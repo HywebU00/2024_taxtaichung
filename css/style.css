@@ -3428,7 +3428,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 .search ul.picLink li,
 .m_search ul.picLink li {
@@ -3439,7 +3440,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 6px;
+  margin-top: 10px;
 }
 .search ul.picLink li a img,
 .m_search ul.picLink li a img {
@@ -3451,13 +3452,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .m_search ul.picLink li a span {
   flex: 1 1 100%;
   text-align: center;
-  padding: 12px 0;
+  padding: 12px 0 0;
 }
 .search ol a, .search ul a,
 .m_search ol a,
 .m_search ul a {
   display: block;
-  padding: 2px 4px;
+  padding: 4px;
   margin: 2px 0;
   color: #222;
 }
@@ -3611,10 +3612,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 ._flex-3 .col .title {
   font-size: 1.25em;
   letter-spacing: 1px;
+  margin: 0;
 }
 ._flex-3 .col:last-child {
   background: transparent;
   padding: 0;
+}
+._flex-3 .col ol {
+  margin-bottom: 0;
 }
 
 .m_search {
@@ -3664,7 +3669,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .m_search ._flex-3 .col {
   flex: 1 1 100%;
   max-width: 100%;
-  padding: 1em 2em;
+  padding: 2em;
 }
 .m_search ._flex-3 .col:nth-child(2) {
   margin: 6px 0;
@@ -7937,11 +7942,17 @@ table.table_sprite tr:nth-child(even) {
   box-shadow: 0 0px 0px 3px #0066cc inset;
 }
 
+.searchSlider {
+  margin-top: 1.25em;
+}
 .searchSlider .slick-slide > div {
   padding: 4px;
 }
 .searchSlider .slick-dots li button:before {
   color: transparent;
+}
+.searchSlider.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
 .searchSlider section {
   padding: 0;
@@ -7953,17 +7964,38 @@ table.table_sprite tr:nth-child(even) {
   border-radius: 4px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  background: bisque;
+}
+.searchSlider a:last-child {
+  margin-bottom: 0;
 }
 .searchSlider a span {
   position: absolute;
+  z-index: 1;
   font-size: 1.125em;
   color: #fff;
   text-align: center;
   padding: 0 2em;
 }
 .searchSlider .img-container {
+  overflow: hidden;
+}
+.searchSlider .img-container:before {
+  display: inline-block;
+  content: "";
+  padding-top: 60%;
+}
+.searchSlider .img-container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  margin: auto;
 }
 .searchSlider .img-container a {
   display: block;
