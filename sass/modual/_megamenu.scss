@@ -4,8 +4,9 @@
   z-index: 99;
   // 預設選單 ul
   clear: both;
+  background-image: linear-gradient(to bottom, #2e84b9 0%, #0f67b1 100%);
 
-  @include screen('mobile') {
+  @include screen('tablet') {
     display: none;
   }
 
@@ -35,15 +36,15 @@
 
     // 第一層選單樣式
     > li {
-      flex: 0 1 calc(100% / 6);
+      flex: 0 1 calc(100% / 8);
 
       > a {
         display: block;
         padding: 0 1em;
         min-height: 2.5em;
         font-weight: bold;
-        line-height: 2.5em;
-        color: $color-word;
+        line-height: 60px;
+        color: #fff;
       }
 
       &.hasChild {
@@ -55,7 +56,7 @@
             display: inline-block;
             margin-left: .5em;
             vertical-align: middle;
-            border: 2px solid lighten($color-word, 40);
+            border: 2px solid #fff;
             transform: rotate(135deg);
             border-bottom: none;
             border-left: none;
@@ -66,10 +67,10 @@
 
       &:hover {
         > a {
-          color: $aHover;
+          // color: $aHover;
 
           &:after {
-            border: 2px solid $aHover;
+            border: 2px solid #fff;
             border-bottom: none;
             border-left: none;
           }
@@ -84,9 +85,21 @@
         display: block;
         outline: none;
         text-decoration: none;
+        text-align: center;
+        &:hover, &:focus-visible{
+          background: darken(#0f67b1, 10);
+        }
       }
 
       // 第二層選單樣式
+      > ul{
+        > li{
+          border-bottom: 1px solid #fff;
+          &:last-child{
+            border-bottom-color: transparent;
+          }
+        }
+      }
       ul {
         // display: none;
         display: flex;
@@ -109,15 +122,24 @@
 
         li {
           flex: none;
-          flex-basis: 23%;
+          // flex-basis: 23%;
+          flex-basis: 98%;
           margin: 0 1%;
-          padding: 0;
+          padding: 10px 0;
 
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          
           a {
-            padding: .6em 1.2em;
+            padding: .3em .6em;
             color: #FFF;
             font-weight: bold;
             box-sizing: border-box;
+            text-align: left;
+
+            // 第二層標題 寬度
+            flex-basis: 15%;
 
             &:hover,
             &:focus {
@@ -127,17 +149,20 @@
 
           // 第三層選單樣式
           ul {
-            margin: 0 0 20px;
             padding: 0 !important;
-            background: #fff;
+            background: transparent;
 
+            // 第三層內容 寬度
+            flex-basis: 85%;
+            // 第三繩內容物 排排站
+            // display: flex; 被設了 block 不能用
             li {
               margin: 0;
               padding: 0;
 
               a {
-                padding: .8em 1.2em;
-                color: #000;
+                padding: .4em .6em;
+                color: #fff;
 
                 &:hover,
                 &:focus {
@@ -168,12 +193,16 @@
             left: 0;
             animation: none;
             display: block;
+            // background: pink;
 
             li {
-              display: block;
-              width: 100%;
+              // display: block;
+              // width: 100%;
+              display: inline-block;
+              border-bottom: none;
 
               > a {
+                // background: pink;
 
                 &:hover,
                 &:focus {
@@ -280,6 +309,7 @@
         li {
           flex: 1 1 100%;
           flex-direction: column;
+          padding: 0;
 
           > a {
             padding: .5em 1em;
@@ -290,6 +320,11 @@
           }
 
           &.hasChild {
+            ul{
+              li{
+                display: block;
+              }
+            }
             > a {
               padding: .5em 1em;
               color: #222;
@@ -327,8 +362,9 @@
                 display: block;
                 min-height: 1.5em;
                 line-height: 1.5em;
-                padding: .5em 1em .5em 2em !important;
+                padding: .5em 3em .5em 2em !important;
                 background: #eee;
+                width: 100%;
 
                 &:hover,
                 &:focus {
@@ -345,13 +381,14 @@
 
               li {
                 a {
-                  background: rgba(0, 0, 0, .15) !important;
-                  padding: .5em 1em .5em 4em !important;
+                  color: #fff;
+                  background: rgba(0, 0, 0, .45) !important;
+                  padding: .5em 1em .5em 3.2em !important;
                   border-bottom: 1px solid #BBB;
 
                   &:hover,
                   &:focus {
-                    background: rgba(0, 0, 0, .25) !important;
+                    background: rgba(0, 0, 0, .15) !important;
                   }
 
                   &:after {

@@ -15,7 +15,7 @@
         flex: 1 1 48%;
         margin-bottom: 10px;
         border-radius: 5px;
-       
+
         &:nth-child(odd) {
             margin-right:10px;
         }
@@ -28,29 +28,36 @@
         }
         a {
             border-radius: 4px;
-            border: 2px solid #DDD;
-            padding: 1em 1em 1em 2.5em;
+            border: 2px solid $primaryColor;
+            padding: 1em 1em 1em 3em;
             display: block;
-            vertical-align: top;
+            // vertical-align: top;
             position: relative;
             height: 100%;  
             box-sizing: border-box;
-            @include aSetting_nocolor;
+            font-size: 1.5em;
+            color: #222;
+            background-image: url(../images/icon_np.png) ,linear-gradient(to right, #fff 0%, #fff 100%);
+            background-repeat: no-repeat;
+            background-position: 32px 50% , 0 top;
+            transition: .2s;
+            // @include aSetting_nocolor;
             // @include text-overflow;
-            .num {
-                position: absolute;
-                width: 1em;
-                top: 1em;
-                left: .5em;
-                text-align: right;
-                &:after {
-                    content: ".";
-                }
-            }
+            // .num {
+            //     position: absolute;
+            //     width: 1em;
+            //     top: 1em;
+            //     left: .5em;
+            //     text-align: right;
+            //     &:after {
+            //         content: ".";
+            //     }
+            // }
             &:hover,
             &:focus {
-               border: 2px solid $primaryColor;
-                color: $primaryColor;
+                border: 2px solid $primaryColor;
+                color: #fff;
+                background-image: url(../images/icon_np.png) ,linear-gradient(to right, #2e84b9 0%, #0f67b1 100%);
             }
         }
     }

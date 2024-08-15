@@ -4,7 +4,7 @@
     outline: none;
 }
 
- :focus-visible {
+:focus-visible {
     outline: 2px dashed $aFocus;
 }
 
@@ -19,6 +19,11 @@
     @include screen("mobile") {
         display: none;
     }
+
+    &#aZ{
+        top: -30px;
+        color: #fff;
+    }
 }
 
 a.goCenter {
@@ -29,8 +34,7 @@ a.goCenter {
     padding: 0 .5em;
     height: 2em;
     line-height: 2em;
-    background: $secondaryColor;
-    color: #fff;
+    background: #333;
     text-decoration: none;
     z-index: 999999999999;
     opacity: 0;
@@ -41,10 +45,12 @@ a.goCenter {
         display: none;
     }
     &:hover,
-    &:focus {
+    &:focus-visible {
         outline: none;
         top: 0;
         opacity: 1;
+        color: #FFF;
+        background: $primaryColor;
     }
 }
 

@@ -59,6 +59,21 @@ $(function () {
       },
     ],
   });
+  // search 輪播
+  $('.searchSlider').slick({
+    mobileFirst: true,
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    prevArrow: false,
+    nextArrow: false,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease'
+  });
   //燈箱slick+lightBox組合
   $('.cp_slider').slick({
     dots: true,
@@ -173,6 +188,75 @@ $(function () {
     focusOnSelect: true,
     infinite: true,
   });
+
+  // search
+  // 物件1：.btnSearchOpen
+  // 物件2：.search
+  // search設定
+  var main_search_mode = false;
+  var _searchSwitch = $('.btnSearchOpen');
+  // $('.search').hide();
+
+  function main_searchToggle() {
+    if (!main_search_mode) {
+      $('.btnSearchOpen').addClass('_triggle');
+      $('.search').addClass('_open');
+      main_search_mode = true;
+      // var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+      // if (isAndroid) {
+      //   _window.off('resize');
+      // }
+    } else {
+      $('.btnSearchOpen').removeClass('_triggle');
+      $('.search').removeClass('_open');
+      main_search_mode = false;
+    }
+  }
+  _searchSwitch.off().on('click', function (e) {
+    main_searchToggle();
+  });
+  // 如果點在外面
+  $(document.body).on('click', function (e) {
+    if (main_search_mode) {
+      main_searchToggle();
+      main_search_mode = false;
+    }
+  });
+  $('.search, .btnSearchOpen').on('click', function (e) {
+    e.stopPropagation();
+  });
+
+  // 1）滑鼠點擊：class 切換
+  // $('.btnSearchOpen').on('click', function() {
+  //   if ($(this).hasClass('_triggle')) {
+  //     $('.btnSearchOpen').removeClass('_triggle');
+  //     $('.search').removeClass('_open');
+  //   } else {
+  //     $('.btnSearchOpen').addClass('_triggle');
+  //     $('.search').addClass('_open');
+  //   }
+  // });
+  // 2）鍵盤遊走，.search 失去焦點關閉
+  $('.btnSearchOpen').on('focus', function() {
+    $(this).addClass('_triggle');
+    $('.search').addClass('_open');
+    $('.search').show();
+  });
+  $('.search').on('focusout', function(event) {
+    // 判斷當前焦點是否在 .search 內部
+    if (!$(event.relatedTarget).closest('.search').length) {
+      $('.btnSearchOpen').removeClass('_triggle');
+      $(this).removeClass('_open');
+    }
+  });
+  // // 3）滑鼠點擊空白處：按鈕、.search 關閉
+  // $(document).on('click', function(event) {
+  //   // 檢查點擊是否發生在 .search 元素內或 .btnSearchOpen 元素上
+  //   if (!$(event.target).closest('.search, .btnSearchOpen').length) {
+  //     $('.btnSearchOpen').removeClass('_triggle');
+  //     $('.search').removeClass('_open');
+  //   }
+  // });
 
   // password_toggle
   var passShow = false;

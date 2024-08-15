@@ -1,9 +1,11 @@
 .fatfooter {
     @extend %clearfix;
     overflow: hidden;
-    padding-bottom: 1em;
+    padding-bottom: 5em;
     margin: 0 auto;
-    background: $fatfooterBgColor;
+    // background: $fatfooterBgColor;
+    background: url(../images/bg_fatfooter.png) right bottom no-repeat $fatfooterBgColor;
+    border-radius: 90px 90px 0 0;
     @include screen('mobile') {
         display: none;
     }
@@ -16,53 +18,58 @@
     .btn-fatfooter {
         font-size: .813em;
         display: block;
-        min-width: 6em;
+        width: 60px;
+        height: 40px;
         color: #FFF;
         border: none;
-        background: $aHover;
+        border-radius: 6px;
+        background: transparent;
         position: absolute;
-        right: 1%;
+        left: 50%;
+        top: 20px;
         z-index: 90;
         text-indent: -9999px;
-        border-radius: 4px;
+        transform: translateX(-50%);
         &:before {
             content: "";
             position: absolute;
-            width: 12px;
-            height: 12px;
-            border: 2px solid #FFF;
+            width: 24px;
+            height: 24px;
+            border: 3px solid #222;
             border-left: none;
             border-bottom: none;
-            transform: rotate(-45deg);
-            left: 50%;
+            left: 4px;
             top: 12px;
-            margin-left: -6px;
-            transition: .3s ease-out;
+            transform: rotate(-45deg);
+            transform-origin: top right;
+            // transform-origin: center;
+            // transition: .3s ease-out;
         }
         &:hover,
         &:focus {
-            background: darken($aHover, 10);
+            background: #7291BD;
             color: #fff;
             text-decoration: none;
-            cursor: pointer;
-            border: none;
             box-shadow: none;
             outline: none;
             border: none;
             cursor: pointer;
+            &:before {
+                border-color: #fff;
+            }
         }
         &.close {
             &:before {
                 transform: rotate(135deg) !important;
-                top: 5px;
+                top: 32px;
             }
         }
     }
     nav {
-        overflow: hidden;
+        // overflow: hidden;
         display: block;
         position: relative;
-        padding: 3em 0 0 2em;
+        padding: 6em 0 0;
         box-sizing: border-box;
 
         ul {
@@ -70,7 +77,8 @@
             @include li-reset;
 
             li {
-                flex:1 1 16%;
+                flex:1 1 auto;
+                flex-basis: calc(100% / 6);
                 box-sizing: border-box;
 
                 a {
@@ -79,6 +87,7 @@
                     font-weight: bold;
                     padding: .5em 0px;
                     box-sizing: border-box;
+                    color: #000;
                     &:hover{
                         box-shadow: none;
                     }

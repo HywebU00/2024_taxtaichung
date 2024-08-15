@@ -35,6 +35,7 @@
             display: inline-block;
             width: 12px;
             height: 12px;
+            margin-right: 10px;
             top:.3em;
             background: url(../images/basic/icon_time.png) no-repeat center center;
             background-size: 12px;
@@ -127,8 +128,8 @@ div.function{
                 a {
                     display: block;
                     box-sizing: border-box;
-                    width: 32px;
-                    height: 32px;
+                    width: 36px;
+                    height: 36px;
                     text-align: center;
                     line-height: 32px;
                     border-radius: 50%;
@@ -143,8 +144,8 @@ div.function{
                     &:before {
                         content: "";
                         position: absolute;
-                        width: 60%;
-                        height: 60%;
+                        width: 55%;
+                        height: 55%;
                         top: 20%;
                         left: 20%;
                     }
@@ -205,23 +206,23 @@ div.function{
     .share {
         box-sizing: border-box;
         text-align: center;
-        height: 32px;
+        height: 36px;
         margin: 0 4px;
         position:relative;
         a.shareButton{
             display: block;
             background: #F1F1F1;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             text-indent:-9999px;
             text-align: center;
             position: relative;
             &:before {
                 content: "";
                 position: absolute;
-                width: 60%;
-                height: 60%;
+                width: 55%;
+                height: 55%;
                 top: 20%;
                 left: 20%;
                 background: url(../images/basic/icon_share.svg) no-repeat center center  !important;

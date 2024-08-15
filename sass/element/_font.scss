@@ -59,18 +59,20 @@ kbd{
 // 字級
 .font_size {
     display: flex;
-    flex:0 1 12.5em;
-    padding: .3em;
+    align-items: center;
+    margin: 0 10px;
+    // flex:0 1 12.5em;
+    // padding: .3em;
     span {
-        font-size: .875em;
+        font-size: 0;
         color: #222;
-        padding-top: .3em;
+        // padding-top: .3em;
     }
     ul {
-       @include li-reset;
-       display: flex;
-       flex: 0 0 6em;
-       li {
+        @include li-reset;
+        display: flex;
+        flex: 0 0 6em;
+        li {
             font-size: 1em;
             flex:0 0 auto;
             margin: 2px;
@@ -80,12 +82,12 @@ kbd{
                 text-align: center;
                 line-height: 32px;
                 border-radius: 50%;
-                background: #F1F1F1;
+                background: transparent;
                 width: 32px;
                 height: 32px;
                 color: #333;
                 &:hover, &:focus {
-                    background: $aHover;
+                    background: #666;
                     color: #FFF;
                 }
                 &.active {
@@ -96,8 +98,8 @@ kbd{
                         color: #FFF;
                     }
                 }
-                &.small { font-size: .938em; }
-                &.large { font-size: 1.125em; }
+                &.small { font-size: .813em; }
+                &.large { font-size: 1.35em; }
             }
         }
     }

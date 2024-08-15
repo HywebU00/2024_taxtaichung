@@ -41,10 +41,72 @@ body {
 .main {
   position: relative;
   margin: 0 auto;
-
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
   h2 {
     line-height: 1.25em;
+  }
+}
+
+// 懸停按鈕
+.R_side_fixed{
+  position: fixed;
+  right: calc((100% - 1200px) / 2 - 46px);
+  top: 28%;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  $_size: 46px;
+  a{
+    display: flex;
+    align-items: center;
+    border-radius: $_size;
+    color: #fff;
+    position: relative;
+    img{
+      position: absolute;
+      right: 4px;
+      z-index: 2;
+    }
+    span{
+      right: 0;
+      opacity: 0;
+      line-height: $_size;
+      font-size: 0;
+      background: #ce4734;
+      padding: 0 23px 0 23px;
+      border-radius: $_size;
+      word-break: keep-all;
+      overflow: hidden;
+      transition: .3s;
+    }
+    transition: .3s;
+    &:hover, &:focus-visible{
+      width: auto;
+      span{
+        right: 0;
+        opacity: 1;
+        padding: 0 $_size 0 20px;
+        width: 100%;
+        font-size: 1.125em;
+      }
+    }
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: -2px;
+    top: -4px;
+    width: calc($_size + 4px);
+    height: calc($_size * 6 + 8px);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  }
+  @media screen and (max-width: 1300px) {
+    right: 0;
   }
 }
 
@@ -53,6 +115,8 @@ body {
 .innerpage {
   > .container {
     @include gutter(); //gutter 代表左右要留白
+    padding-top: 2em;
+    padding-bottom: 2em;
     display: flex;
     align-items: flex-start;
   }
