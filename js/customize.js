@@ -1,5 +1,10 @@
 // 自行加入的JS請寫在這裡
 $(function () {
+
+  // 熱門活動 頁籤切換，次項內容 寬度調整
+  $('.activeZone .tabBtn').click(function() {
+    $('.activeSlider').slick('refresh');
+  })
   // 首頁輪播
   $('.mpSlider').slick({
     mobileFirst: true,
@@ -7,7 +12,7 @@ $(function () {
     arrows: true,
     infinite: true,
     speed: 500,
-    autoplay: true,
+    autoplay: false,
     fade: true,
     lazyLoaded: true,
     lazyLoad: 'ondemand',
@@ -19,6 +24,7 @@ $(function () {
       return $('<button type="button" aria-label="' + title + '"/>').text(title);
     },
   });
+
   // 廣告輪播
   $('.adSlider').slick({
     mobileFirst: true,
@@ -27,7 +33,7 @@ $(function () {
     speed: 300,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     arrow: true,
     lazyLoaded: true,
     lazyLoad: 'ondemand',
@@ -59,7 +65,124 @@ $(function () {
       },
     ],
   });
-  // search 輪播
+
+  // 熱門專區 12格下面藍藍的
+  $('.hotSlider').slick({
+    mobileFirst: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrow: true,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+    ],
+  });
+
+  // activeSlider
+  // 熱門活動 頁籤塞slider
+  $('.activeSlider').slick({
+    mobileFirst: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrow: true,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+    ],
+  });
+
+  // 影片輪播
+  $('.ytSlider').slick({
+    mobileFirst: true,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrow: true,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+    ],
+  });
+
+  // search 輪播 - 
   $('.searchSlider').slick({
     mobileFirst: true,
     dots: true,
@@ -74,7 +197,8 @@ $(function () {
     lazyLoad: 'ondemand',
     ease: 'ease'
   });
-  //燈箱slick+lightBox組合
+
+  // 燈箱slick+lightBox組合
   $('.cp_slider').slick({
     dots: true,
     infinite: true,
@@ -118,6 +242,7 @@ $(function () {
       },
     ],
   });
+
   //
   $('.cppic_slider').slick({
     dots: true,

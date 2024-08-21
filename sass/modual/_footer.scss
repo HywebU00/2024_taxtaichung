@@ -32,8 +32,7 @@ footer {
             color: $lightColor;
         }
     }
-
-    // map
+    // google map
     ._map{
         flex: 0 0 450px;
         iframe {
@@ -42,54 +41,76 @@ footer {
             aspect-ratio: 4 / 3;
         }
     }
-    // 
+    // 資訊
     ._info{
         flex: 1 1 auto;
         padding-left: 3.6em;
-        // 標章
-        ._tag{
-            display: flex;
-            align-items: flex-start;
-            a{
-                margin-right: 10px;
-            }
-            img {
-                vertical-align: middle; /* 或 top, bottom, baseline */
-            }
+    }
+    // 標章
+    ._tag{
+        display: flex;
+        align-items: flex-start;
+        a{
+            margin-right: 10px;
         }
-        // 宣告連結
-        ul._link{
-            @include li-reset();
-            margin-top: 1.25em;
-            display: flex;
-            li{
-                position: relative;
+        img {
+            vertical-align: middle; /* 或 top, bottom, baseline */
+        }
+    }
+    // 宣告連結
+    ul._link{
+        @include li-reset();
+        margin-top: 1.25em;
+        display: flex;
+        li{
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 14px;
+                background: #fff;
+                right: 0;
+                top: 6px;
+            }
+            &:last-child{
                 &:after{
-                    content: "";
-                    position: absolute;
-                    width: 1px;
-                    height: 14px;
-                    background: #fff;
-                    right: 0;
-                    top: 6px;
+                    display: none;
                 }
-                &:last-child{
-                    &:after{
-                        display: none;
-                    }
-                }
+            }
+            a{
+                padding: 2px 12px;
+            }
+            &:first-child{
                 a{
-                    padding: 2px 12px;
-                }
-                &:first-child{
-                    a{
-                        padding-left: 0;
-                    }
+                    padding-left: 0;
                 }
             }
         }
     }
-
+    // 內頁 footer
+    &._type2{
+        .container{
+            display: block;
+        }
+        ul._link{
+            margin-top: 0;
+        }
+        ._info{
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between;
+            p{
+                flex: 1 1 60%;
+            }
+            >div{
+                flex: 1 1 40%;
+            }
+        }
+        ._tag{
+            justify-content: flex-end;
+        }
+    }
     @include screen('tablet') {
         .container {
             flex-wrap: wrap;

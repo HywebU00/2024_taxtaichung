@@ -50,7 +50,8 @@ body {
 // 懸停按鈕
 .R_side_fixed{
   position: fixed;
-  right: calc((100% - 1200px) / 2 - 46px);
+  // right: calc((100% - 1200px) / 2 - 46px);
+  right: 4px;
   top: 28%;
   z-index: 1000;
 

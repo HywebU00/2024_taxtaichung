@@ -329,19 +329,17 @@
     }
   }
 
-
   .tabContent {
     display: none;
     position: relative;
     padding: 15px;
-    border: #bbb 1px solid;
+    // border: #bbb 1px solid;
 
     @include screen('mobile') {
       padding: 0;
       margin-bottom: 10px;
       border: none;
     }
-
 
     &.active {
       display: block;
@@ -389,5 +387,75 @@
     .modeBBtn {
       display: block;
     }
+  }
+
+  // ----------------------------------- Lize
+  &._list{
+    .tabBtn{
+        background: transparent;
+        border-radius: 40px;
+
+        &:hover, &:focus-visible{
+          background: #eee;
+        }
+
+        &.active {
+          background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+          color: #fff;
+        }
+      }
+    .tabItems{
+      background: #fff;
+      border-radius: 40px;
+    }
+    .tabContent{
+      padding: 1em 4em;
+      time{
+        color: #cb4f0e;
+        margin-right: 30px;
+      }
+      ul{
+        @include li-reset;
+        li{
+          border-bottom: 1px solid #9aa2a4;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            width: 96px;
+            height: 2px;
+            background: #cb4f0e;
+            bottom: 0;
+          }
+          a{
+            display: block;
+            padding: 16px 0;
+            color: #222;
+            font-weight: bold;
+            background: transparent;
+            transition: .3s;
+
+            &:hover, &:focus-visible{
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &._slider{
+    .tabItems{
+      justify-content: center;
+      .tabBtn{
+        max-width: 35%;
+      }
+    }
+    // .tabContent {
+    //   display: block;
+    //   opacity: .4;
+    //   &.active{
+    //     opacity: 1;
+    //   }
+    // }
   }
 }

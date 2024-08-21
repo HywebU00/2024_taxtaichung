@@ -7,6 +7,10 @@ $btn-radius:.2em;
 .btn_grp {
     text-align: center;
     padding: 1em 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // 按鈕的共用設定
@@ -173,6 +177,22 @@ $btn-radius:.2em;
     text-shadow:none;
 }
 
+// rss
+.btn_RSS{
+    display: block;
+    font-size: 0;
+    width: 48px;
+    height: 48px;
+    margin: 0 4px;
+    background: url(../images/icon/icon_rss.svg) 50% 50% no-repeat;
+    background-size: contain;
+    transition: .3s;
+
+    &:hover, &:focus-visible{
+        background: url(../images/icon/icon_rss-light.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
 
 // 按鈕大小
 .btn-xl {

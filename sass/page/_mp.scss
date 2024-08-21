@@ -23,10 +23,272 @@ a.more {
     }
 }
 
-// 範例：
-.demosection {
-    [class^='col'] {
-        border: 2px solid #fff;
-        background: #dedede;
+a.main_more{
+    // mp 黑底白字＋icon
+    display: inline-block;
+    background: url(../images/icon_moreBtn.png) right 20px top 50% no-repeat, #000;
+    color: #fff;
+    padding: 0.75em 4em;
+    border-radius: 30px;
+    transition: .3s;
+
+    &:hover, &:focus-visible{
+        background: url(../images/icon_moreBtn.png) right 20px top 50% no-repeat, #d74600;
     }
+}
+
+// 範例：
+// .demosection {
+//     [class^='col'] {
+//         border: 2px solid #fff;
+//         background: #dedede;
+//     }
+// }
+
+// 共用
+.mpSubTitle{
+    font-size: 1.75em;
+    text-align: center;
+    margin-bottom: 50px;
+
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 6px;
+        background: $importantColor;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.videoZone,
+.infoZone,
+.linkZone,
+.hotZone,
+.activeZone,
+.adZone{
+    padding: 2em 0;
+    // 背景位置控制
+    background-size: cover;
+    background-position: top center;
+}
+
+
+// 1 - slider
+// 2 - 影音專區 2欄
+.videoZone{
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+    }
+    .mpSubTitle{
+        text-align: left;
+        margin: 0 0 30px;
+        &:after{
+            bottom: 10px;
+            left: 164px;
+        }
+    }
+
+    ._YT{
+        padding-right: 10px;
+        iframe{
+            width: 100%;
+            height: 320px;
+        }
+    }
+    ._tax{
+        padding-left: 10px;
+        padding-top: 53px;
+        ul{
+            @include li-reset;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li{
+                flex: 0 1 48%;
+                margin-bottom: 12px;
+                a{
+                    // background: #000;
+                    // background-color: #FFFFFF;
+                    display: flex;
+                    align-items: center;
+                    background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+                    color: #fff;
+                    font-size: 1.35em;
+                    border-radius: 4px;
+                    padding: .5em 1em;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 3 - 訊息專區 tab
+.infoZone{}
+// 4 - 專區 3連結
+.linkZone{
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.125em;
+            color: #000;
+            span{
+                font-weight: bold;
+                padding: 12px 0;
+            }
+        }
+    }
+}
+// 5 - 熱門專區 一排4連結 + slider連結
+.hotZone{}
+// 12個主題
+.topic_Link{
+    display: flex;
+    flex-wrap: wrap;
+    .col{
+        flex: 0 1 23%;
+        margin: 0 1% 24px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        ._title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 260px;
+            background: #fff;
+            font-size: 1.25em;
+            img{
+                width: 72px;
+                height: 72px;
+            }
+        }
+        position: relative;
+        overflow: hidden;
+        ._listlink{
+            position: absolute;
+            width: 100%;
+            height: 260px;
+            overflow: scroll;
+            padding: 0 1.5em;
+            top: 0;
+            left: 100%;
+            color: #fff;
+            background-image: linear-gradient(180deg, #f16f2d 0%, #ce4734 100%);
+            z-index: 1;
+            transition: .3s;
+
+            b{
+                // 行內標題
+                display: block;
+                text-align: center;
+                font-size: 1.25em;
+                padding: 26px 0 12px;
+                border-bottom: 1px solid #fff;
+            }
+            ul{
+                @include li-reset;
+                li{}
+            }
+            a{
+                display: block;
+                text-align: center;
+                padding: 4px 0;
+                margin: 2px 0;
+                color: #fff;
+                &:hover, &:focus-visible{
+                }
+            }
+        }
+        &:hover, &:focus-visible{
+            cursor: pointer;
+            ._listlink{
+                left: 0;
+            }
+        }
+    }
+    @include screen('tablet') {
+        .col{
+            flex: 0 1 auto;
+            flex: calc(100% / 3 - 2%);
+            max-width: calc(100% / 3 - 2%);
+        }
+    }
+    @include screen('mobile') {
+        .col{
+            flex: calc(100% / 2 - 2%);
+            max-width: calc(100% / 2 - 2%);
+        }
+    }
+    @include screen('xs_mobile') {
+        .col{
+            flex: calc(100% - 4%);
+            max-width: calc(100% - 4%);
+        }
+    }
+}
+
+// 6 - 熱門活動 tab 塞 slider
+.activeZone{}
+.activeSlider{
+    ._item{
+        text-align: center;
+        padding: 1em 2em;
+        margin: 50px auto;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 25px -10px;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        .img-container{
+            @include aspect-ratio(2,1); 
+        }
+        h4{
+            font-size: 1.25em;
+            font-weight: bold;
+            text-align: center;
+        }
+        a{
+            display: block;
+            font-size: 1.125em;
+            padding: 10px 20px;
+            margin: 12px 0;
+            border-radius: 40px;
+            &._info{
+                color: #222;
+                background: #cce2f6;
+            }
+            &._winner{
+                color: #fff;
+                background: #0f67b1;
+            }
+        }
+    }
+}
+._tabslider{
+    padding-top: 5em;
+    background: #eee;
+    position: relative;
+    button.tabBtn{
+        // position: absolute;
+        // top: 0;
+    }
+    ._conten{}
+}
+
+// 7、8 - 網網相連、小廣告 adslider
+.adZone{
+    // +.adZone{
+    //     padding-top: 0;
+    // }
 }

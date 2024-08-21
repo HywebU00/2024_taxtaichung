@@ -1,6 +1,6 @@
 // slick.css
 
-/* Slider */
+// Slider
 
 .slick-slider {
   position: relative;
@@ -16,7 +16,6 @@
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
 .slick-list {
   position: relative;
   display: block;
@@ -90,10 +89,9 @@
 
 .slick-initialized .slick-slide {
   display: block;
-
   & > div {
-    padding: 0 10px;
-    ;
+    // padding: 0 10px;
+    padding: 0 16px;
   }
 }
 
@@ -130,7 +128,7 @@
 
 // slick_theme.css
 
-/* ---箭頭的樣式--- */
+// --- 箭頭的樣式 --- 
 .slick-arrow {
   &::before {
     display: none;
@@ -164,7 +162,7 @@
 }
 
 
-/* 上一則 位置 圖片*/
+// 上一則 位置 圖片
 
 .slick-prev {
   left: 25px;
@@ -180,7 +178,7 @@
 }
 
 
-/* 下一則 位置 圖片*/
+// 下一則 位置 圖片
 
 .slick-next {
   right: 25px;
@@ -196,14 +194,14 @@
 }
 
 
-/* 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉 */
+// 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉
 
 .slick-disabled {
   opacity: .25;
 }
 
 
-/* ---點的樣式---*/
+// --- 點的樣式 ---
 
 // slick dots 
 .slick-dots {
@@ -236,8 +234,11 @@
 }
 
 
-/* ---點的位置、大小、顏色---*/
+// --- 點的位置、大小、顏色 ---
 
+ul.slick-dots{
+  margin-bottom: 0;
+}
 .slick-dots {
   /* 位置距離 */
   bottom: 20px;
@@ -323,41 +324,51 @@
       right: 2%;
     }
   }
+  .slick-slide {
+    & > div {
+      padding: 0;
+    }
+  }
 }
-
 // slick._scss
 // adSlider
 .adSlider {
   @include gutter(70px);
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 
-  @include screen('mobile') {
-    @include gutter();
-  }
+  // @include screen('mobile') {
+  //   @include gutter();
+  // }
 
   .slick-prev {
     background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
     background-size: 80%;
-    left: -15px;
+    left: 0;
   }
 
   .slick-next {
     background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
     background-size: 80%;
-    right: -15px;
+    right: 0;
   }
 
   .img-container {
-    width: 165px;
-    height: 55px;
-    margin: 0px 15px;
+    width: 200px;
+    height: 80px;
+    // background: transparent;
+    // margin: 0px 15px;
+    // img{
+    //   display: block;
+    // }
 
     a {
-      display: block;
-      text-align: center;
+      // display: block;
+      // text-align: center;
 
       img {
         margin: 0 auto;
+        max-width: 200px;
+        max-height: 80px;
       }
     }
 
@@ -376,11 +387,112 @@
       }
     }
   }
+
+  &._200110{
+    .img-container {
+      width: 200px;
+      height: 110px;
+      a{
+        img {
+          max-height: 110px;
+        }
+      }
+    }
+  }
+}
+
+// 熱門專區 12格下面藍藍的
+.hotSlider{
+  @include gutter(180px);
+
+  .slick-list{
+    padding: 6px;
+    .slick-slide{
+      & > div{
+        // 項目之間的內距
+        // background: pink;
+        padding: 0;
+      }
+    }
+  }
+
+  .slick-prev {
+    // background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+    // background-size: 80%;
+    left: 20px;
+  }
+  .slick-next {
+    // background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+    // background-size: 80%;
+    right: 20px;
+  }
+  .img-container {
+    background: transparent;
+    img{
+      max-width: 100px;
+      max-height: 100px;
+    }
+    &:focus {
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        box-shadow: 0 0px 0px 3px $primaryColor inset;
+      }
+    }
+  }
+  a {
+    text-align: center;
+    padding: 1em;
+    border-radius: 6px;
+    b{
+      color: #222;
+      font-size: 1.125em;
+      display: block;
+      padding-top: 12px;
+    }
+
+    &:hover, &:focus-visible{
+      background: #eee;
+    }
+  }
+}
+
+// 熱門活動 頁籤塞slider
+.activeSlider{
+  @include gutter(80px);
+
+  // .slick-list{
+  //   .slick-slide{
+  //     & > div{
+  //       // 項目之間的內距
+  //       // background: pink;
+  //       // padding: 0;
+  //     }
+  //   }
+  // }
+
+  .slick-dots{
+    bottom: -30px;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
 }
 
 // search slider
 // 塞在 search 的 slider
 .searchSlider {
+  margin-top: 1.25em;
   .slick-slide{
     > div{
       padding: 4px;
@@ -388,6 +500,9 @@
   }
   .slick-dots li button:before{
     color: transparent;
+  }
+  &.slick-dotted.slick-slider{
+    margin-bottom: 0;
   }
   section{
     // background: pink;
@@ -401,9 +516,16 @@
     border-radius: 4px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    
+    // height: 150px;
+    background: bisque;
     span{
       position: absolute;
+      z-index: 1;
       font-size: 1.125em;
       color: #fff;
       text-align: center;
@@ -411,7 +533,10 @@
     }
   }
   .img-container {
-    width: 100%;
+    // width: 100%;
+    // 圖片設定比例
+    @include aspect-ratio(5,3);
+
 
     a {
       display: block;
@@ -447,6 +572,29 @@
   // @include screen('mobile') {
   //   @include gutter();
   // }
+}
+
+// ytSlider
+.ytSlider{
+  @include gutter(80px);
+  iframe {
+    width: 100%;
+    height: 280px;
+  }
+  ul.slick-dots {
+    margin-bottom: 0;
+    bottom: -42px;
+  }
+  .slick-prev {
+    // background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+    // background-size: 80%;
+    left: 0;
+  }
+  .slick-next {
+    // background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+    // background-size: 80%;
+    right: 0;
+  }
 }
 
 //  slick燈箱
@@ -535,14 +683,13 @@
   }
 }
 
-// 
 // slick燈箱
 .lightbox_slider_block {
   h3 {
     font-size: 1.5em;
     padding: 12px 0px 15px 0px;
     margin: 0.5em 0px 1.2em;
-    border-bottom: 1px solid $primaryColor;
+    border-bottom: 1px solid #222;
   }
 
   background: #fff;
@@ -623,9 +770,7 @@
   }
 }
 
-
 /*  slick-lightbox  */
-
 .slick-lightbox {
   position: fixed;
   top: 0;

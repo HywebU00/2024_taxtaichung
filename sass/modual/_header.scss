@@ -136,7 +136,7 @@
     .navigation {
         // background: pink;
         align-items: center;
-        padding-right: 42px; // 閃位給 .btnSearchOpen
+        padding-right: 80px; // 閃位給 .btnSearchOpen
         @include screen('tablet') {
             display: none;
         }
@@ -149,10 +149,24 @@
             ul {
                 padding: 0;
                 margin: 0;
-                font-size: 0.875em;
+                // font-size: 0.875em;
                 list-style: none;
                 display: flex;
                 justify-content: flex-end;
+                // background: pink;
+                padding-right: 12px;
+
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 16px;
+                    background: #ddd;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
             li {
                 flex: 0 0 auto;
@@ -303,14 +317,16 @@
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 0;
+        margin: 0;
+        padding: 0;
         li{
             flex: 0 1 50%;
             a{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                margin-bottom: 6px;
+                margin-top: 10px;
+                // margin-bottom: 6px;
                 img{
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     border-radius: 50%;
@@ -319,7 +335,7 @@
                 span{
                     flex: 1 1 100%;
                     text-align: center;
-                    padding: 12px 0;
+                    padding: 12px 0 0;
                 }
             }
         }
@@ -327,7 +343,7 @@
     ol, ul{
         a{
             display: block;
-            padding: 2px 4px;
+            padding: 4px;
             margin: 2px 0;
             color: #222;
             &:hover, &:focus-visible{
@@ -377,8 +393,14 @@
     top: 18px;
     margin: 0;
     border-color: transparent;
+    // 加文字
+    display: flex;
+    align-items: center;
     img{
         display: block;
+    }
+    span{
+        padding-left: 4px;
     }
     &:hover,
     &:focus-visible,
@@ -493,10 +515,14 @@
             // margin-top: 0;
             font-size: 1.25em;
             letter-spacing: 1px;
+            margin: 0;
         }
         &:last-child{
             background: transparent;
             padding: 0;
+        }
+        ol{
+            margin-bottom: 0;
         }
     }
 }
@@ -547,7 +573,7 @@
         .col{
             flex: 1 1 100%;
             max-width: 100%;
-            padding: 1em 2em;
+            padding: 2em;
 
             &:nth-child(2){
                 margin: 6px 0;

@@ -6,58 +6,305 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
         margin: 0;
         padding: 1em 0;
         list-style-type: none;
     }
-    li {
-        flex: 1 1 48%;
-        margin-bottom: 10px;
-        border-radius: 5px;
-
-        &:nth-child(odd) {
-            margin-right:10px;
-        }
-        
-        @include screen('mobile') {
-            flex: 1 1 100%;
+    &._default{
+        max-height: initial; // 修正 search 展開區塊的高度限制
+        li {
+            // 雙欄
+            flex: 0 1 49%;
+            margin-bottom: 10px;
+            border-radius: 5px;
             &:nth-child(odd) {
-                margin-right: 0;
+                margin-right: 2%;
+            }
+            a {
+                border-radius: 4px;
+                border: 2px solid $primaryColor;
+                padding: 1.25em 1em 1.25em 3em;
+                display: block;
+                position: relative;
+                height: 100%;  
+                box-sizing: border-box;
+                font-size: 1.5em;
+                color: #222;
+                background-image: url(../images/icon_np.png) ,linear-gradient(to right, #dcedf9 0%, #fff 100%);
+                background-repeat: no-repeat;
+                background-position: 32px 50%, 50% 50%;
+                transition: .3s;
+                &:hover,
+                &:focus {
+                    border: 2px solid $primaryColor;
+                    color: #fff;
+                    // background-image: url(../images/icon_np.png) ,linear-gradient(to right, #2e84b9 0%, #0f67b1 100%);
+                    background-image: url(../images/icon_np.png) ,url(../images/bg_np_hover.jpg);
+                    background-size: auto, cover;
+                }
             }
         }
-        a {
-            border-radius: 4px;
-            border: 2px solid $primaryColor;
-            padding: 1em 1em 1em 3em;
+    }
+    &._herolist{
+        // 主圖 ＋ list連結
+        ._flex{
+            display: flex;
+            align-items: center;
+            margin: 4em 0;
+        }
+        ._img{
+            flex: 0 0 33%;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        ._list{
+            flex: 1 1 66%;
+            max-width: 66%;
+            margin-left: 2em;
+            // background: pink;
+            ._title{
+                font-size: 1.5em;
+                padding-left: 2.75em;
+                position: relative;
+                &:before,
+                &:after{
+                    content: '';
+                    position: absolute;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background: $primaryColor;
+                    border-radius: 50%;
+                    left: 0;
+                    top: -50%;
+                }
+                &:after{
+                    width: 22px;
+                    height: 22px;
+                    background: url(../images/icon-arrow-r-white.svg) 50% 50% no-repeat;
+                    left: 14px;
+                    top: 50%;
+                    transform: translateY(-50%)
+                    // background-size: 30px;
+                }
+            }
+            ul{
+                li{
+                    background: url(../images/icon-arrow-r-type2.svg) 10px 50% no-repeat;
+                    background-size: 16px;
+                }
+            }
+        }
+        .img-container {
+            // 圖片設定比例
+            @include aspect-ratio(4,3);
+        }
+        ul, ol{
+            // 用 flex 會導致 <a> 的刪節號破版
             display: block;
-            // vertical-align: top;
-            position: relative;
-            height: 100%;  
-            box-sizing: border-box;
+            li{
+                // background: pink;
+                // 用 float
+                display: inline-block;
+                float: left;
+                width: 50%;
+                a{
+                    display: block;
+                    font-size: 1.125em;
+                    padding: 8px 0 8px 36px;
+                    color: #222;
+                    // 刪節號
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    &._img{
+        // 圖片連結
+        // background: pink;
+        ul{
+            li{
+                flex: 0 0 auto;
+                flex-basis: calc(100% / 4);
+                a{
+                    display: block;
+                    text-align: center;
+                    line-height: 0; // 修正包 img 的高度
+                    padding: 6px 0;
+                    margin-bottom: 6px;
+                    img{
+                        // display: block;
+                    }
+                }
+            }
+        }
+    }
+    &._icontext{
+        // icon ＋ 文字連結
+        ._title{
+            text-align: center;
             font-size: 1.5em;
-            color: #222;
-            background-image: url(../images/icon_np.png) ,linear-gradient(to right, #fff 0%, #fff 100%);
-            background-repeat: no-repeat;
-            background-position: 32px 50% , 0 top;
-            transition: .2s;
-            // @include aSetting_nocolor;
-            // @include text-overflow;
-            // .num {
-            //     position: absolute;
-            //     width: 1em;
-            //     top: 1em;
-            //     left: .5em;
-            //     text-align: right;
-            //     &:after {
-            //         content: ".";
-            //     }
-            // }
-            &:hover,
-            &:focus {
-                border: 2px solid $primaryColor;
-                color: #fff;
-                background-image: url(../images/icon_np.png) ,linear-gradient(to right, #2e84b9 0%, #0f67b1 100%);
+            letter-spacing: 2px;
+            padding: 1em 0;
+            margin: 2em 0;
+            position: relative;
+            &:before, &:after{
+                content: '';    
+                position: absolute;
+                width: 90px;
+                height: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $importantColor;
+            }
+            &:before{
+                top: 0;
+            }
+            &:after{
+                bottom: 0;
+            }
+        }
+        ul{
+            li{
+                // 四欄
+                flex: 0 0 25%;
+                margin-bottom: 3em;
+                a{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    span.icon{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 30px;
+                        background: #fef5f5;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        transition: .3s;
+                        img{
+                            position: absolute;
+                            width: 94px;
+                            height: 94px;
+                            &:nth-child(2){
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    b{
+                        display: block;
+                        text-align: center;
+                        color: #222;
+                        font-size: 1.125em;
+                        padding: 1.5em 0 1em;
+                    }
+                    &:hover, &:focus-visible{
+                        span.icon{
+                            background: linear-gradient(to bottom, #f16f2d 0%, #ce4734 100%);
+                            box-shadow: none;
+                            img{
+                                &:nth-child(1){
+                                    opacity: 0;
+                                }
+                                &:nth-child(2){
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        &._img{
+            ul{
+                li{
+                    flex-basis: calc(100% / 3);
+                }
+            }
+        }
+    }
+    @include screen('tablet') {
+        &._img{
+            ul{
+                li{
+                    flex-basis: calc(100% / 2);
+                }
+            }
+        }
+        &._icontext{
+            ul{
+                li{
+                    flex: 0 0 auto;
+                    flex-basis: calc(100% / 3);
+                }
+            }
+        }
+    }
+    @include screen('mobile') {
+        &._default{
+            li{
+                flex: 1 1 100%;
+                &:nth-child(odd) {
+                    margin-right: 0;
+                }
+            }
+        }
+        &._herolist{
+            ._flex{
+                flex-wrap: wrap;
+            }
+            ._img{
+                flex: 1 1 100%;
+            }
+            ._list{
+                flex: 1 1 100%;
+                max-width: 100%;
+                margin: 1em 0 0;
+                ul, ol{
+                    li{
+                        width: 100%;
+                        a{
+                            padding: 12px 0 12px 36px;
+                        }
+                    }
+                }
+            }
+        }
+        &._img{
+            ul{
+                li{
+                    flex-basis: calc(100% / 1);
+                }
+            }
+        }
+        &._icontext{
+            ul{
+                li{
+                    flex-basis: calc(100% / 2);
+                    a{
+                        span.icon{
+                            width: 150px;
+                            height: 150px;
+                            img{
+                                width: 72px;
+                                height: 72px;
+                            }
+                        }
+                        b{
+                            padding: 1.5em 12px 1em;
+                        }
+                    }
+                }
             }
         }
     }
