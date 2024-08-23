@@ -1,0 +1,1354 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360R {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes scrollDown2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes downAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes rightAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes leftAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes hasItem {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+:root {
+  --contentPadding: 100px;
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    --contentPadding: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --contentPadding: 30px;
+  }
+}
+
+.welcome {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  color: #130A06;
+  font-size: 1rem;
+  font-family: "Quicksand", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic Medium", sans-serif;
+  line-height: 1.75;
+  background: #fff;
+}
+.welcome * {
+  box-sizing: border-box;
+  outline: 0;
+}
+.welcome *::before {
+  box-sizing: border-box;
+}
+.welcome *::after {
+  box-sizing: border-box;
+}
+.welcome a {
+  color: #130A06;
+  transition: all 0.3s ease;
+}
+.welcome a:hover {
+  color: #2D2F91;
+}
+.welcome img {
+  max-width: 100%;
+  margin: 0px;
+  line-height: 1;
+}
+.welcome figure {
+  margin: 0px;
+}
+.welcome .wrapper {
+  position: relative;
+}
+.welcome .container {
+  position: relative;
+  width: 100%;
+  max-width: calc(1440px + var(--contentPadding) * 2);
+  padding-left: var(--contentPadding);
+  padding-right: var(--contentPadding);
+  margin: 0 auto;
+}
+.welcome section {
+  position: relative;
+}
+.welcome [type=text],
+.welcome [type=password],
+.welcome [type=email] {
+  border: none;
+  width: 100%;
+  background: none;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.welcome input:focus {
+  outline: none !important;
+}
+.welcome textarea {
+  padding: 5px 10px;
+  line-height: 1.4;
+  font-weight: normal;
+  color: #666666;
+  width: 100%;
+  background: none;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.welcome .select {
+  position: relative;
+  padding: 0 5px;
+  color: #000;
+  font-weight: 600;
+}
+.welcome .select::before {
+  content: "";
+  display: block;
+  position: absolute;
+  text-indent: 0px;
+  width: 8px;
+  aspect-ratio: 1;
+  right: 10px;
+  top: 15px;
+  z-index: 5;
+  border: 2px solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.welcome .select select {
+  line-height: 1.4;
+  font-weight: normal;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  padding: 5px 30px 10px 10px;
+  border-radius: 5px;
+  background: none;
+}
+.welcome select::-ms-expand {
+  display: none;
+}
+.welcome button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.welcome button:focus {
+  outline: none !important;
+}
+.welcome .privacyBox {
+  position: fixed;
+  background: #000;
+  z-index: 9999;
+  bottom: 0px;
+  width: 100%;
+  color: #e7e7e7;
+  padding: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.welcome .privacyBox a {
+  color: #2D2F91;
+}
+.welcome .privacyBox .closePrivacy {
+  right: 12px;
+  top: 15px;
+  max-width: 100px;
+  line-height: 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 3px 5px;
+  color: #e7e7e7;
+  display: block;
+  background: #2D2F91;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.welcome .editor {
+  line-height: 1.6;
+  color: #444444;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1000px) {
+  .welcome .editor {
+    font-size: 1rem;
+  }
+}
+.welcome .lazyload,
+.welcome .lazyloading {
+  opacity: 0;
+}
+.welcome .lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.welcome .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.welcome .video-container iframe,
+.welcome .video-container object,
+.welcome .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.welcome .tableBox {
+  overflow-x: auto;
+  scrollbar-color: #2D2F91 rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+}
+.welcome .tableBox::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.welcome .tableBox::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #2D2F91;
+}
+.welcome .tableBox::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.welcome .pic {
+  line-height: 0;
+}
+.welcome .pic img {
+  width: 100% !important;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.welcome .tableUse {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.welcome .tableUse::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 80px;
+}
+.welcome .tableUse::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #2D2F91;
+}
+.welcome .tableUse::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.welcome {
+  height: 500vh;
+  background: #e9ebef;
+}
+.welcome::-webkit-scrollbar {
+  display: none;
+}
+.welcome header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 9;
+}
+.welcome header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.welcome header .logo {
+  transform: translateY(20px);
+}
+.welcome header .logo a:focus-visible {
+  outline: #00b7ff solid 3px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome header .menuBox {
+    display: none;
+  }
+}
+.welcome header .menuBox ul {
+  border-radius: 0 0 6px 6px;
+  background: #e9132e;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.welcome header .menuBox ul li {
+  flex-grow: 1;
+}
+.welcome header .menuBox ul li a {
+  padding: 15px 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.welcome header .menuBox ul li a:hover {
+  background: #940c1d;
+}
+.welcome header .menuBox ul li a:focus-visible {
+  outline: #00b7ff solid 3px;
+}
+.welcome header .menuBox.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.welcome header .menuBox.active ul {
+  flex-direction: column;
+  border-radius: 0;
+}
+.welcome #canvas-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+.welcome main {
+  position: relative;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+.welcome main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/bg.jpg") center bottom no-repeat;
+  height: 100vh;
+}
+.welcome main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .container {
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 90px;
+  }
+}
+.welcome main .infoBox {
+  width: 35%;
+  position: relative;
+  z-index: 9;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .infoBox {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+.welcome main .infoBox .info {
+  position: relative;
+  isolation: isolate;
+}
+.welcome main .infoBox .info .titleS,
+.welcome main .infoBox .info .title {
+  font-size: clamp(26px, 2.8vw, 48px);
+  color: #000;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.2;
+}
+.welcome main .infoBox .info .titleS {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(3px);
+  font-weight: 900;
+  letter-spacing: -1.9px;
+  z-index: -1;
+}
+.welcome main .infoBox .info .zhTitle {
+  font-family: "Zen Antique", "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic Medium", sans-serif;
+  font-size: clamp(22px, 2.5vw, 40px);
+  color: #b4410f;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.welcome main .infoBox .info .zhTitle::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+  background: #b4410f;
+  display: block;
+}
+.welcome main .infoBox .info .zhTitle span {
+  display: flex;
+  align-items: center;
+}
+.welcome main .infoBox .info .zhTitle span::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #b4410f;
+  border-radius: 50%;
+  margin: 4px 25px 0;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .infoBox .info .zhTitle span::after {
+    width: 4px;
+    height: 4px;
+    margin: 4px 15px 0;
+  }
+}
+.welcome main .infoBox .info .box {
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .infoBox .info .box {
+    margin-bottom: 20px;
+  }
+  .welcome main .infoBox .info .box:nth-child(2) {
+    flex-grow: 1;
+  }
+}
+.welcome main .infoBox .info p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 10px 30px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .infoBox .info p {
+    display: none;
+  }
+}
+.welcome main .infoBox .info .formBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 30px;
+  background: rgba(245, 246, 245, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+}
+@media screen and (max-width: 1300px) {
+  .welcome main .infoBox .info .formBox {
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+}
+.welcome main .infoBox .info .formBox .selectBox {
+  flex-grow: 1;
+  position: relative;
+}
+@media screen and (max-width: 1300px) {
+  .welcome main .infoBox .info .formBox .selectBox {
+    width: 100%;
+  }
+}
+.welcome main .infoBox .info .formBox .selectBox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  text-indent: 0px;
+  width: 8px;
+  aspect-ratio: 1;
+  right: 10px;
+  top: 15px;
+  z-index: 5;
+  border: 2px solid #4e4e4e;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.welcome main .infoBox .info .formBox .selectBox select {
+  width: 100%;
+  padding: 10px;
+  border: #c8c8c8 1px solid;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.welcome main .infoBox .info .formBox .selectBox select::-ms-expand {
+  display: none;
+}
+.welcome main .infoBox .info .formBox .selectBox select:focus-visible {
+  outline: #00b7ff solid 3px;
+}
+.welcome main .infoBox .info .formBox button {
+  font-size: 1.125rem;
+  background: #b4410f;
+  color: #fff;
+  border-radius: 50px;
+  width: 80px;
+  height: 60px;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 1300px) {
+  .welcome main .infoBox .info .formBox button {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+  }
+}
+.welcome main .infoBox .info .formBox button:hover {
+  background: #85300b;
+}
+.welcome main .infoBox .info .formBox button:focus-visible {
+  outline: #00b7ff solid 3px !important;
+}
+.welcome main .out {
+  width: 44vw;
+  aspect-ratio: 1;
+  position: relative;
+  margin-top: 20px;
+  max-height: 1080px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .out {
+    width: 60%;
+    margin-top: -30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .welcome main .out {
+    width: 80%;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome main .out {
+    width: 90%;
+  }
+}
+.welcome main .out::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80px;
+  background: #000;
+  opacity: 0.3;
+  filter: blur(20px);
+  border-radius: 50%;
+  display: block;
+  bottom: 20px;
+  right: 20%;
+}
+.welcome main .scrollPicBox {
+  transform: rotate(10deg);
+  width: 100%;
+  top: 50%;
+  right: 0;
+  animation: rotateSlow 20s ease-in-out infinite;
+  position: relative;
+  transform: rotate(10deg);
+}
+@keyframes rotateSlow {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+.welcome main .scrollPicBox .box {
+  perspective: 100vw;
+  transform-style: preserve-3d;
+}
+.welcome main .scrollPicBox #scrollImgs {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: 0 0 -25vw;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .scrollPicBox #scrollImgs {
+    transform-origin: 0 0 -32vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .welcome main .scrollPicBox #scrollImgs {
+    transform-origin: 0 0 -40vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome main .scrollPicBox #scrollImgs {
+    transform-origin: 0 0 -43vw;
+  }
+}
+.welcome main .scrollPicBox #scrollImgs button {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.welcome main .scrollPicBox #scrollImgs button:focus-visible {
+  outline: red 2px solid !important;
+}
+.welcome main .scrollPicBox #scrollImgs .item {
+  width: 100%;
+  display: block;
+  position: absolute;
+  line-height: 0;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 50% -25vw;
+  transform: translate3d(-50%, -50%, 0);
+  transform-style: preserve-3d;
+}
+@media screen and (max-width: 1001px) {
+  .welcome main .scrollPicBox #scrollImgs .item {
+    transform-origin: 50% 50% -32vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .welcome main .scrollPicBox #scrollImgs .item {
+    transform-origin: 50% 50% -40vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome main .scrollPicBox #scrollImgs .item {
+    transform-origin: 50% 50% -43vw;
+  }
+}
+.welcome main .scrollPicBox img {
+  width: 100%;
+}
+.welcome main canvas {
+  display: block;
+  margin: 0 auto;
+}
+.welcome .fancybox__content {
+  padding: 0;
+}
+.welcome .scrollPicBox .item.content1 {
+  background: #ffebee;
+}
+.welcome .scrollPicBox .item.content2 {
+  background: #f3e5f5;
+}
+.welcome .scrollPicBox .item.content3 {
+  background: #ffebee;
+}
+.welcome .scrollPicBox .item.content4 {
+  background: #e3f2fd;
+}
+.welcome .scrollPicBox .item.content5 {
+  background: #fff9c4;
+}
+.welcome .scrollPicBox .item.content6 {
+  background: #e8f5e9;
+}
+@media screen and (max-width: 550px) {
+  .welcome .scrollPicBox .item.content6 .contentBox .contentInfoBox {
+    width: 70%;
+  }
+}
+.welcome .scrollPicBox .item.content6 .contentBox .contentInfoBox .btnBox {
+  margin-top: 0;
+}
+@media screen and (max-width: 550px) {
+  .welcome .scrollPicBox .item.content6 .contentBox .contentPicBox {
+    width: 30%;
+  }
+}
+.welcome .scrollPicBox .item.content7 {
+  background: #e8f5e9;
+}
+.welcome .scrollPicBox .item.content8 {
+  background: #e8f5e9;
+}
+.welcome .scrollPicBox .item.content9 {
+  background: #fbe9e7;
+}
+.welcome .scrollPicBox .item.content10 {
+  background: #e1f5fe;
+}
+.welcome .scrollPicBox .btnBox {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px auto 0;
+}
+@media screen and (max-width: 1300px) {
+  .welcome .scrollPicBox .btnBox {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .scrollPicBox .btnBox {
+    width: 100%;
+    gap: 5px;
+  }
+}
+.welcome .scrollPicBox .btnBox > * {
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 30px 10px 15px;
+  border-radius: 5px;
+  background: #262626;
+  color: #fff;
+  position: relative;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1300px) {
+  .welcome .scrollPicBox .btnBox > * {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .scrollPicBox .btnBox > * {
+    padding: 5px 10px;
+    font-size: 0.8125rem;
+  }
+}
+.welcome .scrollPicBox .btnBox > *::after {
+  content: "";
+  width: 17px;
+  height: 18px;
+  display: block;
+  background: url("../images/welcome/ar.png") no-repeat;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 550px) {
+  .welcome .scrollPicBox .btnBox > *::after {
+    right: 10px;
+  }
+}
+.welcome .scrollPicBox .contentBox {
+  height: 100%;
+  aspect-ratio: 140/75;
+  text-align: left;
+}
+.welcome .scrollPicBox .contentBox .outerBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.welcome .scrollPicBox .contentBox .content {
+  width: 80%;
+  margin: 0 auto;
+  aspect-ratio: 140/75;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.welcome .scrollPicBox .contentBox .title {
+  white-space: nowrap;
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.welcome .scrollPicBox .contentBox .contentInfoBox {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1200px) {
+  .welcome .scrollPicBox .contentBox .contentInfoBox {
+    width: 65%;
+  }
+}
+.welcome .scrollPicBox .contentBox .contentInfoBox .info {
+  flex-grow: 1;
+}
+.welcome .scrollPicBox .contentBox .contentInfoBox .info.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welcome .scrollPicBox .contentBox .contentInfoBox .info p {
+  font-size: clamp(18px, 1.5vw, 26px);
+  font-weight: 400;
+  margin: 0;
+}
+.welcome .scrollPicBox .contentBox .contentPicBox {
+  width: 45%;
+}
+@media screen and (max-width: 1200px) {
+  .welcome .scrollPicBox .contentBox .contentPicBox {
+    width: 35%;
+  }
+}
+.welcome .scrollPicBox .contentBox .pic {
+  line-height: 0;
+  height: 100%;
+}
+.welcome .contentFancyBox {
+  display: none;
+}
+.welcome .contentFancyBox .box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox .box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.welcome .contentFancyBox .box .contentInfoBox {
+  width: 60%;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox .box .contentInfoBox {
+    width: 100%;
+  }
+}
+.welcome .contentFancyBox .box .contentPicBox {
+  width: 40%;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox .box .contentPicBox {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    order: 2;
+  }
+}
+.welcome .contentFancyBox a:focus-visible {
+  outline: #00b7ff solid 3px;
+}
+.welcome .contentFancyBox .outerBox {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  padding: 5vw;
+}
+@media screen and (min-width: 1001px) {
+  .welcome .contentFancyBox .outerBox {
+    max-width: 1400px;
+    max-height: 750px;
+  }
+}
+.welcome .contentFancyBox .outerBox > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+}
+.welcome .contentFancyBox .inBox {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (max-width: 1100px) {
+  .welcome .contentFancyBox .inBox {
+    gap: 10px;
+  }
+}
+.welcome .contentFancyBox .title {
+  color: #000;
+  font-size: clamp(28px, 3vw, 45px);
+  font-weight: 800;
+  width: 100%;
+}
+.welcome .contentFancyBox .contentInfoBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.welcome .contentFancyBox .contentInfoBox .info {
+  flex-grow: 1;
+}
+.welcome .contentFancyBox .contentInfoBox .info.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welcome .contentFancyBox .contentInfoBox .info p {
+  font-size: clamp(20px, 2vw, 36px);
+  font-weight: 600;
+  margin: 0;
+}
+.welcome .contentFancyBox .pic {
+  line-height: 0;
+}
+.welcome .contentFancyBox#content2, .welcome .contentFancyBox#content3, .welcome .contentFancyBox#content4, .welcome .contentFancyBox#content9, .welcome .contentFancyBox#content10 {
+  background: #ffebee;
+}
+.welcome .contentFancyBox#content2 .inBox .btnBox, .welcome .contentFancyBox#content3 .inBox .btnBox, .welcome .contentFancyBox#content4 .inBox .btnBox, .welcome .contentFancyBox#content9 .inBox .btnBox, .welcome .contentFancyBox#content10 .inBox .btnBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 10px;
+}
+@media screen and (max-width: 1100px) {
+  .welcome .contentFancyBox#content2 .inBox .btnBox, .welcome .contentFancyBox#content3 .inBox .btnBox, .welcome .contentFancyBox#content4 .inBox .btnBox, .welcome .contentFancyBox#content9 .inBox .btnBox, .welcome .contentFancyBox#content10 .inBox .btnBox {
+    gap: 10px;
+  }
+}
+.welcome .contentFancyBox#content2 .inBox .btnBox button, .welcome .contentFancyBox#content3 .inBox .btnBox button, .welcome .contentFancyBox#content4 .inBox .btnBox button, .welcome .contentFancyBox#content9 .inBox .btnBox button, .welcome .contentFancyBox#content10 .inBox .btnBox button {
+  width: calc((100% - 20px) / 2);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 15px 45px 15px 20px;
+  background: #910081;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 40px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox#content2 .inBox .btnBox button, .welcome .contentFancyBox#content3 .inBox .btnBox button, .welcome .contentFancyBox#content4 .inBox .btnBox button, .welcome .contentFancyBox#content9 .inBox .btnBox button, .welcome .contentFancyBox#content10 .inBox .btnBox button {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .contentFancyBox#content2 .inBox .btnBox button, .welcome .contentFancyBox#content3 .inBox .btnBox button, .welcome .contentFancyBox#content4 .inBox .btnBox button, .welcome .contentFancyBox#content9 .inBox .btnBox button, .welcome .contentFancyBox#content10 .inBox .btnBox button {
+    font-size: 14px;
+  }
+}
+.welcome .contentFancyBox#content2 .inBox .btnBox button::after, .welcome .contentFancyBox#content3 .inBox .btnBox button::after, .welcome .contentFancyBox#content4 .inBox .btnBox button::after, .welcome .contentFancyBox#content9 .inBox .btnBox button::after, .welcome .contentFancyBox#content10 .inBox .btnBox button::after {
+  content: "";
+  width: 17px;
+  height: 18px;
+  display: block;
+  background: url("../images/welcome/ar.png") no-repeat;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox#content2 .inBox .btnBox button::after, .welcome .contentFancyBox#content3 .inBox .btnBox button::after, .welcome .contentFancyBox#content4 .inBox .btnBox button::after, .welcome .contentFancyBox#content9 .inBox .btnBox button::after, .welcome .contentFancyBox#content10 .inBox .btnBox button::after {
+    right: 10px;
+  }
+}
+.welcome .contentFancyBox#content2 .inBox .btnBox button img, .welcome .contentFancyBox#content3 .inBox .btnBox button img, .welcome .contentFancyBox#content4 .inBox .btnBox button img, .welcome .contentFancyBox#content9 .inBox .btnBox button img, .welcome .contentFancyBox#content10 .inBox .btnBox button img {
+  margin-right: 10px;
+  width: 50px;
+  aspect-ratio: 1;
+}
+@media screen and (max-width: 1100px) {
+  .welcome .contentFancyBox#content2 .inBox .btnBox button img, .welcome .contentFancyBox#content3 .inBox .btnBox button img, .welcome .contentFancyBox#content4 .inBox .btnBox button img, .welcome .contentFancyBox#content9 .inBox .btnBox button img, .welcome .contentFancyBox#content10 .inBox .btnBox button img {
+    width: 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .contentFancyBox#content2 .inBox .btnBox button img, .welcome .contentFancyBox#content3 .inBox .btnBox button img, .welcome .contentFancyBox#content4 .inBox .btnBox button img, .welcome .contentFancyBox#content9 .inBox .btnBox button img, .welcome .contentFancyBox#content10 .inBox .btnBox button img {
+    width: 20px;
+  }
+}
+.welcome .contentFancyBox#content2 .inBox .btnBox button:hover, .welcome .contentFancyBox#content3 .inBox .btnBox button:hover, .welcome .contentFancyBox#content4 .inBox .btnBox button:hover, .welcome .contentFancyBox#content9 .inBox .btnBox button:hover, .welcome .contentFancyBox#content10 .inBox .btnBox button:hover {
+  background: #5e0054;
+}
+.welcome .contentFancyBox#content3 {
+  background: #f3e5f5;
+}
+.welcome .contentFancyBox#content3 .inBox .btnBox button {
+  background: #c35400;
+}
+.welcome .contentFancyBox#content3 .inBox .btnBox button:hover {
+  background: #903e00;
+}
+.welcome .contentFancyBox#content4 {
+  background: #e3f2fd;
+}
+.welcome .contentFancyBox#content4 .inBox .box .contentInfoBox {
+  width: 50%;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox#content4 .inBox .box .contentInfoBox {
+    width: 100%;
+  }
+}
+.welcome .contentFancyBox#content4 .inBox .box .contentPicBox {
+  width: 50%;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox#content4 .inBox .box .contentPicBox {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    order: 2;
+  }
+}
+.welcome .contentFancyBox#content4 .inBox .btnBox {
+  gap: 10px;
+}
+.welcome .contentFancyBox#content4 .inBox .btnBox button {
+  width: 100%;
+  background: #007da5;
+}
+.welcome .contentFancyBox#content4 .inBox .btnBox button:hover {
+  background: #005672;
+}
+.welcome .contentFancyBox#content5 {
+  background: #fff9c4;
+}
+.welcome .contentFancyBox#content5 .btnBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 20px;
+}
+.welcome .contentFancyBox#content5 .btnBox button {
+  width: calc((100% - 40px) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 40px;
+}
+@media screen and (max-width: 1001px) {
+  .welcome .contentFancyBox#content5 .btnBox button {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .contentFancyBox#content5 .btnBox button {
+    font-size: 14px;
+  }
+}
+.welcome .contentFancyBox#content5 .btnBox button .pic {
+  padding: 30px;
+  background: #a56200;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.welcome .contentFancyBox#content6, .welcome .contentFancyBox#content7, .welcome .contentFancyBox#content8 {
+  background: #e8f5e9;
+}
+.welcome .contentFancyBox#content6 .inBox, .welcome .contentFancyBox#content7 .inBox, .welcome .contentFancyBox#content8 .inBox {
+  justify-content: space-between;
+}
+.welcome .contentFancyBox#content6 .contentInfoBox, .welcome .contentFancyBox#content7 .contentInfoBox, .welcome .contentFancyBox#content8 .contentInfoBox {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.welcome .contentFancyBox#content6 .title, .welcome .contentFancyBox#content7 .title, .welcome .contentFancyBox#content8 .title {
+  text-align: center;
+  font-size: clamp(22px, 3vw, 60px);
+  color: #d93c00;
+  white-space: nowrap;
+}
+.welcome .contentFancyBox#content6 .title span, .welcome .contentFancyBox#content7 .title span, .welcome .contentFancyBox#content8 .title span {
+  font-size: clamp(16px, 2vw, 30px);
+  margin-right: 10px;
+}
+.welcome .contentFancyBox#content6 .title span:nth-child(2), .welcome .contentFancyBox#content7 .title span:nth-child(2), .welcome .contentFancyBox#content8 .title span:nth-child(2) {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.welcome .contentFancyBox#content6 p, .welcome .contentFancyBox#content7 p, .welcome .contentFancyBox#content8 p {
+  margin: 0;
+  line-height: 1.2;
+  font-size: clamp(40px, 4vw, 72px);
+}
+.welcome .contentFancyBox#content6 p span, .welcome .contentFancyBox#content7 p span, .welcome .contentFancyBox#content8 p span {
+  font-size: clamp(18px, 1.5vw, 24px);
+  width: 80%;
+  display: block;
+}
+.welcome .contentFancyBox#content6 .btnBox, .welcome .contentFancyBox#content7 .btnBox, .welcome .contentFancyBox#content8 .btnBox {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px auto 0;
+}
+@media screen and (max-width: 1300px) {
+  .welcome .contentFancyBox#content6 .btnBox, .welcome .contentFancyBox#content7 .btnBox, .welcome .contentFancyBox#content8 .btnBox {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .contentFancyBox#content6 .btnBox, .welcome .contentFancyBox#content7 .btnBox, .welcome .contentFancyBox#content8 .btnBox {
+    width: 100%;
+    gap: 5px;
+  }
+}
+.welcome .contentFancyBox#content6 .btnBox > a, .welcome .contentFancyBox#content7 .btnBox > a, .welcome .contentFancyBox#content8 .btnBox > a {
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 30px 10px 15px;
+  border-radius: 5px;
+  background: #262626;
+  color: #fff;
+  position: relative;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1300px) {
+  .welcome .contentFancyBox#content6 .btnBox > a, .welcome .contentFancyBox#content7 .btnBox > a, .welcome .contentFancyBox#content8 .btnBox > a {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome .contentFancyBox#content6 .btnBox > a, .welcome .contentFancyBox#content7 .btnBox > a, .welcome .contentFancyBox#content8 .btnBox > a {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
+.welcome .contentFancyBox#content6 .btnBox > a::after, .welcome .contentFancyBox#content7 .btnBox > a::after, .welcome .contentFancyBox#content8 .btnBox > a::after {
+  content: "";
+  width: 17px;
+  height: 18px;
+  display: block;
+  background: url("../images/welcome/ar.png") no-repeat;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 550px) {
+  .welcome .contentFancyBox#content6 .btnBox > a::after, .welcome .contentFancyBox#content7 .btnBox > a::after, .welcome .contentFancyBox#content8 .btnBox > a::after {
+    right: 10px;
+  }
+}
+.welcome .contentFancyBox#content6 .btnBox > a:nth-child(2), .welcome .contentFancyBox#content7 .btnBox > a:nth-child(2), .welcome .contentFancyBox#content8 .btnBox > a:nth-child(2) {
+  background: #008941;
+}
+.welcome .contentFancyBox#content6 .btnBox > a:hover:nth-child(1), .welcome .contentFancyBox#content7 .btnBox > a:hover:nth-child(1), .welcome .contentFancyBox#content8 .btnBox > a:hover:nth-child(1) {
+  background: #4d4d4d;
+}
+.welcome .contentFancyBox#content6 .btnBox > a:hover:nth-child(2), .welcome .contentFancyBox#content7 .btnBox > a:hover:nth-child(2), .welcome .contentFancyBox#content8 .btnBox > a:hover:nth-child(2) {
+  background: #005629;
+}
+.welcome .contentFancyBox#content9 .inBox .btnBox button {
+  background: #d93c00;
+}
+.welcome .contentFancyBox#content9 .inBox .btnBox button:hover {
+  background: #a62e00;
+}
+.welcome .contentFancyBox#content10 {
+  background: #e1f5fe;
+}
+.welcome .contentFancyBox#content10 .inBox .btnBox button {
+  width: auto;
+  flex-grow: 1;
+  background: #1976d2;
+}
+.welcome .contentFancyBox#content10 .inBox .btnBox button span {
+  display: block;
+  font-size: 1rem;
+}
+.welcome .contentFancyBox#content10 .inBox .btnBox button:hover {
+  background: #145ca4;
+}
+.welcome .mobileBtn {
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  width: 60px;
+  height: 60px;
+  z-index: 90;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+  margin-left: 40px;
+  padding: 0;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border-radius: 5px;
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .welcome .mobileBtn {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    display: block;
+  }
+}
+.welcome .mobileBtn span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 20px;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.welcome .mobileBtn span:nth-of-type(1) {
+  transform: translate(-50%, calc(-50% - 7px));
+}
+.welcome .mobileBtn span:nth-of-type(3) {
+  transform: translate(-50%, calc(-50% + 7px));
+}
+.welcome .mobileBtn.active {
+  transform: scale(0.6);
+  top: 3px;
+}
+.welcome .mobileBtn.active span {
+  background: #fff;
+}
+.welcome .mobileBtn.active span:nth-of-type(1) {
+  width: 40px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.welcome .mobileBtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.welcome .mobileBtn.active span:nth-of-type(3) {
+  width: 40px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.welcome .mobileBtn .text {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+}
+
+.fancybox__backdrop {
+  background: rgba(24, 24, 27, 0.5) !important;
+}/*# sourceMappingURL=welcome.css.map */

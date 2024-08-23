@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/welcome.css" />
+    <link rel="stylesheet" href="plugins/fancybox/fancybox.css" />
+    <title>Document</title>
+    <!-- <style>
+      .welcome {
+        height: auto;
+      }
+      main {
+        display: none;
+      }
+      .contentFancyBox {
+        display: block !important;
+      }
+    </style> -->
+  </head>
+  <body class="welcome">
+    <button type="button" class="mobileBtn"><span></span><span></span><span></span></button>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="#"><img src="images/welcome/logo.png" alt="" /></a>
+        </div>
+        <div class="menuBox">
+          <ul>
+            <li><a href="#">進入首頁</a></li>
+            <li><a href="#">意見信箱</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">兒童版</a></li>
+            <li><a href="#">雲端發票專區</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="canvas-container"></div>
+      <div class="container">
+        <div class="infoBox">
+          <div class="info">
+            <div class="box">
+              <div class="title">
+                Smart &<br />
+                Heartwarming Service
+              </div>
+              <div class="zhTitle"><span>智慧創新</span>服務暖心</div>
+            </div>
+            <div class="box">
+              <p>快捷服務</p>
+              <form class="formBox" action="">
+                <div class="selectBox">
+                  <select name="" id="">
+                    <option value="視訊發證補單">視訊發證補單</option>
+                  </select>
+                </div>
+                <div class="selectBox">
+                  <select name="" id="">
+                    <option value="宅配通">宅配通</option>
+                  </select>
+                </div>
+                <button class="submit" type="submit">前往</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="out">
+          <div class="scrollPicBox">
+            <div class="outer">
+              <div class="box">
+                <div id="scrollImgs">
+                  <div class="item content1">
+                    <button class="contentBox" data-fancybox data-src="#content1" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="pic"><img src="images/welcome/pic1.jpg" alt="" /></div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="item content2">
+                    <button class="contentBox" data-fancybox data-src="#content2" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="pic"><img src="images/welcome/pic2.jpg" alt="" /></div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="item content3">
+                    <button class="contentBox" data-fancybox data-src="#content3" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="pic"><img src="images/welcome/pic3.jpg" alt="" /></div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="item content4">
+                    <button class="contentBox" data-fancybox data-src="#content4" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="pic"><img src="images/welcome/pic4.jpg" alt="" /></div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="item content5">
+                    <button class="contentBox" data-fancybox data-src="#content5" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="pic"><img src="images/welcome/pic5.jpg" alt="" /></div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div class="item content6">
+                    <button class="contentBox" data-fancybox data-src="#content6" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="content">
+                            <div class="contentInfoBox">
+                              <div class="info center">
+                                <p style="font-size: clamp(18px, 3vw, 60px); color: #d93c00; white-space: nowrap; font-weight: bold"><span style="font-size: clamp(14px, 2vw, 30px); margin-right: 10px">\</span>地價稅開徵<span style="font-size: clamp(14px, 2vw, 30px); margin-left: 10px">/</span></p>
+
+                                <p style="font-size: clamp(20px, 3.2vw, 70px)"><span style="font-size: clamp(12px, 1vw, 24px); width: 80%; display: block">開徵結止日期</span>11/1-11/30</p>
+                                <div class="btnBox">
+                                  <div style="background: #008941">立即線上查繳稅</div>
+                                  <div>行動支付繳稅影片</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="contentPicBox">
+                              <div class="pic"><img src="images/welcome/p6.png" alt="" /></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <!-- <div class="item content7">
+                  <button class="contentBox" data-fancybox data-src="#content6" href="#">
+                    <div class="outerBox">
+                      <div class="inBox">
+                        <div class="pic"><img src="images/welcome/pic7.jpg" alt="" /></div>
+                      </div>
+                    </div>
+                  </button>
+                </div> -->
+                  <!-- <div class="item content8">
+                  <button class="contentBox" data-fancybox data-src="#content6" href="#">
+                    <div class="outerBox">
+                      <div class="inBox">
+                        <div class="pic"><img src="images/welcome/pic8.jpg" alt="" /></div>
+                      </div>
+                    </div>
+                  </button>
+                </div> -->
+                  <!-- <div class="item content9">
+                  <button class="contentBox" data-fancybox data-src="#content6" href="#">
+                    <div class="outerBox">
+                      <div class="inBox">
+                        <div class="pic"><img src="images/welcome/pic9.jpg" alt="" /></div>
+                      </div>
+                    </div>
+                  </button>
+                </div> -->
+
+                  <div class="item content10">
+                    <button class="contentBox" data-fancybox data-src="#content5" href="#">
+                      <div class="outerBox">
+                        <div class="inBox">
+                          <div class="pic"><img src="images/welcome/pic10.jpg" alt="" /></div>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="contentFancyBox" id="content1">
+      <div class="outerBox">
+        <a href="#">
+          <div class="inBox">
+            <div class="box">
+              <div class="pic"><img src="images/welcome/c1_t.png" alt="" /></div>
+              <div class="pic"><img src="images/welcome/c1_p.png" alt="" /></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content2">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="title">分局服務</div>
+          <div class="box">
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="btnBox">
+                  <button><img src="images/welcome/c2_i.png" alt="" />文心分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />豐原分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />大屯分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />沙鹿分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />民權分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />東山分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />大智分局</button>
+                  <button><img src="images/welcome/c2_i.png" alt="" />東勢分局</button>
+                </div>
+              </div>
+            </div>
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/p2.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content3">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="title">分局服務</div>
+          <div class="box">
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/p3.png" alt="" /></div>
+            </div>
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="btnBox">
+                  <button><img src="images/welcome/c3_i.png" alt="" />行動支付繳稅</button>
+                  <button><img src="images/welcome/c3_i2.png" alt="" />金融機構繳稅</button>
+                  <button><img src="images/welcome/c3_i3.png" alt="" />信用卡繳稅</button>
+                  <button><img src="images/welcome/c3_i4.png" alt="" />自動櫃員機繳稅</button>
+                  <button><img src="images/welcome/c3_i5.png" alt="" />臨櫃刷卡繳稅</button>
+                  <button><img src="images/welcome/c3_i6.png" alt="" />便利商店繳稅</button>
+                  <button><img src="images/welcome/c3_i7.png" alt="" />約定轉帳繳稅</button>
+                  <button><img src="images/welcome/c3_i8.png" alt="" />晶片金融卡網路繳稅</button>
+                  <button><img src="images/welcome/c3_i9.png" alt="" />電子支付帳戶繳稅</button>
+                  <button><img src="images/welcome/c3_i10.png" alt="" />活期(儲蓄)存款帳戶繳稅</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content4">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="title">書表下載區</div>
+          <div class="box">
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="btnBox">
+                  <button><img src="images/welcome/c4_i.png" alt="" />房屋所有人無租賃關係申明書</button>
+                  <button><img src="images/welcome/c4_i.png" alt="" />設籍人無租賃關係申明書</button>
+                  <button><img src="images/welcome/c4_i.png" alt="" />房屋納稅義務人名義變更申請書</button>
+                  <button><img src="images/welcome/c4_i.png" alt="" />房屋稅減免、更正、註銷申請書</button>
+                  <button><img src="images/welcome/c4_i.png" alt="" />房屋新、增、改建稅籍及使用情形申報書</button>
+                </div>
+              </div>
+            </div>
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/p4.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content5">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="title">書表下載區</div>
+          <div class="box">
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/p5.png" alt="" /></div>
+            </div>
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="btnBox">
+                  <button>
+                    <div class="pic"><img src="images/welcome/c5_i.png" alt="" /></div>
+                    <span>案件進度查詢-本局</span>
+                  </button>
+                  <button>
+                    <div class="pic"><img src="images/welcome/c5_i2.png" alt="" /></div>
+                    <span>繳稅方式及紀錄查詢</span>
+                  </button>
+                  <button>
+                    <div class="pic"><img src="images/welcome/c5_i3.png" alt="" /></div>
+                    <span>房屋稅籍編號查詢</span>
+                  </button>
+                  <button>
+                    <div class="pic"><img src="images/welcome/c5_i4.png" alt="" /></div>
+                    <span>臺中市地方稅退稅查詢</span>
+                  </button>
+                  <button>
+                    <div class="pic"><img src="images/welcome/c5_i5.png" alt="" /></div>
+                    <span>委託轉帳、電子稅單線上查詢</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content6">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="box">
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="title"><span>\</span>牌照稅自用<span>/</span></div>
+                <p><span>開徵結止日期</span>11/1-11/30</p>
+                <div class="btnBox">
+                  <a href="#">立即線上查繳稅</a>
+                  <a href="#">行動支付繳稅影片</a>
+                </div>
+              </div>
+            </div>
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/p6.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content7">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="box">
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="title"><span>\</span>地價稅開徵<span>/</span></div>
+                <p><span>開徵結止日期</span>11/1-11/30</p>
+                <div class="btnBox">
+                  <a href="#">立即線上查繳稅</a>
+                  <a href="#">行動支付繳稅影片</a>
+                </div>
+              </div>
+            </div>
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/c6_p.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content8">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="box">
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="title"><span>\</span>房屋稅開徵<span>/</span></div>
+                <p><span>開徵結止日期</span>11/1-11/30</p>
+                <div class="btnBox">
+                  <a href="#">立即線上查繳稅</a>
+                  <a href="#">行動支付繳稅影片</a>
+                </div>
+              </div>
+            </div>
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/c7_p.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content9">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="title">稅額試算</div>
+          <div class="box">
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="btnBox">
+                  <button><img src="images/welcome/c8_i.png" alt="" />使用牌照稅</button>
+                  <button><img src="images/welcome/c8_i2.png" alt="" />地價稅</button>
+                  <button><img src="images/welcome/c8_i3.png" alt="" />房屋稅</button>
+                  <button><img src="images/welcome/c8_i4.png" alt="" />娛樂稅</button>
+                  <button><img src="images/welcome/c8_i5.png" alt="" />契稅</button>
+                  <button><img src="images/welcome/c8_i6.png" alt="" />土地增值稅</button>
+                  <button><img src="images/welcome/c8_i7.png" alt="" />印花稅</button>
+                </div>
+              </div>
+            </div>
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/c8_p.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentFancyBox" id="content10">
+      <div class="outerBox">
+        <div class="inBox">
+          <div class="title">線上申辦</div>
+          <div class="box">
+            <div class="contentPicBox">
+              <div class="pic"><img src="images/welcome/c9_p.png" alt="" /></div>
+            </div>
+            <div class="contentInfoBox">
+              <div class="info center">
+                <div class="btnBox">
+                  <button><img src="images/welcome/c8_i3.png" alt="" />房屋稅</button>
+                  <button><img src="images/welcome/c8_i2.png" alt="" />地價稅</button>
+                  <button><img src="images/welcome/c8_i.png" alt="" />使用牌照稅</button>
+                  <button><img src="images/welcome/c8_i6.png" alt="" />土地增值稅</button>
+                  <button><img src="images/welcome/c8_i5.png" alt="" />契稅</button>
+                  <button><img src="images/welcome/c8_i7.png" alt="" />印花稅</button>
+                  <button>
+                    <img src="images/welcome/c9_i.png" alt="" />
+                    <div class="info">其他<span>無欠稅證明、轉帳納稅</span></div>
+                  </button>
+                  <button><img src="images/welcome/c9_i2.png" alt="" />財產資料、個人所得資料</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="plugins/jquery-3.7.1.min.js"></script>
+    <script src="plugins/pixi.min.js"></script>
+    <script src="plugins/TweenMax.min.js"></script>
+    <script src="plugins/PixiPlugin.min.js"></script>
+    <script src="plugins/fancybox/fancybox.umd.js"></script>
+    <script src="plugins/welcome.js"></script>
+  </body>
+</html>
