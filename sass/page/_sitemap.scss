@@ -4,7 +4,7 @@
     margin: 0px auto 1em;
     @extend %clearfix;
     p {
-        font-size: 0.813em;
+        // font-size: 0.813em;
         kbd {
             border: 1px solid #aaa;
             background: transparent;
@@ -17,11 +17,14 @@
         }
     }
     .accesskeyDefine {
-        padding: 1em 2em;
-        background: #eee;
+        padding: 2em 4em;
+        background: #e5f4f9;
         border-radius: 6px;
         li {
             margin-bottom: 0.2em;
+        }
+        + p{
+            line-height: 2.2;
         }
     }
 }
@@ -29,8 +32,9 @@
 $sitemapLength: 4;
 $sitemapWidth: calc(100% / $sitemapLength);
 .cascading {
-    border-top: 1px solid #ccc;
-    @include gutter;
+    // border-top: 1px solid #ccc;
+    // @include gutter;
+    // background: pink;
     box-sizing: border-box;
     ul {
         @include li-reset;

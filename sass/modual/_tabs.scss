@@ -392,21 +392,22 @@
   // ----------------------------------- Lize
   &._list{
     .tabBtn{
-        background: transparent;
-        border-radius: 40px;
-
-        &:hover, &:focus-visible{
-          background: #eee;
-        }
-
-        &.active {
-          background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
-          color: #fff;
-        }
+      background: transparent;
+      border-radius: 40px;
+      font-size: 1.125em;
+      font-weight: bold;
+      &:hover, &:focus-visible{
+        background: #e6e6e6;
       }
+      &.active {
+        background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+        color: #fff;
+      }
+    }
     .tabItems{
       background: #fff;
       border-radius: 40px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
     .tabContent{
       padding: 1em 4em;
@@ -442,12 +443,38 @@
         }
       }
     }
+    @include screen('mobile') {
+      .tabContent{
+        margin-bottom: 0;
+        padding: .5em 0;
+
+        .modeBBtn{
+          border-radius: 40px;
+        }
+      }
+    }
   }
   &._slider{
     .tabItems{
       justify-content: center;
+      width: 70%;
+      margin: auto;
+      background: #fff;
+      border-radius: 40px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       .tabBtn{
-        max-width: 35%;
+        max-width: 50%;
+        background: transparent;
+        border-radius: 40px;
+        font-size: 1.125em;
+        font-weight: bold;
+        &:hover, &:focus-visible{
+          background: #e6e6e6;
+        }
+        &.active {
+          background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+          color: #fff;
+        }
       }
     }
     // .tabContent {

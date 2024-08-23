@@ -17,7 +17,6 @@
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
-
   <body>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
@@ -923,7 +922,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">要套文章標題</h2>
+              <h2 class="title">復查決定書案例查詢</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -968,41 +967,224 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- NP_一般節點頁 -->
-            <section class="sub_menu _default">
-              <ul>
-                <li>
-                  <a href="#">活動訊息</a>
-                </li>
-                <li>
-                  <a href="#">活動花絮</a>
-                </li>
-                <li>
-                  <a href="#">電子書專區</a>
-                </li>
-                <li>
-                  <a href="#">中稅影音小舖</a>
-                </li>
-                <li>
-                  <a href="#">雲端發票線上捐</a>
-                </li>
-                <li>
-                  <a href="#">雲端發票宣導專區</a>
-                </li>
-                <li>
-                  <a href="#">幸福找點稅Podcast</a>
-                </li>
-                <li>
-                  <a href="#">輕鬆稅學堂</a>
-                </li>
-                <li>
-                  <a href="#">節點9</a>
-                </li>
-                <li>
-                  <a href="#">節點10</a>
-                </li>
-              </ul>
+            <!-- LP -->
+            <section class="lp">
+              <!-- filter -->
+              <div class="filter">
+                <div class="flex-form form_inline">
+                  <!-- 排序標準 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">排序項目：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">稅目</option>
+                        <option value="">條號</option>
+                        <option value="">年月份</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 年度 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">年度：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">全部</option>
+                        <option value="">113年度</option>
+                        <option value="">112年度</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 稅目 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">稅目：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">請選擇</option>
+                        <option value="">項目A</option>
+                        <option value="">項目Ｂ</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 條號 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">條號：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">請選擇</option>
+                        <option value="">項目A</option>
+                        <option value="">項目Ｂ</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="flex-form">
+                  <div class="form_grp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
+                  <input name="" type="submit" value="查詢" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
+              </div>
+              <!-- 案件項目 -->
+              <section class="case">
+                <!-- 標題項目 -->
+                <div class="_head">
+                  <h3>地價稅1</h3>
+                  <div class="_inner">
+                    <div class="_info">
+                      <span>土地稅法第10條</span>
+                      <time datetime="">112-01</time>
+                    </div>
+                    <div class="_tag">
+                      <span>土地稅法</span>
+                      <span>地價稅</span>
+                      <span>農產品</span>
+                      <span>農業經營</span>
+                      <span>一二三四五六七</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 案情內容 -->
+                <div class="_content">
+                  <div class="_item">
+                    <h4>案情概述</h4>
+                    <p>系爭土地供存放農業工具，作為曬場及農產品集貨場等用途，與農業經營不可分離，應屬課徵田賦之土地云云。</p>
+                  </div>
+                  <div class="_item">
+                    <h4>詳細內容</h4>
+                    <div>
+                      <p><a href="#">文字連結</a>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分，申請復查，本局決定如下：主文維持原處分。事實申請人所有本市○區○段○、○地號等 2 筆土地，宗地面積分別為 2,776 及 3,280 平方公尺(以下用㎡），原課徵田賦（目前停徵），嗣查於 107 年以前面積 806 及 881 ㎡部分未作農業使用，不符合課徵田賦之要件，本局爰依稅捐稽徵法第 21 條規定及財政部 79 年 6 月 18 日台財稅第 790135202 號函釋規定，自實際變更使用之次年期起改按一般用地稅率計課，並補徵核課期間內107 年至 110 年之地價稅款， 107 年至 108 年每年各為新臺幣(以下同)3,264元，109 年及110年每年各為 3,219 元，合計 1 萬2,966元。理由一、按「稅捐之核課期間，依下列規定……應由稅捐稽徵機關依稅籍底 ... ...</p>
+                      <ul>
+                        <li>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分</li>
+                        <li>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分</li>
+                        <li>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分</li>
+                      </ul>
+                      <ol>
+                        <li>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分</li>
+                        <li>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分</li>
+                        <li>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="btn_grp">
+                    <a href="#" class="sub_more">更多詳細內容</a>
+                  </div>
+                </div>
+              </section>
+              <section class="case">
+                <!-- 標題項目 -->
+                <div class="_head">
+                  <h3>地價稅2</h3>
+                  <div class="_inner">
+                    <div class="_info">
+                      <span>土地稅法第10條</span>
+                      <time datetime="">112-01</time>
+                    </div>
+                    <div class="_tag">
+                      <span>土地稅法</span>
+                      <span>地價稅</span>
+                      <span>農產品</span>
+                      <span>農業經營</span>
+                      <span>一二三四五六七</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 案情內容 -->
+                <div class="_content">
+                  <div class="_item">
+                    <h4>案情概述</h4>
+                    <p>系爭土地供存放農業工具，作為曬場及農產品集貨場等用途，與農業經營不可分離，應屬課徵田賦之土地云云。</p>
+                  </div>
+                  <div class="_item">
+                    <h4>詳細內容</h4>
+                    <div>
+                      <p><a href="#">文字連結</a>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分，申請復查，本局決定如下：主文維持原處分。事實申請人所有本市○區○段○、○地號等 2 筆土地，宗地面積分別為 2,776 及 3,280 平方公尺(以下用㎡），原課徵田賦（目前停徵），嗣查於 107 年以前面積 806 及 881 ㎡部分未作農業使用，不符合課徵田賦之要件，本局爰依稅捐稽徵法第 21 條規定及財政部 79 年 6 月 18 日台財稅第 790135202 號函釋規定，自實際變更使用之次年期起改按一般用地稅率計課，並補徵核課期間內107 年至 110 年之地價稅款， 107 年至 108 年每年各為新臺幣(以下同)3,264元，109 年及110年每年各為 3,219 元，合計 1 萬2,966元。理由一、按「稅捐之核課期間，依下列規定……應由稅捐稽徵機關依稅籍底 ... ...</p>
+                    </div>
+                  </div>
+                  <div class="btn_grp">
+                    <a href="#" class="sub_more">更多詳細內容</a>
+                  </div>
+                </div>
+              </section>
+              <section class="case">
+                <!-- 標題項目 -->
+                <div class="_head">
+                  <h3>地價稅</h3>
+                  <div class="_inner">
+                    <div class="_info">
+                      <span>土地稅法第10條</span>
+                      <time datetime="">112-01</time>
+                    </div>
+                    <div class="_tag">
+                      <span>土地稅法</span>
+                      <span>地價稅</span>
+                      <span>農產品</span>
+                      <span>農業經營</span>
+                      <span>一二三四五六七</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 案情內容 -->
+                <div class="_content">
+                  <div class="_item">
+                    <h4>案情概述</h4>
+                    <p>系爭土地供存放農業工具，作為曬場及農產品集貨場等用途，與農業經營不可分離，應屬課徵田賦之土地云云。</p>
+                  </div>
+                  <div class="_item">
+                    <h4>詳細內容</h4>
+                    <div>
+                      <p><a href="#">文字連結</a>111申請人因補徵 107 年至 110 年地價稅事件，不服本局所為處分，申請復查，本局決定如下：主文維持原處分。事實申請人所有本市○區○段○、○地號等 2 筆土地，宗地面積分別為 2,776 及 3,280 平方公尺(以下用㎡），原課徵田賦（目前停徵），嗣查於 107 年以前面積 806 及 881 ㎡部分未作農業使用，不符合課徵田賦之要件，本局爰依稅捐稽徵法第 21 條規定及財政部 79 年 6 月 18 日台財稅第 790135202 號函釋規定，自實際變更使用之次年期起改按一般用地稅率計課，並補徵核課期間內107 年至 110 年之地價稅款， 107 年至 108 年每年各為新臺幣(以下同)3,264元，109 年及110年每年各為 3,219 元，合計 1 萬2,966元。理由一、按「稅捐之核課期間，依下列規定……應由稅捐稽徵機關依稅籍底 ... ...</p>
+                    </div>
+                  </div>
+                  <div class="btn_grp">
+                    <a href="#" class="sub_more">更多詳細內容</a>
+                  </div>
+                </div>
+              </section>
             </section>
+            <!-- Pagination -->
+            <div class="pagination">
+              <form action="">
+                <div class="form_inline">
+                  <div class="total">
+                    共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                    <select name="" id="" aria-label="每頁顯示">
+                      <option value="">10</option>
+                      <option value="">20</option>
+                      <option value="">30</option>
+                      <option value="">40</option>
+                    </select>
+                    筆， <input type="button" value="確定" class="btn btn-submit" />
+                  </div>
+                </div>
+              </form>
+              <ul class="page">
+                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+              </ul>
+            </div>
             <!-- 內容區 End -->
           </div>
         </div>

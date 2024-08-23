@@ -2,9 +2,28 @@
 $(function () {
 
   // 熱門活動 頁籤切換，次項內容 寬度調整
-  $('.activeZone .tabBtn').click(function() {
-    $('.activeSlider').slick('refresh');
+  // $('.activeZone .tabBtn').click(function() {
+  //   $('.activeSlider').slick('refresh');
+  // })
+
+  // 重要訊息 _toptip
+  $('._toptip .btn._close').click(function(){
+    $(this).parents('._toptip').fadeOut();
   })
+
+  $('._toptip .btn._slideup').click(function(){
+    if ($(this).hasClass('_hide')) {
+      $(this).removeClass('_hide');
+      $('.btn._slideup').html('收合/CLOSE');
+      $('.btn._slideup').attr('name', '收合選單/CLOSE');
+    } else {
+      $(this).addClass('_hide');
+      $('.btn._slideup').html('展開/OPEN');
+      $('.btn._slideup').attr('name', '展開內容/OPEN');
+    }
+    $(this).siblings('._text').fadeToggle();
+  })
+
   // 首頁輪播
   $('.mpSlider').slick({
     mobileFirst: true,
@@ -89,9 +108,17 @@ $(function () {
         },
       },
       {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
         breakpoint: 575,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: true,
         },
@@ -101,45 +128,45 @@ $(function () {
 
   // activeSlider
   // 熱門活動 頁籤塞slider
-  $('.activeSlider').slick({
-    mobileFirst: true,
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: false,
-    arrow: true,
-    lazyLoaded: true,
-    lazyLoad: 'ondemand',
-    ease: 'ease',
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-    ],
-  });
+  // $('.activeSlider').slick({
+  //   mobileFirst: true,
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   arrow: true,
+  //   lazyLoaded: true,
+  //   lazyLoad: 'ondemand',
+  //   ease: 'ease',
+  //   responsive: [
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         arrows: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         arrows: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 575,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         arrows: true,
+  //       },
+  //     },
+  //   ],
+  // });
 
   // 影片輪播
   $('.ytSlider').slick({
@@ -416,13 +443,99 @@ $(function () {
   // }
 });
 
-// tab功能
-tabFunction({
-  target: '.tabSet',
-  openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
-  openSwitch: true, // 是否可開合/切換
-  autoClose: true, // 自動關閉其他開啟內容
-  modeSwitch: true, // 預設模式自動切換，尺寸以上tab功能，尺寸以下手風琴功能
-  width: 767, // 尺寸以上tab功能，尺寸以下手風琴功能
-  index: 0, // 預設開啟第幾個
-});
+// 熱門活動 頁籤＋swiper
+(function () {
+  const activeSliderS1 = new Swiper('.activeSliderS1 .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: false,
+    observer: true,
+    observeParents: true,
+    // 切換點
+    pagination: {
+      el: '.activeSliderS1 .swiperDots',
+      bulletElement: 'button',
+      clickable: true,
+    },
+    // 切換箭頭
+    navigation: {
+      nextEl: '.activeSliderS1 .nextSlider', //自行設定樣式
+      prevEl: '.activeSliderS1 .prevSlider', //自行設定樣式
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+    },
+    on: {
+      init: cleanButtonAttrUse(),
+      observerUpdate: cleanButtonAttrUse(),
+      setTranslate: cleanButtonAttrUse(),
+      keyPress: cleanButtonAttrUse(),
+      slideChange: cleanButtonAttrUse(),
+    },
+  });
+
+  const activeSliderS2 = new Swiper('.activeSliderS2 .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: false,
+    observer: true,
+    observeParents: true,
+    // 切換點
+    pagination: {
+      el: '.activeSliderS2 .swiperDots',
+      bulletElement: 'button',
+      clickable: true,
+    },
+    // 切換箭頭
+    navigation: {
+      nextEl: '.activeSliderS2 .nextSlider', //自行設定樣式
+      prevEl: '.activeSliderS2 .prevSlider', //自行設定樣式
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+    },
+    on: {
+      init: cleanButtonAttrUse(),
+      observerUpdate: cleanButtonAttrUse(),
+      setTranslate: cleanButtonAttrUse(),
+      keyPress: cleanButtonAttrUse(),
+      slideChange: cleanButtonAttrUse(),
+    },
+  });
+  let allTarget = document.querySelectorAll('.tabContentGroup a,.tabContentGroup button');
+
+  allTarget.forEach((item, i) => {
+    item.addEventListener('keyup', function () {
+      cleanButtonAttrUse();
+    });
+  });
+
+  function cleanButtonAttrUse() {
+    document.querySelectorAll('.nextSlider, .prevSlider').forEach(function (button) {
+      button.removeAttribute('tabindex');
+      button.removeAttribute('disabled');
+      button.classList.remove('swiper-button-disabled');
+      button.classList.remove('swiper-button-lock');
+    });
+  }
+  // tab功能
+  tabFunction({
+    target: '.tabSet',
+    openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
+    openSwitch: true, // 是否可開合/切換
+    autoClose: true, // 自動關閉其他開啟內容
+    modeSwitch: true, // 預設模式自動切換，尺寸以上tab功能，尺寸以下手風琴功能
+    width: 767, // 尺寸以上tab功能，尺寸以下手風琴功能
+    index: 0, // 預設開啟第幾個
+  });
+})();

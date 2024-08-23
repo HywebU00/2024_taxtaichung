@@ -136,7 +136,8 @@
 }
 
 .slick-prev,
-.slick-next {
+.slick-next,
+.swiperArrow {
   font-size: 0em;
   line-height: 0em;
   position: absolute;
@@ -300,7 +301,6 @@ ul.slick-dots{
   width: 100%;
   padding-bottom: 3em;
   @include gutter(0);
-
   .img-container {
     @include aspect-ratio(5,
       2); //PC版比例
@@ -309,6 +309,13 @@ ul.slick-dots{
       @include aspect-ratio(5,
         3); //Mobile版比例
     }
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 72px !important;
+    height: 72px !important;
+    border-radius: 50%;
   }
 
   .slick-prev {
@@ -460,6 +467,16 @@ ul.slick-dots{
 
     &:hover, &:focus-visible{
       background: #eee;
+    }
+  }
+
+  @include screen('mobile'){
+    @include gutter(80px);
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next{
+      right: 0;
     }
   }
 }

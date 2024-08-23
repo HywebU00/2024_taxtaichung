@@ -25,11 +25,12 @@ div.tag{
             flex:0 0 auto;
             a{
                 display:block;
-                font-size:.813em;
+                // font-size:.813em;
                 @include aSetting_nocolor;
                 border-radius:4px;
                 border:1px solid #DDD;
-                padding:.2em .5em;
+                padding:.35em 1.2em
+                
             }
         }
     }

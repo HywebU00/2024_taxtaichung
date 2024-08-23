@@ -14,18 +14,18 @@
         border: 1px solid #CCC;
         padding: .4em 1em;
         display: block;
-        color: #333;
+        color: #333 !important;
         box-sizing: border-box;
         border-radius:4px;
         &:hover,
         &:focus {
-            color: #FFF;
+            color: #FFF !important;
             background: darken($primaryColor, 15);
             border: 1px solid darken($primaryColor, 15);
             box-shadow: none;
         }
         &.active {
-            color: #FFF;
+            color: #FFF !important;
             @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
         }
         span {

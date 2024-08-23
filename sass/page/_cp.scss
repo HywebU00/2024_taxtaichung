@@ -8,26 +8,67 @@ h2.title {
 h2.title{
     border-bottom: 2px solid #000;
     padding-bottom: .5em;
+    background: url(../images/icon_h2title.png) left 50% no-repeat;
+    padding-left: 52px;
 }
 .title_mixBox{
     display: flex;
     justify-content: space-between;
     padding: 1em 0;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     border-bottom: 2px solid #000;
     h2.title{
         border-bottom: none;
         padding-bottom: 0;
         margin: 0;
+        font-size: 2em;
     }
     .function_panel{
         margin: 0;
         padding: 0;
+        flex-wrap: nowrap;
     }
+    @include screen('mobile') {
+        flex-wrap: wrap;
+        h2.title{
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        .function_panel{
+            width: 100%;
+        }
+    }
+}
+
+.tip{
+    // cp頁提醒欄
+    // background: $importantColor;
+    background: #e5f4f9;
+    padding: 2em 3em;
+    border-radius: 4px;
+    p{
+        margin: 10px 0;
+    }
+}
+
+._sticky_rt{
+    // cp 內容區塊右上方，btn 切換繳稅方式
+    position: absolute;
+    right: 0;
+    top: -12px;
+}
+
+._content{
+    // 行動支付繳稅 的內容區塊
+    background: #f9f9f9;
+    padding: 2em;
+    margin-bottom: 2em;
 }
 
 // .tt{ color: #222; }
 .cp {
+    position: relative;
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -336,20 +377,23 @@ h2.title{
 }
 
 .publish_info {
-    font-size: 0.875em;
+    font-size: 0.875em !important;
     line-height: 1.5em;
     list-style: none;
     margin: 0 0 .7em 0;
-    border-left: solid 5px $primaryColor;
-    padding: 0.8em 1.5em 0.8em;
-    background: #F2F2F2;
+    // border-left: solid 5px $primaryColor;
+    padding: 0.5em 0;
+    // background: #F2F2F2;
     display: flex;
     flex-wrap: wrap;
     @extend %clearfix;
     box-sizing: border-box;
     li {
-        flex: 1 1 calc(100% / 3);
+        // flex: 1 1 calc(100% / 3);
+        font-family: georgia;
+        flex: 0 1 auto;
         margin-bottom: .5em;
+        padding-right: 2em;
         @include screen('tablet') {
             flex: 1 1 calc(100% / 2);
         }

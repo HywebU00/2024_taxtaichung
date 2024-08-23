@@ -105,6 +105,7 @@ $btn-radius:.2em;
 .btn-submit {
     // @extend %btn;
     @include btn_setting(lighten($primaryColor, 5), #FFF);
+    background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
 }
 .btn-reset {
     // @extend %btn;
@@ -191,6 +192,39 @@ $btn-radius:.2em;
     &:hover, &:focus-visible{
         background: url(../images/icon/icon_rss-light.svg) 50% 50% no-repeat;
         background-size: contain;
+    }
+}
+
+// 切換去ＯＯ頁的按鈕
+.btn-shift{
+    background: $primaryColor!important;
+    color: #fff !important;
+    border: solid 1px $primaryColor!important;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+        background: darken($primaryColor, 10)!important;
+        border: solid 1px $primaryColor!important;
+
+    }
+}
+
+// filter 咒胎的 search btn
+._gosearch{
+    // background: url(../images/icon/icon_search2.svg) left 50% no-repeat;
+    background: url(../images/icon_search2.svg) 10px 50% no-repeat $primaryColor;
+    background-size: 28px 28px;
+    color: #fff !important;
+    padding-left: 42px;
+    border: solid 1px $primaryColor!important;
+
+    &:hover,
+    &:focus {
+        background: url(../images/icon_search2.svg) 10px 50% no-repeat darken($primaryColor, 10);
+        background-size: 28px 28px;
+        border: solid 1px $primaryColor!important;
+
     }
 }
 

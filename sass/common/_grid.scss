@@ -1,37 +1,38 @@
 /////////////////////////////////////////////////////////以下為demo範例///
 // 首頁區塊設定
-.demosection {
-    padding: 0em 0 3em;
-    text-align: center;
-    [class^='col'] {
-        border: 1px solid $color-blue;
-        background: lighten($color-blue, 30);
-        min-height: 200px;
-        color: darken($color-word, 5);
-        text-align: center;
-        line-height: 200px;
-        font-size: 1.5em;
-        font-weight: bold;
-        box-sizing: border-box;
-    }
-    &+.demosection {
-        padding-top: 2em;
-    }
-    &+.bg {
-        background: lighten($primaryColor, 50);
-    }
-    &.full {
-        .container {
-            max-width: 100% !important;
-        }
-    }
-}
+// .demosection {
+//     padding: 0em 0 3em;
+//     text-align: center;
+//     [class^='col'] {
+//         border: 1px solid $color-blue;
+//         background: lighten($color-blue, 30);
+//         min-height: 200px;
+//         color: darken($color-word, 5);
+//         text-align: center;
+//         line-height: 200px;
+//         font-size: 1.5em;
+//         font-weight: bold;
+//         box-sizing: border-box;
+//     }
+//     &+.demosection {
+//         padding-top: 2em;
+//     }
+//     &+.bg {
+//         background: lighten($primaryColor, 50);
+//     }
+//     &.full {
+//         .container {
+//             max-width: 100% !important;
+//         }
+//     }
+// }
 
 // 可用class個別命名
 // 單欄滿版
 .full {
     .container {
         max-width: 100% !important;
+        @include gutter(0);
     }
 }
 

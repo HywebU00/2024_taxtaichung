@@ -19,39 +19,31 @@
         margin: 0;
         box-sizing: border-box
     }
-    body {
-        background: #3099d0;
-        color: #FFF
-    }
     .wrapper {
         width: 100%;
-        max-width: 800px;
+        max-width: 820px;
         margin: 0px auto;
-        padding: 1em
+        padding: 3em 20px 0;
+    }
+    .wrapper img{
+        width: 100%;
     }
     .wrapper h1 {
-        font-size: 10em;
         display: block;
-        float: left;
-        width: 50%;
-        text-align: right;
-        margin: 0 30px 15px 0;
+        font-size: 3em;
+        padding: 1em 0;
+        text-align: center;
         font-family: sans-serif
     }
-    .wrapper h2 {
-        overflow: hidden;
-        font-size: 2em;
-        padding-top: 2em
-    }
-    .wrapper .error {
-        clear: both;
-        text-align: center
-    }
-    .wrapper .error h3 {
+    .wrapper .error h2 {
         margin-bottom: 1em
     }
-    .wrapper .error h3 small {
+    .wrapper .error h2 small {
         display: block
+    }
+    .wrapper .error {
+        text-align: center;
+        line-height: 1.6;
     }
     .btn_grp {
         clear: both;
@@ -64,19 +56,21 @@
         padding: .5em 1.3em;
         margin: 0 1em 1em;
         min-width: 10em;
-        color: #FFF;
+        color: #0f67b1;
+        font-weight: bold;
         text-align: center;
-        border: 1px solid #FFF;
+        border: 1px solid #0f67b1;
         text-decoration: none;
         transition: .3s ease-out
     }
     .btn_grp a:hover, .btn_grp a:focus {
-        background: rgba(0, 0, 0, .2);
+        background: #0f67b1;
+        color: #fff;
         box-shadow: none;
         outline: none
     }
     @media screen and (max-width:767px) {
-        .wrapper h1 {
+        /* .wrapper h1 {
             float: none;
             margin: 10px 0 5px;
             line-height: 1;
@@ -92,24 +86,22 @@
         }
         .wrapper .error {
             margin-top: 1em
-        }
+        } */
     }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>404</h1>
-        <h2>抱歉！<br>找不到您的頁面！</h2>
+        <img src="images/img_404.png" alt="">
+        <h1>抱歉！找不到您的頁面！</h1>
         <div class="error">
-            <h3>您瀏覽的網頁不存在,請再重新檢視 <small>The page you're visiting does not exit, please click.</small>
-            </h3>
-            <h3>將在<span>2</span>秒後自動跳轉到首頁 <small>be redirected to homepage automatically in <span>2</span> seconds.</small>
-            </h3>
+            <h2>您瀏覽的網頁不存在,請再重新檢視 <small>The page you're visiting does not exit, please click.</small></h2>
+            <h2>將在<span>2</span>秒後自動跳轉到首頁 <small>be redirected to homepage automatically in <span>2</span> seconds.</small></h2>
         </div>
         <div class="btn_grp">
-            <a href="javascript:history.back()" class="btn">回上一頁</a>
-            <a href="#" class="btn">回首頁</a>
+            <!-- <a href="javascript:history.back()" class="btn">回上一頁</a> -->
+            <a href="#" class="btn">回官網首頁</a>
         </div>
     </div>
 </body>

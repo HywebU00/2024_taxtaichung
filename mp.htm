@@ -898,9 +898,22 @@
       <!-- main Start -->
       <div id="aC" class="main">
         <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+        <!-- 重要訊息 -->
+        <section class="col-12 _toptip">
+          <div class="container">
+            <h3 class="_title">我是重要訊息 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo eveniet et, animi perspiciatis dolores aperiam quidem non amet? Officia, eius. Aspernatur sit beatae, veritatis quisquam aliquam laborum iste nobis quo.</h3>
+            <div class="_text">
+              我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。
+            </div>
+            <button class="btn _slideup" name="收合訊息/CLOSE" aria-label="收合訊息/CLOSE">收合訊息</button>
+            <button class="btn _close" name="關閉訊息，不再顯示" aria-label="關閉訊息，不再顯示">關閉訊息，不再顯示</button>
+          </div>
+        </section>
         <!-- 右側懸停物件 -->
         <section class="R_side_fixed">
-          <a href="javascript:;"><img src="images/img-side-1-help.png" alt=""><span>地稅小幫手</span></a>
+          <a href="javascript:;" class="_tiptool">
+            <img src="images/img-side-1-help.png" alt=""><span>我是<b>地稅小幫手</b>，很高興為您服務！</span>
+          </a>
           <a href="javascript:;"><img src="images/img-side-2-AI.png" alt=""><span>AI可比</span></a>
           <a href="javascript:;"><img src="images/img-side-3-podcast.png" alt=""><span>官方Line諮詢</span></a>
           <a href="javascript:;"><img src="images/img-side-4-FB.png" alt=""><span>中市稅輕鬆FB</span></a>
@@ -914,20 +927,26 @@
             <div class="mpSlider">
               <div class="img-container">
                 <a href="#">
+                  <img src="images/demo/00.jpg" alt="圖說0" class="cover" />
+                  <!-- <span class="caption">圖說1</span> -->
+                </a>
+              </div>
+              <div class="img-container">
+                <a href="#">
                   <img src="images/demo/01.jpg" alt="圖說1" class="cover" />
-                  <span class="caption">圖說1</span>
+                  <!-- <span class="caption">圖說1</span> -->
                 </a>
               </div>
               <div class="img-container">
                 <a href="#">
                   <img src="images/demo/02.jpg" alt="圖說1" class="cover" />
-                  <span class="caption">圖說2</span>
+                  <!-- <span class="caption">圖說2</span> -->
                 </a>
               </div>
               <div class="img-container">
                 <a href="#">
                   <img src="images/demo/03.jpg" alt="圖說1" class="cover" />
-                  <span class="caption">圖說3</span>
+                  <!-- <span class="caption">圖說3</span> -->
                 </a>
               </div>
             </div>
@@ -1303,67 +1322,11 @@
             </div>
           </div>
         </section>
-        <!-- 6 - 熱門活動 tab 塞 slider -->
+        <!-- 6 - 熱門活動 tab 塞 swiper -->
         <section class="activeZone">
           <div class="container">
             <h3 class="mpSubTitle">熱門活動</h3>
             <div class="tabSet _slider">
-              <!-- 頁籤的上一層父物件要加 role="tablist" -->
-              <!-- <button type="button" class="tabBtn">當期活動</button>
-              <div class="tabContent">
-                <div class="content">
-                  <div class="activeSlider">
-                    <div class="_item">
-                      <div class="img-container">
-                        <img src="images/img-active1.jpg" alt="" class="contain">
-                      </div>
-                      <h4>稅樂搖曳 逍遙夜</h4>
-                      <a href="#" class="_info">活動資訊</a>
-                      <a href="#" class="_winner">得獎名單</a>
-                    </div>
-                    <div class="_item">
-                      <div class="img-container">
-                        <img src="images/img-active2.jpg" alt="" class="contain">
-                      </div>
-                      <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
-                      <a href="#" class="_info">活動資訊</a>
-                      <a href="#" class="_winner">得獎名單</a>
-                    </div>
-                    <div class="_item">
-                      <div class="img-container">
-                        <img src="images/img-active3.jpg" alt="" class="contain">
-                      </div>
-                      <h4>愛在台中 雲端大考驗</h4>
-                      <a href="#" class="_info">活動資訊</a>
-                      <a href="#" class="_winner">得獎名單</a>
-                    </div>
-                    <div class="_item">
-                      <div class="img-container">
-                        <img src="images/img-active1.jpg" alt="" class="contain">
-                      </div>
-                      <h4>稅樂搖曳 逍遙夜</h4>
-                      <a href="#" class="_info">活動資訊</a>
-                      <a href="#" class="_winner">得獎名單</a>
-                    </div>
-                    <div class="_item">
-                      <div class="img-container">
-                        <img src="images/img-active2.jpg" alt="" class="contain">
-                      </div>
-                      <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
-                      <a href="#" class="_info">活動資訊</a>
-                      <a href="#" class="_winner">得獎名單</a>
-                    </div>
-                    <div class="_item">
-                      <div class="img-container">
-                        <img src="images/img-active3.jpg" alt="" class="contain">
-                      </div>
-                      <h4>愛在台中 雲端大考驗</h4>
-                      <a href="#" class="_info">活動資訊</a>
-                      <a href="#" class="_winner">得獎名單</a>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
               <div class="tabItems">
                 <button type="button" class="tabBtn">當期活動</button>
                 <button type="button" class="tabBtn">歷史活動</button>
@@ -1371,99 +1334,109 @@
               <div class="tabContentGroup">
                 <div class="tabContent">
                   <div class="content">
-                    <!-- <a href="#">1</a>
-                    <a href="#">1</a>
-                    <a href="#">1</a> -->
-                    <div class="activeSlider">
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active1.jpg" alt="" class="contain">
+                    <div class="activeSliderS1">
+                      <!--前一筆-->
+                      <button class="prevSlider swiperArrow"></button>
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active1.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>稅樂搖曳 逍遙夜</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active2.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active3.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>愛在台中 雲端大考驗</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active1.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>稅樂搖曳 逍遙夜</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active2.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active3.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>愛在台中 雲端大考驗</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
                         </div>
-                        <h4>稅樂搖曳 逍遙夜</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
                       </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active2.jpg" alt="" class="contain">
-                        </div>
-                        <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active3.jpg" alt="" class="contain">
-                        </div>
-                        <h4>愛在台中 雲端大考驗</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active1.jpg" alt="" class="contain">
-                        </div>
-                        <h4>稅樂搖曳 逍遙夜</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active2.jpg" alt="" class="contain">
-                        </div>
-                        <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active3.jpg" alt="" class="contain">
-                        </div>
-                        <h4>愛在台中 雲端大考驗</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
+                      <!--下一筆-->
+                      <button class="nextSlider swiperArrow"></button>
                     </div>
                   </div>
                 </div>
                 <div class="tabContent">
                   <div class="content">
-                    <!-- <a href="#">2</a>
-                    <a href="#">2</a>
-                    <a href="#">2</a> -->
-                    <div class="activeSlider">
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active3.jpg" alt="" class="contain">
+                    <div class="activeSliderS2">
+                      <!--前一筆-->
+                      <button class="prevSlider swiperArrow"></button>
+                      <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active3.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>1愛在台中 雲端大考驗</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active3.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>2愛在台中 雲端大考驗</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active3.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>3愛在台中 雲端大考驗</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
+                          <div class="_item swiper-slide">
+                            <div class="img-container">
+                              <img src="images/img-active3.jpg" alt="" class="contain" />
+                            </div>
+                            <h4>4愛在台中 雲端大考驗</h4>
+                            <a href="#" class="_info">活動資訊</a>
+                            <a href="#" class="_winner">得獎名單</a>
+                          </div>
                         </div>
-                        <h4>1愛在台中 雲端大考驗</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
                       </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active3.jpg" alt="" class="contain">
-                        </div>
-                        <h4>2愛在台中 雲端大考驗</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active3.jpg" alt="" class="contain">
-                        </div>
-                        <h4>3愛在台中 雲端大考驗</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
-                      <div class="_item">
-                        <div class="img-container">
-                          <img src="images/img-active3.jpg" alt="" class="contain">
-                        </div>
-                        <h4>4愛在台中 雲端大考驗</h4>
-                        <a href="#" class="_info">活動資訊</a>
-                        <a href="#" class="_winner">得獎名單</a>
-                      </div>
+                      <!--下一筆-->
+                      <button class="nextSlider swiperArrow"></button>
                     </div>
                   </div>
                 </div>
@@ -1730,6 +1703,8 @@
     <!-- fancybox -->
     <script src="vendor/fancybox/fancybox.umd.js"></script>
     <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <!-- hyUI -->
     <script src="js/main.js"></script>
     <!-- 客製js -->

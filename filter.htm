@@ -923,7 +923,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">要套文章標題</h2>
+              <h2 class="title">fillters</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -968,40 +968,265 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- NP_一般節點頁 -->
-            <section class="sub_menu _default">
-              <ul>
-                <li>
-                  <a href="#">活動訊息</a>
-                </li>
-                <li>
-                  <a href="#">活動花絮</a>
-                </li>
-                <li>
-                  <a href="#">電子書專區</a>
-                </li>
-                <li>
-                  <a href="#">中稅影音小舖</a>
-                </li>
-                <li>
-                  <a href="#">雲端發票線上捐</a>
-                </li>
-                <li>
-                  <a href="#">雲端發票宣導專區</a>
-                </li>
-                <li>
-                  <a href="#">幸福找點稅Podcast</a>
-                </li>
-                <li>
-                  <a href="#">輕鬆稅學堂</a>
-                </li>
-                <li>
-                  <a href="#">節點9</a>
-                </li>
-                <li>
-                  <a href="#">節點10</a>
-                </li>
-              </ul>
+            <section class="">
+              <!-- filter 1 -->
+              sitemap 的咒胎
+              <div class="filter">
+                <div class="flex-form">
+                  <div class="form_grp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
+                  <input name="" type="submit" value="查詢" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
+              </div>
+
+              <!-- filter 2 -->
+              lp2 的咒胎
+              <div class="filter">
+                <div class="flex-form form_inline">
+                  <!-- 排序標準 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">排序項目：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">稅目</option>
+                        <option value="">條號</option>
+                        <option value="">年月份</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 年度 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">年度：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">全部</option>
+                        <option value="">113年度</option>
+                        <option value="">112年度</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 稅目 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">稅目：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">請選擇</option>
+                        <option value="">項目A</option>
+                        <option value="">項目Ｂ</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 條號 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">條號：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">請選擇</option>
+                        <option value="">項目A</option>
+                        <option value="">項目Ｂ</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="flex-form">
+                  <div class="form_grp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
+                  <input name="" type="submit" value="查詢" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
+              </div>
+
+              <!-- filter 3 -->
+              進階查詢 的咒胎
+              <div class="filter">
+                <div class="flex-form">
+                  <!-- 關鍵字 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
+                    <div class="form_content form_inline">
+                      <select name="" id="fake-legend">
+                        <option value="">AND</option>
+                        <option value="">項目A</option>
+                        <option value="">項目Ｂ</option>
+                      </select>
+                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">不含字詞：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入文字" />
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">日期範圍：</label>
+                    <div class="form_content">
+                      <div class="datepick">
+                        <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                      </div>
+                      <div class="datepick">
+                        <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">站點分類：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">台北市</option>
+                        <option value="">新北市</option>
+                        <option value="">桃園市</option>
+                        <option value="">新竹市</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
+                  <input name="" type="submit" value="查詢" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
+              </div>
+
+              <!-- filter 4 -->
+              我要申辦 的咒胎、多選
+              <div class="filter">
+                <div class="flex-form form-column">
+                  <!-- checkbox -->
+                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                    <label for="fake-legend" class="form_title">稅別(多選)：</label>
+                    <div class="form_content" id="fake-legend">
+                      <div class="check_grp form_inline">
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" checked="" class="btn-check" />
+                          <span>全部</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>地價稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>房屋稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>使用牌照稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>土地增值稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>契稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>印花稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>娛樂稅</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>其他</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>財產資料、個人所得資料</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- checkbox -->
+                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                    <label for="fake-legend" class="form_title">適用憑證(多選)：</label>
+                    <div class="form_content" id="fake-legend">
+                      <div class="check_grp form_inline">
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" checked="" class="btn-check" />
+                          <span>全部</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>免用憑證</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>自然人憑證</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>TW FidO(行動自然人憑證)</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>健保卡</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>晶片金融卡</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>硬體金融憑證</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>醫事憑證 </span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>軟體金融憑證</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span>手機門號+健保卡驗證</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">申辦項目：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入文字" />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
+                  <input name="" type="submit" value="查詢" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
+              </div>
+
             </section>
             <!-- 內容區 End -->
           </div>

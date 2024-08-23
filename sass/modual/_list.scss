@@ -4,66 +4,88 @@
             a {
                 @include aSetting_nocolor;
             }
-            &.date {
-                text-align: center;
-                color: #666;
-                @include screen('mobile') {
-                    text-align: left;
-                }
-            }
-            &.num {
-                text-align: center;
-                color: #666;
-                @include screen('mobile') {
-                    text-align: left;
-                }
-            }
+            // &.date {
+            //     text-align: center;
+            //     color: #666;
+            //     @include screen('mobile') {
+            //         text-align: left;
+            //     }
+            // }
+            // &.num {
+            //     text-align: center;
+            //     color: #666;
+            //     @include screen('mobile') {
+            //         text-align: left;
+            //     }
+            // }
         }
     }
     .list {
         &>ul, ol {
             list-style-type: none;
             padding: 0;
-            border-top: 2px solid $primaryColor;
+            // border-top: 2px solid $primaryColor;
             &>li {
                 padding: 1em 0;
                 border-bottom: 1px solid #DDD;
                 position: relative; // outline: 1px solid blue;
+                .classify{
+                    // 分類
+                    display: flex;
+                    align-items: center;
+                    b{
+                        padding: 0 1em;
+                        font-weight: normal;
+                        font-size: 85%;
+                    }
+                }
                 .tag {
-                    margin-left: 2em;
+                    // margin-left: 2em;
+                    background: #eee;
+                    padding: .35em 1em;
+                    border-radius: 40px;
+                    font-weight: bold;
+                    font-size: .85em;
                 }
                 &>a {
                     display: block;
-                    padding-left: 2em;
+                    // padding-left: 2em;
                     position: relative;
                     line-height: 1.45em;
                     color: $color-word;
                     &:hover {
                         color: $aHover;
                     }
-                    .num {
-                        width: 1.5em;
-                        text-align: right;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        &:after {
-                            content: ".";
-                            display: inline-block;
-                        }
+                    // .num {
+                    //     width: 1.5em;
+                    //     text-align: right;
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0;
+                    //     &:after {
+                    //         content: ".";
+                    //         display: inline-block;
+                    //     }
+                    // }
+                    p{
+                        margin: 1em 0;
+                        font-size: 1.25em;
                     }
                 }
-                span.dept {
-                    display: inline-block;
-                    font-size: .938em;
-                    @include screen("mobile") {
-                        display: block;
-                    }
-                }
+                // span.dept {
+                //     display: inline-block;
+                //     font-size: .938em;
+                //     @include screen("mobile") {
+                //         display: block;
+                //     }
+                // }
                 time {
                     display: block;
-                    color: #AAA;
-                    font-size: .938em;
+                    color: #222;
+                    // font-size: .938em;
+                    font-family: georgia;
+                    border-right: 1px solid #000;
+                    padding-right: 1em;
                 }
             }
         }
