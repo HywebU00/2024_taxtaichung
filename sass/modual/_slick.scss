@@ -433,40 +433,75 @@ ul.slick-dots{
     // background-size: 80%;
     right: 20px;
   }
-  .img-container {
-    background: transparent;
-    img{
-      max-width: 100px;
-      max-height: 100px;
-    }
-    &:focus {
-      &:before {
-        content: "";
-        position: absolute;
-        z-index: 9;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        box-shadow: 0 0px 0px 3px $primaryColor inset;
-      }
-    }
-  }
+  // .img-container {
+  //   background: transparent;
+  //   width: 100px;
+  //   height: 100px;
+  //   margin: auto;
+  //   background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+  //   border-radius: 20px;
+  //   img{
+  //     max-width: 100px;
+  //     max-height: 100px;
+  //   }
+  //   &:focus {
+  //     &:before {
+  //       content: "";
+  //       position: absolute;
+  //       z-index: 9;
+  //       width: 100%;
+  //       height: 100%;
+  //       top: 0;
+  //       left: 0;
+  //       bottom: 0;
+  //       right: 0;
+  //       box-shadow: 0 0px 0px 3px $primaryColor inset;
+  //     }
+  //   }
+  // }
   a {
     text-align: center;
     padding: 1em;
     border-radius: 6px;
+    .img-container {
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+      border-radius: 20px;
+      img{
+        max-width: 100px;
+        max-height: 100px;
+      }
+      &:focus {
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: 9;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          box-shadow: 0 0px 0px 3px $primaryColor inset;
+        }
+      }
+    }
     b{
       color: #222;
       font-size: 1.125em;
       display: block;
       padding-top: 12px;
     }
+    transition: .3s;
 
     &:hover, &:focus-visible{
       background: #eee;
+      .img-container {
+        background: linear-gradient(to right, $importantColor 0%, $importantColor 100%);
+      }
     }
   }
 

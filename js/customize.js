@@ -24,6 +24,28 @@ $(function () {
     $(this).siblings('._text').fadeToggle();
   })
 
+  // lp右欄 高度偵聽
+  $(window).on('load', function() {
+      var rightBlockHeight = $('.right_block').height();
+      // 将高度值直接设置为 .lp 的 inline style
+      $('.lp').css('height', rightBlockHeight + 'px');
+  });
+
+  // 卡片 申辦管道 btn-switch
+  $('.btn-switch').click(function(){
+    if ($(this).hasClass('act')) {
+      $(this).removeClass('act');
+      $(this).html('展開/OPEN');
+      $(this).attr('name', '展開/OPEN');
+      $(this).parents('.ctl').siblings('.links').css('display','none');
+    } else {
+      $(this).addClass('act');
+      $(this).html('收合/CLOSE');
+      $(this).attr('name', '收合/CLOSE');
+      $(this).parents('.ctl').siblings('.links').css('display','flex');
+    }
+  });
+
   // 首頁輪播
   $('.mpSlider').slick({
     mobileFirst: true,

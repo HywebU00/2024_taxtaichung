@@ -210,6 +210,65 @@ $btn-radius:.2em;
     }
 }
 
+// 申辦流程
+.btn-process{
+    display: flex;
+    background: linear-gradient(to bottom, #f16f2d 0%, #ce4734 100%) !important;
+    color: #fff !important;
+    border: solid 1px #f16f2d!important;
+    img{
+        width: 22px;
+        height: 22px;
+        margin-right: 6px;
+    }
+    &:hover,
+    &:focus {
+        background: linear-gradient(to bottom, #ce4734 0%, #ce4734 100%) !important;
+        border: solid 1px $importantColor!important;
+
+    }
+}
+
+// 卡片 申辦管道 開合btn
+.btn-switch{
+    font-size: 0;
+    width: 28px;
+    height: 28px;
+    background: #222;
+    border-radius: 50%;
+    border: 2px solid #222;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        background: #fff;
+    }
+    &:before{
+        // 水平
+        width: 16px;
+        height: 2px;
+    }
+    &:after{
+        // 垂直
+        width: 2px;
+        height: 16px;
+    }
+
+    &.act{
+        background: #fff;
+        &:before, &:after{
+            background: #222;
+        }
+        &:after{
+            transform: rotate(90deg);
+        }
+    }
+}
+
 // filter 咒胎的 search btn
 ._gosearch{
     // background: url(../images/icon/icon_search2.svg) left 50% no-repeat;

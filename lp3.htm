@@ -17,8 +17,7 @@
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
-
-  <body id="mp">
+  <body>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -896,19 +895,9 @@
       </header>
       <!-- header End -->
       <!-- main Start -->
-      <div id="aC" class="main">
+      <div id="aC" class="main innerpage">
+        <!-- 內頁新增一個classname-->
         <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
-        <!-- 重要訊息 -->
-        <section class="col-12 _toptip">
-          <div class="container">
-            <h3 class="_title">我是重要訊息 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo eveniet et, animi perspiciatis dolores aperiam quidem non amet? Officia, eius. Aspernatur sit beatae, veritatis quisquam aliquam laborum iste nobis quo.</h3>
-            <div class="_text">
-              我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。我是重要訊息，<a href="#">連結</a>在這裡，其他的文字內容看這邊。。。
-            </div>
-            <button class="btn _slideup" name="收合訊息/CLOSE" aria-label="收合訊息/CLOSE">收合訊息</button>
-            <button class="btn _close" name="關閉訊息，不再顯示" aria-label="關閉訊息，不再顯示">關閉訊息，不再顯示</button>
-          </div>
-        </section>
         <!-- 右側懸停物件 -->
         <section class="R_side_fixed">
           <a href="javascript:;" class="_tiptool">
@@ -920,624 +909,203 @@
           <a href="javascript:;"><img src="images/img-side-5-YT.png" alt=""><span>Youtube</span></a>
           <a href="javascript:;"><img src="images/img-side-6-Line.png" alt=""><span>Podcast</span></a>
         </section>
-        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
-        <!-- 1 - slider -->
-        <section class="col-12 full">
-          <div class="container">
-            <div class="mpSlider">
-              <div class="img-container">
-                <a href="#">
-                  <img src="images/demo/00.jpg" alt="圖說0" class="cover" />
-                  <!-- <span class="caption">圖說1</span> -->
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img src="images/demo/01.jpg" alt="圖說1" class="cover" />
-                  <!-- <span class="caption">圖說1</span> -->
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img src="images/demo/02.jpg" alt="圖說1" class="cover" />
-                  <!-- <span class="caption">圖說2</span> -->
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img src="images/demo/03.jpg" alt="圖說1" class="cover" />
-                  <!-- <span class="caption">圖說3</span> -->
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- 2 - 影音專區 2欄 -->
-        <section class="videoZone" style="background-image: url(images/bg-mp-section1.jpg);">
-          <div class="container">
-            <div class="col _YT">
-              <h3 class="mpSubTitle">影音專區</h3>
-              <div>
-                <iframe src="https://www.youtube.com/embed/eG49C-1DaVo?si=grNLshQoc5IyqtWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <!-- <span class="caption">圖說1</span> -->
-              </div>
-              <div class="btn_grp">
-                <a href="#" class="main_more">更多影音專區</a>
-              </div>
-            </div>
-            <div class="col _tax">
+        <div class="container">
+          <!-- 左側 -->
+          <!-- <div class="left_block stickySidebar">
+            <div class="leftblock_nodemenu">
+              <div class="title">標題文字</div>
               <ul>
-                <li><a href="#"><img src="images/icon-mp-tax1.png" alt="">使用牌照稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax2.png" alt="">房屋稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax3.png" alt="">地價稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax4.png" alt="">土地增值稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax5.png" alt="">契稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax6.png" alt="">印花稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax7.png" alt="">娛樂稅</a></li>
-                <li><a href="#"><img src="images/icon-mp-tax8.png" alt="">我要申辦</a></li>
+                <li>
+                  <a href="#">節點連結文字樣式節點連結文字樣式</a>
+                </li>
+                <li>
+                  <a href="#">節點連結文字樣式節點連結文字樣式</a>
+                </li>
+                <li>
+                  <a href="#">節點連結文字樣式節點連結文字樣式</a>
+                </li>
+                <li>
+                  <a href="#">節點連結文字樣式節點連結文字樣式</a>
+                </li>
+                <li>
+                  <a href="#">節點連結文字樣式節點連結文字樣式</a>
+                </li>
               </ul>
             </div>
-          </div>
-        </section>
-        <!-- 3 - 訊息專區 tab -->
-        <section class="infoZone" style="background-image: url(images/bg-mp-section2.jpg);">
-          <div class="container">
-            <h3 class="mpSubTitle">訊息專區</h3>
-            <div class="tabSet _list">
-              <!-- 頁籤的上一層父物件要加 role="tablist" -->
-              <div class="tabItems">
-                <button type="button" class="tabBtn">熱門排行</button>
-                <button type="button" class="tabBtn">稅務新聞</button>
-                <button type="button" class="tabBtn">活動訊息</button>
-                <button type="button" class="tabBtn">送達資訊公告</button>
-                <button type="button" class="tabBtn">開徵公告</button>
-                <button type="button" class="tabBtn">得獎名單</button>
-              </div>
-              <div class="tabContentGroup">
-                <div class="tabContent">
-                  <div class="content">
-                    <ul>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>原部分面積供出租或營業使用，恢復自住住家使用後，需要重新申請按自用住宅用地稅率課徵地價稅嗎？</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tabContent">
-                  <div class="content">
-                    <ul>
-                      <li><a href="#"><time datetime="">2024-03-20</time>2地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>原部分面積供出租或營業使用，恢復自住住家使用後，需要重新申請按自用住宅用地稅率課徵地價稅嗎？</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tabContent">
-                  <div class="content">
-                    <ul>
-                      <li><a href="#"><time datetime="">2024-03-20</time>3地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>原部分面積供出租或營業使用，恢復自住住家使用後，需要重新申請按自用住宅用地稅率課徵地價稅嗎？</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tabContent">
-                  <div class="content">
-                    <ul>
-                      <li><a href="#"><time datetime="">2024-03-20</time>4地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>原部分面積供出租或營業使用，恢復自住住家使用後，需要重新申請按自用住宅用地稅率課徵地價稅嗎？</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tabContent">
-                  <div class="content">
-                    <ul>
-                      <li><a href="#"><time datetime="">2024-03-20</time>5地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>原部分面積供出租或營業使用，恢復自住住家使用後，需要重新申請按自用住宅用地稅率課徵地價稅嗎？</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tabContent">
-                  <div class="content">
-                    <ul>
-                      <li><a href="#"><time datetime="">2024-03-20</time>6地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>原部分面積供出租或營業使用，恢復自住住家使用後，需要重新申請按自用住宅用地稅率課徵地價稅嗎？</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                      <li><a href="#"><time datetime="">2024-03-20</time>地稅局節稅通知服務，主動幫民眾省荷包</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          </div> -->
+          <!-- 主要內容區 -->
+          <div class="center_block">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">節點</a></li>
+                <li>節點</li>
+              </ul>
             </div>
-            <div class="btn_grp">
-              <a href="#" class="main_more">更多熱門排行</a>
-              <a href="#" class="btn_RSS">RSS</a>
-            </div>
-          </div>
-        </section>
-        <!-- 4 - 專區 3連結 -->
-        <section class="linkZone">
-          <div class="container">
-            <a href="#">
-              <img src="images/img-mp-link1.jpg" alt="">
-              <span>繳稅服務</span>
-            </a>
-            <a href="#">
-              <img src="images/img-mp-link2.jpg" alt="">
-              <span>三官大締專區</span>
-            </a>
-            <a href="#">
-              <img src="images/img-mp-link3.jpg" alt="">
-              <span>宣導專區</span>
-            </a>
-          </div>
-        </section>
-        <!-- 5 - 熱門專區 一排4連結 + slider連結 -->
-        <section class="hotZone">
-          <div class="container">
-            <h3 class="mpSubTitle">熱門專區</h3>
-            <!-- 12個主題 -->
-            <div class="topic_Link">
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>視訊服務</h4>
-                </div>
-                <div class="_listlink">
-                  <b>視訊服務</b>
+            <!-- h2節點＋function_panel -->
+            <div class="title_mixBox">
+              <h2 class="title">搜尋結果</h2>
+              <div class="function_panel">
+                <!-- function功能區塊 -->
+                <div class="function">
                   <ul>
-                    <li><a href="#">視訊發證補單</a></li>
-                    <li><a href="#">厝邊服務要您好稅</a></li>
-                    <li><a href="#">測試項目</a></li>
-                    <li><a href="#">測試項目2</a></li>
-                    <li><a href="#">一二三四五六七八九十一二三四五六七八九十</a></li>
-                    <li><a href="#">測試項目4</a></li>
-                    <li><a href="#">測試項目</a></li>
-                    <li><a href="#">測試項目6</a></li>
-                    <li><a href="#">測試項目</a></li>
-                    <li><a href="#">測試項目8</a></li>
-                    <li><a href="#">測試項目</a></li>
-                    <li><a href="#">測試項目10</a></li>
+                    <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                    <li class="print"><a href="#">友善列印</a></li>
+                    <li class="forward"><a href="#">轉寄友人</a></li>
                   </ul>
                 </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>節稅省荷包</h4>
-                </div>
-                <div class="_listlink">
-                  <b>節稅省荷包</b>
+                <!-- 社群分享 -->
+                <div class="share">
                   <ul>
-                    <li><a href="#">房屋稅</a></li>
-                    <li><a href="#">地價稅</a></li>
-                    <li><a href="#">使用牌照稅</a></li>
-                    <li><a href="#">土地增值稅</a></li>
-                    <li><a href="#">契稅</a></li>
-                    <li><a href="#">節稅健檢</a></li>
-                  </ul> 
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>線上申辦</h4>
-                </div>
-                <div class="_listlink">
-                  <b>線上申辦</b>
-                  <ul>
-                    <li><a href="#">本局線上申辦</a></li>
-                    <li><a href="#">地方稅網路申報</a></li>
-                    <li><a href="#">財政部稅務入口網</a></li>
-                    <li><a href="#">線上回復平台</a></li>
-                    <li><a href="#">得來速預約</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>線上查詢</h4>
-                </div>
-                <div class="_listlink">
-                  <b>線上查詢</b>
-                  <ul>
-                    <li><a href="#">案件進度查詢</a></li>
-                    <li><a href="#">繳稅紀錄查詢</a></li>
-                    <li><a href="#">退稅查詢</a></li>
-                    <li><a href="#">委託轉帳、電子稅單查詢</a></li>
-                    <li><a href="#">房屋稅籍編號查詢</a></li>
-                  </ul>  
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>稅額試算</h4>
-                </div>
-                <div class="_listlink">
-                  <b>稅額試算</b>
-                  <ul>
-                    <li><a href="#">各稅稅額試算</a></li>
-                    <li><a href="#">滯納金</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>災害減免</h4>
-                </div>
-                <div class="_listlink">
-                  <b>災害減免</b>
-                  <ul>
-                    <li><a href="#">房屋稅</a></li>
-                    <li><a href="#">地價稅</a></li>
-                    <li><a href="#">使用牌照稅</a></li>
-                    <li><a href="#">娛樂稅</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>書表下載</h4>
-                </div>
-                <div class="_listlink">
-                  <b>書表下載</b>
-                  <ul>
-                    <li><a href="#">房屋稅</a></li>
-                    <li><a href="#">地價稅</a></li>
-                    <li><a href="#">使用牌照稅</a></li>
-                    <li><a href="#">土地增值稅</a></li>
-                  </ul>  
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>憑證線上查</h4>
-                </div>
-                <div class="_listlink">
-                  <b>憑證線上查</b>
-                  <ul>
-                    <li><a href="#">財政部稅務入口網電子稅務文件</a></li>
-                    <li><a href="#">個人雲端稅務帳戶</a></li>
-                    <li><a href="#">線上查繳稅</a></li>
-                  </ul>  
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>智慧創新服務</h4>
-                </div>
-                <div class="_listlink">
-                  <b>智慧創新服務</b>
-                  <ul>
-                    <li><a href="#">UTax自動櫃員機</a></li>
-                    <li><a href="#">地稅小幫手</a></li>
-                    <li><a href="#">視訊發證補單</a></li>
-                    <li><a href="#">偏鄉財所宅急便</a></li>
-                    <li><a href="#">中稅AI可比</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>新頒法令</h4>
-                </div>
-                <div class="_listlink">
-                  <b>新頒法令</b>
-                  <ul>
-                    <li><a href="#">房屋稅條例</a></li>
-                    <li><a href="#">使用牌照稅歸戶</a></li>
-                    <li><a href="#">稅捐稽徵法</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>網網相連</h4>
-                </div>
-                <div class="_listlink">
-                  <b>網網相連</b>
-                  <ul>
-                    <li><a href="#">前往網網相連</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col">
-                <div class="_title">
-                  <img src="images/icon-mp-topic1.png" alt="">
-                  <h4>雲端發票</h4>
-                </div>
-                <div class="_listlink">
-                  <b>雲端發票</b>
-                  <ul>
-                    <li><a href="#">前往雲端發票</a></li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_X.svg" alt="X" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <!-- hotSlider -->
-            <div class="hotSlider">
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider1.png" class="contain" alt="圖片說明1" />
+            <!-- 內容區 Start -->
+            <!-- LP_一般條列頁 -->
+            <section class="lp">
+              <!-- 左側 -->
+              <div class="left_block stickySidebar searchResult">
+                <div class="leftblock_nodemenu">
+                  <p class="_resultnum">共有<b>18,200</b>筆</p>
+                  <section class="_resultItem">
+                    <h3>發布日期</h3>
+                    <ul>
+                      <li>最近一個月<div class="num">12</div></li>
+                      <li>最近三個月<div class="num">12</div></li>
+                      <li>最近半年<div class="num">12</div></li>
+                      <li>超過半年<div class="num">12</div></li>
+                    </ul>
+                  </section>
+                  <section class="_resultItem">
+                    <h3>單元分類</h3>
+                    <ul>
+                      <li>分眾導覽<div class="num">2,571</div></li>
+                    </ul>
+                  </section>
                 </div>
-                <b>本局電子文件驗證平台</b>
-              </a>
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider2.png" class="contain" alt="圖片說明2" />
-                </div>
-                <b>一次告知單</b>
-              </a>
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider3.png" class="contain" alt="圖片說明3" />
-                </div>
-                <b>全功能櫃台</b>
-              </a>
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider4.png" class="contain" alt="圖片說明4" />
-                </div>
-                <b>申辦項目免書證謄本表</b>
-              </a>
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider5.png" class="contain" alt="圖片說明5" />
-                </div>
-                <b>民眾參與創新建言</b>
-              </a>
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider6.png" class="contain" alt="圖片說明6" />
-                </div>
-                <b>電子文件驗證平台本局</b>
-              </a>
-              <a href="#">
-                <div class="img-container">
-                  <img data-lazy="images/img-mp-hotSlider1.png" class="contain" alt="圖片說明7" />
-                </div>
-                <b>第七筆</b>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!-- 6 - 熱門活動 tab 塞 swiper -->
-        <section class="activeZone">
-          <div class="container">
-            <h3 class="mpSubTitle">熱門活動</h3>
-            <div class="tabSet _slider">
-              <div class="tabItems">
-                <button type="button" class="tabBtn">當期活動</button>
-                <button type="button" class="tabBtn">歷史活動</button>
               </div>
-              <div class="tabContentGroup">
-                <div class="tabContent">
-                  <div class="content">
-                    <div class="activeSliderS1">
-                      <!--前一筆-->
-                      <button class="prevSlider swiperArrow"></button>
-                      <div class="swiper">
-                        <div class="swiper-wrapper">
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active1.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>稅樂搖曳 逍遙夜</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active2.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>「稅·AIの元宇宙虛擬世界」夏令營活動夏令營活動夏令營活動夏令營活動夏令營活動夏令營活動夏令營活動夏令營活動</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active3.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>愛在台中 雲端大考驗</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active1.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>稅樂搖曳 逍遙夜</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active2.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>「稅·AIの元宇宙虛擬世界」夏令營活動</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active3.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>愛在台中 雲端大考驗</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                        </div>
+              <div class="right_block">
+                <!-- Pagination -->
+                <div class="pagination">
+                  <form action="">
+                    <div class="form_inline">
+                      <div class="total">
+                        共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                        <select name="" id="" aria-label="每頁顯示">
+                          <option value="">10</option>
+                          <option value="">20</option>
+                          <option value="">30</option>
+                          <option value="">40</option>
+                        </select>
+                        筆， <input type="button" value="確定" class="btn btn-submit" />
                       </div>
-                      <!--下一筆-->
-                      <button class="nextSlider swiperArrow"></button>
                     </div>
-                  </div>
+                  </form>
+                  <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                  </ul>
                 </div>
-                <div class="tabContent">
-                  <div class="content">
-                    <div class="activeSliderS2">
-                      <!--前一筆-->
-                      <button class="prevSlider swiperArrow"></button>
-                      <div class="swiper">
-                        <div class="swiper-wrapper">
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active3.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>1愛在台中 雲端大考驗</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active3.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>2愛在台中 雲端大考驗</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active3.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>3愛在台中 雲端大考驗</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                          <div class="_item swiper-slide">
-                            <div class="img-container">
-                              <img src="images/img-active3.jpg" alt="" class="contain" />
-                            </div>
-                            <h4>4愛在台中 雲端大考驗</h4>
-                            <a href="#" class="_info">活動資訊</a>
-                            <a href="#" class="_winner">得獎名單</a>
-                          </div>
-                        </div>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <span class="classify">
+                          <time>2018-03-09</time>
+                          <span class="tag">節稅</span>
+                          <span class="tag">退稅資訊</span>
+                          <span class="tag">常見問題</span>
+                          <span class="tag"><i class="spot">地價稅</i></span>
+                        </b>
+                        </span>
+                        <h3 class="sub_title">次標題<i class="spot">地價稅</i></h3>
+                        <p>豐原分局113年7月15日配合臺中市潭子區公所<i class="spot">地價稅</i>113年度里鄰長研習會辦理租稅宣導活動豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                  <form action="">
+                    <div class="form_inline">
+                      <div class="total">
+                        共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                        <select name="" id="" aria-label="每頁顯示">
+                          <option value="">10</option>
+                          <option value="">20</option>
+                          <option value="">30</option>
+                          <option value="">40</option>
+                        </select>
+                        筆， <input type="button" value="確定" class="btn btn-submit" />
                       </div>
-                      <!--下一筆-->
-                      <button class="nextSlider swiperArrow"></button>
                     </div>
-                  </div>
+                  </form>
+                  <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                  </ul>
                 </div>
               </div>
-            </div>
+            </section>
+            <!-- 內容區 End -->
           </div>
-        </section>
-        <!-- 7 - 網網相連 adslider -->
-        <section class="adZone">
-          <div class="container">
-            <h3 class="mpSubTitle">網網相連</h3>
-            <div class="adSlider _200110">
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_200100.jpg" class="contain" alt="圖片說明1" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_01.jpg" class="contain" alt="圖片說明2" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_02.jpg" class="contain" alt="圖片說明3" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_03.jpg" class="contain" alt="圖片說明4" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_04.jpg" class="contain" alt="圖片說明5" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_05.jpg" class="contain" alt="圖片說明6" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_06.jpg" class="contain" alt="圖片說明7" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- 8 - 小廣告 adslider -->
-        <section class="adZone">
-          <div class="container">
-            <h3 class="mpSubTitle">小廣告</h3>
-            <div class="adSlider">
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_20080.jpg" class="contain" alt="圖片說明1" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_01.jpg" class="contain" alt="圖片說明2" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_02.jpg" class="contain" alt="圖片說明3" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_03.jpg" class="contain" alt="圖片說明4" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_04.jpg" class="contain" alt="圖片說明5" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_05.jpg" class="contain" alt="圖片說明6" />
-                </a>
-              </div>
-              <div class="img-container">
-                <a href="#">
-                  <img data-lazy="images/demo/ad_06.jpg" class="contain" alt="圖片說明7" />
-                </a>
-              </div>
-            </div>
-            <div class="btn_grp">
-              <a href="#" class="main_more">更多廣告</a>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
       <!-- fatfooter -->
       <section class="fatfooter">
         <div class="container">
-          <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+          <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter close">收合</button>
           <nav>
             <ul>
               <li>
@@ -1650,15 +1218,26 @@
         </div>
       </section>
       <!-- footer -->
-      <footer>
+      <footer class="_type2">
         <div class="container">
           <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-          <!-- map -->
-          <div class="_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116464.17419190412!2d120.61371710409969!3d24.189071366007763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d925e0d318d%3A0xfcbd2080c3f57440!2z6Ie65Lit5biC5pS_5bqc5Zyw5pa556iF5YuZ5bGA!5e0!3m2!1szh-TW!2stw!4v1723439560927!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+          <ul class="_link">
+            <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+            <li><a href="javascript:;">隱私權政策</a></li>
+            <li><a href="javascript:;">資訊安全與個資保護政策</a></li>
+          </ul>
           <!-- 標章、info -->
           <div class="_info">
+            <p>
+              地址：[407665] 臺中市西屯區惠來里3鄰文心路二段99號&nbsp;&nbsp;統一編號：52014808<br />
+              電話：(04)2258-5000<a href="#">【各單位聯絡方式】</a>&nbsp;&nbsp;傳真：(04)2251-6926<br />
+              客服中心服務電話：(04)2258-5000#1<br />
+              國稅及地方稅免付費服務電話：0800-000321(限辦公時間提供服務)<br />
+              服務時間：星期一至星期五&nbsp;&nbsp;上午8:00-12:00：下午1:00-5:00<br />
+              彈性上下班時間：8:00-8:30、17:00-17:30，全功能服務櫃台中午不午休<br />
+              <span class="counter">累計瀏覽人次：<em>46476653</em></span><br />
+              請使用IE(第9版以上)或Chrome、FireFox、Edge等瀏覽器瀏覽
+            </p>
             <div class="_tag">
               <a target="_blank" href="javascript:;">
                 <img src="images/footer_QRcode.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
@@ -1670,21 +1249,6 @@
                 <img src="images/basic/egov.png" alt="我的e政府,另開新視窗" />
               </a>
             </div>
-            <ul class="_link">
-              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
-              <li><a href="javascript:;">隱私權政策</a></li>
-              <li><a href="javascript:;">資訊安全與個資保護政策</a></li>
-            </ul>
-            <p>
-              地址：[407665] 臺中市西屯區惠來里3鄰文心路二段99號&nbsp;&nbsp;統一編號：52014808<br />
-              電話：(04)2258-5000<a href="#">【各單位聯絡方式】</a>&nbsp;&nbsp;傳真：(04)2251-6926<br />
-              客服中心服務電話：(04)2258-5000#1<br />
-              國稅及地方稅免付費服務電話：0800-000321(限辦公時間提供服務)<br />
-              服務時間：星期一至星期五&nbsp;&nbsp;上午8:00-12:00：下午1:00-5:00<br />
-              彈性上下班時間：8:00-8:30、17:00-17:30，全功能服務櫃台中午不午休<br />
-              <span class="counter">累計瀏覽人次：<em>46476653</em></span><br />
-              請使用IE(第9版以上)或Chrome、FireFox、Edge等瀏覽器瀏覽
-            </p>
           </div>
         </div>
       </footer>
@@ -1703,8 +1267,6 @@
     <!-- fancybox -->
     <script src="vendor/fancybox/fancybox.umd.js"></script>
     <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
-    <!-- swiper -->
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <!-- hyUI -->
     <script src="js/main.js"></script>
     <!-- 客製js -->

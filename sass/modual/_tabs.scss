@@ -314,7 +314,8 @@
     margin: 1px;
     border-radius: 0;
     box-shadow: none;
-    background: #ddd;
+    background: #fff;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     cursor: pointer;
 
     &:focus-visible {
@@ -324,7 +325,7 @@
 
     &.active {
       cursor: default;
-      background: #00a4f9;
+      background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
       color: #fff;
     }
   }
@@ -378,6 +379,10 @@
       .content {
         display: none;
 
+        &.active{
+          display: block;
+        }
+
         a:focus-visible {
           outline: $aFocus 2px solid;
         }
@@ -386,6 +391,7 @@
 
     .modeBBtn {
       display: block;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
   }
 
@@ -414,6 +420,7 @@
       time{
         color: #cb4f0e;
         margin-right: 30px;
+        min-width: 100px;
       }
       ul{
         @include li-reset;
@@ -429,7 +436,7 @@
             bottom: 0;
           }
           a{
-            display: block;
+            display: flex;
             padding: 16px 0;
             color: #222;
             font-weight: bold;
@@ -446,10 +453,12 @@
     @include screen('mobile') {
       .tabContent{
         margin-bottom: 0;
-        padding: .5em 0;
+        padding: .5em 1em;
 
         .modeBBtn{
           border-radius: 40px;
+          font-size: 1.125em;
+          font-weight: bold;
         }
       }
     }
@@ -474,6 +483,18 @@
         &.active {
           background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
           color: #fff;
+        }
+      }
+    }
+    @include screen('mobile') {
+      .tabContent{
+        margin-bottom: 0;
+        padding: .5em 1em !important;
+
+        .modeBBtn{
+          border-radius: 40px;
+          font-size: 1.125em;
+          font-weight: bold;
         }
       }
     }

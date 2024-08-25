@@ -749,7 +749,8 @@ $(function () {
     .find('.small')
     .on('click', function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('large_size').addClass('small_size');
+      // $('.innerpage').removeClass('large_size').addClass('small_size');
+      $('.main').removeClass('large_size').addClass('small_size');
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'small', 356);
@@ -758,7 +759,8 @@ $(function () {
     .find('.medium')
     .on('click', function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('large_size small_size');
+      // $('.innerpage').removeClass('large_size small_size');
+      $('.main').removeClass('large_size small_size');
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'medium', 356);
@@ -767,7 +769,8 @@ $(function () {
     .find('.large')
     .on('click', function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('small_size').addClass('large_size');
+      // $('.innerpage').removeClass('small_size').addClass('large_size');
+      $('.main').removeClass('small_size').addClass('large_size');
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'large', 356);
@@ -798,21 +801,24 @@ $(function () {
     if (cookie == 'small') {
       //$('.font_size').find('.small').click();
       $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
+      // $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
+      $('.main').removeClass('large_size medium_size').addClass('small_size');
       $('.font_size').find('.small').addClass('active');
       e.preventDefault();
     } else {
       if (cookie == 'large') {
         //$('.font_size').find('.large').click();
         $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+        // $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+        $('.main').removeClass('small_size medium_size').addClass('large_size');
         $('.font_size').find('.large').addClass('active');
         e.preventDefault();
       } else {
         //這裡是預設宣告
         //$('.font_size').find('.medium').click();
         $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('large_size small_size');
+        // $('.innerpage').removeClass('large_size small_size');
+        $('.main').removeClass('large_size small_size');
         $('.font_size').find('.medium').addClass('active');
         e.preventDefault();
       }

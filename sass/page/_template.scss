@@ -31,6 +31,27 @@ body {
   }
 }
 
+// scroll 樣式統一
+body {
+  overflow-y: auto;
+  scrollbar-color: #000 rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #000;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
   padding: 0;
@@ -46,6 +67,13 @@ body {
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
   h2 {
     line-height: 1.25em;
+  }
+  // 字級切換 與 .main 共用
+  &.small_size {
+    font-size: .938em;
+  }
+  &.large_size {
+    font-size: 1.125em;
   }
 }
 
@@ -206,6 +234,7 @@ body {
       font-weight: bold;
       max-width: initial;
       flex: 0 1 auto;
+      padding: 1em 0 .35em;
     }
     .form_content{
       max-width: initial;
@@ -217,6 +246,10 @@ body {
         }
       }
     }
+  }
+  select{
+    padding: .75em 2em .75em 1.25em;
+    background-position: right 8px top 50%;
   }
   // checkbox be btn
   .check_grp{
@@ -255,10 +288,13 @@ body {
 
           // checked 背景色
           background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+
+          +span.icons+span,
           +span{
             // 『標籤文字』
             color: #fff;
           }
+
           // checked 狀態圓圈
           &~span {
             &:after {
@@ -274,10 +310,56 @@ body {
         }
       }
 
+      span.icons{
+        // 可替換 icon 的 checkbox
+        margin-right: 6px;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        img{
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          &:first-child{}
+          &:last-child{
+            // 選取後的白色icon
+            opacity: 0;
+          }
+        }
+      }
+
+      input[type=checkbox]:hover + span.icons,
+      input[type=checkbox]:focus + span.icons,
+      input[type=checkbox]:checked + span.icons{
+          img{
+            opacity: 0;
+            &:first-child{
+              opacity: 0;
+            }
+            &:last-child{
+              // 選取後的白色icon
+              opacity: 1;
+            }
+          }
+      }
+
       &:hover{
         color: #fff;
         input[type="checkbox"]{
           background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+        }
+        input[type=checkbox] + span.icons{
+          img{
+            opacity: 0;
+            &:first-child{
+              opacity: 0;
+            }
+            &:last-child{
+              // 選取後的白色icon
+              opacity: 1;
+            }
+          }
         }
       }
       // &:focus{
@@ -290,6 +372,20 @@ body {
       //   color: #fff;
       //   background: $aFocus;
       // }
+    }
+  }
+  @include screen('tablet') {
+    padding: 1.25em 2.5em;
+    .flex-form{
+      &.form_inline{
+        //    width: 100%; 
+        .form_grp{
+          width: 100%; 
+        }
+        select, input{
+          width: -webkit-fill-available;
+        }
+      }
     }
   }
 }
@@ -381,6 +477,127 @@ body {
   }
 } 
 
+// 我要申辦 卡牌
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  $num: 2;
+  .slice{
+    margin: 10px 20px;
+    padding: 2em 1.5em;
+    flex: 0 1 auto;
+    // flex-basis: calc(100% / $num - 10px);
+    // max-width: calc(100% / $num - 40px);
+    flex-basis: calc(46% - 40px);
+    max-width: calc(46% - 40px);
+    background: #fff;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 16px;
+    // 兩欄
+    .state{
+      display: flex;
+      justify-content: space-between;
+      .icons{
+        display: flex;
+        > div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 42px;
+          height: 42px;
+          margin-right: 4px;
+          background: #fff;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          border-radius: 50%;
+        }
+        img{
+          width: 24px; 
+          height: 24px;
+        }
+      }
+      .link{}
+    }
+    // 標題
+    h4{
+      border-bottom: 1px solid #000;
+      padding-bottom: 6px;
+      font-size: 1.375em;
+      line-height: 1.4;
+    }
+    h5{
+      font-size: 1em;
+      margin-bottom: 0;
+      color: #666;
+    }
+    .method{
+      // 辦法
+      .ctl{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        h6{
+          margin: 4px 0;
+          font-size: 1.125em;
+          line-height: 2;
+          a{
+            color: #222;
+            &:hover, &:focus-visible{
+              color: $importantColor;
+            }
+          }
+        }
+        .btn{}
+      }
+      ul.links{
+        @include li-reset;
+        display: flex;
+        padding: 10px 0 0;
+        display: none;
+        li{
+          flex: 0 0 auto;
+          margin-bottom: 4px;
+          a{
+            display: inline-block;
+            font-size: .9em;
+            color: #fff;
+            background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+            padding: 4px 30px;
+            margin-right: 4px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+    .download{
+      display: flex;
+      padding-top: 16px;
+      h5{
+        margin: 0;
+      }
+      ul.file{
+        // 檔案下載
+        display: flex;
+        padding: 0;
+        padding-left: 16px;
+        li{
+          flex: 0 0 auto;
+          margin-bottom: 4px;
+          a{
+            padding: 0 12px;
+            border-radius: 4px;
+            background: #666;
+            color: #fff;
+            font-weight: bold;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+}
 
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
@@ -435,13 +652,29 @@ body {
     }
   }
 
-  &.small_size {
-    font-size: .938em;
+  .lp{
+    position: relative;
+  }
+  .right_block{
+    width: calc(100% - 300px);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include screen('tablet'){
+      width: 100%;
+      position: initial;
+    }
   }
 
-  &.large_size {
-    font-size: 1.125em;
-  }
+  // 字級切換 與 .main 共用
+  // &.small_size {
+  //   font-size: .938em;
+  // }
+
+  // &.large_size {
+  //   font-size: 1.125em;
+  // }
 }
 
 .hidden {

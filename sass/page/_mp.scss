@@ -115,8 +115,8 @@ a.sub_more{
                 height: 2px;
                 left: 50%;
                 transform-origin: center left;
-                transform: translate(-7px, -2px) rotate(45deg);
-                // transform: rotate(45deg);
+                // transform: translate(-7px, -2px) rotate(45deg);
+                transform: translate(-7px, 2px) rotate(-45deg);
             }
             &:after{
                 // 垂直
@@ -124,19 +124,19 @@ a.sub_more{
                 height: 10px;
                 left: 50%;
                 transform-origin: center left;
-                transform: translate(3px, -3px) rotate(45deg);
+                // transform: translate(3px, -3px) rotate(45deg);
+                transform: translate(3px, -4px) rotate(-45deg);
             }
 
             &._hide{
                 &:before{
-                    transform: translate(-7px, 2px) rotate(-45deg);
+                    // transform: translate(-7px, 2px) rotate(-45deg);
+                    transform: translate(-7px, -2px) rotate(45deg);
                 }
                 &:after{
-                    transform: translate(3px, -4px) rotate(-45deg);
+                    // transform: translate(3px, -4px) rotate(-45deg);
+                    transform: translate(3px, -3px) rotate(45deg);
                 }
-                // &:after{
-                //     transform: translate(-50%, -50%) rotate(0);
-                // }
             }
         }
         &._close{
@@ -240,13 +240,37 @@ a.sub_more{
                     // background-color: #FFFFFF;
                     display: flex;
                     align-items: center;
-                    background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+                    background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
                     color: #fff;
                     font-size: 1.35em;
                     border-radius: 4px;
+                    overflow: hidden;
                     padding: .5em 1em;
                     img{
                         margin-right: 10px;
+                    }
+                    position: relative;
+                    z-index: 1;;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        width: 0;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: $importantColor;
+                        // background: darken(#0f67b1, 5);
+                        transition: .3s;
+                    }
+
+                    &:hover, &:focus-visible{
+                        // color: $primaryColor;
+                        // background: #fff;
+                        // box-shadow: 0 0 0 2px #222;
+                        &:after{
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -433,6 +457,11 @@ a.sub_more{
             font-size: 1.25em;
             font-weight: bold;
             text-align: center;
+            height: 48px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
         }
         a{
             display: block;
