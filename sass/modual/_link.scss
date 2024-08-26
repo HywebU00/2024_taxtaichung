@@ -1,6 +1,29 @@
 // 自動產生編號：https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 
 // 選項次層
+.sub_menu_title{
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    padding: 1em 0;
+    margin: 2em 0;
+    position: relative;
+    &:before, &:after{
+        content: '';    
+        position: absolute;
+        width: 90px;
+        height: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $importantColor;
+    }
+    &:before{
+        top: 0;
+    }
+    &:after{
+        bottom: 0;
+    }
+}
 .sub_menu {
     ul, ol {
         display: flex;
@@ -146,29 +169,29 @@
     }
     &._icontext{
         // icon ＋ 文字連結
-        ._title{
-            text-align: center;
-            font-size: 1.5em;
-            letter-spacing: 2px;
-            padding: 1em 0;
-            margin: 2em 0;
-            position: relative;
-            &:before, &:after{
-                content: '';    
-                position: absolute;
-                width: 90px;
-                height: 3px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: $importantColor;
-            }
-            &:before{
-                top: 0;
-            }
-            &:after{
-                bottom: 0;
-            }
-        }
+        // ._title{
+        //     text-align: center;
+        //     font-size: 1.5em;
+        //     letter-spacing: 2px;
+        //     padding: 1em 0;
+        //     margin: 2em 0;
+        //     position: relative;
+        //     &:before, &:after{
+        //         content: '';    
+        //         position: absolute;
+        //         width: 90px;
+        //         height: 3px;
+        //         left: 50%;
+        //         transform: translateX(-50%);
+        //         background: $importantColor;
+        //     }
+        //     &:before{
+        //         top: 0;
+        //     }
+        //     &:after{
+        //         bottom: 0;
+        //     }
+        // }
         ul{
             li{
                 // 四欄
@@ -222,6 +245,11 @@
                     }
                 }
             }
+        }
+    }
+    &._cards{
+        .cards{
+            // padding: 2em 0;
         }
     }
     @media screen and (max-width: 1200px) {

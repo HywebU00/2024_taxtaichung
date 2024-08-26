@@ -485,7 +485,7 @@ body::-webkit-scrollbar-track {
 
   $num: 2;
   .slice{
-    margin: 10px 20px;
+    margin: 0 20px 50px;
     padding: 2em 1.5em;
     flex: 0 1 auto;
     // flex-basis: calc(100% / $num - 10px);
@@ -530,6 +530,8 @@ body::-webkit-scrollbar-track {
       font-size: 1em;
       margin-bottom: 0;
       color: #666;
+      flex: 0 1 90px;
+      min-width: 90px;
     }
     .method{
       // 辦法
@@ -581,7 +583,7 @@ body::-webkit-scrollbar-track {
         // 檔案下載
         display: flex;
         padding: 0;
-        padding-left: 16px;
+        // padding-left: 1px;
         li{
           flex: 0 0 auto;
           margin-bottom: 4px;

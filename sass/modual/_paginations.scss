@@ -23,7 +23,8 @@
             height: 40px;
             margin: 2px;
             list-style: none;
-            flex:0 0 40px;
+            flex:0 0 40px !important;
+            margin-bottom: 2px !important; // 調整 .sub_menu._icontext對li的設定
 
             box-sizing: border-box;
             a {

@@ -1079,8 +1079,8 @@
                 <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
               </div>
             </div>
-            <section class="sub_menu _icontext">
-              <h3 class="_title">進階限縮</h3>
+            <section class="sub_menu _cards">
+              <h3 class="sub_menu_title">進階限縮</h3>
               <!-- filter -->
               <div class="filter">
                 <div class="flex-form form-column">
@@ -1181,6 +1181,43 @@
                     </div>
                   </div>
                 </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除限縮條件" class="btn btn-reset">
+                  <input name="" type="submit" value="進行限縮條件" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
+              </div>
+              <!-- Pagination -->
+              <div class="pagination">
+                <form action="">
+                  <div class="form_inline">
+                    <div class="total">
+                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                      <select name="" id="" aria-label="每頁顯示">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                      </select>
+                      筆， <input type="button" value="確定" class="btn btn-submit" />
+                    </div>
+                  </div>
+                </form>
+                <ul class="page">
+                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                </ul>
               </div>
               <!-- 卡片 -->
               <div class="cards">
@@ -1233,22 +1270,13 @@
                       <li><a href="#">連結5</a></li>
                     </ul>
                   </section>
-                  <section class="method">
-                    <div class="ctl">
-                      <h6>使用憑證</h6>
-                      <button class="btn-switch">展開/OPEN</button>
-                    </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
-                  </section>
                   <div class="download">
                     <h5>表單下載 /</h5>
                     <ul class="file">
+                      <li><a href="#">ODT</a></li>
+                      <li><a href="#">DOCX</a></li>
+                      <li><a href="#">ODT</a></li>
+                      <li><a href="#">DOCX</a></li>
                       <li><a href="#">ODT</a></li>
                       <li><a href="#">DOCX</a></li>
                     </ul>
@@ -1283,7 +1311,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道A</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1296,7 +1324,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道B</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1343,7 +1371,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道A</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1356,7 +1384,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道B</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1403,7 +1431,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道A</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1416,7 +1444,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道B</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1463,7 +1491,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道A</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1476,7 +1504,7 @@
                   <section class="method">
                     <div class="ctl">
                       <h6>管道B</h6>
-                      <button class="btn">展開/收合</button>
+                      <button class="btn-switch">展開/OPEN</button>
                     </div>
                     <ul class="links">
                       <li><a href="#">連結1</a></li>
@@ -1494,6 +1522,38 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+              <!-- Pagination -->
+              <div class="pagination">
+                <form action="">
+                  <div class="form_inline">
+                    <div class="total">
+                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                      <select name="" id="" aria-label="每頁顯示">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                      </select>
+                      筆， <input type="button" value="確定" class="btn btn-submit" />
+                    </div>
+                  </div>
+                </form>
+                <ul class="page">
+                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                </ul>
               </div>
             </section>
             <!-- 內容區 End -->

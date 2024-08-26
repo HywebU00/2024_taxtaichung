@@ -7180,6 +7180,30 @@ table.table_sprite tr:nth-child(even) {
   justify-content: space-between;
 }
 
+.sub_menu_title {
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  padding: 1em 0;
+  margin: 2em 0;
+  position: relative;
+}
+.sub_menu_title:before, .sub_menu_title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ce4734;
+}
+.sub_menu_title:before {
+  top: 0;
+}
+.sub_menu_title:after {
+  bottom: 0;
+}
+
 .sub_menu ul, .sub_menu ol {
   display: flex;
   flex-direction: row;
@@ -7312,29 +7336,6 @@ table.table_sprite tr:nth-child(even) {
   line-height: 0;
   padding: 6px 0;
   margin-bottom: 6px;
-}
-.sub_menu._icontext ._title {
-  text-align: center;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  padding: 1em 0;
-  margin: 2em 0;
-  position: relative;
-}
-.sub_menu._icontext ._title:before, .sub_menu._icontext ._title:after {
-  content: "";
-  position: absolute;
-  width: 90px;
-  height: 3px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ce4734;
-}
-.sub_menu._icontext ._title:before {
-  top: 0;
-}
-.sub_menu._icontext ._title:after {
-  bottom: 0;
 }
 .sub_menu._icontext ul li {
   flex: 0 0 25%;
@@ -9135,7 +9136,8 @@ div.function ul li.icon_forward a:before {
   height: 40px;
   margin: 2px;
   list-style: none;
-  flex: 0 0 40px;
+  flex: 0 0 40px !important;
+  margin-bottom: 2px !important;
   box-sizing: border-box;
 }
 .pagination .page li a {
@@ -9733,7 +9735,7 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 .cards .slice {
-  margin: 10px 20px;
+  margin: 0 20px 50px;
   padding: 2em 1.5em;
   flex: 0 1 auto;
   flex-basis: calc(46% - 40px);
@@ -9774,6 +9776,8 @@ body::-webkit-scrollbar-track {
   font-size: 1em;
   margin-bottom: 0;
   color: #666;
+  flex: 0 1 90px;
+  min-width: 90px;
 }
 .cards .slice .method .ctl {
   display: flex;
@@ -9823,7 +9827,6 @@ body::-webkit-scrollbar-track {
 .cards .slice .download ul.file {
   display: flex;
   padding: 0;
-  padding-left: 16px;
 }
 .cards .slice .download ul.file li {
   flex: 0 0 auto;
