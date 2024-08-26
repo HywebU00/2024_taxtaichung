@@ -625,7 +625,7 @@
   width: 44vw;
   aspect-ratio: 1;
   position: relative;
-  margin-top: 20px;
+  margin-top: 80px;
   max-height: 1080px;
 }
 @media screen and (max-width: 1001px) {
@@ -912,6 +912,9 @@
 }
 .welcome .contentFancyBox {
   display: none;
+}
+.welcome .contentFancyBox button:focus-visible {
+  outline: #00b7ff solid 3px !important;
 }
 .welcome .contentFancyBox .box {
   width: 100%;
