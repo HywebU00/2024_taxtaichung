@@ -4625,6 +4625,7 @@ footer p a {
 footer .counter {
   display: inline-block;
   margin-right: 5px;
+  color: #fff;
 }
 footer .counter em {
   font-style: normal;
@@ -4688,9 +4689,11 @@ footer ul._link li:first-child a {
 }
 footer._type2 .container {
   display: block;
+  max-width: 1200px;
 }
 footer._type2 ul._link {
   margin-top: 0;
+  margin-bottom: 1em;
 }
 footer._type2 ._info {
   padding-left: 0;
@@ -4698,13 +4701,21 @@ footer._type2 ._info {
   justify-content: space-between;
 }
 footer._type2 ._info p {
-  flex: 1 1 60%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-footer._type2 ._info > div {
-  flex: 1 1 40%;
+footer._type2 ._info .col {
+  flex: 1 1 auto;
+  padding-right: 10px;
+}
+footer._type2 ._info .col:last-child {
+  padding-right: 0;
 }
 footer._type2 ._tag {
   justify-content: flex-end;
+}
+footer._type2 .counter {
+  display: block;
 }
 @media screen and (max-width: 991px) {
   footer .container {
@@ -4716,12 +4727,58 @@ footer._type2 ._tag {
     padding-right: 1em;
     box-sizing: border-box;
   }
+  footer p {
+    text-align: center;
+  }
   footer ._map {
     flex: 1 1 100%;
   }
   footer ._info {
     padding-left: 0;
     margin-top: 1.5em;
+  }
+  footer ._tag {
+    justify-content: center;
+  }
+  footer ul._link {
+    justify-content: center;
+  }
+  footer._type2 ._info {
+    flex-wrap: wrap;
+  }
+  footer._type2 ._info .col {
+    flex: 1 1 100%;
+    padding-right: 0;
+  }
+  footer._type2 ._tag {
+    justify-content: center;
+  }
+  footer._type2 .counter {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer p {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 575px) {
+  footer ul._link {
+    flex-wrap: wrap;
+  }
+  footer ul._link li {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  footer ul._link li:after {
+    display: none;
+  }
+  footer ul._link li:first-child a {
+    padding-left: 20px;
+  }
+  footer ul._link li a {
+    display: inline-block;
+    padding: 6px 20px;
   }
 }
 
@@ -7177,7 +7234,18 @@ table.table_sprite tr:nth-child(even) {
 }
 .searchResult ._resultItem ul li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+.searchResult ._resultItem ul li a.num {
+  background: #eaf8fb;
+  padding: 5px 8px;
+  border-radius: 24px;
+  font-weight: bold;
+}
+.searchResult ._resultItem ul li a.num:hover, .searchResult ._resultItem ul li a.num:focus-visible {
+  background: #0066cc;
+  color: #fff;
 }
 
 .sub_menu_title {
@@ -7438,6 +7506,7 @@ table.table_sprite tr:nth-child(even) {
   }
   .sub_menu._icontext ul li a b {
     padding: 1.5em 12px 1em;
+    width: 100%;
   }
 }
 

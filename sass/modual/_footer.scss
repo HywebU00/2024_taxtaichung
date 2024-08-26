@@ -20,6 +20,7 @@ footer {
     .counter {
         display: inline-block;
         margin-right: 5px;
+        color: #fff;
         em {
             font-style: normal;
         }
@@ -92,23 +93,38 @@ footer {
     &._type2{
         .container{
             display: block;
+            max-width: 1200px;
         }
         ul._link{
             margin-top: 0;
+            margin-bottom: 1em;
         }
         ._info{
             padding-left: 0;
             display: flex;
             justify-content: space-between;
             p{
-                flex: 1 1 60%;
+                // flex: 1 1 60%;
+                margin-top: 0;
+                margin-bottom: 0;
             }
-            >div{
-                flex: 1 1 40%;
+            // >div{
+            //     flex: 1 1 40%;
+            // }
+            .col{
+                flex: 1 1 auto;
+                padding-right: 10px;
+                &:last-child{
+                    padding-right: 0;
+                }
             }
         }
         ._tag{
             justify-content: flex-end;
+        }
+        // 瀏覽人次
+        .counter {
+            display: block;
         }
     }
     @include screen('tablet') {
@@ -117,6 +133,9 @@ footer {
             justify-content: center;
             @include gutter(2em);
         }
+        p{
+            text-align: center;
+        }
         ._map{
             flex: 1 1 100%;
         }
@@ -124,5 +143,78 @@ footer {
             padding-left: 0;
             margin-top: 1.5em;
         }
+        // 標章
+        ._tag{
+            justify-content: center;
+        }
+        // 宣告連結
+        ul._link{
+            justify-content: center;
+        }
+
+        // 內頁 footer
+        &._type2{
+            ._info{
+                flex-wrap: wrap;
+                .col{
+                    flex: 1 1 100%;
+                    padding-right: 0;
+                }
+            }
+            ._tag{
+                justify-content: center;
+            }
+            // 瀏覽人次
+            .counter{
+                margin-bottom: 2em;
+            }
+        }
+    }
+    @include screen('mobile'){
+        p{
+            text-align: left;
+        }
+        // // 宣告連結
+        // ul._link{
+        //     flex-wrap: wrap;
+        //     li{
+        //         flex: 1 1 100%;
+        //         text-align: center;
+        //         &:after{
+        //             display: none;
+        //         }
+        //         &:first-child{
+        //             a{
+        //                 padding-left: 20px;
+        //             }
+        //         }
+        //         a{
+        //             display: inline-block;
+        //             padding: 6px 20px;
+        //         }
+        //     }
+        // } 
+    }
+    @include screen('xs_mobile'){
+        // 宣告連結
+        ul._link{
+            flex-wrap: wrap;
+            li{
+                flex: 1 1 100%;
+                text-align: center;
+                &:after{
+                    display: none;
+                }
+                &:first-child{
+                    a{
+                        padding-left: 20px;
+                    }
+                }
+                a{
+                    display: inline-block;
+                    padding: 6px 20px;
+                }
+            }
+        } 
     }
 }
