@@ -45,7 +45,8 @@
                 }
                 .tag {
                     // margin-left: 2em;
-                    background: #eee;
+                    background: #eaf8fb;
+                    color: #2f6db1;
                     padding: .35em 1em;
                     border-radius: 40px;
                     font-weight: bold;
@@ -58,7 +59,13 @@
                     line-height: 1.45em;
                     color: $color-word;
                     &:hover {
-                        color: $aHover;
+                        // color: $aHover;
+                        h3, p{
+                            color: $aHover;
+                        }
+                        // h3 + p{
+                        //     color: #222;
+                        // }
                     }
                     // .num {
                     //     width: 1.5em;
@@ -74,6 +81,7 @@
                     p{
                         margin: 1em 0;
                         font-size: 1.25em;
+                        font-weight: bold;
                     }
 
                     .sub_title{
@@ -82,10 +90,19 @@
                         + p{
                             font-size: 1em;
                             margin: 0;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
+                            font-weight: normal;
+                            // overflow: hidden;
+                            // text-overflow: ellipsis;
+                            // white-space: nowrap;
                         }
+                    }
+                }
+                // 刪節號共用
+                .sub_title{
+                    + p{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                 }
                 // span.dept {
@@ -100,7 +117,7 @@
                     color: #222;
                     // font-size: .938em;
                     font-family: georgia;
-                    border-right: 1px solid #000;
+                    border-right: 1px solid #ddd;
                     padding-right: 1em;
 
                     + span{
@@ -121,13 +138,27 @@
 .searchResult{
     // 左欄 搜尋結果
     ._resultnum{
-        padding: 1em;
-        background: #eee;
-        b{}
+        padding: .75em 1em;
+        background: #266eb3;
+        color: #fff;
+        border-radius: 4px 4px 0 0;
+        margin-bottom: 0;
+        b{
+            padding: 0 6px;
+        }
     }
     ._resultItem{
-        padding: 0 1em;
+        padding: 1em;
+        background: #fff;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+
+        &:last-child{
+            border-bottom: 1px solid #ddd;
+            border-radius: 0 0 4px 4px;
+        }
         h3{
+            margin-top: 0;
             margin-bottom: 12px;
         }
         ul{

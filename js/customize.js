@@ -27,8 +27,10 @@ $(function () {
   // lp右欄 高度偵聽
   $(window).on('load', function() {
       var rightBlockHeight = $('.right_block').height();
+      var leftBlockHeight = $('.left_block').height();
       // 将高度值直接设置为 .lp 的 inline style
       $('.lp').css('height', rightBlockHeight + 'px');
+      $('.lp').css('min-height', leftBlockHeight + 'px');
   });
 
   // 卡片 申辦管道 btn-switch
@@ -44,6 +46,32 @@ $(function () {
       $(this).attr('name', '收合/CLOSE');
       $(this).parents('.ctl').siblings('.links').css('display','flex');
     }
+  });
+
+  /*-----------------------------------*/
+  /////////////modal設定/////////////
+  /*-----------------------------------*/
+  $(function () {
+    $("#modal1").hide(); //先隱藏視窗
+    $(".modal").after('<div class="modal_overlay"></div>'); //新增透明底
+    // $(".modal").prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
+    $(".modal_overlay").hide(); //隱藏透明底
+    //按鈕動作
+    $("#openModal").click(function (e) {
+      $(".modal_overlay").fadeIn(100);
+      $(".modal").fadeIn(100);
+      $("body").addClass("noscroll");
+      e.preventDefault();
+    });
+    //關閉function
+    function closeModal() {
+      $("#modal1").hide();
+      $(".modal_overlay").hide();
+      $("body").removeClass("noscroll");
+    }
+    //點選關閉按鈕及透明底都可關閉
+    $(".modal_overlay").click(closeModal);
+    $(".modal .close_Modal").click(closeModal);
   });
 
   // 首頁輪播

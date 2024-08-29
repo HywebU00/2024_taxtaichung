@@ -962,7 +962,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">fillters</h2>
+              <h2 class="title">稅務行事曆</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -1007,436 +1007,350 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <section class="">
-              <!-- filter 1 -->
-              sitemap 的咒胎
-              <div class="filter">
-                <div class="flex-form">
-                  <div class="form_grp">
-                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
-                    <div class="form_content">
-                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
-                  <input name="" type="submit" value="查詢" class="btn btn-submit">
-                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
-                </div>
-              </div>
-
-              <!-- filter 2 -->
-              lp2 的咒胎
-              <div class="filter">
-                <div class="flex-form form_inline">
-                  <!-- 排序標準 -->
-                  <div class="form_grp">
-                    <label for="fake-legend" class="form_title" aria-required="true">排序項目：</label>
-                    <div class="form_content">
-                      <select name="" id="fake-legend">
-                        <option value="">稅目</option>
-                        <option value="">條號</option>
-                        <option value="">年月份</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- 年度 -->
-                  <div class="form_grp">
-                    <label for="fake-legend" class="form_title" aria-required="true">年度：</label>
-                    <div class="form_content">
-                      <select name="" id="fake-legend">
-                        <option value="">全部</option>
-                        <option value="">113年度</option>
-                        <option value="">112年度</option>
-                        <option value="">...</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- 稅目 -->
-                  <div class="form_grp">
-                    <label for="fake-legend" class="form_title" aria-required="true">稅目：</label>
-                    <div class="form_content">
-                      <select name="" id="fake-legend">
-                        <option value="">請選擇</option>
-                        <option value="">項目A</option>
-                        <option value="">項目Ｂ</option>
-                        <option value="">...</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- 條號 -->
-                  <div class="form_grp">
-                    <label for="fake-legend" class="form_title" aria-required="true">條號：</label>
-                    <div class="form_content">
-                      <select name="" id="fake-legend">
-                        <option value="">請選擇</option>
-                        <option value="">項目A</option>
-                        <option value="">項目Ｂ</option>
-                        <option value="">...</option>
-                      </select>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="flex-form">
-                  <div class="form_grp">
-                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
-                    <div class="form_content">
-                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
-                  <input name="" type="submit" value="查詢" class="btn btn-submit">
-                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
-                </div>
-              </div>
-
-              <!-- filter 3 -->
-              進階查詢 的咒胎
-              <div class="filter">
-                <div class="flex-form">
-                  <!-- 關鍵字 -->
-                  <div class="form_grp">
-                    <label for="fake-legend" class="form_title" aria-required="true">關鍵字：</label>
-                    <div class="form_content form_inline">
-                      <select name="" id="fake-legend">
-                        <option value="">AND</option>
-                        <option value="">項目A</option>
-                        <option value="">項目Ｂ</option>
-                      </select>
-                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
-                    </div>
-                  </div>
-                  <div class="form_grp">
-                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                    <label for="fake-legend" class="form_title" aria-required="true">不含字詞：</label>
-                    <div class="form_content">
-                      <input type="text" id="fake-legend" placeholder="請輸入文字" />
-                    </div>
-                  </div>
-                  <div class="form_grp">
-                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                    <label for="fake-legend" class="form_title" aria-required="true">日期範圍：</label>
-                    <div class="form_content">
-                      <div class="datepick">
-                        <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
-                      </div>
-                      <div class="datepick">
-                        <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_grp">
-                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
-                    <label for="fake-legend" class="form_title" aria-required="true">站點分類：</label>
-                    <div class="form_content">
-                      <select name="" id="fake-legend">
-                        <option value="">台北市</option>
-                        <option value="">新北市</option>
-                        <option value="">桃園市</option>
-                        <option value="">新竹市</option>
-                        <option value="">...</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
-                  <input name="" type="submit" value="查詢" class="btn btn-submit">
-                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
-                </div>
-              </div>
-
-              <!-- filter 4 -->
-              我要申辦 的咒胎、多選
-              <div class="filter">
-                <div class="flex-form form-column">
-                  <!-- checkbox -->
-                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                    <label for="fake-legend" class="form_title">稅別(多選)：</label>
-                    <div class="form_content" id="fake-legend">
-                      <div class="check_grp form_inline">
+            <!-- 身份切換 -->
+            <div class="view_switch">
+              <button type="button" class="btn btn-secondary _act">一般民眾</button>
+              <button type="button" class="btn btn-secondary">友善閱讀</button>
+            </div>
+            <!-- filter -->
+            <!-- 多選 -->
+            <div class="filter _tag">
+              <div class="flex-form form-column">
+                <!-- checkbox -->
+                <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                  <label for="fake-legend" class="form_title">請選擇稅別（多選、一般民眾）：</label>
+                  <div class="form_content" id="fake-legend">
+                    <div class="check_grp form_inline">
+                      <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" checked="" class="btn-check" />
-                          <span>全部</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>地價稅</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>房屋稅</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <input type="checkbox" name="" value="" class="btn-check _n1" />
                           <span>使用牌照稅</span>
                         </label>
+                        <a href="#" id="openModal" class="">牌照稅行事曆</a>
+                      </div>
+                      <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <input type="checkbox" name="" value="" class="btn-check _n2" />
+                          <span>房屋稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check _n3" />
+                          <span>地價稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check _n4" />
                           <span>土地增值稅</span>
                         </label>
+                        <a href="#" id="openModal" class="">土地增值稅行事曆</a>
+                      </div>
+                      <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <input type="checkbox" name="" value="" class="btn-check _n5" />
                           <span>契稅</span>
                         </label>
+                        <a href="#" id="openModal" class="">契稅行事曆</a>
+                      </div>
+                      <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <input type="checkbox" name="" value="" class="btn-check _n6" />
                           <span>印花稅</span>
                         </label>
+                        <a href="#" id="openModal" class="">印花稅行事曆</a>
+                      </div>
+                      <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <input type="checkbox" name="" value="" class="btn-check _n7" />
                           <span>娛樂稅</span>
                         </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>其他</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>財產資料、個人所得資料</span>
-                        </label>
+                        <a href="#" id="openModal" class="">娛樂稅行事曆</a>
                       </div>
                     </div>
                   </div>
-                  <!-- checkbox -->
-                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                    <label for="fake-legend" class="form_title">適用憑證(多選)：</label>
-                    <div class="form_content" id="fake-legend">
-                      <div class="check_grp form_inline">
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" checked="" class="btn-check" />
-                          <span>全部</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>免用憑證</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>自然人憑證</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>TW FidO(行動自然人憑證)</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>健保卡</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>晶片金融卡</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>硬體金融憑證</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>醫事憑證 </span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>軟體金融憑證</span>
-                        </label>
-                        <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check" />
-                          <span>手機門號+健保卡驗證</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form_grp">
-                    <label for="fake-legend" class="form_title" aria-required="true">申辦項目：</label>
-                    <div class="form_content">
-                      <input type="text" id="fake-legend" placeholder="請輸入文字" />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
-                  <input name="" type="submit" value="查詢" class="btn btn-submit">
-                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
                 </div>
               </div>
-
-              <!-- filter 5 -->
-              sp4 的咒胎、多選 - checkbox
-              <div class="filter _tag">
-                <div class="flex-form form-column">
-                  <!-- checkbox -->
-                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                    <label for="fake-legend" class="form_title">請選擇稅別（多選、一般民眾）：</label>
-                    <div class="form_content" id="fake-legend">
-                      <div class="check_grp form_inline">
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n1" />
-                            <span>使用牌照稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">牌照稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n2" />
-                            <span>房屋稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n3" />
-                            <span>地價稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n4" />
-                            <span>土地增值稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">土地增值稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n5" />
-                            <span>契稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">契稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n6" />
-                            <span>印花稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">印花稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n7" />
-                            <span>娛樂稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">娛樂稅行事曆</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="reset" value="清除選擇" class="btn btn-reset">
-                  <input name="" type="submit" value="送出查詢" class="btn btn-submit">
-                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
-                </div>
+              <div class="btn_grp">
+                <input name="" type="reset" value="清除選擇" class="btn btn-reset">
+                <input name="" type="submit" value="送出查詢" class="btn btn-submit">
+                <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
               </div>
-
-              <!-- filter 5 -->
-              sp4 的咒胎、單選 - 標籤模式
-              <div class="filter _tag">
-                <!-- category -->
-                <div class="category">
-                  <ul>
-                    <li>
-                      <a href="#" class="active">全部</a>
-                      <!-- <a href="#" id="openModal" class="tip">牌照稅行事曆</a> -->
-                    </li>
-                    <li>
-                      <a href="#">牌照稅</a>
-                      <a href="#" id="openModal" class="tip">牌照稅行事曆</a>
-                    </li>
-                    <li>
-                      <a href="#">房屋稅</a>
-                      <a href="#" id="openModal" class="tip">房屋稅行事曆</a>
-                    </li>
-                    <li>
-                      <a href="#">地價稅</a>
-                      <a href="#" id="openModal" class="tip">地價稅行事曆</a>
-                    </li>
-                    <li>
-                      <a href="#">土地增值稅</a>
-                      <a href="#" id="openModal" class="tip">土地增值稅行事曆</a>
-                    </li>
-                    <li>
-                      <a href="#">契稅</a>
-                      <a href="#" id="openModal" class="tip">契稅行事曆</a>
-                    </li>
-                    <li>
-                      <a href="#">印花稅</a>
-                      <a href="#" id="openModal" class="tip">印花稅行事曆</a>
-                    </li>
-                    <li>
-                      <a href="#">娛樂稅</a>
-                      <a href="#" id="openModal" class="tip">娛樂稅行事曆</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- <div class="flex-form form-column">
-                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                    <label for="fake-legend" class="form_title">請選擇稅別（單選、友善閱讀）：</label>
-                    <div class="form_content" id="fake-legend">
-                      <div class="check_grp form_inline">
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n1" />
-                            <span>使用牌照稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">牌照稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n2" />
-                            <span>房屋稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n3" />
-                            <span>地價稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n4" />
-                            <span>土地增值稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">土地增值稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n5" />
-                            <span>契稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">契稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n6" />
-                            <span>印花稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">印花稅行事曆</a>
-                        </div>
-                        <div class="_flex">
-                          <label class="btn">
-                            <input type="checkbox" name="" value="" class="btn-check _n7" />
-                            <span>娛樂稅</span>
-                          </label>
-                          <a href="#" id="openModal" class="">娛樂稅行事曆</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="reset" value="清除選擇" class="btn btn-reset">
-                  <input name="" type="submit" value="送出查詢" class="btn btn-submit">
-                </div> -->
+            </div>
+            <!-- 單選 -->
+            <div class="filter _tag">
+              <!-- category -->
+              <div class="category">
+                <ul>
+                  <li>
+                    <a href="#">全部</a>
+                    <!-- <a href="#" id="openModal" class="tip">牌照稅行事曆</a> -->
+                  </li>
+                  <li>
+                    <a href="#" class="active">牌照稅</a>
+                    <a href="#" id="openModal" class="tip">牌照稅行事曆</a>
+                  </li>
+                  <li>
+                    <a href="#">房屋稅</a>
+                    <a href="#" id="openModal" class="tip">房屋稅行事曆</a>
+                  </li>
+                  <li>
+                    <a href="#">地價稅</a>
+                    <a href="#" id="openModal" class="tip">地價稅行事曆</a>
+                  </li>
+                  <li>
+                    <a href="#">土地增值稅</a>
+                    <a href="#" id="openModal" class="tip">土地增值稅行事曆</a>
+                  </li>
+                  <li>
+                    <a href="#">契稅</a>
+                    <a href="#" id="openModal" class="tip">契稅行事曆</a>
+                  </li>
+                  <li>
+                    <a href="#">印花稅</a>
+                    <a href="#" id="openModal" class="tip">印花稅行事曆</a>
+                  </li>
+                  <li>
+                    <a href="#">娛樂稅</a>
+                    <a href="#" id="openModal" class="tip">娛樂稅行事曆</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 月曆 -->
+            <!-- filter 複選：12個月 -->
+            <section class="month">
+              <div class="Jun">
+                <h3>一月</h3>
+                <ul>
+                  <li class="_n1">使用牌照稅</li>
+                  <li class="_n2">房屋稅</li>
+                  <li class="_n3">地價稅</li>
+                  <li class="_n4">土地增值稅</li>
+                  <li class="_n5">契稅</li>
+                  <li class="_n6">印花稅</li>
+                  <li class="_n7">娛樂稅</li>
+                </ul>
+              </div>
+              <div class="Feb">
+                <h3>二月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Mar">
+                <h3>三月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Apr">
+                <h3>四月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="May">
+                <h3>五月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Jun">
+                <h3>六月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Jul">
+                <h3>七月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Aug">
+                <h3>八月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Sep">
+                <h3>九月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Oct">
+                <h3>十月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Nov">
+                <h3>十一月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Dec">
+                <h3>十二月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+            </section>
+            <!-- filter 單選：隨機月份 -->
+            <section class="month _center">
+              <div class="Jun">
+                <h3>一月</h3>
+                <ul>
+                  <li>使用牌照稅</li>
+                </ul>
+              </div>
+              <div class="Feb">
+                <h3>二月</h3>
+                <ul>
+                  <li>使用牌照稅</li>
+                </ul>
+              </div>
+              <div class="Mar">
+                <h3>三月</h3>
+                <ul>
+                  <li>使用牌照稅</li>
+                </ul>
+              </div>
+              <!-- <div class="Apr">
+                <h3>四月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="May">
+                <h3>五月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Jun">
+                <h3>六月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Jul">
+                <h3>七月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Aug">
+                <h3>八月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Sep">
+                <h3>九月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Oct">
+                <h3>十月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Nov">
+                <h3>十一月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div>
+              <div class="Dec">
+                <h3>十二月</h3>
+                <ul>
+                  <li>印花稅總繳</li>
+                  <li>娛樂稅自動報繳及查定課徵</li>
+                  <li>房屋稅開徵</li>
+                </ul>
+              </div> -->
+            </section>
+            <!-- 其他資訊 icon link -->
+            <section class="otherLinks">
+              <h3 class="sub_menu_title">其他資訊</h3>
+              <!-- icon 連結 -->
+              <div class="_tax">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="icons">
+                        <img src="images/icon-mp-tax9.png" alt="">
+                        <img src="images/icon-mp-tax9-act.png" alt="">
+                      </span>
+                      <span>稅務新聞</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icons">
+                        <img src="images/icon-mp-tax10.png" alt="">
+                        <img src="images/icon-mp-tax10-act.png" alt="">
+                      </span>
+                      <span>常見稅務問題</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icons">
+                        <img src="images/icon-mp-tax11.png" alt="">
+                        <img src="images/icon-mp-tax11-act.png" alt="">
+                      </span>
+                      <span>多元繳稅服務</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </section>
             <!-- 內容區 End -->

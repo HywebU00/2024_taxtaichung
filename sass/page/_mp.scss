@@ -216,7 +216,6 @@ a.sub_more{
             left: 164px;
         }
     }
-
     ._YT{
         padding-right: 10px;
         iframe{
@@ -228,16 +227,83 @@ a.sub_more{
         padding-left: 10px;
         padding-top: 53px;
         ul{
+            li{
+                flex: 0 1 48%;
+            }
+        }
+    }
+    // ._tax{
+    //     padding-left: 10px;
+    //     padding-top: 53px;
+    //     ul{
+    //         @include li-reset;
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         justify-content: space-between;
+    //         li{
+    //             flex: 0 1 48%;
+    //             margin-bottom: 12px;
+    //             a{
+    //                 // background: #000;
+    //                 // background-color: #FFFFFF;
+    //                 display: flex;
+    //                 align-items: center;
+    //                 background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+    //                 color: #fff;
+    //                 font-size: 1.35em;
+    //                 border-radius: 4px;
+    //                 overflow: hidden;
+    //                 padding: .5em 1em;
+    //                 img{
+    //                     margin-right: 10px;
+    //                 }
+    //                 position: relative;
+    //                 z-index: 1;;
+    //                 &:after{
+    //                     content: '';
+    //                     position: absolute;
+    //                     z-index: -1;
+    //                     width: 0;
+    //                     height: 100%;
+    //                     left: 0;
+    //                     top: 0;
+    //                     background: $importantColor;
+    //                     // background: darken(#0f67b1, 5);
+    //                     transition: .3s;
+    //                 }
+
+    //                 &:hover, &:focus-visible{
+    //                     // color: $primaryColor;
+    //                     // background: #fff;
+    //                     // box-shadow: 0 0 0 2px #222;
+    //                     &:after{
+    //                         width: 100%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     @include screen('mobile') {
+    //         ul{
+    //             li{
+    //                 flex: 1 1 100%;
+    //             }
+    //         }
+    //     }
+    // }
+}
+// sp4 其他資訊 共用連結樣式，所以拖出來
+.videoZone,
+.otherLinks{
+    ._tax{
+        ul{
             @include li-reset;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             li{
-                flex: 0 1 48%;
                 margin-bottom: 12px;
                 a{
-                    // background: #000;
-                    // background-color: #FFFFFF;
                     display: flex;
                     align-items: center;
                     background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
@@ -246,12 +312,29 @@ a.sub_more{
                     border-radius: 4px;
                     overflow: hidden;
                     padding: .5em 1em;
-                    img{
-                        margin-right: 10px;
+                    
+                    .icons{
+                        // 預設、hover 兩張 icon
+                        margin-right: 12px;
+                        position: relative;
+                        width: 60px;
+                        height: 60px;
+                        img{
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            &:first-child{}
+                            &:last-child{
+                                // 選取後的白色icon
+                                opacity: 0;
+                            }
+                        }
                     }
                     position: relative;
                     z-index: 1;;
                     &:after{
+                        // hover 刷色
                         content: '';
                         position: absolute;
                         z-index: -1;
@@ -260,14 +343,21 @@ a.sub_more{
                         left: 0;
                         top: 0;
                         background: $importantColor;
-                        // background: darken(#0f67b1, 5);
                         transition: .3s;
                     }
 
                     &:hover, &:focus-visible{
-                        // color: $primaryColor;
-                        // background: #fff;
-                        // box-shadow: 0 0 0 2px #222;
+                        .icons{
+                            img{
+                                &:first-child{
+                                    opacity: 0;
+                                }
+                                &:last-child{
+                                    // 選取後的白色icon
+                                    opacity: 1;
+                                }
+                            }
+                        }
                         &:after{
                             width: 100%;
                         }
@@ -284,6 +374,29 @@ a.sub_more{
         }
     }
 }
+.otherLinks{
+    margin-bottom: 2em;
+    ._tax{
+        ul{
+            li{
+                flex: 0 1 32%;
+                a{
+                    // icon、文字置中
+                    justify-content: center;
+                }
+            }
+        }
+        @include screen('mobile') {
+            ul{
+                li{
+                    flex: 1 1 100%;
+                }
+            }
+        }
+    }
+}
+
+
 // 3 - 訊息專區 tab
 .infoZone{}
 // 4 - 專區 3連結

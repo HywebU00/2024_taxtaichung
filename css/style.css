@@ -1713,15 +1713,15 @@ kbd kbd {
 }
 
 .btn-normal {
-  background: #f1f1f1 !important;
-  color: #65656E !important;
+  background: #555 !important;
+  color: #fff !important;
   border: solid 1px #c3c3c3 !important;
   text-shadow: none !important;
 }
 .btn-normal:hover, .btn-normal:focus {
-  color: #404046 !important;
-  background: #c3c3c3 !important;
-  border: solid 1px #c3c3c3 !important;
+  color: #fff !important;
+  background: #ce4734 !important;
+  border: solid 1px #ce4734 !important;
 }
 
 .btn-back {
@@ -6555,7 +6555,7 @@ button {
   vertical-align: middle;
   margin: 0.3em;
   box-sizing: border-box;
-  border-radius: 0.2em;
+  border-radius: 0.25em;
   transition: all 0.3s ease-out;
 }
 
@@ -6633,7 +6633,7 @@ textarea {
   vertical-align: middle;
   margin: 0.3em;
   box-sizing: border-box;
-  border-radius: 0.2em;
+  border-radius: 0.25em;
   transition: all 0.3s ease-out;
   height: 5em;
   overflow-y: scroll;
@@ -7170,7 +7170,8 @@ table.table_sprite tr:nth-child(even) {
   line-height: normal;
 }
 .lp .list > ul > li .tag, .lp .list ol > li .tag {
-  background: #eee;
+  background: #eaf8fb;
+  color: #2f6db1;
   padding: 0.35em 1em;
   border-radius: 40px;
   font-weight: bold;
@@ -7182,12 +7183,13 @@ table.table_sprite tr:nth-child(even) {
   line-height: 1.45em;
   color: #222;
 }
-.lp .list > ul > li > a:hover, .lp .list ol > li > a:hover {
+.lp .list > ul > li > a:hover h3, .lp .list > ul > li > a:hover p, .lp .list ol > li > a:hover h3, .lp .list ol > li > a:hover p {
   color: #004d99;
 }
 .lp .list > ul > li > a p, .lp .list ol > li > a p {
   margin: 1em 0;
   font-size: 1.25em;
+  font-weight: bold;
 }
 .lp .list > ul > li > a .sub_title, .lp .list ol > li > a .sub_title {
   margin-bottom: 4px;
@@ -7196,6 +7198,9 @@ table.table_sprite tr:nth-child(even) {
 .lp .list > ul > li > a .sub_title + p, .lp .list ol > li > a .sub_title + p {
   font-size: 1em;
   margin: 0;
+  font-weight: normal;
+}
+.lp .list > ul > li .sub_title + p, .lp .list ol > li .sub_title + p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -7204,7 +7209,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   color: #222;
   font-family: georgia;
-  border-right: 1px solid #000;
+  border-right: 1px solid #ddd;
   padding-right: 1em;
 }
 .lp .list > ul > li time + span, .lp .list ol > li time + span {
@@ -7218,13 +7223,27 @@ table.table_sprite tr:nth-child(even) {
 }
 
 .searchResult ._resultnum {
-  padding: 1em;
-  background: #eee;
+  padding: 0.75em 1em;
+  background: #266eb3;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 0;
+}
+.searchResult ._resultnum b {
+  padding: 0 6px;
 }
 .searchResult ._resultItem {
-  padding: 0 1em;
+  padding: 1em;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.searchResult ._resultItem:last-child {
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
 }
 .searchResult ._resultItem h3 {
+  margin-top: 0;
   margin-bottom: 12px;
 }
 .searchResult ._resultItem ul {
@@ -7762,22 +7781,25 @@ table.table_sprite tr:nth-child(even) {
 .modal {
   position: fixed;
   display: none;
-  width: 400px;
-  height: 300px;
+  width: 60%;
+  height: auto;
   background: #FFF;
   z-index: 99999999;
-  top: 5%;
+  top: 12%;
   left: 50%;
-  margin-left: -200px;
-  padding: 1em 1em 1em;
+  margin-left: -30%;
+  padding: 3em 2em;
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: 1px 1px 15px RGBA(0, 0, 0, 0.5);
   animation: scaleUp 0.5s ease-out;
 }
 .modal h2 {
-  border-bottom: 1px solid #0066cc;
-  padding-bottom: 0.5em;
+  border-bottom: 1px solid #666;
+  color: #0059b3;
+  padding-bottom: 0.75em;
+  text-align: center;
+  margin-top: 0;
 }
 .modal .close {
   position: absolute;
@@ -7815,6 +7837,8 @@ table.table_sprite tr:nth-child(even) {
   height: 100%;
   background: RGBA(0, 0, 0, 0.5);
   z-index: 99999998;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 .slick-slider {
@@ -9581,6 +9605,34 @@ body::-webkit-scrollbar-track {
   }
 }
 
+._n1 {
+  background: #93ebff;
+}
+
+._n2 {
+  background: #aaffe3;
+}
+
+._n3 {
+  background: #00ca62;
+}
+
+._n4 {
+  background: #99db00;
+}
+
+._n5 {
+  background: #efdf00;
+}
+
+._n6 {
+  background: #ff7739;
+}
+
+._n7 {
+  background: #e5beff;
+}
+
 .filter {
   padding: 1.25em 5em;
   background: #e6f6fb;
@@ -9630,17 +9682,42 @@ body::-webkit-scrollbar-track {
   border-radius: 4px;
   padding: 12px 20px;
   margin: 2px 4px !important;
-  color: #222;
   background: transparent;
   border-radius: 6px;
   border-color: transparent;
   position: relative;
+}
+.filter .check_grp .btn + a {
+  font-size: 0;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #7e7e7e;
+  margin-left: -12px;
+  position: relative;
+  z-index: 1;
+}
+.filter .check_grp .btn + a:before {
+  content: "？";
+  position: absolute;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+.filter .check_grp .btn + a:hover, .filter .check_grp .btn + a:focus-visible {
+  background: #333;
 }
 .filter .check_grp .btn input[type=checkbox] {
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
+  color: #222;
   background: #cce2f6;
   border: none;
   border-radius: 6px;
@@ -9648,6 +9725,7 @@ body::-webkit-scrollbar-track {
   left: 0;
 }
 .filter .check_grp .btn input[type=checkbox]:checked, .filter .check_grp .btn input[type=checkbox]:focus {
+  color: #fff;
   background-image: none;
   background-repeat: no-repeat;
   background-position: center center;
@@ -9666,6 +9744,44 @@ body::-webkit-scrollbar-track {
 }
 .filter .check_grp .btn input[type=checkbox]:focus {
   box-shadow: 0 0 0 3px #ce4734;
+}
+.filter .check_grp .btn input[type=checkbox]._n1:checked, .filter .check_grp .btn input[type=checkbox]._n1:focus {
+  background: #93ebff;
+}
+.filter .check_grp .btn input[type=checkbox]._n2:checked, .filter .check_grp .btn input[type=checkbox]._n2:focus {
+  background: #aaffe3;
+}
+.filter .check_grp .btn input[type=checkbox]._n3:checked, .filter .check_grp .btn input[type=checkbox]._n3:focus {
+  background: #00ca62;
+}
+.filter .check_grp .btn input[type=checkbox]._n4:checked, .filter .check_grp .btn input[type=checkbox]._n4:focus {
+  background: #99db00;
+}
+.filter .check_grp .btn input[type=checkbox]._n5:checked, .filter .check_grp .btn input[type=checkbox]._n5:focus {
+  background: #efdf00;
+}
+.filter .check_grp .btn input[type=checkbox]._n6:checked, .filter .check_grp .btn input[type=checkbox]._n6:focus {
+  background: #ff7739;
+}
+.filter .check_grp .btn input[type=checkbox]._n7:checked, .filter .check_grp .btn input[type=checkbox]._n7:focus {
+  background: #e5beff;
+}
+.filter .check_grp .btn input[type=checkbox]._n1:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n1:checked + span, .filter .check_grp .btn input[type=checkbox]._n1:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n1:focus + span, .filter .check_grp .btn input[type=checkbox]._n2:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n2:checked + span, .filter .check_grp .btn input[type=checkbox]._n2:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n2:focus + span, .filter .check_grp .btn input[type=checkbox]._n3:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n3:checked + span, .filter .check_grp .btn input[type=checkbox]._n3:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n3:focus + span, .filter .check_grp .btn input[type=checkbox]._n4:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n4:checked + span, .filter .check_grp .btn input[type=checkbox]._n4:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n4:focus + span, .filter .check_grp .btn input[type=checkbox]._n5:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n5:checked + span, .filter .check_grp .btn input[type=checkbox]._n5:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n5:focus + span, .filter .check_grp .btn input[type=checkbox]._n6:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n6:checked + span, .filter .check_grp .btn input[type=checkbox]._n6:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n6:focus + span, .filter .check_grp .btn input[type=checkbox]._n7:checked + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n7:checked + span, .filter .check_grp .btn input[type=checkbox]._n7:focus + span.icons + span,
+.filter .check_grp .btn input[type=checkbox]._n7:focus + span {
+  color: #222;
 }
 .filter .check_grp .btn span.icons {
   margin-right: 6px;
@@ -9712,6 +9828,62 @@ body::-webkit-scrollbar-track {
 .filter .check_grp .btn:hover input[type=checkbox] + span.icons img:last-child {
   opacity: 1;
 }
+.filter._tag {
+  background: #f3f3f3;
+}
+.filter._tag ._flex {
+  display: flex;
+  align-items: center;
+}
+.filter._tag .btn input[type=checkbox] {
+  border-radius: 30px;
+}
+.filter._tag .category ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter._tag .category ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  float: none;
+}
+.filter._tag .category a {
+  padding: 10px 20px;
+  margin: 2px 4px !important;
+  border-radius: 30px;
+  background: #cce2f6;
+  border-color: transparent;
+}
+.filter._tag .category a.tip {
+  font-size: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #7e7e7e;
+  margin: auto !important;
+  margin-left: -12px !important;
+  padding: inherit;
+  position: relative;
+  z-index: 1;
+}
+.filter._tag .category a.tip:before {
+  content: "？";
+  position: absolute;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  z-index: 1;
+  font-size: 1.25rem;
+}
+.filter._tag .category a:hover, .filter._tag .category a:focus-visible, .filter._tag .category a.active {
+  background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+}
+.filter._tag .category a:hover.tip, .filter._tag .category a:focus-visible.tip, .filter._tag .category a.active.tip {
+  background: #333;
+}
 @media screen and (max-width: 991px) {
   .filter {
     padding: 1.25em 2.5em;
@@ -9722,6 +9894,70 @@ body::-webkit-scrollbar-track {
   .filter .flex-form.form_inline select, .filter .flex-form.form_inline input {
     width: -webkit-fill-available;
   }
+}
+
+.month {
+  display: flex;
+  flex-wrap: wrap;
+}
+.month._center {
+  justify-content: center;
+}
+.month > div {
+  flex: 0 1 23%;
+  margin: 0 1% 30px;
+  background: #f7f7f7;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+.month > div h3 {
+  text-align: center;
+  color: #fff;
+  background: #737373;
+  margin: 0;
+  padding: 0.75em 0;
+}
+.month > div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 1em 0;
+}
+.month > div ul li {
+  padding: 10px 20px 10px 40px;
+  position: relative;
+}
+.month > div ul li::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  width: 6px;
+  height: 6px;
+  background: #222;
+  border-radius: 50%;
+}
+@media screen and (max-width: 991px) {
+  .month > div {
+    flex: 0 1 48%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .month > div {
+    flex: 2 1 100%;
+  }
+}
+
+.view_switch {
+  display: flex;
+  justify-content: flex-end;
+}
+.view_switch .btn {
+  padding: 0.5em 2em;
+}
+.view_switch .btn._act {
+  background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%) !important;
+  color: #fff !important;
 }
 
 .case ._head {
@@ -9908,6 +10144,89 @@ body::-webkit-scrollbar-track {
   color: #fff;
   font-weight: bold;
   margin-right: 2px;
+}
+
+.search_state {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 3px;
+  border-radius: 40px;
+  box-shadow: #0061c2 0 0 0 1px;
+}
+.search_state a {
+  flex: 1 1 50%;
+  display: block;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-align: center;
+  background: #fff;
+}
+.search_state a:hover, .search_state a:focus-visible {
+  background: #eee;
+}
+.search_state a.act {
+  color: #fff;
+  background: #0059b3;
+}
+
+.QA_game {
+  padding-bottom: 20em;
+  background-position: 50% bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.QA_game h3.Qtitle {
+  font-size: 1.75em;
+  margin: 1.65em 0 1em;
+  line-height: 1.2;
+}
+.QA_game h3.Qtitle b {
+  color: #ce4734;
+}
+.QA_game h3.Qtitle + p {
+  font-size: 1.125em;
+}
+.QA_game h3.Qtitle + p b {
+  color: #ce4734;
+}
+.QA_game .tip {
+  padding: 0.75em 2em;
+}
+.QA_game .options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+}
+.QA_game .options .btn {
+  color: #fff;
+  font-size: 1.35em;
+  padding: 1em 3em;
+  border-radius: 3em;
+  background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
+}
+.QA_game .options .btn:hover, .QA_game .options .btn.act {
+  background: #ce4734;
+}
+.QA_game .finished {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2em;
+  text-align: center;
+}
+.QA_game .finished h3.Qtitle {
+  color: #0059b3;
+}
+.QA_game .finished p {
+  font-size: 1.125em;
+  line-height: 1.6;
+}
+
+.ctl_btns {
+  display: flex;
+  justify-content: center;
 }
 
 .innerpage > .container {
@@ -10191,7 +10510,12 @@ a.sub_more:hover, a.sub_more:focus-visible {
   padding-left: 10px;
   padding-top: 53px;
 }
-.videoZone ._tax ul {
+.videoZone ._tax ul li {
+  flex: 0 1 48%;
+}
+
+.videoZone ._tax ul,
+.otherLinks ._tax ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -10199,11 +10523,12 @@ a.sub_more:hover, a.sub_more:focus-visible {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.videoZone ._tax ul li {
-  flex: 0 1 48%;
+.videoZone ._tax ul li,
+.otherLinks ._tax ul li {
   margin-bottom: 12px;
 }
-.videoZone ._tax ul li a {
+.videoZone ._tax ul li a,
+.otherLinks ._tax ul li a {
   display: flex;
   align-items: center;
   background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
@@ -10215,10 +10540,26 @@ a.sub_more:hover, a.sub_more:focus-visible {
   position: relative;
   z-index: 1;
 }
-.videoZone ._tax ul li a img {
-  margin-right: 10px;
+.videoZone ._tax ul li a .icons,
+.otherLinks ._tax ul li a .icons {
+  margin-right: 12px;
+  position: relative;
+  width: 60px;
+  height: 60px;
 }
-.videoZone ._tax ul li a:after {
+.videoZone ._tax ul li a .icons img,
+.otherLinks ._tax ul li a .icons img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.videoZone ._tax ul li a .icons img:last-child,
+.otherLinks ._tax ul li a .icons img:last-child {
+  opacity: 0;
+}
+.videoZone ._tax ul li a:after,
+.otherLinks ._tax ul li a:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -10229,11 +10570,39 @@ a.sub_more:hover, a.sub_more:focus-visible {
   background: #ce4734;
   transition: 0.3s;
 }
-.videoZone ._tax ul li a:hover:after, .videoZone ._tax ul li a:focus-visible:after {
+.videoZone ._tax ul li a:hover .icons img:first-child, .videoZone ._tax ul li a:focus-visible .icons img:first-child,
+.otherLinks ._tax ul li a:hover .icons img:first-child,
+.otherLinks ._tax ul li a:focus-visible .icons img:first-child {
+  opacity: 0;
+}
+.videoZone ._tax ul li a:hover .icons img:last-child, .videoZone ._tax ul li a:focus-visible .icons img:last-child,
+.otherLinks ._tax ul li a:hover .icons img:last-child,
+.otherLinks ._tax ul li a:focus-visible .icons img:last-child {
+  opacity: 1;
+}
+.videoZone ._tax ul li a:hover:after, .videoZone ._tax ul li a:focus-visible:after,
+.otherLinks ._tax ul li a:hover:after,
+.otherLinks ._tax ul li a:focus-visible:after {
   width: 100%;
 }
 @media screen and (max-width: 767px) {
-  .videoZone ._tax ul li {
+  .videoZone ._tax ul li,
+  .otherLinks ._tax ul li {
+    flex: 1 1 100%;
+  }
+}
+
+.otherLinks {
+  margin-bottom: 2em;
+}
+.otherLinks ._tax ul li {
+  flex: 0 1 32%;
+}
+.otherLinks ._tax ul li a {
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .otherLinks ._tax ul li {
     flex: 1 1 100%;
   }
 }
@@ -11186,7 +11555,7 @@ h2.title {
   padding: 0 0 0.5em 0;
   margin-bottom: 1.5em;
   background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
 }
 .leftblock_nodemenu .title {
   margin: 0 0 1em;
