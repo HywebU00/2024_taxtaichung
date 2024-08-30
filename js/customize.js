@@ -537,7 +537,7 @@ $(function () {
       prevEl: '.activeSliderS1 .prevSlider', //自行設定樣式
     },
     breakpoints: {
-      500: {
+      390: {
         slidesPerView: 1,
       },
       767: {
@@ -571,7 +571,7 @@ $(function () {
       prevEl: '.activeSliderS2 .prevSlider', //自行設定樣式
     },
     breakpoints: {
-      500: {
+      300: {
         slidesPerView: 1,
       },
       767: {
