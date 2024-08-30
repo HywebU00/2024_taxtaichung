@@ -732,7 +732,6 @@ $bg_n7: #e5beff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   $num: 2;
   .slice{
     margin: 0 20px 50px;
@@ -849,6 +848,24 @@ $bg_n7: #e5beff;
       }
     }
   }
+  @include screen('tablet') {
+    .slice{
+      flex: 1 1 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  @include screen('mobile') {
+    .slice{
+      margin: 0 0 50px;
+      .state{
+        flex-wrap: wrap;
+        .icons{
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
 }
 
 // 進階搜尋 lp3
@@ -881,7 +898,7 @@ $bg_n7: #e5beff;
 
 // 節稅健檢
 .QA_game{
-  padding-bottom: 20em;
+  padding-bottom: 17em;
   background-position: 50% bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -909,6 +926,7 @@ $bg_n7: #e5beff;
     justify-content: center;
     padding: 3em 0;
     .btn{
+      flex: 0 1 auto;
       color: #fff;
       font-size: 1.35em;
       padding: 1em 3em;
@@ -941,6 +959,18 @@ $bg_n7: #e5beff;
     p{
       font-size: 1.125em;
       line-height: 1.6;
+    }
+  }
+  @include screen('mobile'){
+    padding-bottom: 8em;
+    .tip{
+      padding: 0.75em 1em;
+    }
+    .options{
+      padding: 1em 0;
+      .btn{
+        flex: 1 1 100%;
+      }
     }
   }
 }

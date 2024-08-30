@@ -3296,7 +3296,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: absolute;
   z-index: 999;
   right: 0;
-  top: 18px;
+  top: 15px;
   margin: 0;
   border-color: transparent;
   display: flex;
@@ -7161,18 +7161,38 @@ table.table_sprite tr:nth-child(even) {
   align-items: center;
 }
 .lp .list > ul > li .classify b, .lp .list ol > li .classify b {
-  padding: 0 1em;
-  font-weight: normal;
+  padding: 0.25em 0;
+  margin-right: 1em;
   font-size: 85%;
+  color: #555;
 }
 .lp .list > ul > li .classify span, .lp .list ol > li .classify span {
   margin-right: 6px;
   line-height: normal;
 }
+.lp .list > ul > li .txt, .lp .list ol > li .txt {
+  display: flex;
+  padding-top: 0.65em;
+}
+.lp .list > ul > li .txt .num, .lp .list ol > li .txt .num {
+  flex: 0 1 30px;
+  min-width: 30px;
+  line-height: 1.9;
+}
+.lp .list > ul > li .txt p, .lp .list ol > li .txt p {
+  flex: 1 1 auto;
+  margin: 0;
+  line-height: 1.5;
+}
+.lp .list > ul > li .txt + .tag, .lp .list ol > li .txt + .tag {
+  margin-left: 30px;
+}
 .lp .list > ul > li .tag, .lp .list ol > li .tag {
+  display: inline-block;
   background: #eaf8fb;
   color: #2f6db1;
   padding: 0.35em 1em;
+  margin-top: 8px;
   border-radius: 40px;
   font-weight: bold;
   font-size: 0.85em;
@@ -7209,11 +7229,24 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   color: #222;
   font-family: georgia;
-  border-right: 1px solid #ddd;
   padding-right: 1em;
 }
-.lp .list > ul > li time + span, .lp .list ol > li time + span {
+.lp .list > ul > li time + b,
+.lp .list > ul > li time + span.tag, .lp .list ol > li time + b,
+.lp .list ol > li time + span.tag {
   margin-left: 16px;
+  position: relative;
+}
+.lp .list > ul > li time + b:before,
+.lp .list > ul > li time + span.tag:before, .lp .list ol > li time + b:before,
+.lp .list ol > li time + span.tag:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  background: #ddd;
+  left: -16px;
+  top: 6px;
 }
 
 .spot {
@@ -10145,6 +10178,24 @@ body::-webkit-scrollbar-track {
   font-weight: bold;
   margin-right: 2px;
 }
+@media screen and (max-width: 991px) {
+  .cards .slice {
+    flex: 1 1 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cards .slice {
+    margin: 0 0 50px;
+  }
+  .cards .slice .state {
+    flex-wrap: wrap;
+  }
+  .cards .slice .state .icons {
+    margin-bottom: 6px;
+  }
+}
 
 .search_state {
   display: flex;
@@ -10172,7 +10223,7 @@ body::-webkit-scrollbar-track {
 }
 
 .QA_game {
-  padding-bottom: 20em;
+  padding-bottom: 17em;
   background-position: 50% bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -10202,6 +10253,7 @@ body::-webkit-scrollbar-track {
   padding: 3em 0;
 }
 .QA_game .options .btn {
+  flex: 0 1 auto;
   color: #fff;
   font-size: 1.35em;
   padding: 1em 3em;
@@ -10222,6 +10274,20 @@ body::-webkit-scrollbar-track {
 .QA_game .finished p {
   font-size: 1.125em;
   line-height: 1.6;
+}
+@media screen and (max-width: 767px) {
+  .QA_game {
+    padding-bottom: 8em;
+  }
+  .QA_game .tip {
+    padding: 0.75em 1em;
+  }
+  .QA_game .options {
+    padding: 1em 0;
+  }
+  .QA_game .options .btn {
+    flex: 1 1 100%;
+  }
 }
 
 .ctl_btns {
