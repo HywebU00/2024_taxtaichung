@@ -541,7 +541,7 @@ $(function () {
         slidesPerView: 1,
       },
       767: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
     },
     on: {
@@ -572,10 +572,10 @@ $(function () {
     },
     breakpoints: {
       500: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       767: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
     },
     on: {

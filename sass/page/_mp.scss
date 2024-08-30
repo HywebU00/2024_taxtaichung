@@ -404,7 +404,6 @@ a.sub_more{
     .container{
         display: flex;
         justify-content: space-evenly;
-
         a{
             display: flex;
             flex-direction: column;
@@ -414,6 +413,13 @@ a.sub_more{
             span{
                 font-weight: bold;
                 padding: 12px 0;
+            }
+        }
+        @include screen('mobile') {
+            flex-wrap: wrap;
+            a{
+                flex: 1 1 100%;
+                margin-top: 20px;
             }
         }
     }
@@ -539,6 +545,15 @@ a.sub_more{
     .tabSet{
         margin-bottom: 0;
     }
+
+    @include screen('mobile') {
+        .prevSlider{
+            left: 0;
+        }
+        .nextSlider{
+            right: 0;
+        }
+    }
 }
 .activeSlider,
 .activeSliderS1,
@@ -591,6 +606,9 @@ a.sub_more{
                 background: #0f67b1;
                 margin-bottom: 0;
             }
+        }
+        @include screen('mobile') {
+            padding: 2.5em 4em;
         }
     }
 }

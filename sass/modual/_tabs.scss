@@ -454,7 +454,14 @@
       .tabContent{
         margin-bottom: 0;
         padding: .5em 1em;
-
+        ul{
+          padding: 1em 1.75em;
+          li{
+            a{
+              flex-wrap: wrap;
+            }
+          }
+        }
         .modeBBtn{
           border-radius: 40px;
           font-size: 1.125em;

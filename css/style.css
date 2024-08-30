@@ -7702,6 +7702,12 @@ table.table_sprite tr:nth-child(even) {
     margin-bottom: 0;
     padding: 0.5em 1em;
   }
+  .tabSet._list .tabContent ul {
+    padding: 1em 1.75em;
+  }
+  .tabSet._list .tabContent ul li a {
+    flex-wrap: wrap;
+  }
   .tabSet._list .tabContent .modeBBtn {
     border-radius: 40px;
     font-size: 1.125em;
@@ -10725,6 +10731,15 @@ a.sub_more:hover, a.sub_more:focus-visible {
   font-weight: bold;
   padding: 12px 0;
 }
+@media screen and (max-width: 767px) {
+  .linkZone .container {
+    flex-wrap: wrap;
+  }
+  .linkZone .container a {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
 
 .topic_Link {
   display: flex;
@@ -10843,6 +10858,14 @@ a.sub_more:hover, a.sub_more:focus-visible {
 .activeZone .tabSet {
   margin-bottom: 0;
 }
+@media screen and (max-width: 767px) {
+  .activeZone .prevSlider {
+    left: 0;
+  }
+  .activeZone .nextSlider {
+    right: 0;
+  }
+}
 
 .activeSlider,
 .activeSliderS1,
@@ -10929,6 +10952,13 @@ a.sub_more:hover, a.sub_more:focus-visible {
   color: #fff;
   background: #0f67b1;
   margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .activeSlider ._item,
+  .activeSliderS1 ._item,
+  .activeSliderS2 ._item {
+    padding: 2.5em 4em;
+  }
 }
 
 ._tabslider {
