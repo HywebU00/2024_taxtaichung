@@ -543,6 +543,9 @@ $(function () {
       767: {
         slidesPerView: 2,
       },
+      994: {
+        slidesPerView: 3,
+      },
     },
     on: {
       init: cleanButtonAttrUse(),
@@ -576,6 +579,9 @@ $(function () {
       },
       767: {
         slidesPerView: 2,
+      },
+      994: {
+        slidesPerView: 3,
       },
     },
     on: {
