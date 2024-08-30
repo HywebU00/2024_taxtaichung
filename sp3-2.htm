@@ -39,6 +39,46 @@
           <!-- <button class="btn btn-normal">前往客服中心</button> -->
       </div>
     </div>
+    <div id="modal2" class="modal_scroll">
+      <!-- div內的內容可以自行設定 -->
+      <h2>有scroll的跳窗</h2>
+      <div class="modal_content">
+        <p>內文 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas qui aliquid voluptates quidem dignissimos dolorem sed corporis minima at iste molestiae doloremque ullam officia, voluptate quisquam autem iure est. Aliquam?</p>
+        <ul>
+          <li>無序清單</li>
+          <li>無序清單</li>
+          <li>無序清單</li>
+        </ul>
+        <ol>
+          <li>有序清單</li>
+          <li>有序清單</li>
+          <li>有序清單</li>
+        </ol>
+        <table>
+        <tr>
+          <th>稅目</th>
+          <th>工作事項</th>
+          <th>申報、繳納開始日期</th>
+          <th>申報、繳納截止日期</th>
+        </tr>
+        <tr>
+          <th rowspan="2">土地增值稅</th>
+          <td>申報</td>
+          <td>土地所有權移轉或設定典權時於訂定契約日起</td>
+          <td>30日內填具現值申報書檢同契約書及有關文件申報</td>
+        </tr>
+        <tr>
+          <td>納稅</td>
+          <td>&nbsp;</td>
+          <td>接到稅單之開徵始日起30日內繳納</td>
+        </tr>
+      </table>
+        <div class="btn_grp">
+          <button class="btn btn-normal close_Modal">關閉跳窗，重新選擇</button>
+          <!-- <button class="btn btn-normal">前往客服中心</button> -->
+        </div>
+      </div>
+    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -1004,6 +1044,7 @@
               <div class="options">
                 <button type="button" class="btn" onclick="window.location.href='sp3-3.htm'">是（往下一題）</button>
                 <button type="button" id="openModal" class="btn">否（跳窗資訊）</button>
+                <button type="button" id="openModal_scroll" class="btn">有scroll的跳窗</button>
               </div>
               <!-- 操作按鈕 -->
               <div class="ctl_btns">

@@ -74,6 +74,30 @@ $(function () {
     $(".modal .close_Modal").click(closeModal);
   });
 
+  $(function () {
+    $("#modal2").hide(); //先隱藏視窗
+    $(".modal_scroll").after('<div class="modal_overlay"></div>'); //新增透明底
+    // $(".modal").prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
+    $(".modal_overlay").hide(); //隱藏透明底
+    //按鈕動作
+    $("#openModal_scroll").click(function (e) {
+      $(".modal_overlay").fadeIn(100);
+      $(".modal_scroll").fadeIn(100);
+      $("body").addClass("noscroll");
+      e.preventDefault();
+    });
+    //關閉function
+    function closeModal() {
+        $("#modal2").hide();
+        $(".modal_overlay").hide();
+        $("body").removeClass("noscroll");
+    }
+    //點選關閉按鈕及透明底都可關閉
+    // $(".modal_overlay").click(closeModal);
+    // $(".modal .close_Modal").click(closeModal);
+    $(this).find('.close_Modal').click(closeModal);
+  });
+
   // 首頁輪播
   $('.mpSlider').slick({
     mobileFirst: true,

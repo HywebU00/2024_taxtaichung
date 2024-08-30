@@ -7811,7 +7811,8 @@ table.table_sprite tr:nth-child(even) {
   margin: 0.1em auto 1em;
 }
 
-.modal {
+.modal,
+.modal_scroll {
   position: fixed;
   display: none;
   width: 60%;
@@ -7827,14 +7828,16 @@ table.table_sprite tr:nth-child(even) {
   box-shadow: 1px 1px 15px RGBA(0, 0, 0, 0.5);
   animation: scaleUp 0.5s ease-out;
 }
-.modal h2 {
+.modal h2,
+.modal_scroll h2 {
   border-bottom: 1px solid #666;
   color: #0059b3;
   padding-bottom: 0.75em;
   text-align: center;
   margin-top: 0;
 }
-.modal .close {
+.modal .close,
+.modal_scroll .close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -7847,8 +7850,42 @@ table.table_sprite tr:nth-child(even) {
   padding: 0;
   background: url(../images/basic/icon_close.svg) no-repeat center center;
 }
-.modal .close:hover, .modal .close:focus {
+.modal .close:hover, .modal .close:focus,
+.modal_scroll .close:hover,
+.modal_scroll .close:focus {
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .modal,
+  .modal_scroll {
+    width: 90%;
+    margin-left: -45%;
+  }
+}
+
+.modal_scroll {
+  height: 590px;
+  padding: 3em 2em 6em;
+}
+.modal_scroll .modal_content {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.modal_scroll .modal_content .center_box {
+  text-align: center;
+  padding: 1em 0;
+}
+.modal_scroll .modal_content .center_box p {
+  margin: 6px 0;
+  font-weight: bold;
+}
+.modal_scroll .modal_content .center_box b {
+  font-size: 150%;
+  color: #004d99;
+  border: 1px solid;
+  padding: 0.5em 1.5em;
+  display: inline-block;
 }
 
 @keyframes scaleUp {
