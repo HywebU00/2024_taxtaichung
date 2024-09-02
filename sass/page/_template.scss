@@ -97,6 +97,8 @@ body::-webkit-scrollbar-track {
     position: relative;
     img{
       position: absolute;
+      width: 36px;
+      height: 36px;
       right: 4px;
       z-index: 2;
     }
