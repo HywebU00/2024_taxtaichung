@@ -81,7 +81,7 @@ body::-webkit-scrollbar-track {
 .R_side_fixed{
   position: fixed;
   // right: calc((100% - 1200px) / 2 - 46px);
-  right: 4px;
+  right: 0;
   top: 28%;
   z-index: 97;
 
@@ -186,19 +186,46 @@ body::-webkit-scrollbar-track {
         }
       }
     }
+
+    &:first-child{
+      margin-bottom: -3px;
+      &:after{
+        border-radius: 4px 0 0 0;
+        padding-top: 10px;
+      }
+    }
+    &:last-child{
+      &:after{
+        border-radius: 0 0 0 4px;
+        padding-bottom: 10px;
+      }
+    }
+
+    // 背景
+    &:after{
+      content: '';
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      background: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+      right: 0;
+      z-index: -1;
+    }
   }
-  &::after{
-    content: '';
-    position: absolute;
-    z-index: -1;
-    right: -2px;
-    top: -4px;
-    width: calc($_size + 4px);
-    height: calc($_size * 6 + 8px);
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  }
+  // &::after{
+  //   // 背景
+  //   content: '';
+  //   position: absolute;
+  //   z-index: -1;
+  //   right: -2px;
+  //   top: -4px;
+  //   width: calc($_size + 4px);
+  //   height: calc($_size * 6 + 8px);
+  //   background: #fff;
+  //   border-radius: 4px;
+  //   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  // }
   @media screen and (max-width: 1300px) {
     right: 0;
   }
