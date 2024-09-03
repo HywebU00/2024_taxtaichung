@@ -7051,7 +7051,6 @@ table.table_sprite tr:nth-child(even) {
   position: relative;
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0);
-  overflow-y: hidden;
 }
 
 .scroltable-container {
@@ -10737,10 +10736,17 @@ a.sub_more:hover, a.sub_more:focus-visible {
   align-items: center;
   font-size: 1.25em;
   color: #000;
+  padding: 0.5em;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 .linkZone .container a span {
   font-weight: bold;
   padding: 12px 0;
+}
+.linkZone .container a:hover, .linkZone .container a:focus-visible {
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 @media screen and (max-width: 767px) {
   .linkZone .container {
@@ -10801,6 +10807,7 @@ a.sub_more:hover, a.sub_more:focus-visible {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 1.5em;
 }
 .topic_Link .col ._listlink a {
   display: block;
@@ -10808,9 +10815,14 @@ a.sub_more:hover, a.sub_more:focus-visible {
   padding: 4px 0;
   margin: 2px 0;
   color: #fff;
+  border-radius: 6px;
+}
+.topic_Link .col ._listlink a:hover, .topic_Link .col ._listlink a:focus-visible {
+  background: rgba(0, 0, 0, 0.65);
 }
 .topic_Link .col:hover, .topic_Link .col:focus-visible {
   cursor: pointer;
+  box-shadow: none;
 }
 .topic_Link .col:hover ._listlink, .topic_Link .col:focus-visible ._listlink {
   left: 0;
@@ -10956,6 +10968,7 @@ a.sub_more:hover, a.sub_more:focus-visible {
 .activeSliderS2 ._item a._info {
   color: #222;
   background: #cce2f6;
+  transition: 0.3s;
 }
 .activeSlider ._item a._winner,
 .activeSliderS1 ._item a._winner,
@@ -10963,6 +10976,19 @@ a.sub_more:hover, a.sub_more:focus-visible {
   color: #fff;
   background: #0f67b1;
   margin-bottom: 0;
+  transition: 0.3s;
+}
+.activeSlider ._item a:hover._info, .activeSlider ._item a:hover._winner, .activeSlider ._item a:focus-visible._info, .activeSlider ._item a:focus-visible._winner,
+.activeSliderS1 ._item a:hover._info,
+.activeSliderS1 ._item a:hover._winner,
+.activeSliderS1 ._item a:focus-visible._info,
+.activeSliderS1 ._item a:focus-visible._winner,
+.activeSliderS2 ._item a:hover._info,
+.activeSliderS2 ._item a:hover._winner,
+.activeSliderS2 ._item a:focus-visible._info,
+.activeSliderS2 ._item a:focus-visible._winner {
+  color: #fff;
+  background: #ce4734;
 }
 @media screen and (max-width: 767px) {
   .activeSlider ._item,
