@@ -11047,6 +11047,12 @@ h2.title {
   margin-bottom: 2em;
 }
 
+._clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .cp {
   position: relative;
 }
@@ -11168,10 +11174,9 @@ h2.title {
   content: "·";
   font-size: 2em;
   font-weight: bold;
-  width: 1em;
   height: 1em;
   position: absolute;
-  top: 0.32em;
+  top: 0.4em;
   left: 0.1em;
   color: #666;
 }
@@ -11444,7 +11449,6 @@ h2.title {
   content: "·";
   font-size: 2em;
   font-weight: bold;
-  width: 1em;
   height: 1em;
   position: absolute;
   top: 0.35em;
