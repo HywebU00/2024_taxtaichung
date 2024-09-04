@@ -107,7 +107,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: url('../images/bg.jpg') center bottom no-repeat;
+      background: url('../images/welcome/bg.jpg') center bottom no-repeat;
       height: 100vh;
     }
 
@@ -721,6 +721,7 @@
       @media screen and (min-width:1001px) {
         max-width: 1400px;
         max-height: 750px;
+        // width: fit-content;
       }
 
       & > a {
@@ -740,6 +741,7 @@
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
+      // width: fit-content;
       // aspect-ratio: 140/75;
       display: flex;
       flex-wrap: wrap;
@@ -789,7 +791,7 @@
     &#content4,
     &#content9,
     &#content10 {
-      background: #ffebee;
+      // background: #ffebee;
 
       .inBox {
 
@@ -865,7 +867,7 @@
     }
 
     &#content3 {
-      background: #f3e5f5;
+      // background: #f3e5f5;
 
       .inBox {
         .btnBox {
@@ -881,7 +883,7 @@
     }
 
     &#content4 {
-      background: #e3f2fd;
+      // background: #e3f2fd;
 
       .inBox {
         .box {
@@ -921,7 +923,7 @@
     }
 
     &#content5 {
-      background: #fff9c4;
+      // background: #fff9c4;
 
       .btnBox {
         display: flex;
@@ -960,7 +962,7 @@
     &#content6,
     &#content7,
     &#content8 {
-      background: #e8f5e9;
+      // background: #e8f5e9;
 
       .inBox {
         justify-content: space-between;
@@ -1058,9 +1060,7 @@
           }
 
           &:hover {
-            &:nth-child(1) {
-              background: lighten(#000000, 30);
-            }
+            background: lighten(#000000, 30);
 
             &:nth-child(2) {
               background: darken(#008941, 10);
@@ -1085,7 +1085,7 @@
     }
 
     &#content10 {
-      background: #e1f5fe;
+      // background: #e1f5fe;
 
       .inBox {
         .btnBox {

@@ -430,7 +430,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../images/bg.jpg") center bottom no-repeat;
+  background: url("../images/welcome/bg.jpg") center bottom no-repeat;
   height: 100vh;
 }
 .welcome main .container {
@@ -1013,9 +1013,6 @@
 .welcome .contentFancyBox .pic {
   line-height: 0;
 }
-.welcome .contentFancyBox#content2, .welcome .contentFancyBox#content3, .welcome .contentFancyBox#content4, .welcome .contentFancyBox#content9, .welcome .contentFancyBox#content10 {
-  background: #ffebee;
-}
 .welcome .contentFancyBox#content2 .inBox .btnBox, .welcome .contentFancyBox#content3 .inBox .btnBox, .welcome .contentFancyBox#content4 .inBox .btnBox, .welcome .contentFancyBox#content9 .inBox .btnBox, .welcome .contentFancyBox#content10 .inBox .btnBox {
   width: 100%;
   display: flex;
@@ -1086,17 +1083,11 @@
 .welcome .contentFancyBox#content2 .inBox .btnBox button:hover, .welcome .contentFancyBox#content3 .inBox .btnBox button:hover, .welcome .contentFancyBox#content4 .inBox .btnBox button:hover, .welcome .contentFancyBox#content9 .inBox .btnBox button:hover, .welcome .contentFancyBox#content10 .inBox .btnBox button:hover {
   background: #5e0054;
 }
-.welcome .contentFancyBox#content3 {
-  background: #f3e5f5;
-}
 .welcome .contentFancyBox#content3 .inBox .btnBox button {
   background: #c35400;
 }
 .welcome .contentFancyBox#content3 .inBox .btnBox button:hover {
   background: #903e00;
-}
-.welcome .contentFancyBox#content4 {
-  background: #e3f2fd;
 }
 .welcome .contentFancyBox#content4 .inBox .box .contentInfoBox {
   width: 50%;
@@ -1126,9 +1117,6 @@
 }
 .welcome .contentFancyBox#content4 .inBox .btnBox button:hover {
   background: #005672;
-}
-.welcome .contentFancyBox#content5 {
-  background: #fff9c4;
 }
 .welcome .contentFancyBox#content5 .btnBox {
   display: flex;
@@ -1161,9 +1149,6 @@
   background: #a56200;
   border-radius: 50%;
   margin-bottom: 15px;
-}
-.welcome .contentFancyBox#content6, .welcome .contentFancyBox#content7, .welcome .contentFancyBox#content8 {
-  background: #e8f5e9;
 }
 .welcome .contentFancyBox#content6 .inBox, .welcome .contentFancyBox#content7 .inBox, .welcome .contentFancyBox#content8 .inBox {
   justify-content: space-between;
@@ -1256,7 +1241,7 @@
 .welcome .contentFancyBox#content6 .btnBox > a:nth-child(2), .welcome .contentFancyBox#content7 .btnBox > a:nth-child(2), .welcome .contentFancyBox#content8 .btnBox > a:nth-child(2) {
   background: #008941;
 }
-.welcome .contentFancyBox#content6 .btnBox > a:hover:nth-child(1), .welcome .contentFancyBox#content7 .btnBox > a:hover:nth-child(1), .welcome .contentFancyBox#content8 .btnBox > a:hover:nth-child(1) {
+.welcome .contentFancyBox#content6 .btnBox > a:hover, .welcome .contentFancyBox#content7 .btnBox > a:hover, .welcome .contentFancyBox#content8 .btnBox > a:hover {
   background: #4d4d4d;
 }
 .welcome .contentFancyBox#content6 .btnBox > a:hover:nth-child(2), .welcome .contentFancyBox#content7 .btnBox > a:hover:nth-child(2), .welcome .contentFancyBox#content8 .btnBox > a:hover:nth-child(2) {
@@ -1267,9 +1252,6 @@
 }
 .welcome .contentFancyBox#content9 .inBox .btnBox button:hover {
   background: #a62e00;
-}
-.welcome .contentFancyBox#content10 {
-  background: #e1f5fe;
 }
 .welcome .contentFancyBox#content10 .inBox .btnBox button {
   width: auto;
