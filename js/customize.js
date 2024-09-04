@@ -28,7 +28,6 @@ $(function () {
   $(window).on('load', function() {
       var rightBlockHeight = $('.right_block').height();
       var leftBlockHeight = $('.left_block').height();
-      // 将高度值直接设置为 .lp 的 inline style
       $('.lp').css('height', rightBlockHeight + 'px');
       $('.lp').css('min-height', leftBlockHeight + 'px');
   });
