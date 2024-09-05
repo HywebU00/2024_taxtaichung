@@ -9182,10 +9182,10 @@ div.function ul li.icon_forward a:before {
   display: none;
   position: absolute;
   top: 2.5em;
-  left: -6px;
-  padding: 6px;
+  left: -12px;
+  padding: 12px;
   background: #FFF;
-  box-shadow: 2px 2px 5px RGBA(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   border-radius: 8px;
   z-index: 999;
   height: auto;
