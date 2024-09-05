@@ -68,7 +68,7 @@
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
-                background: $primaryColor;
+                background: #222;
                 width: 50%;
                 height: 3px;
                 top: 20px;
@@ -94,7 +94,7 @@
                 width: 40px;
                 height: 40px;
                 background: url(../images/icon_search.svg) no-repeat center center;
-                background-size: 32px;
+                background-size: 36px;
                 content: '';
                 position: absolute;
                 top: 10px;

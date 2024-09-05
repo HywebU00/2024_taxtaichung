@@ -86,7 +86,9 @@
         outline: none;
         text-decoration: none;
         text-align: center;
-        &:hover, &:focus-visible{
+        &:hover,
+        &:focus,
+        &:focus-visible{
           background: darken(#0f67b1, 10);
         }
       }

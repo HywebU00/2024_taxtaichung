@@ -320,14 +320,14 @@ ul.slick-dots{
 
   .slick-prev {
     @include screen('mobile') {
-      top: 35%;
+      // top: 35%;
       left: 2%;
     }
   }
 
   .slick-next {
     @include screen('mobile') {
-      top: 35%;
+      // top: 35%;
       right: 2%;
     }
   }

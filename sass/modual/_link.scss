@@ -113,11 +113,27 @@
                     transform: translateY(-50%)
                     // background-size: 30px;
                 }
+                a{
+                    padding-left: 0;
+                    transition: .3s;
+                    &:hover{
+                        padding-left: .25em;
+                        color: $importantColor;
+                    }
+                }
             }
             ul{
                 li{
                     background: url(../images/icon-arrow-r-type2.svg) 10px 50% no-repeat;
                     background-size: 16px;
+                    a{
+                        padding-left: 36px;
+                        transition: .3s;
+                        &:hover{
+                            padding-left: 42px;
+                            color: $importantColor;
+                        }
+                    }
                 }
             }
         }
@@ -160,8 +176,14 @@
                     line-height: 0; // 修正包 img 的高度
                     padding: 6px 0;
                     margin-bottom: 6px;
+                    background: #fff;
+                    transition: .3s;
                     img{
                         // display: block;
+                    }
+
+                    &:hover, &:focus-visible{
+                        background: #ddd;
                     }
                 }
             }

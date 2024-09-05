@@ -2970,7 +2970,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .header > .container .sidebarCtrl span {
   position: absolute;
-  background: #0066cc;
+  background: #222;
   width: 50%;
   height: 3px;
   top: 20px;
@@ -2994,7 +2994,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   width: 40px;
   height: 40px;
   background: url(../images/icon_search.svg) no-repeat center center;
-  background-size: 32px;
+  background-size: 36px;
   content: "";
   position: absolute;
   top: 10px;
@@ -4172,7 +4172,7 @@ a.imgLink img {
   text-decoration: none;
   text-align: center;
 }
-.megamenu ul li a:hover, .megamenu ul li a:focus-visible {
+.megamenu ul li a:hover, .megamenu ul li a:focus, .megamenu ul li a:focus-visible {
   background: #0b4c82;
 }
 .megamenu ul li > ul > li {
@@ -7154,6 +7154,7 @@ table.table_sprite tr:nth-child(even) {
   padding: 1em 0;
   border-bottom: 1px solid #DDD;
   position: relative;
+  background: #fff;
 }
 .lp .list > ul > li .classify, .lp .list ol > li .classify {
   display: flex;
@@ -7246,6 +7247,13 @@ table.table_sprite tr:nth-child(even) {
   background: #ddd;
   left: -16px;
   top: 6px;
+}
+.lp .list > ul > li:hover, .lp .list ol > li:hover {
+  background: #eaf8fb;
+}
+.lp .list > ul > li:hover .tag, .lp .list ol > li:hover .tag {
+  color: #333;
+  background: #fff;
 }
 
 .spot {
@@ -7405,9 +7413,25 @@ table.table_sprite tr:nth-child(even) {
   top: 50%;
   transform: translateY(-50%);
 }
+.sub_menu._herolist ._list ._title a {
+  padding-left: 0;
+  transition: 0.3s;
+}
+.sub_menu._herolist ._list ._title a:hover {
+  padding-left: 0.25em;
+  color: #ce4734;
+}
 .sub_menu._herolist ._list ul li {
   background: url(../images/icon-arrow-r-type2.svg) 10px 50% no-repeat;
   background-size: 16px;
+}
+.sub_menu._herolist ._list ul li a {
+  padding-left: 36px;
+  transition: 0.3s;
+}
+.sub_menu._herolist ._list ul li a:hover {
+  padding-left: 42px;
+  color: #ce4734;
 }
 .sub_menu._herolist .img-container {
   overflow: hidden;
@@ -7455,6 +7479,11 @@ table.table_sprite tr:nth-child(even) {
   line-height: 0;
   padding: 6px 0;
   margin-bottom: 6px;
+  background: #fff;
+  transition: 0.3s;
+}
+.sub_menu._img ul li a:hover, .sub_menu._img ul li a:focus-visible {
+  background: #ddd;
 }
 .sub_menu._icontext ul li {
   flex: 0 0 25%;
@@ -8216,13 +8245,11 @@ ul.slick-dots {
 }
 @media screen and (max-width: 767px) {
   .mpSlider .slick-prev {
-    top: 35%;
     left: 2%;
   }
 }
 @media screen and (max-width: 767px) {
   .mpSlider .slick-next {
-    top: 35%;
     right: 2%;
   }
 }
