@@ -192,6 +192,7 @@ h2.title{
             line-height: 1.8em;
             margin: .2em .5em .2em 0;
             color: #222;
+            font-weight: bold;
             ~span {
                 flex: 0 0 auto;
                 margin: .2em;
@@ -358,28 +359,36 @@ h2.title{
     ul {
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin: 0 !important;
     }
     li {
         position: relative;
-        padding: .5em 0;
+        // padding: .5em 0;
         border-bottom: solid 1px #eee;
-        padding-left: 1.5em;
+        margin: 0 !important;
+        // padding-left: 1.5em;
         &:before {
             content: '·';
             font-size: 2em;
             font-weight: bold;
             // width: 1em;
-            height: 1em;
+            // height: 1em;
             position: absolute;
-            top: .35em;
+            top: 10px;
             left: .1em;
             color: #666;
         }
         a {
-            padding: .2em 0px;
             display: block;
+            padding: .5em 0;
+            padding-left: 1.5em;
+            transition: .3s;
             @include aSetting_nocolor;
+
+            &:hover, &:focus-visible{
+                background: #eee;
+                padding-left: 2em;
+            }
         }
     }
 }
@@ -443,5 +452,10 @@ h2.title{
 }
 // slider
 ._sliderBox{
-    h3{}
+    span.caption{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
 }

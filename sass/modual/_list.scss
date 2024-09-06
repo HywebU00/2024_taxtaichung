@@ -26,8 +26,10 @@
             padding: 0;
             // border-top: 2px solid $primaryColor;
             &>li {
-                padding: 1em 0;
+                // padding: 1em 0;
                 border-bottom: 1px solid #DDD;
+                background: #fff;
+                margin-bottom: 2px; // focus時讓底線出現的空間
                 position: relative; // outline: 1px solid blue;
                 .classify{
                     // 分類
@@ -77,18 +79,28 @@
                 }
                 &>a {
                     display: block;
+                    padding: 1em 0;
+                    margin-bottom: 2px; 
                     // padding-left: 2em;
                     position: relative;
                     line-height: 1.45em;
                     color: $color-word;
-                    &:hover {
+                    transition: .3s;
+                    &:hover,
+                    &:focus-visible{
                         // color: $aHover;
+                        padding: 1em 1.25em;
+                        background: #eaf8fb;
                         h3, p{
                             color: $aHover;
                         }
                         // h3 + p{
                         //     color: #222;
                         // }
+                        .tag{
+                            color: #333;
+                            background: #fff;
+                        }
                     }
                     // .num {
                     //     width: 1.5em;
@@ -140,7 +152,6 @@
                     color: #222;
                     font-family: georgia;
                     padding-right: 1em;
-
                     +b,
                     + span.tag{
                         margin-left: 16px;
@@ -154,16 +165,6 @@
                             left: -16px;
                             top: 6px;
                         }
-                    }
-                }
-
-                background: #fff;
-                &:hover{
-                    // background: #f6f6f6;
-                    background: #eaf8fb;
-                    .tag{
-                        color: #333;
-                        background: #fff;
                     }
                 }
             }

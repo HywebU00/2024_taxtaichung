@@ -233,6 +233,25 @@ body::-webkit-scrollbar-track {
   }
 }
 
+// 隱藏 slick-dots 黑點點
+.slick-dots li button{
+  width: 12px;
+  height: 12px;
+}
+.slick-dots li button:before,
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before{
+  opacity: 0;
+}
+.slick-dots li{
+  margin: 0 5px !important;
+}
+.slick-dots li.slick-active,
+.slick-dots li.slick-active button{
+  width: 42px;
+  border-radius: 30px;
+}
+
 // filter
 // focus 配色
 $bg_n1: #93ebff; 
@@ -252,6 +271,7 @@ $bg_n7: #e5beff;
 .filter{
   padding: 1.25em 5em;
   background: #e6f6fb;
+  border: solid 1px #dceaee;
   margin: 1em 0;
   border-radius: 6px;
   .btn_grp{
@@ -612,7 +632,8 @@ $bg_n7: #e5beff;
     // background: pink;
     margin: 0 1% 30px;
     background: #f7f7f7;
-    border-radius: 6px 6px 0 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 6px;
     overflow: hidden;
 
     h3{
@@ -713,7 +734,9 @@ $bg_n7: #e5beff;
   }
   ._content{
     margin-bottom: 1em;
-    padding: 1em 2em;
+    padding: 1em 2em 1.5em;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     ._item{
       display: flex;
       padding: 6px 0;
@@ -847,6 +870,10 @@ $bg_n7: #e5beff;
             padding: 4px 30px;
             margin-right: 4px;
             border-radius: 3px;
+
+            &:hover, &:focus-visible{
+              background: $importantColor;
+            }
           }
         }
       }
@@ -872,6 +899,10 @@ $bg_n7: #e5beff;
             color: #fff;
             font-weight: bold;
             margin-right: 2px;
+
+            &:hover, &:focus-visible{
+              background: $primaryColor;
+            }
           }
         }
       }

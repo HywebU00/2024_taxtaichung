@@ -109,7 +109,11 @@ $btn-radius:.25em;
 }
 .btn-reset {
     // @extend %btn;
-    color:lighten($color-word,15);
+    color: lighten($color-word,15);
+    &:hover,
+    &:focus{
+        border-color: #4d4d4d;
+    }
 }
 .btn-search {
     // @extend %btn;
@@ -256,6 +260,11 @@ $btn-radius:.25em;
         // 垂直
         width: 2px;
         height: 16px;
+    }
+
+    &:hover, &:focus-visible{
+        background: $primaryColor;
+        border-color: $primaryColor;
     }
 
     &.act{

@@ -134,10 +134,11 @@
           align-items: center;
           
           a {
-            padding: .3em .6em;
+            padding: .5em .75em;
             color: #FFF;
             font-weight: bold;
             box-sizing: border-box;
+            border-radius: 3px;
             text-align: left;
 
             // 第二層標題 寬度
@@ -163,7 +164,7 @@
               padding: 0;
 
               a {
-                padding: .4em .6em;
+                padding: .4em 1em;
                 color: #fff;
 
                 &:hover,
