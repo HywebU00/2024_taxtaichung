@@ -19,18 +19,9 @@
             margin: 0;
             box-sizing: border-box
         }
-        /* .wrapper{
+        .wrapper .container{
             max-width: 1200px;
             margin: 0 auto;
-        } */
-        .forbidden{
-            text-align: center;
-        }
-        .wrapper {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0px auto;
-            padding: 2em 20px 0;
         }
         .wrapper img{
             width: auto;
@@ -83,11 +74,260 @@
             box-shadow: none;
             outline: none
         }
+        /* header */
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header .navigation .navlist {
+            flex: 1 1 auto;
+        }
+        .header .navigation .navlist ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 12px;
+            position: relative;
+        }
+        .header .navigation .navlist li {
+            flex: 0 0 auto;
+        }
+        .header .navigation .navlist li a {
+            display: block;
+            padding: 0.5em;
+            text-decoration: none;
+            color: #222;
+            text-decoration: none;
+        }
+        .header .navigation .navlist li a:hover, .header .navigation .navlist li a:focus {
+            color: #004d99;
+            cursor: pointer;
+        }
+        .header ._flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 0;
+        }
+        @media screen and (max-width: 991px) {
+            .header ._flex {
+                padding: 0;
+            }
+        }
+        /* 內容 */
+        .forbidden{
+            text-align: center;
+        }
+        /* footer */
+        footer {
+            clear: both;
+            zoom: 1;
+            box-sizing: border-box;
+            text-align: left;
+            font-size: 0.813em;
+            padding: 4em 0 3em;
+            background: #021e36;
+            position: relative;
+        }
+        footer:before, footer:after {
+            content: "";
+            display: table;
+        }
+        footer:after {
+            clear: both;
+        }
+        footer .container {
+            display: flex;
+            max-width: 1000px;
+        }
+        footer p {
+            line-height: 1.65em;
+            color: #fff;
+        }
+        footer p a {
+            color: #ffcc00;
+        }
+        footer .counter {
+            display: inline-block;
+            margin-right: 5px;
+            color: #fff;
+        }
+        footer .counter em {
+            font-style: normal;
+        }
+        footer a {
+            text-decoration: none;
+            color: #fff;
+        }
+        footer a:hover, footer a:focus {
+            color: #ffcc00;
+        }
+        footer ._info {
+            flex: 1 1 auto;
+            padding-left: 3.6em;
+        }
+        footer ._tag {
+            display: flex;
+            align-items: flex-start;
+        }
+        footer ._tag a {
+            margin-right: 10px;
+        }
+        footer ._tag img {
+            vertical-align: middle; /* 或 top, bottom, baseline */
+        }
+        footer ul._link {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 1.25em;
+            display: flex;
+        }
+        footer ul._link li {
+            position: relative;
+        }
+        footer ul._link li:after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 14px;
+            background: #fff;
+            right: 0;
+            top: 6px;
+        }
+        footer ul._link li:last-child:after {
+            display: none;
+        }
+        footer ul._link li a {
+            padding: 2px 12px;
+        }
+        footer ul._link li:first-child a {
+            padding-left: 0;
+        }
+        footer._type2 .container {
+            display: block;
+            max-width: 1200px;
+        }
+        footer._type2 ul._link {
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+        footer._type2 ._info {
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        footer._type2 ._info p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        footer._type2 ._info .col {
+            flex: 1 1 auto;
+            padding-right: 10px;
+        }
+        footer._type2 ._info .col:last-child {
+            padding-right: 0;
+        }
+        footer._type2 ._tag {
+            justify-content: flex-end;
+        }
+        footer._type2 .counter {
+            display: block;
+        }
+        @media screen and (max-width: 991px) {
+            footer .container {
+                flex-wrap: wrap;
+                justify-content: center;
+                position: relative;
+                min-height: 1px;
+                padding-left: 1em;
+                padding-right: 1em;
+                box-sizing: border-box;
+            }
+            footer p {
+                text-align: center;
+            }
+            footer ._map {
+                flex: 1 1 100%;
+            }
+            footer ._info {
+                padding-left: 0;
+                margin-top: 1.5em;
+            }
+            footer ._tag {
+                justify-content: center;
+            }
+            footer ul._link {
+                justify-content: center;
+            }
+            footer._type2 ._info {
+                flex-wrap: wrap;
+            }
+            footer._type2 ._info .col {
+                flex: 1 1 100%;
+                padding-right: 0;
+            }
+            footer._type2 ._tag {
+                justify-content: center;
+            }
+            footer._type2 .counter {
+                margin-bottom: 2em;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            footer p {
+                text-align: left;
+            }
+        }
+        @media screen and (max-width: 575px) {
+            footer ul._link {
+                flex-wrap: wrap;
+            }
+            footer ul._link li {
+                flex: 1 1 100%;
+                text-align: center;
+            }
+            footer ul._link li:after {
+                display: none;
+            }
+            footer ul._link li:first-child a {
+                padding-left: 20px;
+            }
+            footer ul._link li a {
+                display: inline-block;
+                padding: 6px 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <!-- 標題與右側操作 -->
+                <section class="_flex">
+                    <h1>
+                        <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                    </h1>
+                    <!-- navigation -->
+                    <nav class="navigation" role="navigation" aria-label="Site">
+                        <!-- navlist -->
+                        <div class="navlist">
+                            <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">兒童版</a></li>
+                            <li><a href="#">EN</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+        </header>
         <div class="forbidden">
             <img src="images/img_404_2.png" alt="">
             <h1>臺中市政府地方稅務局　全球資訊網</h1>
@@ -105,6 +345,46 @@
                 <a href="#" class="btn">回官網首頁</a>
             </div>
         </div>
+        <!-- footer -->
+        <footer class="_type2">
+            <div class="container">
+                <ul class="_link">
+                    <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                    <li><a href="javascript:;">隱私權政策</a></li>
+                    <li><a href="javascript:;">資訊安全與個資保護政策</a></li>
+                </ul>
+                <div class="_info">
+                    <div class="col">
+                    <p>
+                        地址：[407665] 臺中市西屯區惠來里3鄰文心路二段99號&nbsp;&nbsp;統一編號：52014808<br />
+                        電話：(04)2258-5000<a href="#">【各單位聯絡方式】</a>&nbsp;傳真：(04)2251-6926<br />
+                        客服中心服務電話：(04)2258-5000#1
+                    </p>
+                    </div>
+                    <div class="col">
+                    <p>
+                        國稅及地方稅免付費服務電話：0800-000321(限辦公時間提供服務)<br />
+                        服務時間：星期一至星期五&nbsp;&nbsp;上午8:00-12:00：下午1:00-5:00<br />
+                        彈性上下班時間：8:00-8:30、17:00-17:30，全功能服務櫃台中午不午休<br />
+                    <span class="counter">累計瀏覽人次：<em>46476653</em></span>
+                    </p>
+                    </div>
+                    <div class="col">
+                    <div class="_tag">
+                        <a target="_blank" href="javascript:;">
+                        <img src="images/footer_QRcode.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
+                        </a>
+                        <a target="_blank" href="javascript:;">
+                        <img src="images/basic/accessibility_aa.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
+                        </a>
+                        <a target="_blank" href="javascript:;">
+                        <img src="images/basic/egov.png" alt="我的e政府,另開新視窗" />
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 
