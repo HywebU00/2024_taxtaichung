@@ -10731,13 +10731,21 @@ a.sub_more:hover, a.sub_more:focus-visible {
 .videoZone .mpSubTitle {
   text-align: left;
   margin: 0 0 30px;
+  display: inline-block;
 }
 .videoZone .mpSubTitle:after {
   bottom: 10px;
-  left: 164px;
+  left: inherit;
+  transform: translateX(20%);
 }
 .videoZone ._YT {
   padding-right: 10px;
+}
+.videoZone ._YT > div {
+  padding-top: 53px !important;
+}
+.videoZone ._YT .mpSubTitle + div {
+  padding-top: 0 !important;
 }
 .videoZone ._YT iframe {
   width: 100%;
@@ -10745,10 +10753,15 @@ a.sub_more:hover, a.sub_more:focus-visible {
 }
 .videoZone ._tax {
   padding-left: 10px;
-  padding-top: 53px;
+}
+.videoZone ._tax ul {
+  padding-top: 53px !important;
 }
 .videoZone ._tax ul li {
   flex: 0 1 48%;
+}
+.videoZone ._tax .mpSubTitle + ul {
+  padding-top: 0 !important;
 }
 
 .videoZone ._tax ul,
@@ -10844,11 +10857,11 @@ a.sub_more:hover, a.sub_more:focus-visible {
   }
 }
 
-.linkZone .container {
+.linkZone .container div {
   display: flex;
   justify-content: space-evenly;
 }
-.linkZone .container a {
+.linkZone .container div a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10858,19 +10871,19 @@ a.sub_more:hover, a.sub_more:focus-visible {
   border-radius: 6px;
   transition: 0.3s;
 }
-.linkZone .container a span {
+.linkZone .container div a span {
   font-weight: bold;
   padding: 12px 0;
 }
-.linkZone .container a:hover, .linkZone .container a:focus-visible {
+.linkZone .container div a:hover, .linkZone .container div a:focus-visible {
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 @media screen and (max-width: 767px) {
-  .linkZone .container {
+  .linkZone .container div {
     flex-wrap: wrap;
   }
-  .linkZone .container a {
+  .linkZone .container div a {
     flex: 1 1 100%;
     margin-top: 20px;
   }
