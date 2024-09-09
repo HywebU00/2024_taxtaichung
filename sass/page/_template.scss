@@ -682,10 +682,26 @@ $bg_n7: #e5beff;
 
   .btn{
     padding: 0.5em 2em;
+    border-radius: 30px;
+
+    &.btn-secondary{
+      color: #333 !important;
+      border-color: #ddd !important;
+      &:hover, &:focus, &:focus-visible{
+        background: #fff !important;
+        border-color: #333 !important;
+      }
+    }
 
     &._act{
-      background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%) !important;
+      // background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%) !important;
+      background: $importantColor !important;
+      // border-color: darken($importantColor, 5) !important;
       color: #fff !important;
+      &:hover, &:focus, &:focus-visible{
+        background: $importantColor !important;
+        border-color: $importantColor !important;
+      }
     }
   }
 }
@@ -1037,6 +1053,32 @@ $bg_n7: #e5beff;
 .ctl_btns{
   display: flex;
   justify-content: center;
+  button{
+    padding: .75em 2em;
+    letter-spacing: 1px
+  }
+}
+
+// errorPage
+.errorPage{
+  text-align: center;
+  h2{
+    margin: 1.65em 0 1em;
+    font-size: 1.5em;
+  }
+  p{
+    line-height: 1.6;
+    font-size: 1.125em;
+  }
+  a{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    font-weight: bold;
+    transition: .3s;
+    &:hover, &:focus-visible{
+      color: $importantColor;
+    }
+  }
 }
 
 ////////////////////////////////////////////////////////////

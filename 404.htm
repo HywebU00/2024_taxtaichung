@@ -14,94 +14,96 @@
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box
-    }
-    .wrapper {
-        width: 100%;
-        max-width: 820px;
-        margin: 0px auto;
-        padding: 3em 20px 0;
-    }
-    .wrapper img{
-        width: 100%;
-    }
-    .wrapper h1 {
-        display: block;
-        font-size: 3em;
-        padding: 1em 0;
-        text-align: center;
-        font-family: sans-serif
-    }
-    .wrapper .error h2 {
-        margin-bottom: 1em
-    }
-    .wrapper .error h2 small {
-        display: block
-    }
-    .wrapper .error {
-        text-align: center;
-        line-height: 1.6;
-    }
-    .btn_grp {
-        clear: both;
-        margin: 2em 0;
-        text-align: center
-    }
-    .btn_grp a {
-        display: inline-block;
-        border-radius: 5px;
-        padding: .5em 1.3em;
-        margin: 0 1em 1em;
-        min-width: 10em;
-        color: #0f67b1;
-        font-weight: bold;
-        text-align: center;
-        border: 1px solid #0f67b1;
-        text-decoration: none;
-        transition: .3s ease-out
-    }
-    .btn_grp a:hover, .btn_grp a:focus {
-        background: #0f67b1;
-        color: #fff;
-        box-shadow: none;
-        outline: none
-    }
-    @media screen and (max-width:767px) {
-        /* .wrapper h1 {
-            float: none;
-            margin: 10px 0 5px;
-            line-height: 1;
-            text-align: center;
-            width: 100%;
-            font-size: 8em
-        }
-        .wrapper h2 {
-            clear: both;
-            text-align: center;
+        * {
+            padding: 0;
             margin: 0;
-            padding: 0
+            box-sizing: border-box
+        }
+        /* .wrapper{
+            max-width: 1200px;
+            margin: 0 auto;
+        } */
+        .forbidden{
+            text-align: center;
+        }
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 2em 20px 0;
+        }
+        .wrapper img{
+            width: auto;
+            max-width: 100%;
+        }
+        .wrapper h1 {
+            display: block;
+            font-size: 3em;
+            padding: .75em 0;
+            text-align: center;
+            font-family: sans-serif
+        }
+        .wrapper .error h2 {
+            margin-bottom: 1em
+        }
+        .wrapper .error h2 small {
+            display: block
         }
         .wrapper .error {
-            margin-top: 1em
-        } */
-    }
+            text-align: center;
+            line-height: 1.6;
+            letter-spacing: 1px;
+        }
+        .wrapper .error ol{
+            text-align: left;
+            width: fit-content;
+            margin: auto;
+        }
+        .btn_grp {
+            clear: both;
+            margin: 2em 0;
+            text-align: center
+        }
+        .btn_grp a {
+            display: inline-block;
+            border-radius: 5px;
+            padding: .5em 1.3em;
+            margin: 0 1em 1em;
+            min-width: 10em;
+            color: #0f67b1;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid #0f67b1;
+            text-decoration: none;
+            transition: .3s ease-out
+        }
+        .btn_grp a:hover, .btn_grp a:focus {
+            background: #0f67b1;
+            color: #fff;
+            box-shadow: none;
+            outline: none
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <img src="images/img_404.png" alt="">
-        <h1>抱歉！找不到您的頁面！</h1>
-        <div class="error">
-            <h2>您瀏覽的網頁不存在,請再重新檢視 <small>The page you're visiting does not exit, please click.</small></h2>
-            <h2>將在<span>2</span>秒後自動跳轉到首頁 <small>be redirected to homepage automatically in <span>2</span> seconds.</small></h2>
-        </div>
-        <div class="btn_grp">
-            <!-- <a href="javascript:history.back()" class="btn">回上一頁</a> -->
-            <a href="#" class="btn">回官網首頁</a>
+        <div class="forbidden">
+            <img src="images/img_404_2.png" alt="">
+            <h1>臺中市政府地方稅務局　全球資訊網</h1>
+            <div class="error">
+                <h2>非常抱歉，系統發生一點點問題，造成您的不便深感歉意，本局會盡快處理。<br>如欲辦理線上申辦，可透過下列方式辦理：</h2>
+                <ol>
+                    <li>線上申辦 MyData  https://onestop.tax.taichung.gov.tw</li>
+                    <li>財政部稅務入口網 https://www.etax.nat.gov.tw</li>
+                    <li>地方稅網路申報網站 https://net.tax.nat.gov.tw</li>
+                </ol>
+                <p>如有任何問題，歡迎您撥打0800-000321免費電話<br>或04-22585000按1接電話客服中心洽詢，將有專人為您服務。</p>
+            </div>
+            <div class="btn_grp">
+                <!-- <a href="javascript:history.back()" class="btn">回上一頁</a> -->
+                <a href="#" class="btn">回官網首頁</a>
+            </div>
         </div>
     </div>
 </body>

@@ -1768,6 +1768,7 @@ kbd kbd {
   color: #fff !important;
   border: solid 1px #0066cc !important;
   border-radius: 30px;
+  padding: 0.5em 1.75em;
 }
 .btn-shift:hover, .btn-shift:focus {
   background: #004d99 !important;
@@ -10111,10 +10112,23 @@ body::-webkit-scrollbar-track {
 }
 .view_switch .btn {
   padding: 0.5em 2em;
+  border-radius: 30px;
+}
+.view_switch .btn.btn-secondary {
+  color: #333 !important;
+  border-color: #ddd !important;
+}
+.view_switch .btn.btn-secondary:hover, .view_switch .btn.btn-secondary:focus, .view_switch .btn.btn-secondary:focus-visible {
+  background: #fff !important;
+  border-color: #333 !important;
 }
 .view_switch .btn._act {
-  background: linear-gradient(to right, #0f67b1 0%, #4491c8 100%) !important;
+  background: #ce4734 !important;
   color: #fff !important;
+}
+.view_switch .btn._act:hover, .view_switch .btn._act:focus, .view_switch .btn._act:focus-visible {
+  background: #ce4734 !important;
+  border-color: #ce4734 !important;
 }
 
 .case ._head {
@@ -10425,6 +10439,31 @@ body::-webkit-scrollbar-track {
 .ctl_btns {
   display: flex;
   justify-content: center;
+}
+.ctl_btns button {
+  padding: 0.75em 2em;
+  letter-spacing: 1px;
+}
+
+.errorPage {
+  text-align: center;
+}
+.errorPage h2 {
+  margin: 1.65em 0 1em;
+  font-size: 1.5em;
+}
+.errorPage p {
+  line-height: 1.6;
+  font-size: 1.125em;
+}
+.errorPage a {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.errorPage a:hover, .errorPage a:focus-visible {
+  color: #ce4734;
 }
 
 .innerpage > .container {
@@ -11148,8 +11187,19 @@ h2.title {
 
 ._content {
   background: #f9f9f9;
-  padding: 2em;
+  padding: 3em 2em;
   margin-bottom: 2em;
+  position: relative;
+}
+._content:before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  max-width: 180px;
+  height: 4px;
+  background: #ce4734;
+  left: 0;
+  top: 0;
 }
 
 ._clear:after {
