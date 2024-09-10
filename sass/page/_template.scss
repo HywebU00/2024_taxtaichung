@@ -747,6 +747,11 @@ $bg_n7: #e5beff;
         }
       }
     }
+
+    + ._content::before{
+      // 清除 lp2 _content 的裝飾線
+      display: none;
+    }
   }
   ._content{
     margin-bottom: 1em;
@@ -769,6 +774,10 @@ $bg_n7: #e5beff;
         font-size: 1em;
         // line-height: 1.4;
         margin: 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
       }
     }
   }

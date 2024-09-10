@@ -10168,6 +10168,9 @@ body::-webkit-scrollbar-track {
   padding: 4px 12px;
   border-radius: 30px;
 }
+.case ._head + ._content::before {
+  display: none;
+}
 .case ._content {
   margin-bottom: 1em;
   padding: 1em 2em 1.5em;
@@ -10190,6 +10193,10 @@ body::-webkit-scrollbar-track {
 .case ._content ._item p {
   font-size: 1em;
   margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 .case .btn_grp {
   justify-content: flex-end;
