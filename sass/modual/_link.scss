@@ -189,6 +189,8 @@
                     transition: .3s;
                     img{
                         // display: block;
+                        max-width: 270px;
+                        max-height: 100px;
                     }
 
                     &:hover, &:focus-visible{
