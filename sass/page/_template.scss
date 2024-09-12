@@ -316,6 +316,7 @@ $bg_n7: #e5beff;
     background-position: right 8px top 50%;
   }
   // checkbox be btn
+  .radio_grp,
   .check_grp{
     .btn{
       border-radius: 4px;
@@ -358,7 +359,7 @@ $bg_n7: #e5beff;
       // checked style。input 選取框鋪在『標籤文字』下
       position: relative;
       // overflow: hidden;
-
+      input[type=radio],
       input[type=checkbox]{
         // opacity: .5;
         position: absolute;
@@ -470,6 +471,9 @@ $bg_n7: #e5beff;
         }
       }
 
+      input[type=radio]:hover + span.icons,
+      input[type=radio]:focus + span.icons,
+      input[type=radio]:checked + span.icons
       input[type=checkbox]:hover + span.icons,
       input[type=checkbox]:focus + span.icons,
       input[type=checkbox]:checked + span.icons{
@@ -487,9 +491,11 @@ $bg_n7: #e5beff;
 
       &:hover{
         color: #fff;
+        input[type=radio],
         input[type="checkbox"]{
           background-image: linear-gradient(to right, #0f67b1 0%, #4491c8 100%);
         }
+        input[type=radio] + span.icons,
         input[type=checkbox] + span.icons{
           img{
             opacity: 0;
@@ -525,6 +531,7 @@ $bg_n7: #e5beff;
       align-items: center;
     }
     .btn{
+      input[type=radio],
       input[type=checkbox]{
         border-radius: 30px;
       }
@@ -615,6 +622,15 @@ $bg_n7: #e5beff;
         }
       }
     }
+  }
+}
+
+// 查詢結果文字
+.result_note{
+  padding: 1em;
+  p{
+    font-weight: bold;
+    font-size: 1.5em;
   }
 }
 

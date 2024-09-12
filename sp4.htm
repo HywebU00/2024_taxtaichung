@@ -1030,21 +1030,21 @@
                       </div>
                       <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check _n2" />
+                          <input type="checkbox" name="" value="" class="btn-check _n2" checked />
                           <span>房屋稅</span>
                         </label>
                         <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
                       </div>
                       <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check _n3" />
+                          <input type="checkbox" name="" value="" class="btn-check _n3" checked />
                           <span>地價稅</span>
                         </label>
                         <a href="#" id="openModal" class="">閱讀房屋稅行事曆</a>
                       </div>
                       <div class="_flex">
                         <label class="btn">
-                          <input type="checkbox" name="" value="" class="btn-check _n4" />
+                          <input type="checkbox" name="" value="" class="btn-check _n4" checked />
                           <span>土地增值稅</span>
                         </label>
                         <a href="#" id="openModal" class="">土地增值稅行事曆</a>
@@ -1082,12 +1082,84 @@
             </div>
             <!-- 單選 -->
             <div class="filter _tag">
-              <!-- category -->
+              <!-- radio -->
+              <div class="flex-form form-column">
+                <!-- radio -->
+                <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                  <label for="fake-legend" class="form_title" aria-required="true">請選擇稅別（單選、友善閱讀）：</label>
+                  <div class="form_content" id="fake-legend">
+                    <div class="radio_grp form_inline">
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>全部</span>
+                        </label>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" checked />
+                          <span>牌照稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>房屋稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>地價稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>土地增值稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>契稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>印花稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                      <div class="_flex">
+                        <label class="btn">
+                          <input type="radio" name="sampleRadio" value="" class="btn-check" />
+                          <span>娛樂稅</span>
+                        </label>
+                        <a href="#" id="openModal" class="">跳窗</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_grp">
+                <input name="" type="reset" value="清除選擇" class="btn btn-reset">
+                <input name="" type="submit" value="送出查詢" class="btn btn-submit">
+                <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+              </div>
+            </div>
+            <!-- category 版 -->
+            <!-- <div class="filter _tag">
               <div class="category">
                 <ul>
                   <li>
                     <a href="#">全部</a>
-                    <!-- <a href="#" id="openModal" class="tip">牌照稅行事曆</a> -->
                   </li>
                   <li>
                     <a href="#" class="active">牌照稅</a>
@@ -1119,6 +1191,11 @@
                   </li>
                 </ul>
               </div>
+            </div> -->
+            <!-- 查詢結果的文字描述 -->
+            <div class="result_note">
+              <p>您選擇了：房屋稅、地價稅、土地增值稅的繳納月份，顯示結果如下：</p>
+              <p>您選擇了：牌照稅的繳納月份，顯示結果如下：</p>
             </div>
             <!-- 月曆 -->
             <!-- filter 複選：12個月 -->
