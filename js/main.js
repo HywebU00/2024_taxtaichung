@@ -417,20 +417,18 @@ $(function () {
   // $('.megamenu > ul > li > a').css('background','pink');
   function mobileMenu() {
     //手機版第第一層點了不會進入內頁，拿掉第一層的連結無作用
-    $('.sidebar .menu li a')
-      .off()
-      .on('keydown', function (e) {
-        if (ww < wwMedium) {
-          if ($(this).parent().hasClass('hasChild')) {
-            e.preventDefault();
-          }
-          $(this).siblings('ul').slideToggle('fast');
-          $(this).parent().siblings('li').find('ul').slideUp('fast');
-        } else {
-          // 確保大於 768px 時重置點擊事件
-          $(this).siblings('ul').show();
+    $('.sidebar .menu li a').off().on('keydown', function (e) {
+      if (ww < wwMedium) {
+        if ($(this).parent().hasClass('hasChild')) {
+          e.preventDefault();
         }
-      });
+        $(this).siblings('ul').slideToggle('fast');
+        $(this).parent().siblings('li').find('ul').slideUp('fast');
+      } else {
+        // 確保大於 768px 時重置點擊事件
+        $(this).siblings('ul').show();
+      }
+    });
 
     if (ww > wwMedium) {
       liHasChild.off().on({
@@ -447,7 +445,6 @@ $(function () {
 
     if (_megamenu.length > 0) {
       $('.megamenu > ul > li > ul').hide();
-
       if (ww > wwMedium) {
         liHasChild2.off().on({
           mouseenter: function () {
@@ -457,15 +454,27 @@ $(function () {
             $(this).children('ul').stop(true, false).fadeOut();
           },
         });
+        $('.megamenu ul li a').off().on('click', function (e) {
+          var $parentLi = $(this).parent('li');
+          if ($parentLi.hasClass('hasChild')) {
+            // 開啟第一個有子選單的 li 的 a 標籤默認行為
+            if ($parentLi.is(':first-child')) {}
+            $(this).siblings('ul').slideDown('fast'); // 維持展開第二層選單
+          }
+        });
       }
 
       if (ww < wwMedium) {
-        $('.megamenu ul li a')
-          .off()
-          .on('click', function (e) {
-            e.preventDefault(); // 防止移動到新頁面
-            $(this).siblings('ul').slideToggle('fast'); // 展開第二層選單
-          });
+        $('.megamenu ul li a').off().on('click', function (e) {
+          var $parentLi = $(this).parent('li');
+          if ($parentLi.hasClass('hasChild')) {
+            // 阻止第一個有子選單的 li 的 a 標籤默認行為
+            if ($parentLi.is(':first-child')) {
+              e.preventDefault();
+            }
+            $(this).siblings('ul').slideToggle('fast'); // 展開或收起第二層選單
+          }
+        });
       }
     }
   }
