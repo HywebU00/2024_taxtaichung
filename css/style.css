@@ -10419,6 +10419,8 @@ body::-webkit-scrollbar-track {
 .case ._content ._item p {
   font-size: 1em;
   margin: 0;
+}
+.case ._content ._item p.clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
