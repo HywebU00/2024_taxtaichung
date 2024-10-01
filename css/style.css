@@ -1431,6 +1431,7 @@ kbd kbd {
   text-align: center;
   padding: 1em 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -1861,7 +1862,6 @@ kbd kbd {
 
 .breadcrumb {
   padding: 0.1em 0em 0.1em;
-  font-size: 0.813em;
   margin: 0px auto 5px;
 }
 .breadcrumb ul {
@@ -9841,6 +9841,7 @@ body::-webkit-scrollbar-track {
 }
 .filter .radio_grp .btn,
 .filter .check_grp .btn {
+  max-width: 100%;
   border-radius: 4px;
   padding: 12px 20px;
   margin: 2px 4px !important;
@@ -9848,6 +9849,11 @@ body::-webkit-scrollbar-track {
   border-radius: 6px;
   border-color: transparent;
   position: relative;
+}
+.filter .radio_grp .btn input + span,
+.filter .check_grp .btn input + span {
+  white-space: normal;
+  text-align: left;
 }
 .filter .radio_grp .btn + a,
 .filter .check_grp .btn + a {
@@ -10111,6 +10117,7 @@ body::-webkit-scrollbar-track {
   position: relative;
   width: 24px;
   height: 24px;
+  min-width: 24px;
 }
 .filter .radio_grp .btn span.icons img,
 .filter .check_grp .btn span.icons img {
@@ -10122,6 +10129,11 @@ body::-webkit-scrollbar-track {
 .filter .radio_grp .btn span.icons img:last-child,
 .filter .check_grp .btn span.icons img:last-child {
   opacity: 0;
+}
+.filter .radio_grp .btn span.icons + span,
+.filter .check_grp .btn span.icons + span {
+  white-space: normal;
+  text-align: left;
 }
 .filter .radio_grp .btn input[type=radio]:hover + span.icons img,
 .filter .radio_grp .btn input[type=radio]:focus + span.icons img,
@@ -11866,7 +11878,6 @@ h2.title {
 }
 
 .publish_info {
-  font-size: 0.875em !important;
   line-height: 1.5em;
   list-style: none;
   margin: 0 0 0.7em 0;

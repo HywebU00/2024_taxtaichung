@@ -319,6 +319,7 @@ $bg_n7: #e5beff;
   .radio_grp,
   .check_grp{
     .btn{
+      max-width: 100%;
       border-radius: 4px;
       padding: 12px 20px;
       margin: 2px 4px !important;
@@ -326,6 +327,12 @@ $bg_n7: #e5beff;
       background: transparent;
       border-radius: 6px;
       border-color: transparent;
+
+      input+span{
+        // color: deepskyblue;
+        white-space: normal;
+        text-align: left;
+      }
 
       + a{
         // 稅務行事曆 modul開關
@@ -458,6 +465,7 @@ $bg_n7: #e5beff;
         position: relative;
         width: 24px;
         height: 24px;
+        min-width: 24px;
         img{
           position: absolute;
           display: block;
@@ -468,6 +476,12 @@ $bg_n7: #e5beff;
             // 選取後的白色icon
             opacity: 0;
           }
+        }
+        +span{
+          // background: #000;
+          // color: red;
+          white-space: normal;
+          text-align: left;
         }
       }
 
