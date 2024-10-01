@@ -7510,6 +7510,9 @@ table.table_sprite tr:nth-child(even) {
 .sub_menu._img ul li a:hover, .sub_menu._img ul li a:focus-visible {
   background: #ddd;
 }
+.sub_menu._icontext ul {
+  justify-content: center;
+}
 .sub_menu._icontext ul li {
   flex: 0 0 25%;
   margin-bottom: 3em;
