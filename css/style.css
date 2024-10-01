@@ -3023,8 +3023,7 @@ div.tag ul li a:hover, div.tag ul li a:focus-visible {
 }
 .header h1 img {
   display: block;
-  max-width: 300px;
-  max-height: 75px;
+  height: 72px;
 }
 @media screen and (max-width: 991px) {
   .header h1 {
@@ -3308,7 +3307,7 @@ div.tag ul li a:hover, div.tag ul li a:focus-visible {
   position: absolute;
   z-index: 999;
   right: 0;
-  top: 15px;
+  top: 42px;
   margin: 0;
   border-color: transparent;
   display: flex;
@@ -4126,6 +4125,12 @@ a.imgLink img {
   .megamenu {
     display: none;
   }
+}
+.megamenu.small_size {
+  font-size: 0.938em;
+}
+.megamenu.large_size {
+  font-size: 1.125em;
 }
 .megamenu.sticky {
   position: fixed;

@@ -115,8 +115,9 @@
         }
         img {
             display: block;
-            max-width: 300px;
-            max-height: 75px;
+            // max-width: 300px;
+            // max-height: 75px;
+            height: 72px;
         }
         @include screen('tablet') {
             padding: 2px 60px;
@@ -390,7 +391,7 @@
     position: absolute;
     z-index: 999;
     right: 0;
-    top: 15px;
+    top: 42px;
     margin: 0;
     border-color: transparent;
     // 加文字

@@ -10,6 +10,14 @@
     display: none;
   }
 
+  // 字級切換 與 .main 共用
+  &.small_size {
+    font-size: .938em;
+  }
+  &.large_size {
+    font-size: 1.125em;
+  }
+
   &.sticky {
     position: fixed;
     top: 0;

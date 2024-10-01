@@ -464,16 +464,25 @@ $(function () {
         });
       }
 
+      // if (ww < wwMedium) {
+      //   $('.megamenu ul li a').off().on('click', function (e) {
+      //     var $parentLi = $(this).parent('li');
+      //     if ($parentLi.hasClass('hasChild')) {
+      //       // 阻止第一個有子選單的 li 的 a 標籤默認行為
+      //       if ($parentLi.is(':first-child')) {
+      //         e.preventDefault();
+      //       }
+      //       $(this).siblings('ul').slideToggle('fast'); // 展開或收起第二層選單
+      //     }
+      //   });
+      // }
+
       if (ww < wwMedium) {
         $('.megamenu ul li a').off().on('click', function (e) {
-          var $parentLi = $(this).parent('li');
-          if ($parentLi.hasClass('hasChild')) {
-            // 阻止第一個有子選單的 li 的 a 標籤默認行為
-            if ($parentLi.is(':first-child')) {
-              e.preventDefault();
-            }
-            $(this).siblings('ul').slideToggle('fast'); // 展開或收起第二層選單
+          if ($(this).parent().hasClass('hasChild')) {
+            e.preventDefault();
           }
+          $(this).siblings('ul').slideToggle('fast'); // 展開第二層選單
         });
       }
     }
@@ -850,12 +859,11 @@ $(function () {
   /*------------------------------------*/
   /////////////字型大小 font-size//////////
   /*------------------------------------*/
-  $('.font_size')
-    .find('.small')
-    .on('click', function (e) {
+  $('.font_size').find('.small').on('click', function (e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
       // $('.innerpage').removeClass('large_size').addClass('small_size');
       $('.main').removeClass('large_size').addClass('small_size');
+      $('.megamenu').removeClass('large_size').addClass('small_size');
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'small', 356);
@@ -866,6 +874,7 @@ $(function () {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
       // $('.innerpage').removeClass('large_size small_size');
       $('.main').removeClass('large_size small_size');
+      $('.megamenu').removeClass('large_size small_size');
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'medium', 356);
@@ -876,6 +885,7 @@ $(function () {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
       // $('.innerpage').removeClass('small_size').addClass('large_size');
       $('.main').removeClass('small_size').addClass('large_size');
+      $('.megamenu').removeClass('small_size').addClass('large_size');
       $(this).blur().addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'large', 356);
