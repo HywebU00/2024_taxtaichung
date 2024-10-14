@@ -5,32 +5,45 @@
     text-align: center;
     font-size: 1.5em;
     letter-spacing: 2px;
-    padding: 1em 0;
-    margin: 2em 0;
+    // padding: 1em 0;
+    margin: 2em 0 1em;
     position: relative;
-    &:before, &:after{
-        content: '';    
+    &:after{
+        content: '';
         position: absolute;
-        width: 90px;
-        height: 3px;
+        width: 60px;
+        height: 6px;
+        background: $importantColor;
+        bottom: -26px;
         left: 50%;
         transform: translateX(-50%);
-        background: $importantColor;
     }
-    &:before{
-        top: 0;
-    }
-    &:after{
-        bottom: 0;
-    }
+    // &:before, &:after{
+    //     content: '';    
+    //     position: absolute;
+    //     width: 90px;
+    //     height: 3px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     background: $importantColor;
+    // }
+    // &:before{
+    //     top: 0;
+    // }
+    // &:after{
+    //     bottom: 0;
+    // }
 }
+// .sub_menu_title:has(+ ul) {
+//     margin-bottom: 1em;
+// }
 .sub_menu {
     ul, ol {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         margin: 0;
-        padding: 1em 0;
+        padding: 1em 0 0;
         list-style-type: none;
     }
     &._default{
@@ -47,7 +60,9 @@
                 border-radius: 4px;
                 border: 2px solid $primaryColor;
                 padding: 1.25em 1em 1.25em 3em;
-                display: block;
+                display: flex;
+                align-items: center;
+                line-height: 1.2;
                 position: relative;
                 height: 100%;  
                 box-sizing: border-box;
@@ -229,8 +244,10 @@
             justify-content: center;
             li{
                 // 四欄
-                flex: 0 0 25%;
-                margin-bottom: 3em;
+                // flex: 0 0 25%;
+                // 六欄
+                flex: 0 0 16.6666667%;
+                // margin-bottom: 1.5em;
                 a{
                     position: relative;
                     display: flex;
@@ -241,16 +258,18 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 200px;
-                        height: 200px;
+                        // width: 200px;
+                        // height: 200px;
+                        width: 120px;
+                        height: 120px;
                         border-radius: 30px;
                         background: #fef5f5;
                         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                         transition: .3s;
                         img{
                             position: absolute;
-                            width: 94px;
-                            height: 94px;
+                            width: 72px;
+                            height: 72px;
                             &:nth-child(2){
                                 opacity: 0;
                             }
@@ -258,10 +277,11 @@
                     }
                     b{
                         display: block;
+                        width: 100%;
                         text-align: center;
                         color: #222;
                         font-size: 1.125em;
-                        padding: 1.5em 0 1em;
+                        padding: 1em 4px;
                     }
                     &:hover, &:focus-visible{
                         span.icon{
@@ -290,7 +310,7 @@
         &._img{
             ul{
                 li{
-                    flex-basis: calc(100% / 3);
+                    flex-basis: calc(100% / 4);
                 }
             }
         }
@@ -307,7 +327,8 @@
             ul{
                 li{
                     flex: 0 0 auto;
-                    flex-basis: calc(100% / 3);
+                    flex-basis: calc(100% / 4);
+                    margin-bottom: 1.5em;
                 }
             }
         }
@@ -364,7 +385,7 @@
                             }
                         }
                         b{
-                            padding: 1.5em 12px 1em;
+                            padding: 1.25em 12px 1em;
                             width: 100%;
                         }
                     }

@@ -7335,24 +7335,18 @@ table.table_sprite tr:nth-child(even) {
   text-align: center;
   font-size: 1.5em;
   letter-spacing: 2px;
-  padding: 1em 0;
-  margin: 2em 0;
+  margin: 2em 0 1em;
   position: relative;
 }
-.sub_menu_title:before, .sub_menu_title:after {
+.sub_menu_title:after {
   content: "";
   position: absolute;
-  width: 90px;
-  height: 3px;
+  width: 60px;
+  height: 6px;
+  background: #ce4734;
+  bottom: -26px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ce4734;
-}
-.sub_menu_title:before {
-  top: 0;
-}
-.sub_menu_title:after {
-  bottom: 0;
 }
 
 .sub_menu ul, .sub_menu ol {
@@ -7360,7 +7354,7 @@ table.table_sprite tr:nth-child(even) {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
-  padding: 1em 0;
+  padding: 1em 0 0;
   list-style-type: none;
 }
 .sub_menu._default {
@@ -7378,7 +7372,9 @@ table.table_sprite tr:nth-child(even) {
   border-radius: 4px;
   border: 2px solid #0066cc;
   padding: 1.25em 1em 1.25em 3em;
-  display: block;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
   position: relative;
   height: 100%;
   box-sizing: border-box;
@@ -7519,8 +7515,7 @@ table.table_sprite tr:nth-child(even) {
   justify-content: center;
 }
 .sub_menu._icontext ul li {
-  flex: 0 0 25%;
-  margin-bottom: 3em;
+  flex: 0 0 16.6666667%;
 }
 .sub_menu._icontext ul li a {
   position: relative;
@@ -7533,8 +7528,8 @@ table.table_sprite tr:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 30px;
   background: #fef5f5;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -7542,18 +7537,19 @@ table.table_sprite tr:nth-child(even) {
 }
 .sub_menu._icontext ul li a span.icon img {
   position: absolute;
-  width: 94px;
-  height: 94px;
+  width: 72px;
+  height: 72px;
 }
 .sub_menu._icontext ul li a span.icon img:nth-child(2) {
   opacity: 0;
 }
 .sub_menu._icontext ul li a b {
   display: block;
+  width: 100%;
   text-align: center;
   color: #222;
   font-size: 1.125em;
-  padding: 1.5em 0 1em;
+  padding: 1em 4px;
 }
 .sub_menu._icontext ul li a:hover span.icon, .sub_menu._icontext ul li a:focus-visible span.icon {
   background: linear-gradient(to bottom, #f16f2d 0%, #ce4734 100%);
@@ -7567,7 +7563,7 @@ table.table_sprite tr:nth-child(even) {
 }
 @media screen and (max-width: 1200px) {
   .sub_menu._img ul li {
-    flex-basis: 33.3333333333%;
+    flex-basis: 25%;
   }
 }
 @media screen and (max-width: 991px) {
@@ -7576,7 +7572,8 @@ table.table_sprite tr:nth-child(even) {
   }
   .sub_menu._icontext ul li {
     flex: 0 0 auto;
-    flex-basis: 33.3333333333%;
+    flex-basis: 25%;
+    margin-bottom: 1.5em;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7619,7 +7616,7 @@ table.table_sprite tr:nth-child(even) {
     height: 72px;
   }
   .sub_menu._icontext ul li a b {
-    padding: 1.5em 12px 1em;
+    padding: 1.25em 12px 1em;
     width: 100%;
   }
 }
