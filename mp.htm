@@ -11,7 +11,8 @@
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
     <![endif]-->
-
+    <!-- WOW動畫-->
+    <link href="vendor/wow/animate.css" rel="stylesheet">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
@@ -1140,15 +1141,15 @@
           <div class="container">
             <h3 class="mpSubTitle">標題</h3>
             <div>
-              <a href="#">
+              <a href="#" class="wow bounceInLeft">
                 <img src="images/img-mp-link1.jpg" alt="">
                 <span>繳稅服務</span>
               </a>
-              <a href="#">
+              <a href="#" class="wow bounceInUp">
                 <img src="images/img-mp-link2.jpg" alt="">
                 <span>三官大締專區</span>
               </a>
-              <a href="#">
+              <a href="#" class="wow bounceInRight">
                 <img src="images/img-mp-link3.jpg" alt="">
                 <span>宣導專區</span>
               </a>
@@ -1780,5 +1781,17 @@
     <script src="js/main.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <!-- WOW動畫-->
+    <script src="vendor/wow/wow.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 100,
+            callback: function(box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        });
+        wow.init();
+    </script>
   </body>
 </html>
