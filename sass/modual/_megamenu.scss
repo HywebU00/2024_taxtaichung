@@ -103,6 +103,7 @@
 
       // 第二層選單樣式
       > ul{
+        backdrop-filter: blur(6px);
         > li{
           border-bottom: 1px solid #666;
           &:last-child{
@@ -210,6 +211,7 @@
             left: 0;
             animation: none;
             display: block;
+            backdrop-filter: unset;
             // background: pink;
 
             li {

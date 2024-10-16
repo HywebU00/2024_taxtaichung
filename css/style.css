@@ -4192,6 +4192,10 @@ a.imgLink img {
 .megamenu ul li a:hover, .megamenu ul li a:focus, .megamenu ul li a:focus-visible {
   background: #0b4c82;
 }
+.megamenu ul li > ul {
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
 .megamenu ul li > ul > li {
   border-bottom: 1px solid #666;
 }
@@ -4274,6 +4278,8 @@ a.imgLink img {
   left: 0;
   animation: none;
   display: block;
+  -webkit-backdrop-filter: unset;
+          backdrop-filter: unset;
 }
 .megamenu ul li ul li.hasChild > ul li {
   display: inline-block;
