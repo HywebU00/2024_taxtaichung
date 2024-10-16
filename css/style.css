@@ -4193,7 +4193,7 @@ a.imgLink img {
   background: #0b4c82;
 }
 .megamenu ul li > ul > li {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #666;
 }
 .megamenu ul li > ul > li:last-child {
   border-bottom-color: transparent;
@@ -4229,6 +4229,7 @@ a.imgLink img {
 .megamenu ul li ul li a {
   padding: 0.5em 0.75em;
   color: #FFF;
+  background: #0f67b1;
   font-weight: bold;
   box-sizing: border-box;
   border-radius: 3px;
@@ -4240,6 +4241,7 @@ a.imgLink img {
 }
 .megamenu ul li ul li ul {
   padding: 0 !important;
+  padding-left: 1em !important;
   background: transparent;
   flex-basis: 85%;
 }
@@ -4250,9 +4252,13 @@ a.imgLink img {
 .megamenu ul li ul li ul li a {
   padding: 0.4em 1em;
   color: #fff;
+  border-radius: 6px;
+  background: transparent;
 }
 .megamenu ul li ul li ul li a:hover, .megamenu ul li ul li ul li a:focus {
   color: #fff;
+  background: transparent !important;
+  box-shadow: inset 0 0 0 2px #b1b1b1;
 }
 .megamenu ul li ul li ul li ul {
   margin: 0;
