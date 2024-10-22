@@ -55,13 +55,20 @@
 
   window.addEventListener('scroll', function () {
     let aa = (360 * window.scrollY) / documentHeight;
+    console.log(window.scrollY, documentHeight);
 
-    if (window.scrollY < 1) {
-      window.scrollTo({
-        top: documentHeight - 1,
-        behavior: 'instant',
-      });
-    } else if (window.scrollY == documentHeight) {
+    // if (window.scrollY < 1) {
+    //   window.scrollTo({
+    //     top: documentHeight - 1,
+    //     behavior: 'instant',
+    //   });
+    // } else if (window.scrollY == documentHeight) {
+    //   window.scrollTo({
+    //     top: 1,
+    //     behavior: 'instant',
+    //   });
+    // }
+    if (window.scrollY == documentHeight) {
       window.scrollTo({
         top: 1,
         behavior: 'instant',
