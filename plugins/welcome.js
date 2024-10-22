@@ -55,7 +55,6 @@
 
   window.addEventListener('scroll', function () {
     let aa = (360 * window.scrollY) / documentHeight;
-    console.log(window.scrollY, documentHeight);
 
     // if (window.scrollY < 1) {
     //   window.scrollTo({
