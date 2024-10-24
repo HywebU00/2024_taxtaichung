@@ -213,9 +213,10 @@ a.sub_more{
         margin: 0 0 30px;
         display: inline-block;
         &:after{
-            bottom: 10px;
-            left: inherit;
-            transform: translateX(20%);
+            display: none;
+            // bottom: 10px;
+            // left: inherit;
+            // transform: translateX(20%);
         }
     }
     ._YT{

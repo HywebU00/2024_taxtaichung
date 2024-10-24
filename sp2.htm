@@ -1081,8 +1081,9 @@
             </div>
             <section class="sub_menu _cards">
               <h3 class="sub_menu_title">進階限縮</h3>
+              <button type="button" class="btn _switchFilter act">展開/OPEN</button>
               <!-- filter -->
-              <div class="filter">
+              <div class="filter _hide">
                 <div class="flex-form form-column">
                   <!-- checkbox -->
                   <div class="form_grp" role="group" aria-labelledby="fake-legend">
@@ -1105,7 +1106,7 @@
                           </span>
                           <span>線上申辦</span>
                         </label>
-                        <label class="btn">
+                        <!-- <label class="btn">
                           <input type="checkbox" name="" value="" class="btn-check" />
                           <span class="icons">
                             <img src="images/icon_checkbox1.png" alt="">
@@ -1113,6 +1114,29 @@
                           </span>
                           <span>臨櫃</span>
                         </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span class="icons">
+                            <img src="images/icon_checkbox3.png" alt="">
+                            <img src="images/icon_checkbox3-act.png" alt="">
+                          </span>
+                          <span>自行上傳</span>
+                        </label>
+                        <label class="btn">
+                          <input type="checkbox" name="" value="" class="btn-check" />
+                          <span class="icons">
+                            <img src="images/icon_checkbox4.png" alt="">
+                            <img src="images/icon_checkbox4-act.png" alt="">
+                          </span>
+                          <span>線上申辦</span>
+                        </label> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                    <label for="fake-legend" class="form_title">上傳方式(多選)：</label>
+                    <div class="form_content" id="fake-legend">
+                      <div class="check_grp form_inline">
                         <label class="btn">
                           <input type="checkbox" name="" value="" class="btn-check" />
                           <span class="icons">
@@ -1249,7 +1273,45 @@
                   <h5>申辦管道 / 擇一使用</h5>
                   <section class="method">
                     <div class="ctl">
-                      <h6><a href="#">本局線上申辦</a></h6>
+                      <h6>本局線上申辦</h6>
+                      <button class="btn-switch">展開/OPEN</button>
+                    </div>
+                    <div class="content">
+                      <ul class="links">
+                        <li><a href="#">連結1</a></li>
+                        <li><a href="#">連結2</a></li>
+                        <li><a href="#">連結3</a></li>
+                        <li><a href="#">連結4</a></li>
+                        <li><a href="#">連結5</a></li>
+                      </ul>
+                      <div class="download">
+                        <h5>使用憑證 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <!-- <li><a href="#">ODT</a></li>
+                          <li><a href="#">DOCX</a></li>
+                          <li><a href="#">ODT</a></li>
+                          <li><a href="#">DOCX</a></li>
+                          <li><a href="#">ODT</a></li>
+                          <li><a href="#">DOCX</a></li> -->
+                        </ul>
+                      </div>
+                      <div class="download">
+                        <h5>表單下載 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <!-- <li><a href="#">ODT</a></li>
+                          <li><a href="#">DOCX</a></li>
+                          <li><a href="#">ODT</a></li>
+                          <li><a href="#">DOCX</a></li>
+                          <li><a href="#">ODT</a></li>
+                          <li><a href="#">DOCX</a></li> -->
+                        </ul>
+                      </div>
                     </div>
                   </section>
                   <section class="method">
@@ -1257,30 +1319,6 @@
                       <h6><a href="#">地方稅網路申辦</a></h6>
                     </div>
                   </section>
-                  <section class="method">
-                    <div class="ctl">
-                      <h6>使用憑證</h6>
-                      <button class="btn-switch">展開/OPEN</button>
-                    </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
-                  </section>
-                  <div class="download">
-                    <h5>表單下載 /</h5>
-                    <ul class="file">
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="slice">
                   <!-- 兩欄 -->
@@ -1310,37 +1348,40 @@
                   <h5>申辦管道 / 擇一使用</h5>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道A</h6>
+                      <h6>管道Ａ</h6>
                       <button class="btn-switch">展開/OPEN</button>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
+                    <div class="content">
+                      <ul class="links">
+                        <li><a href="#">連結1</a></li>
+                        <li><a href="#">連結2</a></li>
+                        <li><a href="#">連結3</a></li>
+                        <li><a href="#">連結4</a></li>
+                        <li><a href="#">連結5</a></li>
+                      </ul>
+                      <div class="download">
+                        <h5>使用憑證 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                      <div class="download">
+                        <h5>表單下載 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </section>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道B</h6>
-                      <button class="btn-switch">展開/OPEN</button>
+                      <h6><a href="#">管道B</a></h6>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
                   </section>
-                  <div class="download">
-                    <h5>表單下載 /</h5>
-                    <ul class="file">
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="slice">
                   <!-- 兩欄 -->
@@ -1370,37 +1411,40 @@
                   <h5>申辦管道 / 擇一使用</h5>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道A</h6>
+                      <h6>管道Ａ</h6>
                       <button class="btn-switch">展開/OPEN</button>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
+                    <div class="content">
+                      <ul class="links">
+                        <li><a href="#">連結1</a></li>
+                        <li><a href="#">連結2</a></li>
+                        <li><a href="#">連結3</a></li>
+                        <li><a href="#">連結4</a></li>
+                        <li><a href="#">連結5</a></li>
+                      </ul>
+                      <div class="download">
+                        <h5>使用憑證 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                      <div class="download">
+                        <h5>表單下載 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </section>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道B</h6>
-                      <button class="btn-switch">展開/OPEN</button>
+                      <h6><a href="#">管道B</a></h6>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
                   </section>
-                  <div class="download">
-                    <h5>表單下載 /</h5>
-                    <ul class="file">
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="slice">
                   <!-- 兩欄 -->
@@ -1430,37 +1474,40 @@
                   <h5>申辦管道 / 擇一使用</h5>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道A</h6>
+                      <h6>管道Ａ</h6>
                       <button class="btn-switch">展開/OPEN</button>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
+                    <div class="content">
+                      <ul class="links">
+                        <li><a href="#">連結1</a></li>
+                        <li><a href="#">連結2</a></li>
+                        <li><a href="#">連結3</a></li>
+                        <li><a href="#">連結4</a></li>
+                        <li><a href="#">連結5</a></li>
+                      </ul>
+                      <div class="download">
+                        <h5>使用憑證 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                      <div class="download">
+                        <h5>表單下載 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </section>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道B</h6>
-                      <button class="btn-switch">展開/OPEN</button>
+                      <h6><a href="#">管道B</a></h6>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
                   </section>
-                  <div class="download">
-                    <h5>表單下載 /</h5>
-                    <ul class="file">
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="slice">
                   <!-- 兩欄 -->
@@ -1490,37 +1537,40 @@
                   <h5>申辦管道 / 擇一使用</h5>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道A</h6>
+                      <h6>管道Ａ</h6>
                       <button class="btn-switch">展開/OPEN</button>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
+                    <div class="content">
+                      <ul class="links">
+                        <li><a href="#">連結1</a></li>
+                        <li><a href="#">連結2</a></li>
+                        <li><a href="#">連結3</a></li>
+                        <li><a href="#">連結4</a></li>
+                        <li><a href="#">連結5</a></li>
+                      </ul>
+                      <div class="download">
+                        <h5>使用憑證 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                      <div class="download">
+                        <h5>表單下載 /</h5>
+                        <ul class="file">
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                          <li><span>tag</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </section>
                   <section class="method">
                     <div class="ctl">
-                      <h6>管道B</h6>
-                      <button class="btn-switch">展開/OPEN</button>
+                      <h6><a href="#">管道B</a></h6>
                     </div>
-                    <ul class="links">
-                      <li><a href="#">連結1</a></li>
-                      <li><a href="#">連結2</a></li>
-                      <li><a href="#">連結3</a></li>
-                      <li><a href="#">連結4</a></li>
-                      <li><a href="#">連結5</a></li>
-                    </ul>
                   </section>
-                  <div class="download">
-                    <h5>表單下載 /</h5>
-                    <ul class="file">
-                      <li><a href="#">ODT</a></li>
-                      <li><a href="#">DOCX</a></li>
-                    </ul>
-                  </div>
                 </div>
               </div>
               <!-- Pagination -->

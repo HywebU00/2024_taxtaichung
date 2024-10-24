@@ -38,12 +38,27 @@ $(function () {
       $(this).removeClass('act');
       $(this).html('展開/OPEN');
       $(this).attr('name', '展開/OPEN');
-      $(this).parents('.ctl').siblings('.links').css('display','none');
+      $(this).parents('.ctl').siblings('.content').css('display','none');
     } else {
       $(this).addClass('act');
       $(this).html('收合/CLOSE');
       $(this).attr('name', '收合/CLOSE');
-      $(this).parents('.ctl').siblings('.links').css('display','flex');
+      $(this).parents('.ctl').siblings('.content').css('display','block');
+    }
+  });
+
+  // 進階限縮  _switchFilter
+  $('._switchFilter').click(function(){
+    if ($(this).hasClass('act')) {
+      $(this).removeClass('act');
+      $(this).html('展開/OPEN');
+      $(this).attr('name', '展開/OPEN');
+      $(this).siblings('.filter').removeClass('_hide');
+    } else {
+      $(this).addClass('act');
+      $(this).html('收合/CLOSE');
+      $(this).attr('name', '收合/CLOSE');
+      $(this).siblings('.filter').addClass('_hide');
     }
   });
 
