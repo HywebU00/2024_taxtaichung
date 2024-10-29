@@ -174,17 +174,17 @@ a.sub_more{
     text-align: center;
     margin-bottom: 50px;
 
-    position: relative;
-    &:after{
-        content: '';
-        position: absolute;
-        width: 60px;
-        height: 6px;
-        background: $importantColor;
-        bottom: -26px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    // position: relative;
+    // &:after{
+    //     content: '';
+    //     position: absolute;
+    //     width: 60px;
+    //     height: 6px;
+    //     background: $importantColor;
+    //     bottom: -26px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    // }
 }
 .videoZone,
 .infoZone,

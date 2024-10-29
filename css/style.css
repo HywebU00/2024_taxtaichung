@@ -4209,7 +4209,7 @@ a.imgLink img {
   border-bottom-color: transparent;
 }
 .megamenu ul li ul {
-  display: flex;
+  display: block;
   overflow: visible;
   width: 100%;
   background: #c8eaff;
@@ -7355,17 +7355,6 @@ table.table_sprite tr:nth-child(even) {
   font-size: 1.5em;
   letter-spacing: 2px;
   margin: 2em 0;
-  position: relative;
-}
-.sub_menu_title:after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 6px;
-  background: #ce4734;
-  bottom: -26px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .sub_menu ul, .sub_menu ol {
@@ -11005,17 +10994,6 @@ a.sub_more:hover, a.sub_more:focus-visible {
   font-size: 1.75em;
   text-align: center;
   margin-bottom: 50px;
-  position: relative;
-}
-.mpSubTitle:after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 6px;
-  background: #ce4734;
-  bottom: -26px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .videoZone,
