@@ -6,6 +6,7 @@
   }
   const imgsA = document.querySelectorAll('#scrollImgs .item');
   const img = document.querySelector('#scrollImgs');
+  const outer = document.querySelector('.scrollPicBox .outer');
   const count = 360 / imgsA.length;
   let documentHeight = document.body.clientHeight - window.innerHeight;
   let requestCheck = null;
@@ -48,46 +49,24 @@
       requestCheck = null;
     }
   }
-
-  let lastScrollTop = 0;
-
-  let check = 0;
-
+  let aa = 0;
   window.addEventListener('scroll', function () {
-    let aa = (360 * window.scrollY) / documentHeight;
+    aa = (360 * window.scrollY) / documentHeight;
 
-    // if (window.scrollY < 1) {
-    //   window.scrollTo({
-    //     top: documentHeight - 1,
-    //     behavior: 'instant',
-    //   });
-    // } else if (window.scrollY == documentHeight) {
-    //   window.scrollTo({
-    //     top: 1,
-    //     behavior: 'instant',
-    //   });
-    // }
-    if (window.scrollY == documentHeight) {
-      window.scrollTo({
-        top: 1,
-        behavior: 'instant',
-      });
+    if (window.scrollY === 0) {
+      document.documentElement.scrollTop = documentHeight - 2;
+    } else if (window.scrollY >= documentHeight) {
+      document.documentElement.scrollTop = 2;
     }
 
     img.style = `-webkit-transform: transform:rotate3d(1,0,0, -${aa}deg); transform: rotate3d(1,0,0, -${aa}deg)`;
   });
 
-  let now = 0;
-
   requestAnimationFrame(checkDeg);
   function checkDeg() {
-    const element = document.querySelector('#scrollImgs');
-
-    now = window.scrollY + 1;
-    window.scrollTo({
-      top: now,
-      behavior: 'instant',
-    });
+    aa = aa + 0.1;
+    if (aa >= 360) aa = 0;
+    img.style = `-webkit-transform: transform:rotate3d(1,0,0, -${aa}deg); transform: rotate3d(1,0,0, -${aa}deg)`;
     requestCheck = requestAnimationFrame(checkDeg);
   }
 
@@ -153,7 +132,7 @@
         pixi: { x: Math.floor(Math.random() * app.renderer.width), y: Math.floor(Math.random() * app.renderer.height) },
         ease: Power4.linear,
         onComplete: function () {
-          console.log('onComplete');
+          // console.log('onComplete');
           // popParticle();
         },
       },
