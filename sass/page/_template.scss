@@ -316,7 +316,8 @@ $bg_n7: #e5beff;
     }
   }
   select{
-    padding: .75em 2em .75em 1.25em;
+    // padding: .75em 2em .75em 1.25em;
+    padding: .5em 1em;
     background-position: right 8px top 50%;
   }
   // checkbox be btn
@@ -1135,10 +1136,12 @@ $bg_n7: #e5beff;
 .ctl_btns{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   button{
     padding: .75em 2em;
     letter-spacing: 1px
   }
+  @include screen('tablet') {}
 }
 
 // errorPage
@@ -1160,6 +1163,601 @@ $bg_n7: #e5beff;
     &:hover, &:focus-visible{
       color: $importantColor;
     }
+  }
+}
+
+// 試算
+.TrialCalc{
+  h3.title{
+    font-size: 1.75em;
+    margin: 1.65em 0 .5em;
+    line-height: 1.2;
+    text-align: center;
+    + p{
+      text-align: center;
+      font-size: 1.125em;
+      font-weight: bold;
+      color: #666;
+    }
+  }
+  .item{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 2.5em 0;
+    a{
+      font-size: 1.25em;
+      font-weight: bold;
+      color: #222;
+      background: #eaeaea;
+      padding: 1em .75em;
+      width: 300px;
+      border: 1px solid #fff;
+      text-align: center;
+      transition: .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:hover, &:focus-visible{
+        background: #c8eaff;
+      }
+      &.act{
+        color: #fff;
+        background-image: linear-gradient(to left, #2e84b9 0%, #0f67b1 100%);
+      }
+      &:first-child{
+        border-radius: 10px 0 0 10px;
+      }
+      &:last-child{
+        border-radius: 0 10px 10px 0;
+      }
+      span{
+        font-size: 67%;
+        // font-weight: normal;
+      }
+    }
+  }
+  .functionLink{
+    width: 80%;
+    margin: 3em auto;
+    display: flex;
+    justify-content: space-between;
+    >div{
+      flex: 0 1 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      a{
+        position: relative;
+        span{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 250px;
+          height: 100px;
+          font-size: 1.25em;
+          line-height: 1.4;
+          font-weight: bold;
+          color: #fff;
+          background: rgba(0,0,0,.75);
+
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50% ,-50%);
+        }
+        img{
+          display: block;
+        }
+        transition: .3s;
+        &:hover, &:focus-visible{
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+      }
+
+    }
+    a.btn{
+      border-radius: 8px;
+      width: 100%;
+      margin: 1em 0;
+      padding: .75em 2em;
+    }
+    .note{
+      width: 100%;
+      h4{
+        margin: 0 0 .5em;
+      }
+    }
+  }
+
+  @include screen('tablet'){
+    .functionLink{
+      flex-direction: column;
+    }
+  }
+  @include screen('mobile'){
+    .item{
+      flex-direction: column;
+      a{
+        width: 100%;
+        border-radius: 10px;
+        &:first-child,
+        &:last-child{
+          border-radius: 10px 10px 10px 10px;
+        }
+      }
+    }
+  }
+}
+.tips{
+  // background: #eee;
+  background: #fff;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  padding: 2em 4em;
+  margin: 2em 0;
+  ul, ol{
+    padding-left: 30px;
+    color: #cb4f0e;
+  }
+  @include screen('tablet') {
+    padding: 1em;
+  }
+}
+ol.cjk{
+  list-style: cjk-decimal;
+}
+
+// 資訊展開
+.infoDisclosure{
+  width: 100%;
+  margin: 0 .25em;
+  .btn{}
+  section{
+    margin: 0 .25em;
+    background: #fff;
+    padding: 1em 2em;
+    h3{
+      margin: 0 0 10px;
+    }
+    display: none;
+    &.show{
+      display: block
+    }
+  }
+}
+// 試算結果
+// .calcResult{
+//   .calcBox{
+//     display: flex;
+//     justify-content: center;
+//     .col{
+//       flex: 0 0 22%;
+//       padding: 8px;
+//       background: #fff;
+//       border: 1px solid #ddd;
+//       margin: 0 10px;
+//       text-align: center;
+//       h3{
+//         margin: 0;
+//         padding: .5em;
+//         background: #eae9e8;
+//       }
+//       span{
+//         display: block;
+//         padding: 1em 0;
+//         b{
+//           color: $primaryColor;
+//           font-size: 1.875em;
+//           margin: 0 4px;
+//         }
+//       }
+//     }
+//     span.operator{
+//       // 運算符號
+//       font-size: 1.5em;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       padding: 0 2px;
+//     }
+//     + .calcBox{
+//       margin-top: 20px;
+//     }
+//     &._formula{
+//       // 土地增值稅公式
+//       justify-content: flex-start;
+
+//       &._diverse{
+//         // 多重運算
+//         .col{
+//           flex: 1 1 auto;
+//           span{
+//             b{
+//               font-size: 1.5em;
+//             }
+//           }
+//         }
+//         section{
+//           display: flex;
+//           margin: 0 2px;
+//         }
+//       }
+//     }
+
+//     @include screen('tablet') {
+//       flex-wrap: wrap;
+//       justify-content: flex-start;
+//       .col{
+//         &:first-child{
+//           flex: 1 1 100%;
+//         }
+//         flex: 0 0 auto;
+//         flex-basis: calc(100% - 50px);
+//         margin: 10px 0;
+//       }
+//       span.operator{
+//         flex: 0 0 auto;
+//         min-width: 50px;
+//       }
+//       &._formula{
+//         // 土地增值稅公式
+//         &._diverse{
+//           // 多重運算
+//           .col{
+//             &:first-child{
+//               flex: 1 1 100%;
+//             }
+//           }
+//           // span.operator{
+//           //   min-width: 40px;
+//           // }
+//           section{
+//             flex: 1 1 auto;
+//             flex-basis: calc(100% - 90px);
+//           }
+//         }
+//       }
+//     }
+//   }
+//   a#openModal{
+//     background: #222;
+//     color: #fff;
+//     padding: 6px 20px;
+//     margin: 0 10px 10px;
+//     border-radius: 20px;
+//     display: inline-block;
+//   }
+// }
+.calcResult{
+  .carProject{
+    // 牌照稅自用、營業
+    text-align: center;
+    margin: 2em 0;
+    h3{
+      font-size: 1.35em;
+      line-height: 1.4;
+      margin: 0 0 1em;
+    }
+    span{
+      b{
+        color: $primaryColor;
+        font-size: 1.875em;
+        margin: 0 4px;
+      }
+    }
+  }
+  .calcBox{
+    display: flex;
+    justify-content: center;
+    padding: 1.25em 0;
+    .col{
+      margin-left: 10px;
+      text-align: center;
+      flex: 0 1 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      &:first-child{
+        // 第一欄：運算結果 父層
+        flex: 0 0 240px;
+        margin: 0;
+      }
+      .box{
+        padding: 8px;
+        margin: 0 4px;
+        background: #fff;
+        border: 1px solid #ddd;
+        h3{
+          margin: 0;
+          padding: .5em;
+          background: #eae9e8;
+          span{
+            display: block;
+            margin: 4px 0 0;
+            padding: 0;
+            background: #fff;
+            font-size: 80%;
+            padding: 3px 8px;
+            border-radius: 20px;
+          }
+          b{
+              background: $primaryColor;
+              color: #fff;
+              width: 26px;
+              border-radius: 50%;
+              display: inline-block;
+              margin-right: 6px;
+            }
+        }
+        span{
+          display: block;
+          padding: 1em 0;
+          b{
+            color: $primaryColor;
+            font-size: 1.875em;
+            margin: 0 4px;
+          }
+        }
+        &._calcResult{
+          width: 100%;
+          margin: 0;
+          border-color: $primaryColor;
+          h3{
+            color: #fff;
+            background: $primaryColor;
+            span{
+              // color:$primaryColor;
+              color: #fff;
+              background: #4f8ae9;
+            }
+            b{
+              background: #fff;
+              color: $primaryColor;
+            }
+          }
+        }
+        + a{
+          display: block;
+          width: 100%;
+          background: #666;
+          color: #fff;
+          padding: 8px 6px;
+          border-radius: 24px;
+          margin: 12px 0;
+          transition: .3s;
+          &:hover, &:focus-visible{
+            background: $importantColor;
+          }
+        }
+      }
+      section{
+        display: flex;
+        align-items: center;
+        margin: 4px 0;
+      }
+    }
+    span.operator{
+      // 運算符號
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2px;
+    }
+    + .calcBox{
+      margin-top: 20px;
+    }
+    &._left{
+      // 土地增值稅公式
+      justify-content: flex-start;
+    }
+    &._top{
+      align-items: flex-start;
+      .col{
+        // 項目銬上對齊
+        align-items: flex-start;
+      }
+    }
+
+    @include screen('tablet') {
+      flex-direction: column;
+      .col{
+        &:first-child{
+        // 第一欄：運算結果 父層
+          flex: 1 1 100%;
+          width: 100%;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+.formula{
+  // 算式
+  background: #eee;
+  padding: 2em;
+  margin-bottom: 20px;
+}
+// 地價稅
+.landList{
+  display: flex;
+  .col{
+    flex: 1 1 auto;
+    &:last-child{
+      flex: 0 0 420px;
+      padding: 0 1em;
+    }
+  }
+  .addZone{
+    // 土地清單
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 1em 1em;
+    min-height: 300px;
+    .item{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 4px 0;
+      // background: #eee;
+      padding: .5em;
+      h4{
+        margin: 0;
+        b{
+          margin-right: 6px;
+        }
+        span{
+          margin-left: 6px;
+        }
+      }
+    }
+    .Btns{
+      display: flex;
+      justify-content: center;
+      a{
+        width: auto;
+        font-size: 1em;
+        padding: 8px 12px;
+        margin: 1px;
+        border-radius: 0;
+        font-size: 0;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        &:hover, &:focus-visible{
+          filter: invert(1);
+        }
+        &.btn_delet{
+          background: url(../images/icon_delet.svg) 50% 50% no-repeat #eee;
+          background-size: 24px;
+        }
+        &.btn_edit{
+          background: url(../images/icon_edit.svg) 50% 50% no-repeat #eee;
+          background-size: 24px;
+        }
+      }
+    }
+  }
+  @include screen('tablet') {
+    flex-direction: column;
+  }
+}
+h3.listTitle{
+  font-size: 1.5em;
+}
+.Btns{
+  // 複製一包出來共用
+  display: flex;
+  justify-content: center;
+  a{
+    width: auto;
+    font-size: 1em;
+    padding: 8px 12px;
+    margin: 1px;
+    border-radius: 0;
+    font-size: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    &:hover, &:focus-visible{
+      filter: invert(1);
+    }
+    &.btn_delet{
+      background: url(../images/icon_delet.svg) 50% 50% no-repeat #eee;
+      background-size: 24px;
+    }
+    &.btn_edit{
+      background: url(../images/icon_edit.svg) 50% 50% no-repeat #eee;
+      background-size: 24px;
+    }
+  }
+}
+a.blackLink{
+  background: #222;
+  color: #fff;
+  padding: 6px 20px;
+  margin: 0 10px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  transition: .3s;
+  &:hover, &:focus-visible{
+    background: $importantColor;
+  }
+}
+
+label{
+  + .notice{
+    padding-left: 1.8em;
+  }
+  + .form_grp{
+    // background: pink;
+    padding: 0 0 0 1.8em !important;
+    border-bottom: none !important;
+    align-items: flex-start !important;
+    label{
+      margin-top: 14px;
+    }
+    label, .form_content{
+      flex-basis: auto !important;
+    }
+  }
+}
+
+// 房屋稅
+.houseWorth{
+  display: inline-block;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  // background: #f0f0f0;
+  color: #222;
+  font-size: 1.5em;
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  margin: 12px 0 20px;
+  b{
+    padding: 0 6px;
+    color: $importantColor;
+  }
+}
+
+// 右側邊步驟欄
+.Rside_steps{
+  position: fixed;
+  z-index: 1;
+  // width: 200px;
+  // height: 300px;
+  top: 50vh;
+  right: 60px;
+  transform: translateY(-50%);
+  ul{
+    @include li-reset;
+    li{
+      margin: 6px 0;
+    }
+  }
+  a{
+    display: block;
+    text-align: center;
+    padding: 6px 10px;
+    color: #222;
+    font-weight: bold;
+    background: #fff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    transition: .3s;
+    b{
+      display: block;
+      color: #666;
+      font-size: 95%;
+      &.finish{
+        color: $importantColor;
+      }
+    }
+    &:hover, &:focus-visible{
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    }
+  }
+  @include screen('tablet') {
+    display: none;
   }
 }
 

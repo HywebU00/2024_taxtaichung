@@ -62,6 +62,23 @@ $(function () {
     }
   });
 
+  // 頁籤 確認總值btn
+  // _switch
+  $('._switch').click(function(){
+    $(this).next('.infoTip').css('display','block');
+  })
+
+  // 資訊展開
+  $('.infoDisclosure ._switch').click(function(){
+    var target = $(this).next('section');
+    if (target.hasClass('show')) {
+      target.removeClass('show');
+    } else {
+      target.addClass('show');
+    }
+    // $(this).next('section').addClass('show');
+  })
+
   /*-----------------------------------*/
   /////////////modal設定/////////////
   /*-----------------------------------*/

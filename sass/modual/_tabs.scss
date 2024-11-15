@@ -308,11 +308,11 @@
   .tabBtn {
     flex: 1 1 auto;
     font-size: 1em;
-    height: 2.8em;
+    height: 3.2em;
     text-align: center;
     border: none;
     margin: 1px;
-    border-radius: 0;
+    border-radius: 3px;
     box-shadow: none;
     background: #fff;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -513,4 +513,230 @@
     //   }
     // }
   }
+  // sp8-1 填表步驟
+  &._step{
+    .tabItems{
+      background: #d9d9d9;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .tabContent {
+      padding: 15px 0;
+    }
+    .tabBtn{
+      font-size: 1.25em;
+      height: 60px;
+      background: transparent;
+      &.active{
+        background: #cb4f0e;
+        position: relative;
+        transition: .3s;
+        &:after{
+          content: '';
+          position: absolute;
+          // 對角線為60px的正方形寬高
+          width: 42.43px;
+          height: 42.43px;
+          // background: green;
+          background: #cb4f0e;
+          border-bottom-right-radius: 6px;
+          transform: rotate(-45deg);
+          transform-origin: top right;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      &:last-child{
+        &.active{
+          &:after{
+            background: #d9d9d9;
+            right: auto;
+            left: -41px;
+          }
+        }
+      }
+    }
+    table{
+      margin-bottom: 2em;
+    }
+    form{
+      background: #edf7fa;
+      padding: 1em 2em;
+      border-radius: 8px;
+    }
+    .form_title{
+      font-size: 1.45rem;
+      color: #222;
+      padding: 0;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      .necessary{
+        margin: 0 6px;
+      }
+      > a{
+        $size: 24px;
+        // 稅務行事曆 modul開關
+        font-size: 0;
+        display: inline-block;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background: #7e7e7e;
+        position: relative;
+        z-index: 1;
+        &:before{
+          content: '？';
+          position: absolute;
+          color: #fff;
+          width: $size;
+          height: $size;
+          line-height: $size;
+          text-align: center;
+          z-index: 1;
+          font-size: 1rem;
+        }
+        &:hover, &:focus-visible{
+          background: #333;
+        }
+      }
+    }
+    .form_grp{
+      border-bottom-color: #a2a2a2;
+      padding: 20px 0;
+      &:last-child{
+        border-bottom-color: transparent;
+      }
+    }
+    .notice_info{
+      margin-top: 0;
+    }
+    fieldset{
+      width: 100%;
+      margin: 12px 0 0;
+      legend{
+        font-size: 1.125em;
+        font-weight: bold;
+        color: #00478f;
+      }
+      fieldset{
+        margin: 6px 0 6px 24px;
+        legend{
+          font-size: 1em;
+          color: #333;
+        }
+      }
+    }
+    button{
+      font-size: 1em;
+    }
+    .ctl_btns{
+      margin: 2em 0;
+      // button{
+      //   padding: 0.45em 4em;
+      // }
+    }
+    @include screen('mobile') {
+      .modeBBtn{
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+      }
+      .tabContent{
+        padding: 0;
+        .modeBBtn{
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}
+
+a.btn_pop{
+  $size: 24px;
+  // 稅務行事曆 modul開關
+  font-size: 0;
+  display: inline-block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: #7e7e7e;
+  position: relative;
+  z-index: 1;
+  margin-left: 4px;
+  &:before{
+    content: '？';
+    position: absolute;
+    color: #fff;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    z-index: 1;
+    font-size: 1rem;
+  }
+  &:hover, &:focus-visible{
+    background: #333;
+  }
+}
+
+// .infoTip{
+//   color: #222;
+//   background: #e5e5e5;
+//   border-radius: 2px;
+//   padding: 3px 12px;
+//   margin: 2px 0 2px 12px;
+//   box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 1px;
+//   position: relative;
+//   z-index: 2;
+//   &:before{
+//     content: '';
+//     position: absolute;
+//     z-index: 1;
+//     // 對角線長度為36px的正方形
+//     width: 12px;
+//     height: 12px;
+//     background: #e5e5e5;
+//     left: -12px;
+//     top: 7px;
+//     transform: rotate(-45deg);
+//     transform-origin: right top;
+//   }
+//   b{
+//     color:#cb4f0e;
+//     padding: 0 4px;
+//   }
+
+//   // 預設隱藏
+//   display: none;
+// }
+
+.infoTip{
+  padding-left: 7px;
+  margin: 5px 0;
+  p{
+    margin: 0;
+    line-height: 1;
+    color: #222;
+    background: #e5e5e5;
+    border-radius: 2px;
+    padding: 6px 10px;
+    display: inline-block;
+    b{
+      color:#cb4f0e;
+      padding: 0 4px;
+    }
+  }
+  span{
+    display: block;
+    font-size: 90%;
+    color: #156cb2;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  // 預設隱藏
+    display: none;
+}
+
+input:checked + .infoTip{
+  display: block;
 }

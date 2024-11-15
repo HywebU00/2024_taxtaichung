@@ -482,6 +482,9 @@
             padding: 2px 4px;
             margin: 2px 0;
             color: #222;
+            font-size: 1.17em;
+            line-height: 1.6;
+            font-weight: bold;
             &:hover, &:focus-visible{
                 color: $aFocus;
             }

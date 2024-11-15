@@ -33,6 +33,7 @@ table {
     }
     td {
         border: #ddd 1px solid;
+        background: #fff;
         word-break: break-all;
         a {
             word-break: break-all;
@@ -249,6 +250,24 @@ table {
             z-index: 2;
         }
     }
+}
+
+// 
+._tdtoR{
+    td{
+        text-align: right;
+        word-break: keep-all;
+    }
+}
+._tdtoC{
+    td{
+        text-align: center;
+        word-break: keep-all;
+    }
+}
+.focus{
+    color: $importantColor;
+    font-size: 1.25em;
 }
 
 @keyframes arrow_left {

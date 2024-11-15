@@ -46,7 +46,7 @@ $btn-radius:.25em;
 }
 // 按鈕預設陰影
 %btn {
-    font-size: $font-size;
+    font-size: $font-size * 1.125;
     touch-action: manipulation;
     background-image: none; //修正firefox
     display: inline-block;

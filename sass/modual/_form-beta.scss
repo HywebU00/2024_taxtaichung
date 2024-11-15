@@ -4,7 +4,7 @@ $m-gutter: 4px; // Flex grid system default margin
     color: $f_color;
     font-size: 1em;
     border: 1px solid $f_border;
-    padding: .75em 1.25em;
+    padding: 0.5em 1em;
     background: #fff;
     vertical-align: middle;
     margin: .3em;
@@ -219,12 +219,14 @@ select::-ms-expand {
 
 // 表單必填
 .necessary {
-    font-size: .875rem;
+    font-size: 1.225rem;
     color: $color-red;
-    padding: 1px 6px;
-    border-radius: 2px;
-    margin: 0 6px 0 0;
-    box-shadow: 0 0 0 1px $color-red inset;
+    font-weight: bold;
+    // background: $color-red;
+    // padding: 1px 6px;
+    // border-radius: 2px;
+    // margin: 0 6px 0 0;
+    // box-shadow: 0 0 0 1px $color-red inset;
 }
 
 .form_grid {}
@@ -1127,24 +1129,25 @@ select::-ms-expand {
             flex-basis: 100%;
             display: flex;
             align-items: center;
-            input {
-                &:checked {
-                    &~span {
-                        &:after {
-                            position: absolute;
-                            width: 1em;
-                            height: 1em;
-                            border-radius: 50%;
-                            background: #54caff;
-                            content: "";
-                            left: .6em;
-                            top: calc(50% - .5em);
-                            z-index: -1;
-                            animation: ripple 0.35s linear;
-                        }
-                    }
-                }
-            }
+            flex-wrap: wrap;
+            // input {
+            //     &:checked {
+            //         &~span {
+            //             &:after {
+            //                 position: absolute;
+            //                 width: 1em;
+            //                 height: 1em;
+            //                 border-radius: 50%;
+            //                 background: #54caff;
+            //                 content: "";
+            //                 left: .6em;
+            //                 top: calc(50% - .5em);
+            //                 z-index: -1;
+            //                 animation: ripple 0.35s linear;
+            //             }
+            //         }
+            //     }
+            // }
         }
         // radio與check個別行內設定
         &.form_inline {
@@ -1155,6 +1158,7 @@ select::-ms-expand {
                 margin-right: 1em;
                 display: inline-flex;
                 align-items: center;
+                flex-wrap: wrap;
             }
         }
     }
@@ -1346,9 +1350,9 @@ input[type="number"] {
 // input＋selectk 的下拉arrow
 input[type="text"] {
     &.complex {
-        padding-right: 1em;
+        padding-right: 2em;
         border: 1px solid #ccc;
-        background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+        background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right 10px center;
         background-size: 16px;
         min-width: 50%;
     }
