@@ -4247,7 +4247,7 @@ a.imgLink img {
   font-weight: bold;
   box-sizing: border-box;
   border-radius: 3px;
-  text-align: left;
+  text-align: justify;
   flex-basis: 15%;
 }
 .megamenu ul li ul li a:hover, .megamenu ul li ul li a:focus {
@@ -6689,9 +6689,9 @@ select:focus {
 
 select {
   line-height: 1.4em;
-  padding: 0.5em 24px 0.5em 0.5em;
+  padding: 0.5em 2em 0.5em 1em;
   border: 1px solid #ccc;
-  background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+  background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right 10px center;
   background-size: 16px;
 }
 select option {
@@ -8011,7 +8011,7 @@ a.btn_pop:hover, a.btn_pop:focus-visible {
   background: #e5e5e5;
   border-radius: 2px;
   padding: 6px 10px;
-  display: inline-block;
+  text-align: center;
 }
 .infoTip p b {
   color: #cb4f0e;
@@ -11233,6 +11233,7 @@ ol.cjk {
 }
 .calcResult .calcBox._top {
   align-items: flex-start;
+  justify-content: flex-start;
 }
 .calcResult .calcBox._top .col {
   align-items: flex-start;
