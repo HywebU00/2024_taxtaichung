@@ -11158,8 +11158,8 @@ ol.cjk {
   background: #eae9e8;
 }
 .calcResult .calcBox .col .box h3 span {
-  display: block;
-  margin: 4px 0 0;
+  display: inline-block;
+  margin: 4px 0 0 4px;
   padding: 0;
   background: #fff;
   font-size: 80%;
