@@ -1700,8 +1700,9 @@ kbd kbd {
   border: solid 1px #0066cc !important;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background: #004d99 !important;
-  border: solid 1px #0066cc !important;
+  color: #fff !important;
+  background: #ce4734 !important;
+  border: solid 1px #ce4734 !important;
 }
 
 .btn-secondary {
@@ -1711,9 +1712,9 @@ kbd kbd {
   text-shadow: none !important;
 }
 .btn-secondary:hover, .btn-secondary:focus {
-  color: #001a33 !important;
-  background: #b5deff !important;
-  border: solid 1px #b5deff !important;
+  color: #fff !important;
+  background: #ce4734 !important;
+  border: solid 1px #ce4734 !important;
 }
 
 .btn-normal {
@@ -8002,6 +8003,7 @@ a.btn_pop:hover, a.btn_pop:focus-visible {
 .infoTip {
   padding-left: 7px;
   margin: 5px 0;
+  text-align: center;
   display: none;
 }
 .infoTip p {
@@ -8022,7 +8024,6 @@ a.btn_pop:hover, a.btn_pop:focus-visible {
   font-size: 90%;
   color: #156cb2;
   font-weight: bold;
-  padding-left: 10px;
 }
 
 input:checked + .infoTip {
@@ -10055,7 +10056,9 @@ body::-webkit-scrollbar-track {
   font-weight: bold;
   max-width: initial;
   flex: 0 1 auto;
-  padding: 1em 0 0.35em;
+  padding: 0.85em 0 0.25em;
+  min-width: 90px;
+  text-align: end;
 }
 .filter .flex-form .form_content {
   max-width: initial;
@@ -10066,8 +10069,13 @@ body::-webkit-scrollbar-track {
 .filter .flex-form .form_content._fill input[type=text] {
   flex: 1 1 auto;
 }
+.filter .flex-form.form-column .form_title, .filter .flex-form.form_inline .form_title {
+  min-width: auto;
+  text-align: left;
+  margin: 0 4px;
+}
 .filter select {
-  padding: 0.5em 1em;
+  padding: 0.5em 2em 0.5em 1em;
   background-position: right 8px top 50%;
 }
 .filter .radio_grp .btn,
@@ -10490,6 +10498,9 @@ body::-webkit-scrollbar-track {
 @media screen and (max-width: 991px) {
   .filter {
     padding: 1.25em 2.5em;
+  }
+  .filter .flex-form .form_title {
+    text-align: left;
   }
   .filter .flex-form.form_inline .form_grp {
     width: 100%;
@@ -11090,12 +11101,16 @@ body::-webkit-scrollbar-track {
 }
 @media screen and (max-width: 991px) {
   .tips {
-    padding: 1em;
+    padding: 1em 2em;
   }
 }
 
 ol.cjk {
   list-style: cjk-decimal;
+}
+
+input[type=text]._width120 {
+  max-width: 100px;
 }
 
 .infoDisclosure {

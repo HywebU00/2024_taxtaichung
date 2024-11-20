@@ -302,7 +302,10 @@ $bg_n7: #e5beff;
       font-weight: bold;
       max-width: initial;
       flex: 0 1 auto;
-      padding: 1em 0 .35em;
+      // padding: 1em 0 .35em;
+      padding: .85em 0 .25em;
+      min-width: 90px;
+      text-align: end;
     }
     .form_content{
       max-width: initial;
@@ -314,10 +317,18 @@ $bg_n7: #e5beff;
         }
       }
     }
+    &.form-column,
+    &.form_inline{
+      .form_title{
+        min-width: auto;
+        text-align: left;
+        margin: 0 4px;
+      }
+    }
   }
   select{
     // padding: .75em 2em .75em 1.25em;
-    padding: .5em 1em;
+    padding: .5em 2em .5em 1em;
     background-position: right 8px top 50%;
   }
   // checkbox be btn
@@ -631,6 +642,9 @@ $bg_n7: #e5beff;
   @include screen('tablet') {
     padding: 1.25em 2.5em;
     .flex-form{
+      .form_title{
+        text-align: left;
+      }
       &.form_inline{
         //    width: 100%; 
         .form_grp{
@@ -1301,11 +1315,18 @@ $bg_n7: #e5beff;
     color: #cb4f0e;
   }
   @include screen('tablet') {
-    padding: 1em;
+    padding: 1em 2em;
   }
 }
 ol.cjk{
   list-style: cjk-decimal;
+}
+
+// 
+input[type="text"]{
+  &._width120{
+    max-width: 100px;
+  }
 }
 
 // 資訊展開
@@ -1450,6 +1471,7 @@ ol.cjk{
   .calcBox{
     display: flex;
     justify-content: center;
+
     padding: 1.25em 0;
     .col{
       margin-left: 10px;
@@ -1473,8 +1495,8 @@ ol.cjk{
           padding: .5em;
           background: #eae9e8;
           span{
-            display: block;
-            margin: 4px 0 0;
+            display: inline-block;
+            margin: 4px 0 0 4px;
             padding: 0;
             background: #fff;
             font-size: 80%;
@@ -1554,6 +1576,7 @@ ol.cjk{
     }
     &._top{
       align-items: flex-start;
+      justify-content: flex-start;
       .col{
         // 項目銬上對齊
         align-items: flex-start;

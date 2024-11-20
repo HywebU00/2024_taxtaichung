@@ -128,9 +128,11 @@ $btn-radius:.25em;
 
     &:hover,
     &:focus {
-        background: darken($primaryColor, 10)!important;
-        border: solid 1px $primaryColor!important;
-
+        // background: darken($primaryColor, 10)!important;
+        // border: solid 1px $primaryColor!important;
+        color: #fff!important;
+        background: $importantColor!important;
+        border: solid 1px $importantColor!important;
     }
 }
 // 次要按鈕
@@ -141,9 +143,12 @@ $btn-radius:.25em;
     text-shadow: none !important;
     &:hover,
     &:focus {
-        color: darken($primaryColor, 30)!important;
-        background: #b5deff!important;
-        border: solid 1px #b5deff!important;
+        // color: darken($primaryColor, 30)!important;
+        // background: #b5deff!important;
+        // border: solid 1px #b5deff!important;
+        color: #fff!important;
+        background: $importantColor!important;
+        border: solid 1px $importantColor!important;
     }
 }
 // 一般按鈕

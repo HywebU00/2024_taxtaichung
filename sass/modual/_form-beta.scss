@@ -1396,9 +1396,9 @@ select:focus {
 //---------------------------------------------下拉選單--------//
 select {
     line-height: 1.4em;
-    padding: .5em 24px .5em .5em;
+    padding: .5em 2em .5em 1em;
     border: 1px solid $color-gray;
-    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right 10px center;
     background-size: 16px;
     option {
         outline: none;
