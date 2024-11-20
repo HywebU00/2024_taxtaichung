@@ -7085,6 +7085,7 @@ table.table_sprite tr:nth-child(even) {
 
 .scroltable-container {
   overflow: auto;
+  padding-right: 2.5em;
 }
 
 .scroltable-nav {
@@ -7969,7 +7970,14 @@ table.table_sprite tr:nth-child(even) {
     padding: 0;
   }
   .tabSet._step .tabContent .modeBBtn {
-    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    background: #d9d9d9;
+    border-radius: 8px;
+  }
+  .tabSet._step .tabContent .modeBBtn.active {
+    background: #cb4f0e;
   }
 }
 
