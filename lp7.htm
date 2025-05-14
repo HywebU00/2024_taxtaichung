@@ -18,6 +18,60 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
   <body>
+    <!--視窗-->
+    <div id="modal2" class="modal_scroll">
+      <!-- div內的內容可以自行設定 -->
+      <h2>預約資訊</h2>
+      <div class="modal_content">
+        <div class="orderInfo">
+          <div>分局名稱<b>文心分局</b></div>
+          <div>日期<b>2025-05-13</b></div>
+          <div>時段<b>10:00~11:00</b></div>
+        </div>
+        <form action="">
+          <div class="flex-form">
+            <div class="form_grp">
+              <label for="fake-legend" class="form_title" aria-required="true">請選擇業務：</label>
+              <div class="form_content">
+                <select name="" id="fake-legend">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_grp">
+              <label for="fake-legend" class="form_title" aria-required="true">請輸入姓名：</label>
+              <div class="form_content">
+                <input type="text" id="fake-legend" placeholder="請輸入文字" />
+              </div>
+            </div>
+            <div class="form_grp">
+              <label for="phone" class="form_title">請輸入手機號碼：</label>
+              <div class="form_content">
+                <input name="phone" id="phone" type="tel" placeholder="手機格式 0912345678" />
+                <div class="notice">以簡訊傳送預約報到 QR Code 之網頁連結</div>
+              </div>
+            </div>
+            <div>
+              <img src="images/u40.png" alt="">
+            </div>
+            <div class="check_grp">
+              <label>
+                <input name="checkSample" type="checkbox" value="">
+                <span>資訊隱私權聲明 所蒐集的姓名、電話僅作為預約報到與傳送簡訊使用，並不作其他用途。避免未經授權的存取、使用或洩密。</span>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="btn_grp">
+          <button class="btn btn-normal close_Modal">取消，關閉跳窗</button>
+          <button class="btn btn-primary">確定預約</button>
+        </div>
+      </div>
+    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -922,7 +976,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">一般條列頁</h2>
+              <h2 class="title">分局線上預約</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -967,227 +1021,80 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- LP_一般條列頁 -->
+            <!-- LP -->
             <section class="lp">
-              <!-- category -->
-              <div class="category">
-                <ul>
-                  <li><a href="#" class="active">全部</a></li>
-                  <li><a href="#">資料大類1</a></li>
-                  <li><a href="#">資料大類2</a></li>
-                  <li><a href="#">資料大類3</a></li>
-                  <li><a href="#">資料大類4</a></li>
-                  <li><a href="#">資料大類5</a></li>
-                  <li><a href="#">資料大類6</a></li>
-                  <li><a href="#">資料大類7</a></li>
-                  <li><a href="#">資料大類8</a></li>
-                  <li><a href="#">資料大類9</a></li>
-                  <li><a href="#">資料大類10</a></li>
-                </ul>
+              <!-- 案件項目 -->
+              <div class="table_list">
+                <table>
+                  <caption>
+                    表格標題
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>日期/時間</th>
+                      <th>2025-05-12(一)</th>
+                      <th>2025-05-13(二)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-title="日期/時間">09:00~10:00</td>
+                      <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                      <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm" id="openModal_scroll">可預約(跳窗)</button></td>
+                    </tr>
+                    <tr>
+                      <td data-title="日期/時間">10:00~11:00</td>
+                      <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                      <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                    </tr>
+                    <tr>
+                      <td data-title="日期/時間">14:00~15:00</td>
+                      <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                      <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                    </tr>
+                    <tr>
+                      <td data-title="日期/時間">15:00~16:00</td>
+                      <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                      <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="category _big">
-                <ul>
-                  <li><a href="#" class="active">全部</a></li>
-                  <li><a href="#">資料大類1</a></li>
-                  <li><a href="#">資料大類2</a></li>
-                  <li><a href="#">資料大類3</a></li>
-                  <li><a href="#">資料大類4</a></li>
-                  <li><a href="#">資料大類5</a></li>
-                  <li><a href="#">資料大類6</a></li>
-                  <li><a href="#">資料大類7</a></li>
-                  <li><a href="#">資料大類8</a></li>
-                  <li><a href="#">資料大類9</a></li>
-                  <li><a href="#">資料大類10</a></li>
-                </ul>
-              </div>
-              <!-- Pagination -->
-              <div class="pagination">
-                <form action="">
-                  <div class="form_inline">
-                    <div class="total">
-                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                      <select name="" id="" aria-label="每頁顯示">
-                        <option value="">10</option>
-                        <option value="">20</option>
-                        <option value="">30</option>
-                        <option value="">40</option>
-                      </select>
-                      筆， <input type="button" value="確定" class="btn btn-submit" />
-                    </div>
-                  </div>
-                </form>
-                <ul class="page">
-                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">6</a></li>
-                  <li><a href="#">7</a></li>
-                  <li><a href="#">8</a></li>
-                  <li><a href="#">9</a></li>
-                  <li><a href="#">10</a></li>
-                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                </ul>
-              </div>
-              <div class="list">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time></span>
-                      <div class="txt">
-                        <span class="num">1.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰，研習會辦理租稅宣導活動，市潭子區公所113年度里鄰，市潭子區公所113年度里鄰。研習會辦理租稅宣導活動，市潭子區公所113年度里鄰，市潭子區公所113年度里鄰。</p>
-                      </div>
-                      <!-- <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span> -->
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">2.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">3.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">4.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">5.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">6.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">7.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">8.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">9.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">10.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Pagination -->
-              <div class="pagination">
-                <form action="">
-                  <div class="form_inline">
-                    <div class="total">
-                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                      <select name="" id="" aria-label="每頁顯示">
-                        <option value="">10</option>
-                        <option value="">20</option>
-                        <option value="">30</option>
-                        <option value="">40</option>
-                      </select>
-                      筆， <input type="button" value="確定" class="btn btn-submit" />
-                    </div>
-                  </div>
-                </form>
-                <ul class="page">
-                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">6</a></li>
-                  <li><a href="#">7</a></li>
-                  <li><a href="#">8</a></li>
-                  <li><a href="#">9</a></li>
-                  <li><a href="#">10</a></li>
-                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                </ul>
-              </div>
+              <br>
+              <table>
+                <caption>
+                  表格標題
+                </caption>
+                <thead>
+                  <tr>
+                    <th>日期/時間</th>
+                    <th>2025-05-12(一)</th>
+                    <th>2025-05-13(二)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-title="日期/時間">09:00~10:00</td>
+                    <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                    <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                  </tr>
+                  <tr>
+                    <td data-title="日期/時間">10:00~11:00</td>
+                    <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                    <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                  </tr>
+                  <tr>
+                    <td data-title="日期/時間">14:00~15:00</td>
+                    <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                    <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                  </tr>
+                  <tr>
+                    <td data-title="日期/時間">15:00~16:00</td>
+                    <td data-title="2025-05-12(一)"><button class="btn btn-normal btn-sm disabled">已額滿</button></td>
+                    <td data-title="2025-05-13(二)"><button class="btn btn-normal btn-sm">可預約</button></td>
+                  </tr>
+                </tbody>
+              </table>
             </section>
             <!-- 內容區 End -->
           </div>

@@ -35,8 +35,19 @@ table {
         border: #ddd 1px solid;
         background: #fff;
         word-break: break-all;
+        text-align: center;
         a {
             word-break: break-all;
+            padding-right: 22px;
+            background:  url(../images/icon/icon_link.svg) right 50% no-repeat;
+            background-size: 16px;
+        }
+
+        &._left{
+            text-align: left;
+        }
+        &._right{
+            text-align: right;
         }
     }
     th {
@@ -45,7 +56,12 @@ table {
         border: #DDD 1px solid;
         text-align: center;
         white-space: nowrap;
-        width: 160px;  // 暫定啦
+        // width: 160px;  // 暫定啦
+        min-width: 90px;
+
+        &.date{
+            width: 220px;
+        }
     }
     &.table_hover {
         tr:hover {
@@ -190,6 +206,7 @@ table {
 
 .scroltable-container {
     overflow: auto;
+    padding-right: 2.5em; //table內容閃開漸層
 }
 
 .scroltable-nav {

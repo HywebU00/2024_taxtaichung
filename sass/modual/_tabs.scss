@@ -644,11 +644,31 @@
       .tabContent{
         padding: 0;
         .modeBBtn{
-          margin-bottom: 1em;
+          font-weight: bold;
+          font-size: 1.25em;
+          margin-bottom: .5em;
+          background: #d9d9d9;
+          border-radius: 8px;
+          &.active{
+            background: #cb4f0e;
+          }
         }
       }
     }
   }
+}
+
+.showRoom{
+  background: #edf7fa;
+  padding: 1em 2em 3em;
+  border-radius: 8px;
+
+  .centerTitle{
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  ol{}
 }
 
 a.btn_pop{

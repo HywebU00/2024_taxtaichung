@@ -295,6 +295,15 @@ $bg_n7: #e5beff;
     .form_grp{
       border-bottom: none;
       padding: 0;
+
+      // 鋪滿欄位
+      &._fill{
+        // background: red;
+        flex: 1 1 auto; /* 填滿整行 */
+        input[type=text] {
+          width: calc(100% + .45em);
+        }
+      }
     }
     .form_title{
       color: #222;
@@ -1353,6 +1362,12 @@ $bg_n7: #e5beff;
 }
 ol.cjk{
   list-style: cjk-decimal;
+  ol.cjk{
+    margin: 4px 0;
+    li::marker {
+      content: "（" counter(list-item, cjk-ideographic) "）";
+    }
+  }
 }
 
 // 

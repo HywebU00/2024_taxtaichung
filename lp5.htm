@@ -922,7 +922,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">一般條列頁</h2>
+              <h2 class="title">活動條列頁</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -967,38 +967,70 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- LP_一般條列頁 -->
+            <!-- LP -->
             <section class="lp">
-              <!-- category -->
-              <div class="category">
-                <ul>
-                  <li><a href="#" class="active">全部</a></li>
-                  <li><a href="#">資料大類1</a></li>
-                  <li><a href="#">資料大類2</a></li>
-                  <li><a href="#">資料大類3</a></li>
-                  <li><a href="#">資料大類4</a></li>
-                  <li><a href="#">資料大類5</a></li>
-                  <li><a href="#">資料大類6</a></li>
-                  <li><a href="#">資料大類7</a></li>
-                  <li><a href="#">資料大類8</a></li>
-                  <li><a href="#">資料大類9</a></li>
-                  <li><a href="#">資料大類10</a></li>
-                </ul>
-              </div>
-              <div class="category _big">
-                <ul>
-                  <li><a href="#" class="active">全部</a></li>
-                  <li><a href="#">資料大類1</a></li>
-                  <li><a href="#">資料大類2</a></li>
-                  <li><a href="#">資料大類3</a></li>
-                  <li><a href="#">資料大類4</a></li>
-                  <li><a href="#">資料大類5</a></li>
-                  <li><a href="#">資料大類6</a></li>
-                  <li><a href="#">資料大類7</a></li>
-                  <li><a href="#">資料大類8</a></li>
-                  <li><a href="#">資料大類9</a></li>
-                  <li><a href="#">資料大類10</a></li>
-                </ul>
+              <!-- filter -->
+              <div class="filter">
+                <div class="flex-form form_inline">
+                  <!-- 活動檔期 -->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">活動檔期：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">全部</option>
+                        <option value="">當期活動</option>
+                        <option value="">歷史活動</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 活動種類-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">活動種類：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">稅務宣導</option>
+                        <option value="">其他</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 日期區間 -->
+                  <div class="form_grp">
+                    <div for="fake-legend" class="form_title" aria-required="true">日期區間：</div>
+                    <div class="form_content">
+                      <div class="datepick">
+                        <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                      </div>
+                      <div class="datepick">
+                        <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 分局選擇-->
+                  <div class="form_grp">
+                    <label for="fake-legend" class="form_title" aria-required="true">分局選擇：</label>
+                    <div class="form_content">
+                      <select name="" id="fake-legend">
+                        <option value="">文心分局</option>
+                        <option value="">分局Ａ</option>
+                        <option value="">分局B</option>
+                        <option value="">分局C</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- 活動搜尋 -->
+                  <div class="form_grp _fill">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="fake-legend" class="form_title" aria-required="true">活動搜尋：</label>
+                    <div class="form_content">
+                      <input type="text" id="fake-legend" placeholder="請輸入標題關鍵字" />
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="reset" value="清除查詢條件" class="btn btn-reset">
+                  <input name="" type="submit" value="查詢" class="btn btn-submit">
+                  <!-- <input name="" type="submit" value="查詢" class="btn btn-submit _gosearch"> -->
+                </div>
               </div>
               <!-- Pagination -->
               <div class="pagination">
@@ -1032,130 +1064,109 @@
                   <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
                 </ul>
               </div>
-              <div class="list">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time></span>
-                      <div class="txt">
-                        <span class="num">1.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰，研習會辦理租稅宣導活動，市潭子區公所113年度里鄰，市潭子區公所113年度里鄰。研習會辦理租稅宣導活動，市潭子區公所113年度里鄰，市潭子區公所113年度里鄰。</p>
-                      </div>
-                      <!-- <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span> -->
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">2.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">3.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">4.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">5.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">6.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">7.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">8.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">9.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">10.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                </ul>
+              <!-- 案件項目 -->
+              <div class="table_list">
+                <table>
+                  <caption>
+                    表格標題
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th class="">編號</th>
+                      <th>活動種類</th>
+                      <th class="date">活動時間</th>
+                      <th>行政區</th>
+                      <th>活動標題</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-title="編號" class="num">01</td>
+                      <td data-title="活動種類">租稅宣導</td>
+                      <td data-title="活動時間" class="date">114/05/01、114/05/29<br>下午 1330- 下午 1630</td>
+                      <td data-title="行政區" class="">西屯區</td>
+                      <td data-title="活動標題" class="_left">文心分局114年5月1日、5月29日配合財政部中區國稅局臺中分局「113年度綜合所得稅結算申報」辦理租稅宣導活動</td>
+                      <td data-title="操作">
+                        <a href="#" class="btn btn-normal btn-sm">活動花絮</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-title="編號" class="num">02</td>
+                      <td data-title="活動種類">租稅宣導</td>
+                      <td data-title="活動時間" class="date">114/05/01、114/05/29<br>下午 1330- 下午 1630</td>
+                      <td data-title="行政區" class="">西屯區</td>
+                      <td data-title="活動標題" class="_left">文心分局114年5月1日、5月29日配合財政部中區國稅局臺中分局「113年度綜合所得稅結算申報」辦理租稅宣導活動</td>
+                      <td data-title="操作">
+                        <a href="#" class="btn btn-normal btn-sm">得獎名單</a>
+                        <a href="#" class="btn btn-normal btn-sm">活動花絮</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-title="編號" class="num">03</td>
+                      <td data-title="活動種類">租稅宣導</td>
+                      <td data-title="活動時間" class="date">114/05/01、114/05/29<br>下午 1330- 下午 1630</td>
+                      <td data-title="行政區" class="">西屯區</td>
+                      <td data-title="活動標題" class="_left">文心分局114年5月1日、5月29日配合財政部中區國稅局臺中分局「113年度綜合所得稅結算申報」辦理租稅宣導活動</td>
+                      <td data-title="操作">
+                        <a href="#" class="btn btn-normal btn-sm">得獎名單</a>
+                        <a href="#" class="btn btn-normal btn-sm">活動花絮</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+              <br>
+              <table>
+                <caption>
+                  表格標題
+                </caption>
+                <thead>
+                    <tr>
+                      <th class="">編號</th>
+                      <th>活動種類</th>
+                      <th class="date">活動時間</th>
+                      <th>行政區</th>
+                      <th>活動標題</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-title="編號" class="num">01</td>
+                      <td data-title="活動種類">租稅宣導</td>
+                      <td data-title="活動時間" class="date">114/05/01、114/05/29<br>下午 1330- 下午 1630</td>
+                      <td data-title="行政區" class="">西屯區</td>
+                      <td data-title="活動標題" class="_left">文心分局114年5月1日、5月29日配合財政部中區國稅局臺中分局「113年度綜合所得稅結算申報」辦理租稅宣導活動</td>
+                      <td data-title="操作">
+                        <a href="#" class="btn btn-normal btn-sm">得獎名單</a>
+                        <a href="#" class="btn btn-normal btn-sm">活動花絮</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-title="編號" class="num">02</td>
+                      <td data-title="活動種類">租稅宣導</td>
+                      <td data-title="活動時間" class="date">114/05/01、114/05/29<br>下午 1330- 下午 1630</td>
+                      <td data-title="行政區" class="">西屯區</td>
+                      <td data-title="活動標題" class="_left">文心分局114年5月1日、5月29日配合財政部中區國稅局臺中分局「113年度綜合所得稅結算申報」辦理租稅宣導活動</td>
+                      <td data-title="操作">
+                        <a href="#" class="btn btn-normal btn-sm">得獎名單</a>
+                        <a href="#" class="btn btn-normal btn-sm">活動花絮</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-title="編號" class="num">03</td>
+                      <td data-title="活動種類">租稅宣導</td>
+                      <td data-title="活動時間" class="date">114/05/01、114/05/29<br>下午 1330- 下午 1630</td>
+                      <td data-title="行政區" class="">西屯區</td>
+                      <td data-title="活動標題" class="_left">文心分局114年5月1日、5月29日配合財政部中區國稅局臺中分局「113年度綜合所得稅結算申報」辦理租稅宣導活動</td>
+                      <td data-title="操作">
+                        <a href="#" class="btn btn-normal btn-sm">得獎名單</a>
+                        <a href="#" class="btn btn-normal btn-sm">活動花絮</a>
+                      </td>
+                    </tr>
+                  </tbody>
+              </table>
               <!-- Pagination -->
               <div class="pagination">
                 <form action="">

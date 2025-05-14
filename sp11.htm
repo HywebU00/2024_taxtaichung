@@ -17,7 +17,18 @@
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
+
   <body>
+    <!--視窗-->
+    <div id="modal1" class="modal">
+      <!-- div內的內容可以自行設定 -->
+      <h2>請注意！</h2>
+      <p>如果您不同意該等條款規定，則無法繼續下一步驟。</p>
+      <div class="btn_grp">
+          <button class="btn btn-normal close_Modal">我知道了，關閉跳窗</button>
+          <!-- <button class="btn btn-normal">前往客服中心</button> -->
+      </div>
+    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -922,7 +933,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">一般條列頁</h2>
+              <h2 class="title">標題</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -967,226 +978,211 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- LP_一般條列頁 -->
-            <section class="lp">
-              <!-- category -->
-              <div class="category">
-                <ul>
-                  <li><a href="#" class="active">全部</a></li>
-                  <li><a href="#">資料大類1</a></li>
-                  <li><a href="#">資料大類2</a></li>
-                  <li><a href="#">資料大類3</a></li>
-                  <li><a href="#">資料大類4</a></li>
-                  <li><a href="#">資料大類5</a></li>
-                  <li><a href="#">資料大類6</a></li>
-                  <li><a href="#">資料大類7</a></li>
-                  <li><a href="#">資料大類8</a></li>
-                  <li><a href="#">資料大類9</a></li>
-                  <li><a href="#">資料大類10</a></li>
-                </ul>
-              </div>
-              <div class="category _big">
-                <ul>
-                  <li><a href="#" class="active">全部</a></li>
-                  <li><a href="#">資料大類1</a></li>
-                  <li><a href="#">資料大類2</a></li>
-                  <li><a href="#">資料大類3</a></li>
-                  <li><a href="#">資料大類4</a></li>
-                  <li><a href="#">資料大類5</a></li>
-                  <li><a href="#">資料大類6</a></li>
-                  <li><a href="#">資料大類7</a></li>
-                  <li><a href="#">資料大類8</a></li>
-                  <li><a href="#">資料大類9</a></li>
-                  <li><a href="#">資料大類10</a></li>
-                </ul>
-              </div>
-              <!-- Pagination -->
-              <div class="pagination">
-                <form action="">
-                  <div class="form_inline">
-                    <div class="total">
-                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                      <select name="" id="" aria-label="每頁顯示">
-                        <option value="">10</option>
-                        <option value="">20</option>
-                        <option value="">30</option>
-                        <option value="">40</option>
-                      </select>
-                      筆， <input type="button" value="確定" class="btn btn-submit" />
+            <!-- 試算首頁 -->
+            <section class="TrialCalc">
+              <!-- <h3 class="title">房屋稅額 = 房屋課稅現值 X 稅率</h3> -->
+              <!-- 步驟 tab -->
+              <div class="tabSet _step">
+                <div class="tabItems">
+                  <button type="button" class="tabBtn">1.個資宣告聲明</button>
+                  <button type="button" class="tabBtn">2.填寫民意問卷資料</button>
+                  <button type="button" class="tabBtn">3.資料確認</button>
+                  <button type="button" class="tabBtn">4.完成送出</button>
+                  <button type="button" class="tabBtn">5.項目5</button>
+                  <button type="button" class="tabBtn">6.項目6</button>
+                </div>
+                <div class="tabContentGroup">
+                  <div class="tabContent">
+                    <div class="content">
+                      <div class="activeSliderS1">
+                        <div class="showRoom">
+                          <h3 class="centerTitle">相關條款與個資法授權</h3>
+                          <p>依據「個人資料保護法」第八條第一項規定，於您填寫本局申辦及各類信箱前，向您告知下列事項，請詳閱：</p>
+                          <ol>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                          </ol>
+                          <ol class="cjk">
+                            <li>
+                              蒐集之目的：稅務行政、客戶管
+                              <ol class="cjk">
+                                <li>期間：本局因提供服務所須之保存期間。</li>
+                                <li>期間：本局因提供服務所須之保存期間。</li>
+                                <li>期間：本局因提供服務所須之保存期間。</li>
+                              </ol>
+                            </li>
+                            <li>
+                              蒐集之目的：稅務行政、客戶管
+                              <ol class="cjk">
+                                <li>期間：本局因提供服務所須之保存期間。</li>
+                                <li>期間：本局因提供服務所須之保存期間。</li>
+                                <li>期間：本局因提供服務所須之保存期間。</li>
+                              </ol>
+                            </li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                            <li>蒐集之目的：稅務行政、客戶管</li>
+                          </ol>
+                          <div class="check_grp">
+                            <label>
+                              <input name="checkSample" type="checkbox" value="">
+                              <span>我已仔細閱讀並明瞭「隱私權條款」等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。</span>
+                            </label>
+                          </div>
+                        </div>
+                        <!-- 操作按鈕 -->
+                        <div class="ctl_btns">
+                          <button class="btn btn-secondary" id="openModal">不同意</button>
+                          <button class="btn btn-primary">我同意</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </form>
-                <ul class="page">
-                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">6</a></li>
-                  <li><a href="#">7</a></li>
-                  <li><a href="#">8</a></li>
-                  <li><a href="#">9</a></li>
-                  <li><a href="#">10</a></li>
-                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                </ul>
-              </div>
-              <div class="list">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time></span>
-                      <div class="txt">
-                        <span class="num">1.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰，研習會辦理租稅宣導活動，市潭子區公所113年度里鄰，市潭子區公所113年度里鄰。研習會辦理租稅宣導活動，市潭子區公所113年度里鄰，市潭子區公所113年度里鄰。</p>
+                  <div class="tabContent">
+                    <div class="content">
+                      <div class="activeSliderS2">
+                        <form action="">
+                          <div class="flex-form form-column">
+                            <!-- 房屋座落區 -->
+                            <div class="form_grp">
+                              <label for="address" class="form_title">
+                                房屋座落區<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                <a href="#" id="openModal" class="">跳窗</a>
+                              </label>
+                              <div class="form_content form_inline">
+                                <input name="text" type="text" id="address" value="" placeholder="input＋select下拉，下拉功能工程師支援" class="complex" />
+                                <div class="notice">input＋select下拉：complex</div>
+                              </div>
+                            </div>
+                            <!-- 路段範圍 -->
+                            <div class="form_grp">
+                              <label for="address" class="form_title">
+                                路段範圍<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                <a href="#" id="openModal" class="">跳窗</a>
+                              </label>
+                              <div class="form_content form_inline">
+                                <input name="text" type="text" id="address" value="" placeholder="input＋select下拉，下拉功能工程師支援" class="complex" />
+                                <button type="button" class="btn btn-primary _switch">確認地段率</button>
+                                <div class="infoTip">
+                                  <p>地段率<b>140</b>%</p>
+                                  <span>依據：座落區+路段</span>
+                                </div>
+                                <div class="notice">input＋select下拉：complex<br>僅列示地段率有調整之路段（即地段率非 100%），如您的房屋座落區路段未於選項中者，請選擇：其他</div>
+                              </div>
+                            </div>
+                            <!-- 房屋面積(平方公尺) -->
+                            <div class="form_grp">
+                              <label for="fake-legend" class="form_title">
+                                房屋面積(平方公尺)<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>
+                                <a href="#" id="openModal" class="">跳窗</a>
+                              </label>
+                              <div class="form_content form_inline">
+                                <input name="text" type="text" value="" placeholder="平方公尺">
+                                <span aria-label="" class="">或</span>
+                                <input name="text" type="text" value="" placeholder="坪數">
+                                <button type="button" class="btn btn-primary _switch">確認面積與計算房屋課稅現值</button>
+                                <div class="infoTip">
+                                  <p>面積<b>23</b>平方公尺</p>
+                                  <!-- <span>依據：課稅面積</span> -->
+                                  <p>房屋課稅現值<b>210,000</b>元</p>
+                                  <span>依據：課稅面積</span>
+                                </div>
+                                <div class="notice">1坪=3.3058平方公尺<br>本表估算之課稅現值，排除個別加減項、電梯及公設面積等因素，故與實際課稅現值會有誤差，實際課稅玩值仍應以房屋稅籍紀錄表所載為準。</div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <!-- 操作按鈕 -->
+                        <div class="ctl_btns">
+                          <button class="btn btn-secondary">回上頁</button>
+                          <button class="btn btn-normal">前往估算契稅</button>
+                          <button class="btn btn-normal">返回房屋稅首頁</button>
+                          <button class="btn btn-primary">下一步</button>
+                        </div>
+                        <!-- 右側邊步驟欄 -->
+                        <section class="Rside_steps">
+                          <ul>
+                            <li><a href="#">2-項目A<b class="finish">已輸入</b></a></li>
+                            <li><a href="#">2-項目B<b>未輸入</b></a></li>
+                            <li><a href="#">2-項目C<b>未輸入</b></a></li>
+                            <li><a href="#">2-項目D<b class="finish">已輸入</b></a></li>
+                          </ul>
+                        </section>
                       </div>
-                      <!-- <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span> -->
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">2.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">3.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">4.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">5.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">6.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">7.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">8.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">9.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="classify"><time>2018-03-09</time><b>資料大類1</b><b>資料大類2</b></span>
-                      <div class="txt">
-                        <span class="num">10.</span>
-                        <p>豐原分局113年7月15日配合臺中市潭子區公所113年度里鄰長研習會辦理租稅宣導活動</p>
-                      </div>
-                      <span class="tag">節稅</span>
-                      <span class="tag">退稅資訊</span>
-                      <span class="tag">常見問題</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Pagination -->
-              <div class="pagination">
-                <form action="">
-                  <div class="form_inline">
-                    <div class="total">
-                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                      <select name="" id="" aria-label="每頁顯示">
-                        <option value="">10</option>
-                        <option value="">20</option>
-                        <option value="">30</option>
-                        <option value="">40</option>
-                      </select>
-                      筆， <input type="button" value="確定" class="btn btn-submit" />
                     </div>
                   </div>
-                </form>
-                <ul class="page">
-                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">6</a></li>
-                  <li><a href="#">7</a></li>
-                  <li><a href="#">8</a></li>
-                  <li><a href="#">9</a></li>
-                  <li><a href="#">10</a></li>
-                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                </ul>
+                  <div class="tabContent">
+                    <div class="content">
+                      <div class="activeSliderS1">
+                        <div class="showRoom">
+                          <h3 class="centerTitle">項目3</h3>
+                        </div>
+                        <!-- 操作按鈕 -->
+                        <div class="ctl_btns">
+                          <button type="button" class="btn btn-primary">主要按鈕</button>
+                          <button type="button" class="btn btn-secondary">次要按鈕</button>
+                          <button type="button" class="btn btn-normal">一般按鈕</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabContent">
+                    <div class="content">
+                      <div class="activeSliderS1">
+                        <div class="showRoom">
+                          <h3 class="centerTitle">項目4</h3>
+                        </div>
+                        <!-- 操作按鈕 -->
+                        <div class="ctl_btns">
+                          <button type="button" class="btn btn-primary">主要按鈕</button>
+                          <button type="button" class="btn btn-secondary">次要按鈕</button>
+                          <button type="button" class="btn btn-normal">一般按鈕</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabContent">
+                    <div class="content">
+                      <div class="activeSliderS1">
+                        <div class="showRoom">
+                          <h3 class="centerTitle">項目5</h3>
+                        </div>
+                        <!-- 操作按鈕 -->
+                        <div class="ctl_btns">
+                          <button type="button" class="btn btn-primary">主要按鈕</button>
+                          <button type="button" class="btn btn-secondary">次要按鈕</button>
+                          <button type="button" class="btn btn-normal">一般按鈕</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabContent">
+                    <div class="content">
+                      <div class="activeSliderS1">
+                        <div class="showRoom">
+                          <h3 class="centerTitle">項目6</h3>
+                        </div>
+                        <!-- 操作按鈕 -->
+                        <div class="ctl_btns">
+                          <button type="button" class="btn btn-primary">主要按鈕</button>
+                          <button type="button" class="btn btn-secondary">次要按鈕</button>
+                          <button type="button" class="btn btn-normal">一般按鈕</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 文字說明 -->
+              <div class="tips">
+                <h4>貼心提醒</h4>
+                <ol class="cjk">
+                  <li>本表僅適用於估算坐落於 臺中市 之房屋。</li>
+                  <li>本表試算之稅額，係依照房屋稅條例及臺中市房屋稅徵收率自治條例等規定試算，排除個別加減項、電梯及公設面稅等因素，故與實際稅額可能會有誤差。</li>
+                </ol>
               </div>
             </section>
             <!-- 內容區 End -->
@@ -1364,6 +1360,8 @@
     <!-- fancybox -->
     <script src="vendor/fancybox/fancybox.umd.js"></script>
     <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <!-- hyUI -->
     <script src="js/main.js"></script>
     <!-- 客製js -->
