@@ -307,16 +307,22 @@
   .modeBBtn,
   .tabBtn {
     flex: 1 1 auto;
-    font-size: 1em;
+    font-size: 1.25em;
     height: 3.2em;
+    font-weight: bold;
     text-align: center;
     border: none;
     margin: 1px;
-    border-radius: 3px;
+    border-radius: 8px 3px 3px 8px;
     box-shadow: none;
     background: #fff;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: solid 1px #ddd;
     cursor: pointer;
+
+    &:last-child{
+          border-radius: 3px 8px 8px 3px;
+    }
 
     &:focus-visible {
       outline: none;
@@ -333,7 +339,7 @@
   .tabContent {
     display: none;
     position: relative;
-    padding: 15px;
+    padding: 15px 0;
     // border: #bbb 1px solid;
 
     @include screen('mobile') {
@@ -535,8 +541,8 @@
           content: '';
           position: absolute;
           // 對角線為60px的正方形寬高
-          width: 42.43px;
-          height: 42.43px;
+          width: 40.43px;
+          height: 41.43px;
           // background: green;
           background: #cb4f0e;
           border-bottom-right-radius: 6px;
@@ -637,6 +643,16 @@
       //   padding: 0.45em 4em;
       // }
     }
+    .questionnaire{
+      // 問卷調查
+      form{
+        background: transparent;
+        padding: 0;
+      }
+      .form_grp{
+        border-bottom-color: transparent;
+      }
+    }
     @include screen('mobile') {
       .modeBBtn{
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
@@ -668,7 +684,9 @@
     font-size: 1.25em;
   }
 
-  ol{}
+  + .ctl_btns{
+    margin-top: 1.5em;
+  }
 }
 
 a.btn_pop{

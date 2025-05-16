@@ -1201,7 +1201,9 @@ $bg_n7: #e5beff;
 }
 
 // errorPage
-.errorPage{
+// successPage
+.errorPage,
+.successPage{
   text-align: center;
   h2{
     margin: 1.65em 0 1em;
@@ -1220,6 +1222,135 @@ $bg_n7: #e5beff;
       color: $importantColor;
     }
   }
+  address{
+    p{
+      margin: 0;
+      font-style: normal;
+    }
+  }
+}
+.orderQRcode{
+  background: #edf7fa;
+  padding: 1em 2em 3em;
+  border-radius: 8px;
+  margin-top: 2em;
+  display: grid;
+  justify-content: center;
+  dl{
+    display: grid;
+    grid-template-columns: 120px auto;
+    dt{
+      // background: pink;
+      padding: 4px 12px 4px 0;
+      text-align: right;
+      font-weight: bold;
+    }
+    dd{
+      margin-left: 0;
+      text-align-last: left;
+      padding: 4px 0;
+    }
+  }
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin: 2em 0;
+}
+.video-container iframe, 
+.video-container object, 
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+// 問卷調查
+.questionnaire{
+  .form_grp{
+    border-bottom-color: transparent !important;
+    padding: 0 !important;
+    margin: 1em 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .form_title{
+      background: $primaryColor;
+      color: #fff;
+      font-size: 1em;
+      padding: 0.65em 2.5em !important;
+      margin: 0;
+    }
+    .form_content{
+      padding: 0.65em 2.5em;
+    }
+  }
+
+  .resultList{
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 20px 0;
+    > p{
+      padding: 0.65em 2.5em;
+      margin: 0;
+      color: #fff;
+      background: $primaryColor;
+    }
+  }
+  ul.vote-results{
+    @include li-reset;
+    padding: 0.65em 2.5em;
+    li{
+      display: grid;
+      grid-template-columns: 250px auto;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+  }
+  .option-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 4px;
+    text-align: right;
+  }
+  .option{
+    text-align: left;
+    font-weight: bold;
+  }
+  .percentage{}
+  .votes{
+    flex: 0 0 70px;
+  }
+  .progress-bar {
+    background: #e0e0e0;
+    border-radius: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    background: #4caf50;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: white;
+    font-weight: bold;
+  }
+}
+// 驗證碼
+.VCode{
+  text-align: center;
 }
 
 // 試算
@@ -1367,6 +1498,108 @@ ol.cjk{
     li::marker {
       content: "（" counter(list-item, cjk-ideographic) "）";
     }
+  }
+}
+
+// 均分連結
+.setGrid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  a{
+    font-size: 1.25em;
+    padding: 1.25em 2em;
+    border-radius: 6px;
+  }
+  &._col2{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  &._col3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  &._col4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    row-gap: 20px;
+  }
+  &._alignTop{
+    align-items: start;
+  }
+
+  @include screen('tablet'){
+    &._col4{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @include screen('mobile'){
+    &._col4{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+// 全功能服務櫃檯
+.branchCard{
+  align-items: start;
+}
+.branchOffice{
+  padding: 1em;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // border: 1px solid #000;
+  border-radius: 6px;
+  .officeName{
+    font-size: 1.75em;
+    text-align: center;
+    font-weight: bold;
+    color: $primaryColor;
+  }
+  p.distance{
+    text-align: center;
+    margin: 4px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #b8b8b8;
+  }
+  .orderInfo{
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: .65em 0;
+    text-align: center;
+  }
+  .infoBox{
+    display: none;
+    &._show{
+      display: block;
+    }
+  }
+  .current{
+    padding: .5em 1em;
+    background: #ededed;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    .subtitle{
+      font-weight: bold;
+      color: $color-orange;
+    }
+    .orderInfo{
+      margin: 0;
+      text-align-last: left;
+    }
+  }
+  // 滿
+  position: relative;
+  .tipFull{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: $color-orange;
+    color: #fff;
+    right: 16px;
+    top: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    font-size: 1.5em;
   }
 }
 

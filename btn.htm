@@ -19,16 +19,6 @@
   </head>
 
   <body>
-    <!--視窗-->
-    <div id="modal1" class="modal">
-      <!-- div內的內容可以自行設定 -->
-      <h2>請注意！</h2>
-      <p>如果您不同意該等條款規定，則無法繼續下一步驟。</p>
-      <div class="btn_grp">
-          <button class="btn btn-normal close_Modal">我知道了，關閉跳窗</button>
-          <!-- <button class="btn btn-normal">前往客服中心</button> -->
-      </div>
-    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -909,17 +899,6 @@
       <div id="aC" class="main innerpage">
         <!-- 內頁新增一個classname-->
         <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
-        <!-- 右側懸停物件 -->
-        <section class="R_side_fixed">
-          <a href="javascript:;" class="_tiptool">
-            <img src="images/img-side-1-help.png" alt=""><span>我是<b>地稅小幫手</b>，很高興為您服務！</span>
-          </a>
-          <a href="javascript:;"><img src="images/img-side-2-AI.png" alt=""><span>AI可比</span></a>
-          <a href="javascript:;"><img src="images/img-side-3-podcast.png" alt=""><span>官方Line諮詢</span></a>
-          <a href="javascript:;"><img src="images/img-side-4-FB.png" alt=""><span>中市稅輕鬆FB</span></a>
-          <a href="javascript:;"><img src="images/img-side-5-YT.png" alt=""><span>Youtube</span></a>
-          <a href="javascript:;"><img src="images/img-side-6-Line.png" alt=""><span>Podcast</span></a>
-        </section>
         <div class="container">
           <!-- 主要內容區 -->
           <div class="center_block">
@@ -931,203 +910,159 @@
                 <li>節點</li>
               </ul>
             </div>
-            <!-- h2節點＋function_panel -->
-            <div class="title_mixBox">
-              <h2 class="title">標題</h2>
-              <div class="function_panel">
-                <!-- function功能區塊 -->
-                <div class="function">
-                  <ul>
-                    <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
-                    <li class="print"><a href="#">友善列印</a></li>
-                    <li class="forward"><a href="#">轉寄友人</a></li>
-                  </ul>
+            <!-- h2節點 -->
+            <h2 class="title">按鈕樣式</h2>
+            <section>
+              <form action="">
+                <!-- button + 深色 icon -->
+                <div class="btn_grp">
+                  <h2>button + 深色 icon</h2>
+                  <button class="btn"><i class="i_apple"></i>IOS</button>
+                  <button class="btn"><i class="i_arrow_left"></i>上一頁</button>
+                  <button class="btn">下一頁<i class="i_arrow_right"></i></button>
+                  <button class="btn"><i class="i_bookmark"></i>加入書籤</button>
+                  <button class="btn"><i class="i_chat"></i>訊息</button>
+                  <button class="btn"><i class="i_check"></i>確認</button>
+                  <button class="btn"><i class="i_clock"></i>時間</button>
+                  <button class="btn"><i class="i_close"></i>關閉</button>
+                  <button class="btn"><i class="i_edit"></i>編輯</button>
+                  <button class="btn"><i class="i_facebook"></i>facebook</button>
+                  <button class="btn"><i class="i_grid"></i>清單</button>
+                  <button class="btn"><i class="i_heart"></i>加入最愛</button>
+                  <button class="btn"><i class="i_home"></i>回首頁</button>
+                  <button class="btn"><i class="i_info"></i>說明</button>
+                  <button class="btn"><i class="i_link"></i>連結</button>
+                  <button class="btn"><i class="i_linkedin"></i>linkedin</button>
+                  <button class="btn"><i class="i_lock"></i>鎖定</button>
+                  <button class="btn"><i class="i_mail"></i>Mail</button>
+                  <button class="btn"><i class="i_rss"></i>RSS</button>
+                  <button class="btn"><i class="i_setting"></i>設定</button>
+                  <button class="btn"><i class="i_star"></i>評比</button>
+                  <button class="btn"><i class="i_twitter"></i>twitter</button>
+                  <button class="btn"><i class="i_video"></i>video</button>
+                  <button class="btn"><i class="i_vimeo"></i>vimeo</button>
+                  <button class="btn"><i class="i_youtube"></i>youtube</button>
+                  <button class="btn"><i class="i_order"></i>下單</button>
+                  <button class="btn"><i class="i_move"></i>移動</button>
+                  <button class="btn"><i class="i_reflash"></i>重新整理</button>
+                  <button class="btn"><i class="i_play"></i>語音播放</button>
+                  <button class="btn"><i class="i_view"></i>檢視</button>
+                  <button class="btn"><i class="i_add"></i>增加</button>
+                  <button class="btn"><i class="i_minus"></i>減少</button>
+                  <button class="btn"><i class="i_search"></i>查詢</button>
+                  <button class="btn"><i class="i_photo"></i>圖片</button>
+                  <button class="btn"><i class="i_man"></i>會員</button>
+                  <button class="btn"><i class="i_copy"></i>複製</button>
+                  <button class="btn"><i class="i_calendar"></i>日期</button>
                 </div>
-                <!-- 社群分享 -->
-                <div class="share">
-                  <ul>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_X.svg" alt="X" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
-                    </li>
-                  </ul>
+                <!-- >button + 白色 icon -->
+                <div class="btn_grp">
+                  <h2>button + 白色 icon</h2>
+                  <button class="btn btn-blue"><i class="i_apple2"></i>IOS</button>
+                  <button class="btn btn-blue"><i class="i_arrow_left2"></i>上一頁</button>
+                  <button class="btn btn-blue">下一頁<i class="i_arrow_right2"></i></button>
+                  <button class="btn btn-blue"><i class="i_bookmark2"></i>加入書籤</button>
+                  <button class="btn btn-blue"><i class="i_chat2"></i>訊息</button>
+                  <button class="btn btn-blue"><i class="i_check2"></i>確認</button>
+                  <button class="btn btn-blue"><i class="i_clock2"></i>時間</button>
+                  <button class="btn btn-blue"><i class="i_close2"></i>關閉</button>
+                  <button class="btn btn-blue"><i class="i_edit2"></i>編輯</button>
+                  <button class="btn btn-blue"><i class="i_facebook2"></i>facebook</button>
+                  <button class="btn btn-blue"><i class="i_grid2"></i>清單</button>
+                  <button class="btn btn-blue"><i class="i_heart2"></i>加入最愛</button>
+                  <button class="btn btn-blue"><i class="i_home2"></i>回首頁</button>
+                  <button class="btn btn-blue"><i class="i_info2"></i>說明</button>
+                  <button class="btn btn-blue"><i class="i_link2"></i>連結</button>
+                  <button class="btn btn-blue"><i class="i_linkedin2"></i>linkedin</button>
+                  <button class="btn btn-blue"><i class="i_lock2"></i>鎖定</button>
+                  <button class="btn btn-blue"><i class="i_mail2"></i>Mail</button>
+                  <button class="btn btn-blue"><i class="i_rss2"></i>RSS</button>
+                  <button class="btn btn-blue"><i class="i_setting2"></i>設定</button>
+                  <button class="btn btn-blue"><i class="i_star2"></i>評比</button>
+                  <button class="btn btn-blue"><i class="i_twitter2"></i>twitter</button>
+                  <button class="btn btn-blue"><i class="i_video2"></i>video</button>
+                  <button class="btn btn-blue"><i class="i_vimeo2"></i>vimeo</button>
+                  <button class="btn btn-blue"><i class="i_youtube2"></i>youtube</button>
+                  <button class="btn btn-blue"><i class="i_order2"></i>下單</button>
+                  <button class="btn btn-blue"><i class="i_move2"></i>移動</button>
+                  <button class="btn btn-blue"><i class="i_reflash2"></i>重新整理</button>
+                  <button class="btn btn-blue"><i class="i_play2"></i>語音播放</button>
+                  <button class="btn btn-blue"><i class="i_view2"></i>檢視</button>
+                  <button class="btn btn-blue"><i class="i_add2"></i>增加</button>
+                  <button class="btn btn-blue"><i class="i_minus2"></i>減少</button>
+                  <button class="btn btn-blue"><i class="i_search2"></i>查詢</button>
+                  <button class="btn btn-blue"><i class="i_photo2"></i>圖片</button>
+                  <button class="btn btn-blue"><i class="i_man2"></i>會員</button>
+                  <button class="btn btn-blue"><i class="i_copy2"></i>複製</button>
+                  <button class="btn btn-blue"><i class="i_calendar2"></i>日期</button>
                 </div>
-              </div>
-            </div>
-            <!-- 內容區 Start -->
-            <!-- 試算首頁 -->
-            <section class="TrialCalc">
-              <!-- <h3 class="title">房屋稅額 = 房屋課稅現值 X 稅率</h3> -->
-              <!-- 步驟 tab -->
-              <div class="tabSet _step">
-                <div class="tabItems">
-                  <button type="button" class="tabBtn">1.個資宣告聲明</button>
-                  <button type="button" class="tabBtn">2.填寫民意問卷資料</button>
-                  <button type="button" class="tabBtn">3.資料確認</button>
-                  <button type="button" class="tabBtn">4.完成送出</button>
-                  <button type="button" class="tabBtn">5.項目5</button>
-                  <button type="button" class="tabBtn">6.項目6</button>
-                </div>
-                <div class="tabContentGroup">
-                  <div class="tabContent">
-                    <div class="content">
-                      <div class="activeSliderS1">
-                        <div class="showRoom">
-                          <h3 class="centerTitle">相關條款與個資法授權</h3>
-                          <p>依據「個人資料保護法」第八條第一項規定，於您填寫本局申辦及各類信箱前，向您告知下列事項，請詳閱：</p>
-                          <ol>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                          </ol>
-                          <ol class="cjk">
-                            <li>
-                              蒐集之目的：稅務行政、客戶管
-                              <ol class="cjk">
-                                <li>期間：本局因提供服務所須之保存期間。</li>
-                                <li>期間：本局因提供服務所須之保存期間。</li>
-                                <li>期間：本局因提供服務所須之保存期間。</li>
-                              </ol>
-                            </li>
-                            <li>
-                              蒐集之目的：稅務行政、客戶管
-                              <ol class="cjk">
-                                <li>期間：本局因提供服務所須之保存期間。</li>
-                                <li>期間：本局因提供服務所須之保存期間。</li>
-                                <li>期間：本局因提供服務所須之保存期間。</li>
-                              </ol>
-                            </li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                            <li>蒐集之目的：稅務行政、客戶管</li>
-                          </ol>
-                          <div class="check_grp">
-                            <label>
-                              <input name="checkSample" type="checkbox" value="">
-                              <span>我已仔細閱讀並明瞭「隱私權條款」等所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。</span>
-                            </label>
-                          </div>
-                        </div>
-                        <!-- 操作按鈕 -->
-                        <div class="ctl_btns">
-                          <button class="btn btn-secondary" id="openModal">不同意</button>
-                          <button class="btn btn-primary">我同意</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tabContent">
-                    <div class="content">
-                      <div class="activeSliderS2">
-                        <div class="showRoom">
-                          <h3 class="centerTitle">項目2</h3>
-                        </div>
-                        <!-- 操作按鈕 -->
-                        <div class="ctl_btns">
-                          <button type="button" class="btn btn-primary">主要按鈕</button>
-                          <button type="button" class="btn btn-secondary">次要按鈕</button>
-                          <button type="button" class="btn btn-normal">一般按鈕</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tabContent">
-                    <div class="content">
-                      <div class="activeSliderS3">
-                        <div class="showRoom">
-                          <h3 class="centerTitle">項目3</h3>
-                        </div>
-                        <!-- 操作按鈕 -->
-                        <div class="ctl_btns">
-                          <button type="button" class="btn btn-primary">主要按鈕</button>
-                          <button type="button" class="btn btn-secondary">次要按鈕</button>
-                          <button type="button" class="btn btn-normal">一般按鈕</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tabContent">
-                    <div class="content">
-                      <div class="activeSliderS4">
-                        <div class="showRoom">
-                          <h3 class="centerTitle">項目4</h3>
-                        </div>
-                        <!-- 操作按鈕 -->
-                        <div class="ctl_btns">
-                          <button type="button" class="btn btn-primary">主要按鈕</button>
-                          <button type="button" class="btn btn-secondary">次要按鈕</button>
-                          <button type="button" class="btn btn-normal">一般按鈕</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tabContent">
-                    <div class="content">
-                      <div class="activeSliderS5">
-                        <div class="showRoom">
-                          <h3 class="centerTitle">項目5</h3>
-                        </div>
-                        <!-- 操作按鈕 -->
-                        <div class="ctl_btns">
-                          <button type="button" class="btn btn-primary">主要按鈕</button>
-                          <button type="button" class="btn btn-secondary">次要按鈕</button>
-                          <button type="button" class="btn btn-normal">一般按鈕</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tabContent">
-                    <div class="content">
-                      <div class="activeSliderS6">
-                        <div class="showRoom">
-                          <h3 class="centerTitle">項目6</h3>
-                        </div>
-                        <!-- 操作按鈕 -->
-                        <div class="ctl_btns">
-                          <button type="button" class="btn btn-primary">主要按鈕</button>
-                          <button type="button" class="btn btn-secondary">次要按鈕</button>
-                          <button type="button" class="btn btn-normal">一般按鈕</button>
-                        </div>
-                      </div>
-                    </div>
+                <!--  -->
+                <div class="btn_grp">
+                  <h2>主要、次要、一般按鈕</h2>
+                  <div class="btn_grp">
+                    <h3>button：default、disabled、readonly</h3>
+                    <button type="button" class="btn btn-primary">主要按鈕</button>
+                    <button type="button" class="btn btn-secondary">次要按鈕</button>
+                    <button type="button" class="btn btn-normal">一般按鈕</button>
+                    <br />
+                    <!--  disabled  -->
+                    <button type="button" class="btn btn-primary" disabled>主要按鈕</button>
+                    <button type="button" class="btn btn-secondary" disabled>次要按鈕</button>
+                    <button type="button" class="btn btn-normal" disabled>一般按鈕</button>
+                    <br />
+                    <!--  readonly  -->
+                    <button type="button" class="btn btn-primary" readonly>主要按鈕</button>
+                    <button type="button" class="btn btn-secondary" readonly>次要按鈕</button>
+                    <button type="button" class="btn btn-normal" readonly>一般按鈕</button>
+                    <hr />
+                    <h3>input：default、disabled、readonly</h3>
+                    <input type="button" class="btn btn-primary" value="主要按鈕" />
+                    <input type="button" class="btn btn-secondary" value="次要按鈕" />
+                    <input type="button" class="btn btn-normal" value="一般按鈕" />
+                    <br />
+                    <!--  disabled  -->
+                    <input type="button" class="btn btn-primary" value="主要按鈕" disabled />
+                    <input type="button" class="btn btn-secondary" value="次要按鈕" disabled />
+                    <input type="button" class="btn btn-normal" value="一般按鈕" disabled />
+                    <br />
+                    <!--  readonly  -->
+                    <input type="button" class="btn btn-primary" value="主要按鈕" readonly />
+                    <input type="button" class="btn btn-secondary" value="次要按鈕" readonly />
+                    <input type="button" class="btn btn-normal" value="一般按鈕" readonly />
+                    <hr />
+                    <h3>a連結按鈕：default、disabled、readonly</h3>
+                    <a href="#" class="btn btn-primary">主要按鈕</a>
+                    <a href="#" class="btn btn-secondary">次要按鈕</a>
+                    <a href="#" class="btn btn-normal">一般按鈕</a>
+                    <br />
+                    <!--  disabled  -->
+                    <a href="#" class="btn btn-primary disabled">主要按鈕</a>
+                    <a href="#" class="btn btn-secondary disabled">次要按鈕</a>
+                    <a href="#" class="btn btn-normal disabled">一般按鈕</a>
+                    <br />
+                    <!--  readonly  -->
+                    <a href="#" class="btn btn-primary readonly">主要按鈕</a>
+                    <a href="#" class="btn btn-secondary readonly">次要按鈕</a>
+                    <a href="#" class="btn btn-normal readonly">一般按鈕</a>
+                    <hr />
+                    <h3>按鈕顏色</h3>
+                    <button type="button" class="btn btn-blue">按鈕</button>
+                    <button type="button" class="btn btn-green">按鈕</button>
+                    <button type="button" class="btn btn-orange">按鈕</button>
+                    <button type="button" class="btn btn-yellow">按鈕</button>
+                    <button type="button" class="btn btn-purple">按鈕</button>
+                    <button type="button" class="btn btn-red">按鈕</button>
+                    <hr />
+                    <h3>按鈕大小</h3>
+                    <button class="btn btn-xl">特大按鈕</button>
+                    <button class="btn btn-lg">大按鈕</button>
+                    <button class="btn">按鈕</button>
+                    <button class="btn btn-sm">小按鈕</button>
+                    <button class="btn btn-xs">小小按鈕</button>
                   </div>
                 </div>
-              </div>
-              <!-- 文字說明 -->
-              <div class="tips">
-                <h4>貼心提醒</h4>
-                <ol class="cjk">
-                  <li>本表僅適用於估算坐落於 臺中市 之房屋。</li>
-                  <li>本表試算之稅額，係依照房屋稅條例及臺中市房屋稅徵收率自治條例等規定試算，排除個別加減項、電梯及公設面稅等因素，故與實際稅額可能會有誤差。</li>
-                </ol>
-              </div>
+              </form>
             </section>
-            <!-- 內容區 End -->
           </div>
         </div>
       </div>
@@ -1287,23 +1222,22 @@
           </div>
         </div>
       </footer>
+      <!-- footer End -->
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- JQ -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- ease -->
+    <!-- 外掛 plugin js -->
     <script src="vendor/jquery.easing.min.js"></script>
-    <!-- slick -->
+    <!-- ease -->
     <script src="vendor/slick/slick.min.js "></script>
-    <!-- lazyload -->
+    <!-- slick -->
+
     <script src="vendor/lazyload/lazyload.js"></script>
-    <!-- scrolltable -->
+    <!-- lazyload -->
+
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
-    <!-- fancybox -->
-    <script src="vendor/fancybox/fancybox.umd.js"></script>
-    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
-    <!-- swiper -->
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- scrolltable -->
     <!-- hyUI -->
     <script src="js/main.js"></script>
     <!-- 客製js -->

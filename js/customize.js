@@ -79,6 +79,17 @@ $(function () {
     // $(this).next('section').addClass('show');
   })
 
+  // 全功能服務櫃檯 儀表板
+  $('.branchOffice .btn-info-switch').on('click', function () {
+    const $infoBox = $(this).closest('.branchOffice').find('.infoBox');
+
+    if ($infoBox.hasClass('_show')) {
+      $infoBox.removeClass('_show');
+    } else {
+      $infoBox.addClass('_show');
+    }
+  });
+
   /*-----------------------------------*/
   /////////////modal設定/////////////
   /*-----------------------------------*/

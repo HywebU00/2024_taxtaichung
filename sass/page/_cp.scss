@@ -52,6 +52,32 @@ h2.title{
     p{
         margin: 10px 0;
     }
+    display: flex;
+    .pic{
+        flex: 0 0 360px;
+        margin: 0 40px 0 0;
+    }
+    .infoBox{
+        flex: 1 1 100%;
+    }
+    dl{
+        display: grid;
+        grid-template-columns: 90px auto;
+        margin: 0;
+        dt{
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        dd{
+            // margin-left: 12px;
+            margin: 4px 0 4px 12px;
+        }
+    }
+    @include screen('tablet'){
+        flex-direction: column;
+    }
 }
 
 ._sticky_rt{

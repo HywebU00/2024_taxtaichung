@@ -164,6 +164,19 @@ $btn-radius:.25em;
         border: solid 1px $importantColor!important;
     }
 }
+// 其他管道
+.btn-linksEqual{
+    background: linear-gradient(to bottom, #0066cc, #004080);
+    color: #fff !important;
+    border: solid 1px $primaryColor!important;
+    display: block;
+    &:hover,
+    &:focus {
+        color: #fff!important;
+        background: $importantColor!important;
+        border: solid 1px $importantColor!important;
+    }
+}
 
 // 返回
 .btn-back{
@@ -283,6 +296,26 @@ $btn-radius:.25em;
             transform: rotate(90deg);
         }
     }
+}
+.btn-info-switch{
+    background: url(../images/icon/icon_arrow_down.svg) right 20px top 50% no-repeat #fff;
+    background-size: 16px;
+    &:hover, &:focus, &:focus-visible{
+        background: url(../images/icon/icon_arrow_down2.svg) right 20px top 50% no-repeat #555;
+        background-size: 16px;
+        color: #fff;
+    }
+    // position: relative;
+    // &::after{
+    //     content: '';
+    //     position: absolute;
+    //     width: 10px;
+    //     height: 10px;
+    //     border: solid 3px #666;
+    //     border-top-color: transparent;
+    //     border-left-color: transparent;
+    //     transform: rotate(45deg);
+    // }
 }
 
 // filter 咒胎的 search btn
