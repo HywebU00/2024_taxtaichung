@@ -19,16 +19,6 @@
   </head>
 
   <body>
-    <!--視窗-->
-    <div id="modal1" class="modal">
-      <!-- div內的內容可以自行設定 -->
-      <h2>請注意！</h2>
-      <p>如果您不同意該等條款規定，則無法繼續下一步驟。</p>
-      <div class="btn_grp">
-          <button class="btn btn-normal close_Modal">我知道了，關閉跳窗</button>
-          <!-- <button class="btn btn-normal">前往客服中心</button> -->
-      </div>
-    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -933,7 +923,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">民意問卷調查</h2>
+              <h2 class="title">新住民專區</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -978,101 +968,401 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- <h3 class="title">次標題</h3> -->
-            <ul class="publish_info">
-              <li>更新日期：2018-03-20</li>
-              <li>發布單位：市政府茶水間</li>
-            </ul>
-            <!-- 問卷統計結果 -->
-            <h3 class="listTitle">問卷統計結果</h3>
-            <div class="tip">
-              <div class="infoBox">
-                <dl>
-                  <dt>問卷題目：</dt>
-                  <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
-                  <dt>單位：</dt>
-                  <dd>市政府</dd>
-                  <dt>簡介：</dt>
-                  <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis pariatur dicta aliquid maxime quis? Numquam fugit nobis impedit officia dolorum, obcaecati soluta provident quo nulla. Cum laborum nihil illum sit?</dd>
-                  <dt>調查日期：</dt>
-                  <dd>2025/05/20</dd>
-                </dl>
-              </div>
-            </div>
-            <!-- 操作按鈕 -->
-            <div class="ctl_btns">
-              <button type="button" class="btn btn-orange">參與調查</button>
-            </div>
-            <!-- 進度條 -->
-            <h3 class="listTitle">統計結果</h3>
-            <div class="questionnaire">
-              <section aria-labelledby="q1_label" class="resultList">
-                <p id="q1_label">1.您的基本資料:年齡</p>
-                <ul class="vote-results">
-                  <li>
-                    <div class="option-block">
-                      <span class="option">會</span>
-                      <span class="percentage">65%</span>
-                      <span class="votes">（130票）</span>
+            <!--  -->
+            <section class="TrialCalc">
+              <!-- <h3 class="title">次標題（置中）</h3> -->
+              <!-- <h3 class="listTitle">次標題</h3> -->
+              <section aria-labelledby="applyTitle" class="apply-module">
+                <!-- 示意圖 -->
+                <figure>
+                  <img src="https://placehold.jp/1200x400.png" alt="圖片的說明文字" />
+                </figure>
+                <!-- 語言切換按鈕 -->
+                <nav aria-label="語言切換">
+                  <ul class="lang-tabs" role="tablist">
+                    <li role="presentation">
+                      <button role="tab" aria-selected="true" aria-controls="lang-zh" id="tab-zh"><span><img src="images/flag_TW.png" alt="台灣國旗"></span>中文版</button>
+                    </li>
+                    <li role="presentation">
+                      <button role="tab" aria-selected="false" aria-controls="lang-en" id="tab-en"><span><img src="images/flag_USA.png" alt="美國國旗"></span>English</button>
+                    </li>
+                    <li role="presentation">
+                      <button role="tab" aria-selected="false" aria-controls="lang-vi" id="tab-vi"><span><img src="images/flag_vietnam.png" alt="越南國旗"></span>Tiếng Việt</button>
+                    </li>
+                    <li role="presentation">
+                      <button role="tab" aria-selected="false" aria-controls="lang-id" id="tab-id"><span><img src="images/flag_indonesia.png" alt="印尼國旗"></span>Indonesia</button>
+                    </li>
+                    <li role="presentation">
+                      <button role="tab" aria-selected="false" aria-controls="lang-th" id="tab-th"><span><img src="images/flag_thailand.png" alt="泰國國旗"></span>ภาษาไทย</button>
+                    </li>
+                  </ul>
+                </nav>
+
+                <!-- 中文內容區 -->
+                <div id="lang-zh" class="lang-panel" role="tabpanel" aria-labelledby="tab-zh" lang="zh-TW">
+                  <div class="dl-grid">
+                    <!-- 項目名稱 -->
+                    <div class="title" role="group" aria-labelledby="item-label item-value">
+                      <span class="serial" aria-hidden="true">1</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label">
+                          <span lang="zh-Hant">申辦項目</span>
+                          <span lang="en" class="translation">Application Item</span>
+                        </div>
+                        <div class="field-value" id="item-value"><strong>建築物用途變更申請</strong></div>
+                      </div>
                     </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="會：65%，130票">
-                      <div class="bar-fill" style="width: 65%;"></div>
+                    <!-- 辦理細項 -->
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label" id="">
+                          <span lang="zh-Hant">辦理天數</span><br>
+                          <span lang="en" class="translation">Processing Days</span>
+                        </div>
+                        <div class="field-value" id="">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label" id="">
+                          <span lang="zh-Hant">免用憑證</span><br>
+                          <span lang="en" class="translation">No Certificate</span>
+                        </div>
+                        <div class="field-value" id=""><button type="button" class="btn btn-normal btn-sm" aria-label="檢查是否免用憑證">check</button></div>
+                      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="option-block">
-                      <span class="option">沒有行動裝置</span>
-                      <span class="percentage">25%</span>
-                      <span class="votes">（50票）</span>
+                    <!-- 應備文件 -->
+                    <div class="document">
+                      <div class="field-label" id="">
+                        <span lang="zh-Hant">應備證件</span><br>
+                        <span lang="en" class="translation">Documents Should Be Prepared</span>
+                      </div>
+                      <div class="field-value" id="">
+                        <ol>
+                          <li>Please submit the application for the change of use classified within 30 days.</li>
+                          <li> For those filing the change of house use classified before the 15th of the month (including the 15th), they shall be applied to the new tax rate for the current month while those filing after the 16th of the month (including the 16th) shall be applied to the existing tax rate for the current month.</li>
+                          <li>If the base of a house is applied to the preferential tax rate of self-use residence, please file a separate application 40 days before the land value tax is collected (on September 22nd).</li>
+                        </ol>
+                      </div>
                     </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="沒有行動裝置：25%，50票">
-                      <div class="bar-fill" style="width: 25%;"></div>
+                  </div>
+                  <div class="dl-grid">
+                    <!-- 項目名稱 -->
+                    <div class="title" role="group" aria-labelledby="item-label item-value">
+                      <span class="serial" aria-hidden="true">2</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label">
+                          <span lang="zh-Hant">申辦項目</span>
+                          <span lang="en" class="translation">Application Item</span>
+                        </div>
+                        <div class="field-value" id="item-value"><strong>建築物用途變更申請</strong></div>
+                      </div>
                     </div>
-                  </li>
-                </ul>
+                    <!-- 辦理細項 -->
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label" id="">
+                          <span lang="zh-Hant">辦理天數</span><br>
+                          <span lang="en" class="translation">Processing Days</span>
+                        </div>
+                        <div class="field-value" id="">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label" id="">
+                          <span lang="zh-Hant">免用憑證</span><br>
+                          <span lang="en" class="translation">No Certificate</span>
+                        </div>
+                        <div class="field-value" id=""><button type="button" class="btn btn-normal btn-sm" aria-label="檢查是否免用憑證">check</button></div>
+                      </div>
+                    </div>
+                    <!-- 應備文件 -->
+                    <div class="document">
+                      <div class="field-label" id="">
+                        <span lang="zh-Hant">應備證件</span><br>
+                        <span lang="en" class="translation">Documents Should Be Prepared</span>
+                      </div>
+                      <div class="field-value" id="">
+                        <ol>
+                          <li>Please submit the application for the change of use classified within 30 days.</li>
+                          <li> For those filing the change of house use classified before the 15th of the month (including the 15th), they shall be applied to the new tax rate for the current month while those filing after the 16th of the month (including the 16th) shall be applied to the existing tax rate for the current month.</li>
+                          <li>If the base of a house is applied to the preferential tax rate of self-use residence, please file a separate application 40 days before the land value tax is collected (on September 22nd).</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dl-grid">
+                    <!-- 項目名稱 -->
+                    <div class="title" role="group" aria-labelledby="item-label item-value">
+                      <span class="serial" aria-hidden="true">3</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label">
+                          <span lang="zh-Hant">申辦項目</span>
+                          <span lang="en" class="translation">Application Item</span>
+                        </div>
+                        <div class="field-value" id="item-value"><strong>建築物用途變更申請</strong></div>
+                      </div>
+                    </div>
+                    <!-- 辦理細項 -->
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label" id="">
+                          <span lang="zh-Hant">辦理天數</span><br>
+                          <span lang="en" class="translation">Processing Days</span>
+                        </div>
+                        <div class="field-value" id="">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label" id="">
+                          <span lang="zh-Hant">免用憑證</span><br>
+                          <span lang="en" class="translation">No Certificate</span>
+                        </div>
+                        <div class="field-value" id=""><button type="button" class="btn btn-normal btn-sm" aria-label="檢查是否免用憑證">check</button></div>
+                      </div>
+                    </div>
+                    <!-- 應備文件 -->
+                    <div class="document">
+                      <div class="field-label" id="">
+                        <span lang="zh-Hant">應備證件</span><br>
+                        <span lang="en" class="translation">Documents Should Be Prepared</span>
+                      </div>
+                      <div class="field-value" id="">
+                        <ol>
+                          <li>Please submit the application for the change of use classified within 30 days.</li>
+                          <li> For those filing the change of house use classified before the 15th of the month (including the 15th), they shall be applied to the new tax rate for the current month while those filing after the 16th of the month (including the 16th) shall be applied to the existing tax rate for the current month.</li>
+                          <li>If the base of a house is applied to the preferential tax rate of self-use residence, please file a separate application 40 days before the land value tax is collected (on September 22nd).</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <dl class="dl-grid">
+                    <dt>序號<br><span lang="en" class="translation">Serial Number</span></dt>
+                    <dd>2</dd>
+                    <dt>申辦項目<br><span lang="en" class="translation">Application Item</span></dt>
+                    <dd><strong>Application for Building Change of Use</strong></dd>
+                    <dt>辦理天數<br><span lang="en" class="translation">Processing Days</span></dt>
+                    <dd>7 天</dd>
+                    <dt>應備證件<br><span lang="en" class="translation">Documents Should Be Prepared</span></dt>
+                    <dd>
+                      <ol>
+                        <li>Please submit the application for the change of use classified within 30 days.</li>
+                        <li> For those filing the change of house use classified before the 15th of the month (including the 15th), they shall be applied to the new tax rate for the current month while those filing after the 16th of the month (including the 16th) shall be applied to the existing tax rate for the current month.</li>
+                        <li>If the base of a house is applied to the preferential tax rate of self-use residence, please file a separate application 40 days before the land value tax is collected (on September 22nd).</li>
+                      </ol>
+                    </dd>
+                    <dt>免用憑證<br><span lang="en" class="translation">No Certificate</span></dt>
+                    <dd><button type="button" class="btn btn-normal btn-sm">check</button></dd>
+                  </dl>
+                  <dl class="dl-grid">
+                    <dt>序號<br><span lang="en" class="translation">Serial Number</span></dt>
+                    <dd>3</dd>
+                    <dt>申辦項目<br><span lang="en" class="translation">Application Item</span></dt>
+                    <dd><strong>Application for Building Change of Use</strong></dd>
+                    <dt>辦理天數<br><span lang="en" class="translation">Processing Days</span></dt>
+                    <dd>7 天</dd>
+                    <dt>應備證件<br><span lang="en" class="translation">Documents Should Be Prepared</span></dt>
+                    <dd>Lorem ipsum dolor sit amet</dd>
+                    <dt>免用憑證<br><span lang="en" class="translation">No Certificate</span></dt>
+                    <dd><button type="button" class="btn btn-normal btn-sm">check</button></dd>
+                  </dl> -->
+                </div>
+                <!-- 英文內容區 -->
+                <div id="lang-en" class="lang-panel" role="tabpanel" aria-labelledby="tab-en" lang="en" hidden>
+                  <div class="dl-grid">
+                    <div class="title" role="group" aria-labelledby="item-label-en item-value-en">
+                      <span class="serial" aria-hidden="true">1</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label-en">
+                          <span lang="en">Application Item</span>
+                          <span class="translation">申辦項目</span>
+                        </div>
+                        <div class="field-value" id="item-value-en"><strong>建築物用途變更申請 EN</strong></div>
+                      </div>
+                    </div>
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="en">Processing Days</span><br>
+                          <span class="translation">辦理天數</span>
+                        </div>
+                        <div class="field-value">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="en">No Certificate</span><br>
+                          <span class="translation">免用憑證</span>
+                        </div>
+                        <div class="field-value">
+                          <button type="button" class="btn btn-normal btn-sm" aria-label="Check if certificate is not required">check</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="document">
+                      <div class="field-label">
+                        <span lang="en">Documents Should Be Prepared</span><br>
+                        <span class="translation">應備證件</span>
+                      </div>
+                      <div class="field-value">
+                        <ol>
+                          <li>...</li>
+                          <li>...</li>
+                          <li>...</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 越南 -->
+                <div id="lang-vi" class="lang-panel" role="tabpanel" aria-labelledby="tab-vi" lang="vi" hidden>
+                  <div class="dl-grid">
+                    <div class="title" role="group" aria-labelledby="item-label-vi item-value-vi">
+                      <span class="serial" aria-hidden="true">1</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label-vi">
+                          <span lang="vi">Hạng mục đăng ký</span>
+                          <span class="translation">申辦項目</span>
+                        </div>
+                        <div class="field-value" id="item-value-vi"><strong>建築物用途變更申請 - 越南</strong></div>
+                      </div>
+                    </div>
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="vi">Số ngày thực hiện</span><br>
+                          <span class="translation">辦理天數</span>
+                        </div>
+                        <div class="field-value">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="vi">Miễn dùng Giấy chứng nhận</span><br>
+                          <span class="translation">免用憑證</span>
+                        </div>
+                        <div class="field-value">
+                          <button type="button" class="btn btn-normal btn-sm" aria-label="Check if certificate is not required">check</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="document">
+                      <div class="field-label">
+                        <span lang="vi">Giấy tờ cần chuẩn bị</span><br>
+                        <span class="translation">應備證件</span>
+                      </div>
+                      <div class="field-value">
+                        <ol>
+                          <li>...</li>
+                          <li>...</li>
+                          <li>...</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 印尼 -->
+                <div id="lang-id" class="lang-panel" role="tabpanel" aria-labelledby="tab-id" lang="id" hidden>
+                  <div class="dl-grid">
+                    <div class="title" role="group" aria-labelledby="item-label-id item-value-id">
+                      <span class="serial" aria-hidden="true">1</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label-id">
+                          <span lang="id">Item aplikasi</span>
+                          <span class="translation">申辦項目</span>
+                        </div>
+                        <div class="field-value" id="item-value-id"><strong>建築物用途變更申請 - 印尼 </strong></div>
+                      </div>
+                    </div>
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="id">Jumlah hari pemrosesan</span><br>
+                          <span class="translation">辦理天數</span>
+                        </div>
+                        <div class="field-value">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="id">Tidak perlu sertifikat</span><br>
+                          <span class="translation">免用憑證</span>
+                        </div>
+                        <div class="field-value">
+                          <button type="button" class="btn btn-normal btn-sm" aria-label="Check if certificate is not required">check</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="document">
+                      <div class="field-label">
+                        <span lang="id">Dokumen yang harus disiapkan</span><br>
+                        <span class="translation">應備證件</span>
+                      </div>
+                      <div class="field-value">
+                        <ol>
+                          <li>...</li>
+                          <li>...</li>
+                          <li>...</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 泰國 -->
+                <div id="lang-th" class="lang-panel" role="tabpanel" aria-labelledby="tab-th" lang="th" hidden>
+                  <div class="dl-grid">
+                    <div class="title" role="group" aria-labelledby="item-label-th item-value-th">
+                      <span class="serial" aria-hidden="true">1</span>
+                      <div class="box">
+                        <div class="field-label" id="item-label-th">
+                          <span lang="th">รายการที่ ขออนุญาต</span>
+                          <span class="translation">申辦項目</span>
+                        </div>
+                        <div class="field-value" id="item-value-th"><strong>建築物用途變更申請 - 泰國</strong></div>
+                      </div>
+                    </div>
+                    <div class="info" role="group" aria-labelledby="">
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="th">จำนวนวัน ำเนินการ</span><br>
+                          <span class="translation">辦理天數</span>
+                        </div>
+                        <div class="field-value">7 天</div>
+                      </div>
+                      <div class="box">
+                        <div class="field-label">
+                          <span lang="th">ใบรับรองที่ได้ รับการยกเว้น</span><br>
+                          <span class="translation">免用憑證</span>
+                        </div>
+                        <div class="field-value">
+                          <button type="button" class="btn btn-normal btn-sm" aria-label="Check if certificate is not required">check</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="document">
+                      <div class="field-label">
+                        <span lang="th">เอกสา รควรเตรียม</span><br>
+                        <span class="translation">應備證件</span>
+                      </div>
+                      <div class="field-value">
+                        <ol>
+                          <li>...</li>
+                          <li>...</li>
+                          <li>...</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </section>
-              <section aria-labelledby="q2_label" class="resultList">
-                <p id="q2_label">2. 您會使用行動支付APP工具消費或繳納稅款嗎？</p>
-                <ul class="vote-results">
-                  <li>
-                    <div class="option-block">
-                      <span class="option">會</span>
-                      <span class="percentage">65%</span>
-                      <span class="votes">（130票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="會：65%，130票">
-                      <div class="bar-fill" style="width: 65%;"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="option-block">
-                      <span class="option">沒有行動裝置</span>
-                      <span class="percentage">25%</span>
-                      <span class="votes">（50票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="沒有行動裝置：25%，50票">
-                      <div class="bar-fill" style="width: 25%;"></div>
-                    </div>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <!-- 文字說明 -->
-            <div class="tips">
-              <h4>貼心提醒</h4>
-              <ol class="cjk">
-                <li>本表僅適用於估算坐落於 臺中市 之房屋。</li>
-                <li>本表試算之稅額，係依照房屋稅條例及臺中市房屋稅徵收率自治條例等規定試算，排除個別加減項、電梯及公設面稅等因素，故與實際稅額可能會有誤差。</li>
-              </ol>
-            </div>
+              <!-- 操作按鈕 -->
+              <!-- <div class="ctl_btns">
+                <button type="button" class="btn btn-secondary">上一步</button>
+                <button type="button" class="btn btn-primary">下一步</button>
+                <button class="btn btn-submit">確定兌換</button> 
+              </div> -->
+              <!-- 文字說明 -->
+              <!-- <div class="tips">
+                <h4>貼心提醒</h4>
+                <ol class="cjk">
+                  <li>本表僅適用於估算坐落於 臺中市 之房屋。</li>
+                  <li>本表試算之稅額，係依照房屋稅條例及臺中市房屋稅徵收率自治條例等規定試算，排除個別加減項、電梯及公設面稅等因素，故與實際稅額可能會有誤差。</li>
+                </ol>
+              </div> -->
+            </section>
             <!-- 內容區 End -->
           </div>
         </div>

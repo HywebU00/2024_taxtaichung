@@ -19,16 +19,6 @@
   </head>
 
   <body>
-    <!--視窗-->
-    <div id="modal1" class="modal">
-      <!-- div內的內容可以自行設定 -->
-      <h2>請注意！</h2>
-      <p>如果您不同意該等條款規定，則無法繼續下一步驟。</p>
-      <div class="btn_grp">
-          <button class="btn btn-normal close_Modal">我知道了，關閉跳窗</button>
-          <!-- <button class="btn btn-normal">前往客服中心</button> -->
-      </div>
-    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -933,7 +923,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">民意問卷調查</h2>
+              <h2 class="title">互動式統計圖表-前台</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -978,101 +968,144 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- <h3 class="title">次標題</h3> -->
-            <ul class="publish_info">
-              <li>更新日期：2018-03-20</li>
-              <li>發布單位：市政府茶水間</li>
-            </ul>
-            <!-- 問卷統計結果 -->
-            <h3 class="listTitle">問卷統計結果</h3>
-            <div class="tip">
-              <div class="infoBox">
-                <dl>
-                  <dt>問卷題目：</dt>
-                  <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
-                  <dt>單位：</dt>
-                  <dd>市政府</dd>
-                  <dt>簡介：</dt>
-                  <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis pariatur dicta aliquid maxime quis? Numquam fugit nobis impedit officia dolorum, obcaecati soluta provident quo nulla. Cum laborum nihil illum sit?</dd>
-                  <dt>調查日期：</dt>
-                  <dd>2025/05/20</dd>
-                </dl>
+            <!--  -->
+            <section>
+              <!-- <h3 class="title">次標題（置中）</h3> -->
+              <!-- <h3 class="listTitle">次標題</h3> -->
+              <ul class="publish_info">
+                <li>最後異動時間：2018-03-20</li>
+                <li>發布單位：臺中市政府地方稅務局</li>
+              </ul>
+              <section class="">
+                <!-- filter -->
+                <div class="filter">
+                  <div class="flex-form">
+                    <!-- 計數模式 -->
+                    <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                      <label for="fake-legend" class="form_title" aria-required="true">計數模式：</label>
+                      <div class="form_content" id="fake-legend">
+                        <div class="radio_grp form_inline">
+                          <label><input type="radio" name="sampleRadio" value="" checked="">累積數</label>
+                          <label><input type="radio" name="sampleRadio" value="">月計數</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-form form_inline">
+                    <!-- 年度 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true">年度：</label>
+                      <div class="form_content">
+                        <select name="" id="fake-legend">
+                          <option value="">113年度</option>
+                          <option value="">112年度</option>
+                          <option value="">...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 月份 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true">月份：</label>
+                      <div class="form_content">
+                        <select name="" id="fake-legend">
+                          <option value="">5月</option>
+                          <option value="">4月</option>
+                          <option value="">3月</option>
+                          <option value="">...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 稅別 -->
+                    <div class="form_grp">
+                      <label for="fake-legend" class="form_title" aria-required="true">稅別：</label>
+                      <div class="form_content">
+                        <select name="" id="fake-legend">
+                          <option value="">土地增值稅</option>
+                          <option value="">房屋稅</option>
+                          <option value="">...</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn_grp">
+                    <input name="" type="reset" value="清除選擇" class="btn btn-reset">
+                    <input name="" type="submit" value="送出查詢" class="btn btn-submit">
+                  </div>
+                </div>
+                <!-- 互動文字內容＋下載按鈕 -->
+                <div class="resultBox">
+                  <p>
+                    <b class="">114年</b>
+                    <b class="">1月</b>
+                    <b class="taxItem">土地增值稅</b>
+                    實徵淨額<b>(累計數)</b>合計
+                    <b>36.20</b>億元，較上年同期
+                    <b>增加12.09</b>億元<b>(50.18%)</b>。</p>
+                  <button type="button" class="btn btn-normal btn-sm">下載ODF</button>
+                  <button type="button" class="btn btn-normal btn-sm">下載Excel</button>
+                </div>
+                <!-- 雙欄統計圖 -->
+                <div class="chartBox">
+                  <div class="col">
+                    <div class="chartHeader">
+                      <div class="title">圖1 各稅實徵淨額長條圖(請點選各稅資料)</div>
+                      <div class="btn_grp">
+                        <button class="btn btn-sm">個稅合計</button>
+                        <button class="btn btn-sm">圖片下載</button>
+                      </div>
+                    </div>
+                    <div class="insertArea">圖表區塊</div>
+                  </div>
+                  <div class="col">
+                    <div class="chartHeader">
+                      <div class="title">圖2 各稅實徵淨額長條圖(請點選各稅資料)</div>
+                      <div class="btn_grp">
+                        <button class="btn btn-sm">個稅合計</button>
+                        <button class="btn btn-sm">圖片下載</button>
+                      </div>
+                    </div>
+                    <div class="insertArea">圖表區塊</div>
+                  </div>
+                  <div class="col">
+                    <div class="chartHeader">
+                      <div class="title">圖3 各稅實徵淨額長條圖(請點選各稅資料)</div>
+                      <div class="btn_grp">
+                        <button class="btn btn-sm">個稅合計</button>
+                        <button class="btn btn-sm">圖片下載</button>
+                      </div>
+                    </div>
+                    <div class="insertArea">圖表區塊</div>
+                  </div>
+                </div>
+                <p>最近更新資料庫時間：2025/5/9 下午 04:31:32</p>
+              </section>
+              <!-- 操作按鈕 -->
+              <!-- <div class="ctl_btns">
+                <button type="button" class="btn btn-secondary">上一步</button>
+                <button type="button" class="btn btn-primary">下一步</button>
+                <button class="btn btn-submit">確定兌換</button> 
+              </div> -->
+              <!-- 文字說明 -->
+              <div class="tips">
+                <h4>說明</h4>
+                <ol>
+                  <li>資料來源：本局會計室。</li>
+                  <li>更新時間：每月15日17:00發布上月資料，12月資料於次年1月25日17:00發布，發布日期如遇例假日則順延至下一工作日發布。</li>
+                  <li>因四捨五入，各細項加總後與合計數或未能相符合。</li>
+                </ol>
+                <ol class="cjk">
+                  <li>資料來源：本局會計室。</li>
+                  <li>更新時間：每月15日17:00發布上月資料，12月資料於次年1月25日17:00發布，發布日期如遇例假日則順延至下一工作日發布。</li>
+                  <li>因四捨五入，各細項加總後與合計數或未能相符合。</li>
+                </ol>
+                <ul class="publish_info">
+                  <li>市府分類：財政稅務</li>
+                  <li>發布日期：2018-03-20</li>
+                  <li>點閱次數：2018-03-20</li>
+                  <li>查詢次數：123456</li>
+                </ul>
               </div>
-            </div>
-            <!-- 操作按鈕 -->
-            <div class="ctl_btns">
-              <button type="button" class="btn btn-orange">參與調查</button>
-            </div>
-            <!-- 進度條 -->
-            <h3 class="listTitle">統計結果</h3>
-            <div class="questionnaire">
-              <section aria-labelledby="q1_label" class="resultList">
-                <p id="q1_label">1.您的基本資料:年齡</p>
-                <ul class="vote-results">
-                  <li>
-                    <div class="option-block">
-                      <span class="option">會</span>
-                      <span class="percentage">65%</span>
-                      <span class="votes">（130票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="會：65%，130票">
-                      <div class="bar-fill" style="width: 65%;"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="option-block">
-                      <span class="option">沒有行動裝置</span>
-                      <span class="percentage">25%</span>
-                      <span class="votes">（50票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="沒有行動裝置：25%，50票">
-                      <div class="bar-fill" style="width: 25%;"></div>
-                    </div>
-                  </li>
-                </ul>
-              </section>
-              <section aria-labelledby="q2_label" class="resultList">
-                <p id="q2_label">2. 您會使用行動支付APP工具消費或繳納稅款嗎？</p>
-                <ul class="vote-results">
-                  <li>
-                    <div class="option-block">
-                      <span class="option">會</span>
-                      <span class="percentage">65%</span>
-                      <span class="votes">（130票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="會：65%，130票">
-                      <div class="bar-fill" style="width: 65%;"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="option-block">
-                      <span class="option">沒有行動裝置</span>
-                      <span class="percentage">25%</span>
-                      <span class="votes">（50票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="沒有行動裝置：25%，50票">
-                      <div class="bar-fill" style="width: 25%;"></div>
-                    </div>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <!-- 文字說明 -->
-            <div class="tips">
-              <h4>貼心提醒</h4>
-              <ol class="cjk">
-                <li>本表僅適用於估算坐落於 臺中市 之房屋。</li>
-                <li>本表試算之稅額，係依照房屋稅條例及臺中市房屋稅徵收率自治條例等規定試算，排除個別加減項、電梯及公設面稅等因素，故與實際稅額可能會有誤差。</li>
-              </ol>
-            </div>
+            </section>
             <!-- 內容區 End -->
           </div>
         </div>

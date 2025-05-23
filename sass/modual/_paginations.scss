@@ -162,6 +162,12 @@
             text-decoration: none;
         }
     }
+    // 調整頁籤中 form 的style
+    // form{
+    //     background: transparent !important;
+    //     padding:0 !important;
+    //     border-radius: 0 !important;
+    // }
 }
 @include screen('mobile') {
     .pagination .total select.form-control {

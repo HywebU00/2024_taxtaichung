@@ -219,14 +219,14 @@ select::-ms-expand {
 
 // 表單必填
 .necessary {
-    font-size: 1.225rem;
-    color: $color-red;
-    font-weight: bold;
+    // font-size: .9rem;
+    // color: #fff;
+    // font-weight: bold;
     // background: $color-red;
-    // padding: 1px 6px;
-    // border-radius: 2px;
-    // margin: 0 6px 0 0;
-    // box-shadow: 0 0 0 1px $color-red inset;
+    // padding: 2px 8px;
+    // border-radius: 20px;
+    
+    color: $color-red;
 }
 
 .form_grid {}

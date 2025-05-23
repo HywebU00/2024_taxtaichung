@@ -17,16 +17,59 @@
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
-
   <body>
     <!--視窗-->
-    <div id="modal1" class="modal">
+    <div id="modal2" class="modal_scroll">
       <!-- div內的內容可以自行設定 -->
-      <h2>請注意！</h2>
-      <p>如果您不同意該等條款規定，則無法繼續下一步驟。</p>
-      <div class="btn_grp">
-          <button class="btn btn-normal close_Modal">我知道了，關閉跳窗</button>
-          <!-- <button class="btn btn-normal">前往客服中心</button> -->
+      <h2>預約資訊</h2>
+      <div class="modal_content">
+        <div class="orderInfo">
+          <div>分局名稱<b>文心分局</b></div>
+          <div>日期<b>2025-05-13</b></div>
+          <div>時段<b>10:00~11:00</b></div>
+        </div>
+        <form action="">
+          <div class="flex-form">
+            <div class="form_grp">
+              <label for="fake-legend" class="form_title" aria-required="true">請選擇業務：</label>
+              <div class="form_content">
+                <select name="" id="fake-legend">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_grp">
+              <label for="fake-legend" class="form_title" aria-required="true">請輸入姓名：</label>
+              <div class="form_content">
+                <input type="text" id="fake-legend" placeholder="請輸入文字" />
+              </div>
+            </div>
+            <div class="form_grp">
+              <label for="phone" class="form_title">請輸入手機號碼：</label>
+              <div class="form_content">
+                <input name="phone" id="phone" type="tel" placeholder="手機格式 0912345678" />
+                <div class="notice">以簡訊傳送預約報到 QR Code 之網頁連結</div>
+              </div>
+            </div>
+            <div class="VCode">
+              <img src="images/u40.png" alt="">
+            </div>
+            <div class="check_grp">
+              <label>
+                <input name="checkSample" type="checkbox" value="">
+                <span>資訊隱私權聲明 所蒐集的姓名、電話僅作為預約報到與傳送簡訊使用，並不作其他用途。避免未經授權的存取、使用或洩密。</span>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="btn_grp">
+          <button class="btn btn-normal close_Modal">取消，關閉跳窗</button>
+          <button class="btn btn-primary">確定預約</button>
+        </div>
       </div>
     </div>
     <!-- 直接跳主內容區 -->
@@ -933,7 +976,7 @@
             </div>
             <!-- h2節點＋function_panel -->
             <div class="title_mixBox">
-              <h2 class="title">民意問卷調查</h2>
+              <h2 class="title">電子書專區條列</h2>
               <div class="function_panel">
                 <!-- function功能區塊 -->
                 <div class="function">
@@ -978,101 +1021,132 @@
               </div>
             </div>
             <!-- 內容區 Start -->
-            <!-- <h3 class="title">次標題</h3> -->
-            <ul class="publish_info">
-              <li>更新日期：2018-03-20</li>
-              <li>發布單位：市政府茶水間</li>
-            </ul>
-            <!-- 問卷統計結果 -->
-            <h3 class="listTitle">問卷統計結果</h3>
-            <div class="tip">
-              <div class="infoBox">
-                <dl>
-                  <dt>問卷題目：</dt>
-                  <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
-                  <dt>單位：</dt>
-                  <dd>市政府</dd>
-                  <dt>簡介：</dt>
-                  <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis pariatur dicta aliquid maxime quis? Numquam fugit nobis impedit officia dolorum, obcaecati soluta provident quo nulla. Cum laborum nihil illum sit?</dd>
-                  <dt>調查日期：</dt>
-                  <dd>2025/05/20</dd>
-                </dl>
+            <!-- LP -->
+            <section class="lp">
+              <!-- category -->
+              <div class="category">
+                <ul>
+                  <li><a href="#" class="active">全部</a></li>
+                  <li><a href="#">資料大類1</a></li>
+                  <li><a href="#">資料大類2</a></li>
+                  <li><a href="#">資料大類3</a></li>
+                  <li><a href="#">資料大類4</a></li>
+                  <li><a href="#">資料大類5</a></li>
+                  <li><a href="#">資料大類6</a></li>
+                  <li><a href="#">資料大類7</a></li>
+                  <li><a href="#">資料大類8</a></li>
+                  <li><a href="#">資料大類9</a></li>
+                  <li><a href="#">資料大類10</a></li>
+                </ul>
               </div>
-            </div>
-            <!-- 操作按鈕 -->
-            <div class="ctl_btns">
-              <button type="button" class="btn btn-orange">參與調查</button>
-            </div>
-            <!-- 進度條 -->
-            <h3 class="listTitle">統計結果</h3>
-            <div class="questionnaire">
-              <section aria-labelledby="q1_label" class="resultList">
-                <p id="q1_label">1.您的基本資料:年齡</p>
-                <ul class="vote-results">
-                  <li>
-                    <div class="option-block">
-                      <span class="option">會</span>
-                      <span class="percentage">65%</span>
-                      <span class="votes">（130票）</span>
+              <!-- 圖文 電子書 -->
+              <div class="bookList">
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="bookTag">資料大類Ａ</div>
+                    <div class="img-container">
+                      <img src="images/book1.png" class="contain" alt="圖片說明" />
                     </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="會：65%，130票">
-                      <div class="bar-fill" style="width: 65%;"></div>
+                    <div class="caption">
+                      <time datetime="2024-05-15"><span>113年</span>2024/05/15</time>
+                      <h3>113年租稅股長</h3>
                     </div>
-                  </li>
-                  <li>
-                    <div class="option-block">
-                      <span class="option">沒有行動裝置</span>
-                      <span class="percentage">25%</span>
-                      <span class="votes">（50票）</span>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="bookTag">資料大類Ａ</div>
+                    <div class="img-container">
+                      <img src="images/book2.png" class="contain" alt="圖片說明" />
                     </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="沒有行動裝置：25%，50票">
-                      <div class="bar-fill" style="width: 25%;"></div>
+                    <div class="caption">
+                      <time datetime="2024-05-15"><span>113年</span>2024/05/15</time>
+                      <h3>113年租稅股長</h3>
                     </div>
-                  </li>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="bookTag">資料大類Ａ</div>
+                    <div class="img-container">
+                      <img src="images/book1.png" class="contain" alt="圖片說明" />
+                    </div>
+                    <div class="caption">
+                      <time datetime="2024-05-15"><span>113年</span>2024/05/15</time>
+                      <h3>稅稅平安聖誕夜(113年國小教材-中低年級)</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="bookTag">資料大類Ａ</div>
+                    <div class="img-container">
+                      <img src="images/book1.png" class="contain" alt="圖片說明" />
+                    </div>
+                    <div class="caption">
+                      <time datetime="2024-05-15"><span>113年</span>2024/05/15</time>
+                      <h3>113年租稅股長</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="bookTag">資料大類Ａ</div>
+                    <div class="img-container">
+                      <img src="images/book1.png" class="contain" alt="圖片說明" />
+                    </div>
+                    <div class="caption">
+                      <time datetime="2024-05-15"><span>113年</span>2024/05/15</time>
+                      <h3>113年租稅股長</h3>
+                    </div>
+                  </a>
+                </div>
+                <div class="thumbnail">
+                  <a href="#">
+                    <div class="bookTag">資料大類Ａ</div>
+                    <div class="img-container">
+                      <img src="images/book1.png" class="contain" alt="圖片說明" />
+                    </div>
+                    <div class="caption">
+                      <time datetime="2024-05-15"><span>113年</span>2024/05/15</time>
+                      <h3>113年租稅股長</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- Pagination -->
+              <div class="pagination">
+                <form action="">
+                  <div class="form_inline">
+                    <div class="total">
+                      共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                      <select name="" id="" aria-label="每頁顯示">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                      </select>
+                      筆， <input type="button" value="確定" class="btn btn-submit" />
+                    </div>
+                  </div>
+                </form>
+                <ul class="page">
+                  <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                  <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
                 </ul>
-              </section>
-              <section aria-labelledby="q2_label" class="resultList">
-                <p id="q2_label">2. 您會使用行動支付APP工具消費或繳納稅款嗎？</p>
-                <ul class="vote-results">
-                  <li>
-                    <div class="option-block">
-                      <span class="option">會</span>
-                      <span class="percentage">65%</span>
-                      <span class="votes">（130票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="會：65%，130票">
-                      <div class="bar-fill" style="width: 65%;"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="option-block">
-                      <span class="option">沒有行動裝置</span>
-                      <span class="percentage">25%</span>
-                      <span class="votes">（50票）</span>
-                    </div>
-                    <div class="progress-bar" role="progressbar"
-                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
-                        aria-label="沒有行動裝置：25%，50票">
-                      <div class="bar-fill" style="width: 25%;"></div>
-                    </div>
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <!-- 文字說明 -->
-            <div class="tips">
-              <h4>貼心提醒</h4>
-              <ol class="cjk">
-                <li>本表僅適用於估算坐落於 臺中市 之房屋。</li>
-                <li>本表試算之稅額，係依照房屋稅條例及臺中市房屋稅徵收率自治條例等規定試算，排除個別加減項、電梯及公設面稅等因素，故與實際稅額可能會有誤差。</li>
-              </ol>
-            </div>
+              </div>
+            </section>
             <!-- 內容區 End -->
           </div>
         </div>
@@ -1248,8 +1322,6 @@
     <!-- fancybox -->
     <script src="vendor/fancybox/fancybox.umd.js"></script>
     <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
-    <!-- swiper -->
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <!-- hyUI -->
     <script src="js/main.js"></script>
     <!-- 客製js -->

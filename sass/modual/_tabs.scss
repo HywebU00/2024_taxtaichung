@@ -530,7 +530,7 @@
       padding: 15px 0;
     }
     .tabBtn{
-      font-size: 1.25em;
+      font-size: 1.125em;
       height: 60px;
       background: transparent;
       &.active{
@@ -566,7 +566,7 @@
     table{
       margin-bottom: 2em;
     }
-    form{
+    > form{
       background: #edf7fa;
       padding: 1em 2em;
       border-radius: 8px;
@@ -651,6 +651,22 @@
       }
       .form_grp{
         border-bottom-color: transparent;
+      }
+    }
+    // 一般表格樣式，有別於稅額試算怡明大標題
+    .normalForm{
+      .form_grp{
+        padding: 0;
+        .form_title{
+          font-size: 1em;
+          flex: 0 0 auto;
+          margin: auto;
+        }
+        .form_content{
+          max-width: fit-content;
+          flex-wrap: nowrap;
+          align-items: center;
+        }
       }
     }
     @include screen('mobile') {

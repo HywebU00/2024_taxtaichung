@@ -39,8 +39,8 @@ table {
         a {
             word-break: break-all;
             padding-right: 22px;
-            background:  url(../images/icon/icon_link.svg) right 50% no-repeat;
-            background-size: 16px;
+            // background:  url(../images/icon/icon_link.svg) right 50% no-repeat;
+            // background-size: 16px;
         }
 
         &._left{
@@ -115,6 +115,13 @@ table {
                 color: #000;
             }
         }
+    }
+}
+
+.linkDeco{
+    a{
+        background:  url(../images/icon/icon_link.svg) right 50% no-repeat;
+        background-size: 16px;
     }
 }
 

@@ -90,6 +90,49 @@ $(function () {
     }
   });
 
+  // sp19
+  $('.lang-tabs button').on('click', function () {
+    const targetId = $(this).attr('aria-controls');
+
+    // 切換 tab 狀態
+    $('.lang-tabs button').attr('aria-selected', 'false');
+    $(this).attr('aria-selected', 'true');
+
+    // 切換 panel 顯示
+    $('.lang-panel').attr('hidden', 'hidden');
+    $('#' + targetId).removeAttr('hidden');
+  });
+  
+  // sp17
+  const zoneList = ['Wenxin', 'Shalu', 'Fengyuan', 'Dongshi', 'Dongshan', 'Minquan', 'Dazhi', 'Datun'];
+  let activeZone = '';
+
+  // Hover highlight + map color
+  zoneList.forEach(function (zone) {
+    const $zoneEl = $('.branchMap .zone.' + zone);
+
+    $zoneEl
+      .on('click', function (e) {
+        e.stopPropagation(); // 阻止冒泡，避免被 document click 清除
+        activeZone = zone;
+
+        $(this).find('path').css('fill', '#dda61f');
+        $(this).siblings('.zone').find('path').css('fill', '#fff');
+
+        const $card = $('.branchInfo .card._' + zone).clone();
+        $('.branchMap .thisOfficInfo').html($card);
+      });
+  });
+
+  // 點擊空白處（非 .branchMap）時清除選取
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.branchMap').length) {
+      $('.branchMap .zone path').css('fill', '');
+      $('.branchMap .thisOfficInfo').empty();
+      activeZone = '';
+    }
+  });
+
   /*-----------------------------------*/
   /////////////modal設定/////////////
   /*-----------------------------------*/
