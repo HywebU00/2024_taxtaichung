@@ -7737,7 +7737,6 @@ table.table_sprite tr:nth-child(even) {
   border-radius: 8px 3px 3px 8px;
   box-shadow: none;
   background: #fff;
-  border: solid 1px #ddd;
   cursor: pointer;
 }
 .tabSet .modeBBtn:last-child,
