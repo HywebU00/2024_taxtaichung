@@ -11717,6 +11717,7 @@ body::-webkit-scrollbar-track {
 .branchInfo .card dl.dl-grid dt {
   font-weight: bold;
   text-align: right;
+  line-height: 1.4;
 }
 .branchInfo .card dl.dl-grid dd {
   margin-left: 0;
@@ -11811,12 +11812,12 @@ body::-webkit-scrollbar-track {
 .branchMap .thisOfficInfo .card dl.dl-grid dt {
   font-weight: bold;
   text-align: right;
+  line-height: 1.4;
 }
 .branchMap .thisOfficInfo .card dl.dl-grid dd {
   margin-left: 0;
   line-height: 1.4;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align: left;
 }
 @media screen and (max-width: 991px) {
   .branchMap .thisOfficInfo {

@@ -1830,6 +1830,7 @@ $bg_n7: #e5beff;
       dt{
         font-weight: bold;
         text-align: right;
+        line-height: 1.4;
       }
       dd{
         margin-left: 0;
@@ -1930,11 +1931,12 @@ $bg_n7: #e5beff;
         dt{
           font-weight: bold;
           text-align: right;
+          line-height: 1.4;
         }
         dd{
           margin-left: 0;
           line-height: 1.4;
-          text-align-last: left;
+          text-align: left;
         }
       }
       // transition: .2s;
