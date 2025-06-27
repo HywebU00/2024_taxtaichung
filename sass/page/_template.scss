@@ -2140,7 +2140,15 @@ ol.cjk{
   &._alignTop{
     align-items: start;
   }
-
+  @media screen and (max-width: 1200px){
+    &._col4{
+      .setGrid{
+        .btn{
+          padding: .5em 0;
+        }
+      }
+    }
+  }
   @include screen('tablet'){
     &._col4{
       grid-template-columns: repeat(2, 1fr);

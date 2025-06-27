@@ -12005,6 +12005,11 @@ ol.cjk ol.cjk li::marker {
 .setGrid._alignTop {
   align-items: start;
 }
+@media screen and (max-width: 1200px) {
+  .setGrid._col4 .setGrid .btn {
+    padding: 0.5em 0;
+  }
+}
 @media screen and (max-width: 991px) {
   .setGrid._col4 {
     grid-template-columns: repeat(2, 1fr);
